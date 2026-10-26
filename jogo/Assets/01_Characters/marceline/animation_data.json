@@ -1,0 +1,372 @@
+{
+  "cell_width": 96,
+  "cell_height": 80,
+  "atlas_columns": 8,
+  "animations": {
+    "idle": {
+      "coords": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "fps": 5.0,
+      "loop": true,
+      "weights": [
+        1.5,
+        1.0,
+        0.75,
+        1.0
+      ],
+      "intent": "quiet_loop",
+      "unique_poses": 4
+    },
+    "walk": {
+      "coords": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "fps": 12.0,
+      "loop": true,
+      "weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intent": "locomotion_cycle",
+      "unique_poses": 8
+    },
+    "jump": {
+      "coords": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "fps": 10.0,
+      "loop": false,
+      "weights": [
+        0.75,
+        1.25
+      ],
+      "intent": "ascent_then_hold",
+      "unique_poses": 2
+    },
+    "fall": {
+      "coords": [
+        [
+          0,
+          3
+        ]
+      ],
+      "fps": 1.0,
+      "loop": true,
+      "weights": [
+        1.0
+      ],
+      "intent": "held_air_pose",
+      "unique_poses": 1
+    },
+    "interact": {
+      "coords": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 12.0,
+      "loop": false,
+      "weights": [
+        0.6,
+        1.0,
+        1.0,
+        1.0,
+        1.35,
+        1.0,
+        1.0,
+        1.0,
+        0.6
+      ],
+      "intent": "action_and_return",
+      "unique_poses": 4
+    },
+    "celebrate": {
+      "coords": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 12.0,
+      "loop": false,
+      "weights": [
+        0.6,
+        1.0,
+        1.0,
+        1.0,
+        1.35,
+        1.0,
+        1.0,
+        1.0,
+        0.6
+      ],
+      "intent": "action_and_return",
+      "unique_poses": 4
+    },
+    "float": {
+      "coords": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "fps": 10.0,
+      "loop": true,
+      "weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intent": "held_ability_loop",
+      "unique_poses": 4
+    },
+    "play_music": {
+      "coords": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 12.0,
+      "loop": false,
+      "weights": [
+        0.6,
+        1.0,
+        1.0,
+        1.0,
+        1.35,
+        1.0,
+        1.0,
+        1.0,
+        0.6
+      ],
+      "intent": "action_and_return",
+      "unique_poses": 4
+    },
+    "jump_start": {
+      "coords": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "fps": 18.0,
+      "loop": false,
+      "weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intent": "takeoff",
+      "unique_poses": 3
+    },
+    "land": {
+      "coords": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "fps": 16.0,
+      "loop": false,
+      "weights": [
+        0.7,
+        1.0
+      ],
+      "intent": "landing_recovery",
+      "unique_poses": 2
+    }
+  }
+}

@@ -1,0 +1,5014 @@
+[
+  {
+    "path": "Assets/00_Guide/visual_guide.png",
+    "category": "visual_guide",
+    "width": 1000,
+    "height": 400,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/celebrate.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/connect_power.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/fall.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/idle.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/interact.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/jump.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/jump_start.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/land.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/terminal.png",
+    "category": "animation_strip",
+    "width": 576,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/animations/walk.png",
+    "category": "animation_strip",
+    "width": 768,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/celebrate/celebrate_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/connect_power/connect_power_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/fall/fall_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/idle/idle_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/idle/idle_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/idle/idle_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/idle/idle_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/interact/interact_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/jump/jump_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/jump/jump_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/jump_start/jump_start_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/jump_start/jump_start_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/jump_start/jump_start_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/land/land_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/land/land_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/terminal/terminal_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/terminal/terminal_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/terminal/terminal_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/terminal/terminal_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/terminal/terminal_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/terminal/terminal_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/frames/walk/walk_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/portrait.png",
+    "category": "portrait",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/bmo/spritesheet.png",
+    "category": "character_sheet",
+    "width": 768,
+    "height": 800,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/celebrate.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/crawl.png",
+    "category": "animation_strip",
+    "width": 576,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/fall.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/idle.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/interact.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/jump.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/jump_start.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/land.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/stretch.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/stretch_hold.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/stretch_retract.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/animations/walk.png",
+    "category": "animation_strip",
+    "width": 768,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/celebrate/celebrate_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/crawl/crawl_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/crawl/crawl_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/crawl/crawl_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/crawl/crawl_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/crawl/crawl_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/crawl/crawl_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/fall/fall_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/idle/idle_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/idle/idle_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/idle/idle_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/idle/idle_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/interact/interact_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/jump/jump_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/jump/jump_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/jump_start/jump_start_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/jump_start/jump_start_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/jump_start/jump_start_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/land/land_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/land/land_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/stretch/stretch_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/stretch/stretch_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/stretch/stretch_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/stretch_hold/stretch_hold_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/stretch_retract/stretch_retract_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/stretch_retract/stretch_retract_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/stretch_retract/stretch_retract_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/frames/walk/walk_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/portrait.png",
+    "category": "portrait",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/cake/spritesheet.png",
+    "category": "character_sheet",
+    "width": 768,
+    "height": 800,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/celebrate.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/fall.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/idle.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/interact.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/jump.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/jump_start.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/land.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/pull_lever.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/push.png",
+    "category": "animation_strip",
+    "width": 576,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/animations/walk.png",
+    "category": "animation_strip",
+    "width": 768,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/celebrate/celebrate_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/fall/fall_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/idle/idle_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/idle/idle_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/idle/idle_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/idle/idle_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/interact/interact_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/jump/jump_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/jump/jump_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/jump_start/jump_start_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/jump_start/jump_start_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/jump_start/jump_start_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/land/land_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/land/land_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/pull_lever/pull_lever_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/push/push_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/push/push_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/push/push_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/push/push_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/push/push_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/push/push_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/frames/walk/walk_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/portrait.png",
+    "category": "portrait",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/finn/spritesheet.png",
+    "category": "character_sheet",
+    "width": 768,
+    "height": 800,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/celebrate.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/crank.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/fall.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/idle.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/interact.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/jump.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/jump_start.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/land.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/push.png",
+    "category": "animation_strip",
+    "width": 576,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/animations/walk.png",
+    "category": "animation_strip",
+    "width": 768,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/celebrate/celebrate_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/crank/crank_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/fall/fall_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/idle/idle_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/idle/idle_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/idle/idle_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/idle/idle_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/interact/interact_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/jump/jump_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/jump/jump_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/jump_start/jump_start_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/jump_start/jump_start_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/jump_start/jump_start_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/land/land_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/land/land_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/push/push_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/push/push_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/push/push_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/push/push_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/push/push_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/push/push_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/frames/walk/walk_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/portrait.png",
+    "category": "portrait",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/fionna/spritesheet.png",
+    "category": "character_sheet",
+    "width": 768,
+    "height": 800,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/bridge_extend.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/bridge_hold.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/bridge_retract.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/celebrate.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/fall.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/idle.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/interact.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/jump.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/jump_start.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/land.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/animations/walk.png",
+    "category": "animation_strip",
+    "width": 768,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_extend/bridge_extend_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_extend/bridge_extend_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_extend/bridge_extend_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_extend/bridge_extend_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_hold/bridge_hold_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_retract/bridge_retract_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_retract/bridge_retract_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_retract/bridge_retract_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/bridge_retract/bridge_retract_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/celebrate/celebrate_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/fall/fall_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/idle/idle_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/idle/idle_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/idle/idle_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/idle/idle_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/interact/interact_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/jump/jump_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/jump/jump_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/jump_start/jump_start_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/jump_start/jump_start_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/jump_start/jump_start_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/land/land_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/land/land_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/frames/walk/walk_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/portrait.png",
+    "category": "portrait",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/jake/spritesheet.png",
+    "category": "character_sheet",
+    "width": 768,
+    "height": 800,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/celebrate.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/fall.png",
+    "category": "animation_strip",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/float.png",
+    "category": "animation_strip",
+    "width": 576,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/idle.png",
+    "category": "animation_strip",
+    "width": 384,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/interact.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/jump.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/jump_start.png",
+    "category": "animation_strip",
+    "width": 288,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/land.png",
+    "category": "animation_strip",
+    "width": 192,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/play_music.png",
+    "category": "animation_strip",
+    "width": 864,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/animations/walk.png",
+    "category": "animation_strip",
+    "width": 768,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/celebrate/celebrate_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/fall/fall_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/float/float_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/float/float_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/float/float_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/float/float_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/float/float_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/float/float_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/idle/idle_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/idle/idle_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/idle/idle_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/idle/idle_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/interact/interact_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/jump/jump_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/jump/jump_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/jump_start/jump_start_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/jump_start/jump_start_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/jump_start/jump_start_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/land/land_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/land/land_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/play_music/play_music_08.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_00.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_01.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_02.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_03.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_04.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_05.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_06.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/frames/walk/walk_07.png",
+    "category": "character_frame",
+    "width": 96,
+    "height": 80,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/portrait.png",
+    "category": "portrait",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/01_Characters/marceline/spritesheet.png",
+    "category": "character_sheet",
+    "width": 768,
+    "height": 800,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/background.png",
+    "category": "background",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/terrain_block_96.png",
+    "category": "terrain_block",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/bottom.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/bottom_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/bottom_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/bridge.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/decor_01.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/decor_02.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/decor_03.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/decor_04.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/fill.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/pillar.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/platform.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/top.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/top_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tiles/top_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/01_tree_house/tileset_32.png",
+    "category": "terrain_atlas",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/background.png",
+    "category": "background",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/terrain_block_96.png",
+    "category": "terrain_block",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/bottom.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/bottom_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/bottom_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/bridge.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/decor_01.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/decor_02.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/decor_03.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/decor_04.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/fill.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/pillar.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/platform.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/top.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/top_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tiles/top_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/02_ice_kingdom/tileset_32.png",
+    "category": "terrain_atlas",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/background.png",
+    "category": "background",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/terrain_block_96.png",
+    "category": "terrain_block",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/bottom.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/bottom_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/bottom_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/bridge.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/decor_01.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/decor_02.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/decor_03.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/decor_04.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/fill.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/pillar.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/platform.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/top.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/top_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tiles/top_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/03_musical_cave/tileset_32.png",
+    "category": "terrain_atlas",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/background.png",
+    "category": "background",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/terrain_block_96.png",
+    "category": "terrain_block",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/bottom.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/bottom_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/bottom_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/bridge.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/decor_01.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/decor_02.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/decor_03.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/decor_04.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/fill.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/pillar.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/platform.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/top.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/top_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tiles/top_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/04_candy_workshop/tileset_32.png",
+    "category": "terrain_atlas",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/background.png",
+    "category": "background",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/terrain_block_96.png",
+    "category": "terrain_block",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/bottom.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/bottom_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/bottom_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/bridge.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/decor_01.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/decor_02.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/decor_03.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/decor_04.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/fill.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/pillar.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/platform.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/top.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/top_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tiles/top_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/05_mirror_tower/tileset_32.png",
+    "category": "terrain_atlas",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/background.png",
+    "category": "background",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/terrain_block_96.png",
+    "category": "terrain_block",
+    "width": 96,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/bottom.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/bottom_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/bottom_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/bridge.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/decor_01.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/decor_02.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/decor_03.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/decor_04.png",
+    "category": "decoration",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/fill.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/pillar.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/platform.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/top.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/top_left.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tiles/top_right.png",
+    "category": "terrain_tile",
+    "width": 32,
+    "height": 32,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/02_Environments/06_friendship_portal/tileset_32.png",
+    "category": "terrain_atlas",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/objects_advanced_atlas.png",
+    "category": "object_atlas",
+    "width": 256,
+    "height": 512,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/objects_common_atlas.png",
+    "category": "object_atlas",
+    "width": 256,
+    "height": 512,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/access_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/access_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/battery_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/battery_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/beam_cyan_horizontal.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 16,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/beam_cyan_vertical.png",
+    "category": "auxiliary_object",
+    "width": 16,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/beam_gold_horizontal.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 16,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/beam_gold_vertical.png",
+    "category": "auxiliary_object",
+    "width": 16,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/bridge_anchor.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/cable_cross.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/cable_elbow.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/cable_end.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/cable_horizontal.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/cable_t.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/cable_vertical.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/checkmark.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/checkpoint_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/checkpoint_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/checkpoint_pin.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/clue_panel.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crank_0.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crank_45.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crank_90.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_collected.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_cyan.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_empty.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_green.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_orange.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_pink.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_purple.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/crystal_red.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/double_receiver_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/double_receiver_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/exit_ready.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/exit_waiting.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/gate_closed.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/gate_half_open.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/gate_open.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/gears_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/gears_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/hint_bulb.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/ice_block.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/interaction_hand.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/lever_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/lever_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/log.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/mirror_0.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/mirror_135.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/mirror_45.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/mirror_90.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/moving_platform.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/musical_door_closed.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/musical_door_open.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/plate_down.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/plate_up.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/player_1_marker.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/player_2_marker.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/portal_active.png",
+    "category": "puzzle_object",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/portal_damaged.png",
+    "category": "puzzle_object",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/portal_pedestal.png",
+    "category": "puzzle_object",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/portal_repaired.png",
+    "category": "puzzle_object",
+    "width": 128,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/receiver_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/receiver_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/reset_arrow.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/rune_circle.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/rune_square.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/rune_triangle.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/socket_empty.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/socket_filled.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/start_flag.png",
+    "category": "auxiliary_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/stone_bridge.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/switch_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/switch_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/temporary_bridge.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/terminal_off.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/terminal_on.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/tunnel_left.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/tunnel_right.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/wooden_block.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/03_Objects_and_Puzzles/sprites/wooden_bridge.png",
+    "category": "puzzle_object",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/back_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/back_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/back_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/back_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/continue_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/continue_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/continue_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/continue_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/exit_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/exit_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/exit_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/exit_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/how_to_play_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/how_to_play_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/how_to_play_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/how_to_play_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/main_menu_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/main_menu_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/main_menu_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/main_menu_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/play_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/play_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/play_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/play_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/repeat_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/repeat_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/repeat_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/repeat_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/restart_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/restart_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/restart_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/restart_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/sound_disabled.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/sound_focus.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/sound_normal.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/buttons/sound_pressed.png",
+    "category": "labeled_button",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/back.png",
+    "category": "interface",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/button_disabled.png",
+    "category": "interface",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/button_focus.png",
+    "category": "interface",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/button_normal.png",
+    "category": "interface",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/button_pressed.png",
+    "category": "interface",
+    "width": 160,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/crystal_counter.png",
+    "category": "interface",
+    "width": 192,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/hint_panel.png",
+    "category": "interface",
+    "width": 128,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/hud_bar.png",
+    "category": "interface",
+    "width": 192,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/panel_cream.png",
+    "category": "interface",
+    "width": 128,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/panel_dark.png",
+    "category": "interface",
+    "width": 128,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/pause.png",
+    "category": "interface",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/portrait_frame.png",
+    "category": "interface",
+    "width": 128,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/sound_off.png",
+    "category": "interface",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/sound_on.png",
+    "category": "interface",
+    "width": 48,
+    "height": 48,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/speech_panel.png",
+    "category": "interface",
+    "width": 128,
+    "height": 96,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/components/title_banner.png",
+    "category": "interface",
+    "width": 192,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/a.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/d.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/e.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/enter.png",
+    "category": "control_icon",
+    "width": 80,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/escape.png",
+    "category": "control_icon",
+    "width": 80,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/left.png",
+    "category": "control_icon",
+    "width": 80,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/p1.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/p2.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/pad_a.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/pad_b.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/pad_start.png",
+    "category": "control_icon",
+    "width": 80,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/pad_x.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/pad_y.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/q.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/right.png",
+    "category": "control_icon",
+    "width": 80,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/shift_right.png",
+    "category": "control_icon",
+    "width": 80,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/up.png",
+    "category": "control_icon",
+    "width": 80,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/controls/w.png",
+    "category": "control_icon",
+    "width": 40,
+    "height": 40,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/logo.png",
+    "category": "title_logo",
+    "width": 512,
+    "height": 112,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/screens/instructions.png",
+    "category": "screen_design",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/screens/main_menu.png",
+    "category": "screen_design",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/screens/pause.png",
+    "category": "screen_design",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/04_Interface/screens/victory.png",
+    "category": "screen_design",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/checkpoint.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/confetti.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/crystal_collect.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/dust.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/effects_atlas.png",
+    "category": "effects_atlas",
+    "width": 256,
+    "height": 512,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/energy_pulse.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/checkpoint/checkpoint_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/checkpoint/checkpoint_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/checkpoint/checkpoint_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/checkpoint/checkpoint_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/confetti/confetti_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/confetti/confetti_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/confetti/confetti_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/confetti/confetti_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/crystal_collect/crystal_collect_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/crystal_collect/crystal_collect_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/crystal_collect/crystal_collect_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/crystal_collect/crystal_collect_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/dust/dust_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/dust/dust_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/dust/dust_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/dust/dust_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/energy_pulse/energy_pulse_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/energy_pulse/energy_pulse_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/energy_pulse/energy_pulse_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/energy_pulse/energy_pulse_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/interaction/interaction_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/interaction/interaction_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/interaction/interaction_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/interaction/interaction_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/music/music_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/music/music_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/music/music_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/music/music_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/portal/portal_00.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/portal/portal_01.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/portal/portal_02.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/frames/portal/portal_03.png",
+    "category": "effect_frame",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/interaction.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/music.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/05_Effects/portal.png",
+    "category": "effect_strip",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/06_Story_Screens/celebration.png",
+    "category": "story_illustration",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/06_Story_Screens/discovery.png",
+    "category": "story_illustration",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/06_Story_Screens/scattered_crystals.png",
+    "category": "story_illustration",
+    "width": 640,
+    "height": 360,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/06_Story_Screens/stage_cards/01_tree_house.png",
+    "category": "stage_card",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/06_Story_Screens/stage_cards/02_ice_kingdom.png",
+    "category": "stage_card",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/06_Story_Screens/stage_cards/03_musical_cave.png",
+    "category": "stage_card",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/06_Story_Screens/stage_cards/04_candy_workshop.png",
+    "category": "stage_card",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/06_Story_Screens/stage_cards/05_mirror_tower.png",
+    "category": "stage_card",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/06_Story_Screens/stage_cards/06_friendship_portal.png",
+    "category": "stage_card",
+    "width": 640,
+    "height": 360,
+    "mode": "RGBA"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/bmo_all_animations_review.png",
+    "category": "preview_board",
+    "width": 1100,
+    "height": 1150,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/cake_all_animations_review.png",
+    "category": "preview_board",
+    "width": 1100,
+    "height": 1380,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/finn_all_animations_review.png",
+    "category": "preview_board",
+    "width": 1100,
+    "height": 1150,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/fionna_all_animations_review.png",
+    "category": "preview_board",
+    "width": 1100,
+    "height": 1150,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/jake_all_animations_review.png",
+    "category": "preview_board",
+    "width": 1100,
+    "height": 1265,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/marceline_all_animations_review.png",
+    "category": "preview_board",
+    "width": 1100,
+    "height": 1150,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/objects_overview.png",
+    "category": "preview_board",
+    "width": 1024,
+    "height": 680,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/pack_overview.png",
+    "category": "preview_board",
+    "width": 1200,
+    "height": 780,
+    "mode": "RGB"
+  },
+  {
+    "path": "Assets/09_Previews_and_Credits/revision_2_walk_contact_sheet.png",
+    "category": "preview_board",
+    "width": 1152,
+    "height": 936,
+    "mode": "RGB"
+  }
+]

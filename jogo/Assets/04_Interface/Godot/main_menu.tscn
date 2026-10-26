@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://d2c604piwdhln"]
+
+[ext_resource type="Texture2D" uid="uid://dqav6dhts2ytd" path="res://Assets/06_Story_Screens/discovery.png" id="bg"]
+[ext_resource type="Texture2D" uid="uid://bcrj0hgwighaa" path="res://Assets/04_Interface/buttons/how_to_play_disabled.png" id="how_to_play_disabled"]
+[ext_resource type="Texture2D" uid="uid://dsfpt2o2gg2sc" path="res://Assets/04_Interface/buttons/how_to_play_focus.png" id="how_to_play_focus"]
+[ext_resource type="Texture2D" uid="uid://c51ak4xdefjey" path="res://Assets/04_Interface/buttons/how_to_play_normal.png" id="how_to_play_normal"]
+[ext_resource type="Texture2D" uid="uid://bd7ka4rpex7q8" path="res://Assets/04_Interface/buttons/how_to_play_pressed.png" id="how_to_play_pressed"]
+[ext_resource type="Texture2D" uid="uid://dnp87111auel7" path="res://Assets/04_Interface/logo.png" id="logo"]
+[ext_resource type="Texture2D" uid="uid://c1vh42mrjads1" path="res://Assets/04_Interface/buttons/play_disabled.png" id="play_disabled"]
+[ext_resource type="Texture2D" uid="uid://dcx7ux355t637" path="res://Assets/04_Interface/buttons/play_focus.png" id="play_focus"]
+[ext_resource type="Texture2D" uid="uid://bgatnvav5cwx6" path="res://Assets/04_Interface/buttons/play_normal.png" id="play_normal"]
+[ext_resource type="Texture2D" uid="uid://fklpiej1r102" path="res://Assets/04_Interface/buttons/play_pressed.png" id="play_pressed"]
+[ext_resource type="Script" uid="uid://wft5qanbv0rh" path="res://Assets/04_Interface/Godot/screen_controller.gd" id="script"]
+[ext_resource type="Texture2D" uid="uid://dooi4trp3qedp" path="res://Assets/04_Interface/buttons/sound_disabled.png" id="sound_disabled"]
+[ext_resource type="Texture2D" uid="uid://w41usqb1u1g4" path="res://Assets/04_Interface/buttons/sound_focus.png" id="sound_focus"]
+[ext_resource type="Texture2D" uid="uid://c16pvrje7ql8v" path="res://Assets/04_Interface/buttons/sound_normal.png" id="sound_normal"]
+[ext_resource type="Texture2D" uid="uid://d37875cgsc67l" path="res://Assets/04_Interface/buttons/sound_pressed.png" id="sound_pressed"]
+
+[node name="Screen" type="Control" unique_id=1079544317]
+texture_filter = 1
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("script")
+
+[node name="Design" type="Control" parent="." unique_id=611685073]
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Background" type="TextureRect" parent="Design" unique_id=121810248]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+texture = ExtResource("bg")
+expand_mode = 1
+
+[node name="Shade" type="ColorRect" parent="Design" unique_id=1219423294]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.03, 0.08, 0.13, 0.4)
+
+[node name="Logo" type="TextureRect" parent="Design" unique_id=1805986891]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 20.0
+offset_right = 576.0
+offset_bottom = 132.0
+mouse_filter = 2
+texture = ExtResource("logo")
+
+[node name="Buttons" type="Control" parent="Design" unique_id=1517696515]
+anchors_preset = 0
+
+[node name="play" type="TextureButton" parent="Design/Buttons" unique_id=1871071627]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 156.0
+offset_right = 400.0
+offset_bottom = 204.0
+texture_normal = ExtResource("play_normal")
+texture_pressed = ExtResource("play_pressed")
+texture_hover = ExtResource("play_focus")
+texture_disabled = ExtResource("play_disabled")
+texture_focused = ExtResource("play_focus")
+
+[node name="how_to_play" type="TextureButton" parent="Design/Buttons" unique_id=641059417]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 210.0
+offset_right = 400.0
+offset_bottom = 258.0
+texture_normal = ExtResource("how_to_play_normal")
+texture_pressed = ExtResource("how_to_play_pressed")
+texture_hover = ExtResource("how_to_play_focus")
+texture_disabled = ExtResource("how_to_play_disabled")
+texture_focused = ExtResource("how_to_play_focus")
+
+[node name="sound" type="TextureButton" parent="Design/Buttons" unique_id=2075623972]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 264.0
+offset_right = 400.0
+offset_bottom = 312.0
+texture_normal = ExtResource("sound_normal")
+texture_pressed = ExtResource("sound_pressed")
+texture_hover = ExtResource("sound_focus")
+texture_disabled = ExtResource("sound_disabled")
+texture_focused = ExtResource("sound_focus")

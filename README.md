@@ -1,8 +1,20 @@
 # Hora de Aventura: O Portal da Amizade
 
-Documentação da entrega do projeto acadêmico de plataforma 2D cooperativa em Godot 4.7.2.
+Projeto acadêmico de plataforma 2D cooperativa em Godot 4.7.2, com o projeto completo e sua documentação.
 
-Este repositório reúne o relatório integral, inventário dos personagens, capturas reais e resultados dos testes. O escopo desta publicação é documental.
+O projeto do Godot está na pasta [`jogo/`](jogo/). A documentação inclui relatório integral, inventário dos seis personagens, capturas reais e resultados dos testes. Caches e backups locais ficam fora do versionamento.
+
+## Abrir o projeto
+
+1. Clone ou baixe este repositório.
+2. No **Godot 4.7.2**, importe [`jogo/project.godot`](jogo/project.godot) e aguarde a importação normal dos assets.
+3. Use **F5** para o fluxo atual do menu e a primeira fase.
+4. Para o Reino Gelado, abra [`jogo/level_2.tscn`](jogo/level_2.tscn) e use **F6**. Na raiz, mantenha **Test Start = Normal**; **Cake Player Id** permite alternar P1/P2.
+5. As salas individuais estão em [`jogo/tests/`](jogo/tests/).
+
+O jogo permanece em desenvolvimento: a primeira fase é a base aprovada; a segunda tem cenário e percurso demonstrável, com coleta do cristal e conclusão conjunta pendentes. O README interno de `jogo/` registra uma etapa anterior da primeira fase; o relatório e o inventário abaixo descrevem o estado atualizado.
+
+Referências fornecidas: [SGDD.pdf](docs/SGDD.pdf), [cronograma-disciplina.png](docs/cronograma-disciplina.png).
 
 - [Relatório original completo](docs/ENTREGA_ORIGINAL.md)
 - [Arquivos alterados e adicionados](docs/ARQUIVOS.md)

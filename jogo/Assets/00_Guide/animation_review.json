@@ -1,0 +1,704 @@
+{
+  "revision": 2,
+  "character_animations": [
+    {
+      "character": "finn",
+      "animation": "idle",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 5.0,
+      "loop": true,
+      "intent": "quiet_loop",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "walk",
+      "playback_frames": 8,
+      "unique_poses": 8,
+      "fps": 12.0,
+      "loop": true,
+      "intent": "locomotion_cycle",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "jump",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 10.0,
+      "loop": false,
+      "intent": "ascent_then_hold",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "fall",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_air_pose",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "interact",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "celebrate",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "push",
+      "playback_frames": 6,
+      "unique_poses": 4,
+      "fps": 10.0,
+      "loop": true,
+      "intent": "held_ability_loop",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "pull_lever",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "jump_start",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 18.0,
+      "loop": false,
+      "intent": "takeoff",
+      "reviewed": true
+    },
+    {
+      "character": "finn",
+      "animation": "land",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 16.0,
+      "loop": false,
+      "intent": "landing_recovery",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "idle",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 5.0,
+      "loop": true,
+      "intent": "quiet_loop",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "walk",
+      "playback_frames": 8,
+      "unique_poses": 8,
+      "fps": 12.0,
+      "loop": true,
+      "intent": "locomotion_cycle",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "jump",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 10.0,
+      "loop": false,
+      "intent": "ascent_then_hold",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "fall",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_air_pose",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "interact",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "celebrate",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "bridge_extend",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "elastic_transition",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "bridge_retract",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "elastic_transition",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "jump_start",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 18.0,
+      "loop": false,
+      "intent": "takeoff",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "land",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 16.0,
+      "loop": false,
+      "intent": "landing_recovery",
+      "reviewed": true
+    },
+    {
+      "character": "jake",
+      "animation": "bridge_hold",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_ability_pose",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "idle",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 5.0,
+      "loop": true,
+      "intent": "quiet_loop",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "walk",
+      "playback_frames": 8,
+      "unique_poses": 8,
+      "fps": 12.0,
+      "loop": true,
+      "intent": "locomotion_cycle",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "jump",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 10.0,
+      "loop": false,
+      "intent": "ascent_then_hold",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "fall",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_air_pose",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "interact",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "celebrate",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "push",
+      "playback_frames": 6,
+      "unique_poses": 4,
+      "fps": 10.0,
+      "loop": true,
+      "intent": "held_ability_loop",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "crank",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "jump_start",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 18.0,
+      "loop": false,
+      "intent": "takeoff",
+      "reviewed": true
+    },
+    {
+      "character": "fionna",
+      "animation": "land",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 16.0,
+      "loop": false,
+      "intent": "landing_recovery",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "idle",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 5.0,
+      "loop": true,
+      "intent": "quiet_loop",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "walk",
+      "playback_frames": 8,
+      "unique_poses": 8,
+      "fps": 12.0,
+      "loop": true,
+      "intent": "locomotion_cycle",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "jump",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 10.0,
+      "loop": false,
+      "intent": "ascent_then_hold",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "fall",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_air_pose",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "interact",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "celebrate",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "crawl",
+      "playback_frames": 6,
+      "unique_poses": 4,
+      "fps": 10.0,
+      "loop": true,
+      "intent": "held_ability_loop",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "stretch",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "elastic_transition",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "jump_start",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 18.0,
+      "loop": false,
+      "intent": "takeoff",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "land",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 16.0,
+      "loop": false,
+      "intent": "landing_recovery",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "stretch_hold",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_ability_pose",
+      "reviewed": true
+    },
+    {
+      "character": "cake",
+      "animation": "stretch_retract",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "elastic_recovery",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "idle",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 5.0,
+      "loop": true,
+      "intent": "quiet_loop",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "walk",
+      "playback_frames": 8,
+      "unique_poses": 8,
+      "fps": 12.0,
+      "loop": true,
+      "intent": "locomotion_cycle",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "jump",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 10.0,
+      "loop": false,
+      "intent": "ascent_then_hold",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "fall",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_air_pose",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "interact",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "celebrate",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "float",
+      "playback_frames": 6,
+      "unique_poses": 4,
+      "fps": 10.0,
+      "loop": true,
+      "intent": "held_ability_loop",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "play_music",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "jump_start",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 18.0,
+      "loop": false,
+      "intent": "takeoff",
+      "reviewed": true
+    },
+    {
+      "character": "marceline",
+      "animation": "land",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 16.0,
+      "loop": false,
+      "intent": "landing_recovery",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "idle",
+      "playback_frames": 4,
+      "unique_poses": 4,
+      "fps": 5.0,
+      "loop": true,
+      "intent": "quiet_loop",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "walk",
+      "playback_frames": 8,
+      "unique_poses": 8,
+      "fps": 12.0,
+      "loop": true,
+      "intent": "locomotion_cycle",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "jump",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 10.0,
+      "loop": false,
+      "intent": "ascent_then_hold",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "fall",
+      "playback_frames": 1,
+      "unique_poses": 1,
+      "fps": 1.0,
+      "loop": true,
+      "intent": "held_air_pose",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "interact",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "celebrate",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "terminal",
+      "playback_frames": 6,
+      "unique_poses": 4,
+      "fps": 10.0,
+      "loop": true,
+      "intent": "held_ability_loop",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "connect_power",
+      "playback_frames": 9,
+      "unique_poses": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "action_and_return",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "jump_start",
+      "playback_frames": 3,
+      "unique_poses": 3,
+      "fps": 18.0,
+      "loop": false,
+      "intent": "takeoff",
+      "reviewed": true
+    },
+    {
+      "character": "bmo",
+      "animation": "land",
+      "playback_frames": 2,
+      "unique_poses": 2,
+      "fps": 16.0,
+      "loop": false,
+      "intent": "landing_recovery",
+      "reviewed": true
+    }
+  ],
+  "effects": {
+    "dust": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "one_shot_hide_on_finish"
+    },
+    "interaction": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "one_shot_hide_on_finish"
+    },
+    "crystal_collect": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "one_shot_hide_on_finish"
+    },
+    "energy_pulse": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "one_shot_hide_on_finish"
+    },
+    "checkpoint": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "one_shot_hide_on_finish"
+    },
+    "music": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "one_shot_hide_on_finish"
+    },
+    "portal": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": true,
+      "intent": "stable_loop"
+    },
+    "confetti": {
+      "frames": 4,
+      "fps": 12.0,
+      "loop": false,
+      "intent": "one_shot_hide_on_finish"
+    }
+  },
+  "object_transitions_reviewed": [
+    "gate",
+    "crank"
+  ],
+  "static_state_resources_reviewed": [
+    "lever",
+    "plate",
+    "checkpoint",
+    "switch",
+    "terminal",
+    "battery",
+    "receiver",
+    "double_receiver",
+    "portal",
+    "gears",
+    "access",
+    "exit"
+  ],
+  "note": "Static state images and held poses intentionally do not cycle. All motion claims must also pass the playable-state tests."
+}

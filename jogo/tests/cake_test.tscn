@@ -1,0 +1,227 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" path="res://tests/cake_test.gd" id="1"]
+
+[ext_resource type="PackedScene" path="res://Assets/01_Characters/cake/playable.tscn" id="2"]
+
+[ext_resource type="PackedScene" path="res://Assets/01_Characters/fionna/playable.tscn" id="3"]
+
+[ext_resource type="TileSet" path="res://Assets/02_Environments/01_tree_house/tileset.tres" id="4"]
+
+[ext_resource type="Texture2D" path="res://Assets/02_Environments/01_tree_house/background.png" id="5"]
+
+[ext_resource type="Script" path="res://tests/cake_tunnel.gd" id="6"]
+
+[ext_resource type="Script" path="res://tests/cake_anchor.gd" id="7"]
+
+[ext_resource type="Script" path="res://tests/fionna_crank.gd" id="8"]
+
+[ext_resource type="SpriteFrames" path="res://Assets/03_Objects_and_Puzzles/Godot/crank.tres" id="9"]
+
+[ext_resource type="Script" path="res://tests/fionna_platform.gd" id="10"]
+
+[ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="11"]
+
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/moving_platform.png" id="12"]
+
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/bridge_anchor.png" id="13"]
+
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/tunnel_left.png" id="14"]
+
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/tunnel_right.png" id="15"]
+
+[sub_resource type="RectangleShape2D" id="Entry"]
+size = Vector2(64,60)
+
+[sub_resource type="RectangleShape2D" id="AnchorRange"]
+size = Vector2(86,80)
+
+[sub_resource type="RectangleShape2D" id="CrankRange"]
+size = Vector2(110,96)
+
+[sub_resource type="RectangleShape2D" id="Platform"]
+size = Vector2(58,12)
+
+[node name="CakeTest" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(576,324)
+scale = Vector2(1.8,1.8)
+texture = ExtResource("5")
+texture_filter = 1
+
+[node name="Terrain" type="TileMap" parent="."]
+tile_set = ExtResource("4")
+format = 2
+
+[node name="Cake" parent="." instance=ExtResource("2")]
+position = Vector2(256,465)
+max_partner_distance = 1100.0
+
+[node name="Fionna" parent="." instance=ExtResource("3")]
+position = Vector2(160,465)
+max_partner_distance = 1100.0
+
+[node name="Tunnel" type="Node2D" parent="."]
+script = ExtResource("6")
+
+[node name="LeftEntry" type="Area2D" parent="Tunnel"]
+position = Vector2(292,480)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tunnel/LeftEntry"]
+shape = SubResource("Entry")
+
+[node name="Marker" type="Sprite2D" parent="Tunnel/LeftEntry"]
+position = Vector2(0,6)
+scale = Vector2(0.5,0.5)
+z_index = -1
+texture = ExtResource("14")
+texture_filter = 1
+
+[node name="RightEntry" type="Area2D" parent="Tunnel"]
+position = Vector2(508,480)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tunnel/RightEntry"]
+shape = SubResource("Entry")
+
+[node name="Marker" type="Sprite2D" parent="Tunnel/RightEntry"]
+position = Vector2(0,6)
+scale = Vector2(0.5,0.5)
+z_index = -1
+texture = ExtResource("15")
+texture_filter = 1
+
+[node name="Prompt" type="Label" parent="Tunnel"]
+offset_left = 238.0
+offset_top = 408.0
+text = "TÚNEL · Cake"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="Anchor" type="Area2D" parent="."]
+position = Vector2(912,350.35286)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Anchor"]
+position = Vector2(0,12)
+shape = SubResource("AnchorRange")
+
+[node name="Marker" type="Sprite2D" parent="Anchor"]
+position = Vector2(-28,16)
+texture = ExtResource("13")
+texture_filter = 1
+
+[node name="Prompt" type="Label" parent="Anchor"]
+offset_left = -168.0
+offset_top = -60.0
+text = "ÂNCORA · ensaio SEM APOIO"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="Crank" type="Area2D" parent="."]
+position = Vector2(1060,350)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("8")
+platform_path = NodePath("../ExtendPlatform")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crank"]
+shape = SubResource("CrankRange")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Crank"]
+texture_filter = 1
+sprite_frames = ExtResource("9")
+animation = &"crank_0"
+autoplay = "crank_0"
+
+[node name="Prompt" type="Label" parent="Crank"]
+offset_left = -70.0
+offset_top = -76.0
+text = ""
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="Status" type="Label" parent="Crank"]
+offset_left = -92.0
+offset_top = 68.0
+text = "Passagem permanente"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="ExtendPlatform" type="AnimatableBody2D" parent="."]
+position = Vector2(1056,382.35286)
+z_index = 1
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("10")
+
+[node name="Sprite2D" type="Sprite2D" parent="ExtendPlatform"]
+position = Vector2(0,2)
+texture = ExtResource("12")
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtendPlatform"]
+position = Vector2(0,6)
+shape = SubResource("Platform")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576,324)
+
+[node name="Instructions" type="CanvasLayer" parent="."]
+
+[node name="Text" type="Label" parent="Instructions"]
+offset_left = 18.0
+offset_top = 10.0
+text = ""
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="TunnelHint" type="Label" parent="."]
+offset_left = 255.0
+offset_top = 585.0
+text = "E/Enter: rastejar · Esc: levantar somente com espaço"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="GapHint" type="Label" parent="."]
+offset_left = 790.0
+offset_top = 174.0
+text = "PONTE DE CAKE\nEspere a formação completa.\nFionna: pequeno salto de entrada e saída; manivela do outro lado."
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="RoleHint" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 620.0
+text = "Inspector da raiz: Cake Player Id = 1 ou 2. Esta sala não substitui nenhuma fase."
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 5
+
+[node name="Roof" type="TileMap" parent="."]
+position = Vector2(0,-6)
+tile_set = ExtResource("4")
+format = 2

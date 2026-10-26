@@ -1,0 +1,90 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://Assets/04_Interface/Godot/screen_controller.gd" id="script"]
+[ext_resource type="Texture2D" path="res://Assets/02_Environments/01_tree_house/background.png" id="bg"]
+[ext_resource type="FontFile" path="res://Assets/08_Fonts/PixelifySans.ttf" id="font"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/continue_normal.png" id="continue_normal"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/continue_focus.png" id="continue_focus"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/continue_pressed.png" id="continue_pressed"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/continue_disabled.png" id="continue_disabled"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/restart_normal.png" id="restart_normal"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/restart_focus.png" id="restart_focus"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/restart_pressed.png" id="restart_pressed"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/restart_disabled.png" id="restart_disabled"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/main_menu_normal.png" id="main_menu_normal"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/main_menu_focus.png" id="main_menu_focus"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/main_menu_pressed.png" id="main_menu_pressed"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/main_menu_disabled.png" id="main_menu_disabled"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(640, 360)
+texture_filter = 1
+script = ExtResource("script")
+[node name="Design" type="Control" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
+[node name="Background" type="TextureRect" parent="Design"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("bg")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+[node name="Shade" type="ColorRect" parent="Design"]
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.03, 0.08, 0.13, 0.4)
+mouse_filter = 2
+[node name="Title" type="Label" parent="Design"]
+offset_left = 0.0
+offset_top = 36.0
+offset_right = 640.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(1, 0.94, 0.77, 1)
+theme_override_colors/font_shadow_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "PAUSA"
+horizontal_alignment = 1
+[node name="Buttons" type="Control" parent="Design"]
+[node name="continue" type="TextureButton" parent="Design/Buttons"]
+offset_left = 240.0
+offset_top = 156.0
+offset_right = 400.0
+offset_bottom = 204.0
+focus_mode = 2
+texture_normal = ExtResource("continue_normal")
+texture_pressed = ExtResource("continue_pressed")
+texture_hover = ExtResource("continue_focus")
+texture_disabled = ExtResource("continue_disabled")
+texture_focused = ExtResource("continue_focus")
+[node name="restart" type="TextureButton" parent="Design/Buttons"]
+offset_left = 240.0
+offset_top = 210.0
+offset_right = 400.0
+offset_bottom = 258.0
+focus_mode = 2
+texture_normal = ExtResource("restart_normal")
+texture_pressed = ExtResource("restart_pressed")
+texture_hover = ExtResource("restart_focus")
+texture_disabled = ExtResource("restart_disabled")
+texture_focused = ExtResource("restart_focus")
+[node name="main_menu" type="TextureButton" parent="Design/Buttons"]
+offset_left = 240.0
+offset_top = 264.0
+offset_right = 400.0
+offset_bottom = 312.0
+focus_mode = 2
+texture_normal = ExtResource("main_menu_normal")
+texture_pressed = ExtResource("main_menu_pressed")
+texture_hover = ExtResource("main_menu_focus")
+texture_disabled = ExtResource("main_menu_disabled")
+texture_focused = ExtResource("main_menu_focus")

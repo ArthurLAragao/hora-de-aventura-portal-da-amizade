@@ -1,0 +1,9 @@
+{
+	"audio_files": 36,
+	"characters": 6,
+	"engine": "4.7.2-stable (official)",
+	"errors": [],
+	"passed": true,
+	"textures_loaded": 716,
+	"tilesets": 6
+}

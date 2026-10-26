@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c73ssjitns4x5"]
+
+[ext_resource type="Script" uid="uid://vtcp4tuqqatj" path="res://player.gd" id="1_pqb02"]
+[ext_resource type="SpriteFrames" path="res://Assets/01_Characters/finn/animations.tres" id="2_finn_frames"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3ec0"]
+size = Vector2(21, 52)
+
+[node name="Player" type="CharacterBody2D" unique_id=1599581884]
+script = ExtResource("1_pqb02")
+character_id = &"finn"
+allowed_abilities = Array[StringName]([&"push", &"lever"])
+coyote_time = 0.03
+jump_buffer_time = 0.12
+collision_layer = 2
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=573081494]
+position = Vector2(-0.5, 6)
+shape = SubResource("RectangleShape2D_v3ec0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=417046172]
+z_index = 2
+texture_filter = 1
+sprite_frames = ExtResource("2_finn_frames")
+animation = &"idle"
+autoplay = "idle"

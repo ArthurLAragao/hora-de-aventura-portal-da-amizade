@@ -1,0 +1,450 @@
+{
+	"character_states_checked": 63,
+	"effects_checked": 8,
+	"errors": [],
+	"object_transitions_checked": 4,
+	"passed": true,
+	"states": [
+		{
+			"animation": "idle",
+			"character": "finn",
+			"frames_seen": 4,
+			"intent": "quiet_loop",
+			"playback_frames": 4
+		},
+		{
+			"animation": "walk",
+			"character": "finn",
+			"frames_seen": 8,
+			"intent": "locomotion_cycle",
+			"playback_frames": 8
+		},
+		{
+			"animation": "jump",
+			"character": "finn",
+			"frames_seen": 2,
+			"intent": "ascent_then_hold",
+			"playback_frames": 2
+		},
+		{
+			"animation": "fall",
+			"character": "finn",
+			"frames_seen": 1,
+			"intent": "held_air_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "interact",
+			"character": "finn",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "celebrate",
+			"character": "finn",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "push",
+			"character": "finn",
+			"frames_seen": 6,
+			"intent": "held_ability_loop",
+			"playback_frames": 6
+		},
+		{
+			"animation": "pull_lever",
+			"character": "finn",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "jump_start",
+			"character": "finn",
+			"frames_seen": 3,
+			"intent": "takeoff",
+			"playback_frames": 3
+		},
+		{
+			"animation": "land",
+			"character": "finn",
+			"frames_seen": 2,
+			"intent": "landing_recovery",
+			"playback_frames": 2
+		},
+		{
+			"animation": "idle",
+			"character": "jake",
+			"frames_seen": 4,
+			"intent": "quiet_loop",
+			"playback_frames": 4
+		},
+		{
+			"animation": "walk",
+			"character": "jake",
+			"frames_seen": 8,
+			"intent": "locomotion_cycle",
+			"playback_frames": 8
+		},
+		{
+			"animation": "jump",
+			"character": "jake",
+			"frames_seen": 2,
+			"intent": "ascent_then_hold",
+			"playback_frames": 2
+		},
+		{
+			"animation": "fall",
+			"character": "jake",
+			"frames_seen": 1,
+			"intent": "held_air_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "interact",
+			"character": "jake",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "celebrate",
+			"character": "jake",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "bridge_extend",
+			"character": "jake",
+			"frames_seen": 4,
+			"intent": "elastic_transition",
+			"playback_frames": 4
+		},
+		{
+			"animation": "bridge_retract",
+			"character": "jake",
+			"frames_seen": 4,
+			"intent": "elastic_transition",
+			"playback_frames": 4
+		},
+		{
+			"animation": "jump_start",
+			"character": "jake",
+			"frames_seen": 3,
+			"intent": "takeoff",
+			"playback_frames": 3
+		},
+		{
+			"animation": "land",
+			"character": "jake",
+			"frames_seen": 2,
+			"intent": "landing_recovery",
+			"playback_frames": 2
+		},
+		{
+			"animation": "bridge_hold",
+			"character": "jake",
+			"frames_seen": 1,
+			"intent": "held_ability_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "idle",
+			"character": "fionna",
+			"frames_seen": 4,
+			"intent": "quiet_loop",
+			"playback_frames": 4
+		},
+		{
+			"animation": "walk",
+			"character": "fionna",
+			"frames_seen": 8,
+			"intent": "locomotion_cycle",
+			"playback_frames": 8
+		},
+		{
+			"animation": "jump",
+			"character": "fionna",
+			"frames_seen": 2,
+			"intent": "ascent_then_hold",
+			"playback_frames": 2
+		},
+		{
+			"animation": "fall",
+			"character": "fionna",
+			"frames_seen": 1,
+			"intent": "held_air_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "interact",
+			"character": "fionna",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "celebrate",
+			"character": "fionna",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "push",
+			"character": "fionna",
+			"frames_seen": 6,
+			"intent": "held_ability_loop",
+			"playback_frames": 6
+		},
+		{
+			"animation": "crank",
+			"character": "fionna",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "jump_start",
+			"character": "fionna",
+			"frames_seen": 3,
+			"intent": "takeoff",
+			"playback_frames": 3
+		},
+		{
+			"animation": "land",
+			"character": "fionna",
+			"frames_seen": 2,
+			"intent": "landing_recovery",
+			"playback_frames": 2
+		},
+		{
+			"animation": "idle",
+			"character": "cake",
+			"frames_seen": 4,
+			"intent": "quiet_loop",
+			"playback_frames": 4
+		},
+		{
+			"animation": "walk",
+			"character": "cake",
+			"frames_seen": 8,
+			"intent": "locomotion_cycle",
+			"playback_frames": 8
+		},
+		{
+			"animation": "jump",
+			"character": "cake",
+			"frames_seen": 2,
+			"intent": "ascent_then_hold",
+			"playback_frames": 2
+		},
+		{
+			"animation": "fall",
+			"character": "cake",
+			"frames_seen": 1,
+			"intent": "held_air_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "interact",
+			"character": "cake",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "celebrate",
+			"character": "cake",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "crawl",
+			"character": "cake",
+			"frames_seen": 6,
+			"intent": "held_ability_loop",
+			"playback_frames": 6
+		},
+		{
+			"animation": "stretch",
+			"character": "cake",
+			"frames_seen": 3,
+			"intent": "elastic_transition",
+			"playback_frames": 3
+		},
+		{
+			"animation": "jump_start",
+			"character": "cake",
+			"frames_seen": 3,
+			"intent": "takeoff",
+			"playback_frames": 3
+		},
+		{
+			"animation": "land",
+			"character": "cake",
+			"frames_seen": 2,
+			"intent": "landing_recovery",
+			"playback_frames": 2
+		},
+		{
+			"animation": "stretch_hold",
+			"character": "cake",
+			"frames_seen": 1,
+			"intent": "held_ability_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "stretch_retract",
+			"character": "cake",
+			"frames_seen": 3,
+			"intent": "elastic_recovery",
+			"playback_frames": 3
+		},
+		{
+			"animation": "idle",
+			"character": "marceline",
+			"frames_seen": 4,
+			"intent": "quiet_loop",
+			"playback_frames": 4
+		},
+		{
+			"animation": "walk",
+			"character": "marceline",
+			"frames_seen": 8,
+			"intent": "locomotion_cycle",
+			"playback_frames": 8
+		},
+		{
+			"animation": "jump",
+			"character": "marceline",
+			"frames_seen": 2,
+			"intent": "ascent_then_hold",
+			"playback_frames": 2
+		},
+		{
+			"animation": "fall",
+			"character": "marceline",
+			"frames_seen": 1,
+			"intent": "held_air_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "interact",
+			"character": "marceline",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "celebrate",
+			"character": "marceline",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "float",
+			"character": "marceline",
+			"frames_seen": 6,
+			"intent": "held_ability_loop",
+			"playback_frames": 6
+		},
+		{
+			"animation": "play_music",
+			"character": "marceline",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "jump_start",
+			"character": "marceline",
+			"frames_seen": 3,
+			"intent": "takeoff",
+			"playback_frames": 3
+		},
+		{
+			"animation": "land",
+			"character": "marceline",
+			"frames_seen": 2,
+			"intent": "landing_recovery",
+			"playback_frames": 2
+		},
+		{
+			"animation": "idle",
+			"character": "bmo",
+			"frames_seen": 4,
+			"intent": "quiet_loop",
+			"playback_frames": 4
+		},
+		{
+			"animation": "walk",
+			"character": "bmo",
+			"frames_seen": 8,
+			"intent": "locomotion_cycle",
+			"playback_frames": 8
+		},
+		{
+			"animation": "jump",
+			"character": "bmo",
+			"frames_seen": 2,
+			"intent": "ascent_then_hold",
+			"playback_frames": 2
+		},
+		{
+			"animation": "fall",
+			"character": "bmo",
+			"frames_seen": 1,
+			"intent": "held_air_pose",
+			"playback_frames": 1
+		},
+		{
+			"animation": "interact",
+			"character": "bmo",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "celebrate",
+			"character": "bmo",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "terminal",
+			"character": "bmo",
+			"frames_seen": 6,
+			"intent": "held_ability_loop",
+			"playback_frames": 6
+		},
+		{
+			"animation": "connect_power",
+			"character": "bmo",
+			"frames_seen": 9,
+			"intent": "action_and_return",
+			"playback_frames": 9
+		},
+		{
+			"animation": "jump_start",
+			"character": "bmo",
+			"frames_seen": 3,
+			"intent": "takeoff",
+			"playback_frames": 3
+		},
+		{
+			"animation": "land",
+			"character": "bmo",
+			"frames_seen": 2,
+			"intent": "landing_recovery",
+			"playback_frames": 2
+		}
+	]
+}

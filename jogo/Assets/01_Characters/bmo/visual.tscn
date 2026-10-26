@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="SpriteFrames" path="res://Assets/01_Characters/bmo/animations.tres" id="1"]
+[ext_resource type="Script" path="res://Assets/01_Characters/animation_driver.gd" id="2"]
+
+[node name="BmoVisual" type="Node2D"]
+script = ExtResource("2")
+character_id = &"bmo"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+texture_filter = 1
+sprite_frames = ExtResource("1")
+animation = &"idle"
+autoplay = "idle"

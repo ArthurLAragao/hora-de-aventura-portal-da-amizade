@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://gate.gd" id="1_gate"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/gate_closed.png" id="2_closed"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/gate_open.png" id="3_open"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/door_open.wav" id="4_gate_sfx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gate"]
+size = Vector2(48, 80)
+
+[node name="Gate" type="StaticBody2D"]
+collision_layer = 1
+collision_mask = 0
+script = ExtResource("1_gate")
+closed_texture = ExtResource("2_closed")
+open_texture = ExtResource("3_open")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 8)
+texture = ExtResource("2_closed")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gate")
+
+[node name="OpenSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gate_sfx")
+volume_db = -5.0

@@ -1,0 +1,413 @@
+{
+  "characters": [
+    "finn",
+    "jake",
+    "fionna",
+    "cake",
+    "marceline",
+    "bmo"
+  ],
+  "specials": {
+    "finn": [
+      "push",
+      "pull_lever"
+    ],
+    "jake": [
+      "bridge_extend",
+      "bridge_retract"
+    ],
+    "fionna": [
+      "push",
+      "crank"
+    ],
+    "cake": [
+      "crawl",
+      "stretch"
+    ],
+    "marceline": [
+      "float",
+      "play_music"
+    ],
+    "bmo": [
+      "terminal",
+      "connect_power"
+    ]
+  },
+  "biomes": [
+    "tree_house",
+    "ice_kingdom",
+    "musical_cave",
+    "candy_workshop",
+    "mirror_tower",
+    "friendship_portal"
+  ],
+  "stage_titles": [
+    "Casa na Árvore",
+    "Reino Gelado",
+    "Caverna Musical",
+    "Oficina do Reino Doce",
+    "Torre dos Espelhos",
+    "Portal da Amizade"
+  ],
+  "common_objects": [
+    "crystal_red",
+    "crystal_orange",
+    "crystal_green",
+    "crystal_cyan",
+    "crystal_purple",
+    "crystal_pink",
+    "socket_empty",
+    "socket_filled",
+    "log",
+    "wooden_block",
+    "plate_up",
+    "plate_down",
+    "lever_off",
+    "lever_on",
+    "gate_closed",
+    "gate_open",
+    "crank_0",
+    "crank_90",
+    "wooden_bridge",
+    "bridge_anchor",
+    "moving_platform",
+    "checkpoint_off",
+    "checkpoint_on",
+    "exit_waiting",
+    "exit_ready",
+    "tunnel_left",
+    "tunnel_right",
+    "ice_block",
+    "switch_off",
+    "switch_on",
+    "stone_bridge",
+    "temporary_bridge"
+  ],
+  "advanced_objects": [
+    "rune_circle",
+    "rune_square",
+    "rune_triangle",
+    "terminal_off",
+    "terminal_on",
+    "musical_door_closed",
+    "musical_door_open",
+    "clue_panel",
+    "battery_off",
+    "battery_on",
+    "cable_horizontal",
+    "cable_vertical",
+    "cable_elbow",
+    "cable_t",
+    "cable_cross",
+    "cable_end",
+    "mirror_0",
+    "mirror_45",
+    "mirror_90",
+    "mirror_135",
+    "receiver_off",
+    "receiver_on",
+    "double_receiver_off",
+    "double_receiver_on",
+    "portal_damaged",
+    "portal_repaired",
+    "portal_active",
+    "portal_pedestal",
+    "access_off",
+    "access_on",
+    "gears_off",
+    "gears_on"
+  ],
+  "auxiliary_objects": [
+    "beam_cyan_horizontal",
+    "beam_cyan_vertical",
+    "beam_gold_horizontal",
+    "beam_gold_vertical",
+    "interaction_hand",
+    "hint_bulb",
+    "checkmark",
+    "reset_arrow",
+    "player_1_marker",
+    "player_2_marker",
+    "crystal_empty",
+    "crystal_collected",
+    "gate_half_open",
+    "crank_45",
+    "checkpoint_pin",
+    "start_flag"
+  ],
+  "effects": [
+    "dust",
+    "interaction",
+    "crystal_collect",
+    "energy_pulse",
+    "checkpoint",
+    "music",
+    "portal",
+    "confetti"
+  ],
+  "buttons": {
+    "play": "Jogar",
+    "how_to_play": "Como jogar",
+    "sound": "Som",
+    "back": "Voltar",
+    "continue": "Continuar",
+    "restart": "Reiniciar",
+    "main_menu": "Menu",
+    "exit": "Sair",
+    "repeat": "Jogar de novo"
+  },
+  "audio": [
+    {
+      "path": "Assets/07_Audio/Music/menu.wav",
+      "seconds": 17.778,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.30237711797406985
+    },
+    {
+      "path": "Assets/07_Audio/Music/01_tree_house.wav",
+      "seconds": 16.552,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.29004297615571106
+    },
+    {
+      "path": "Assets/07_Audio/Music/02_ice_kingdom.wav",
+      "seconds": 20.0,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.3031065926685488
+    },
+    {
+      "path": "Assets/07_Audio/Music/03_musical_cave.wav",
+      "seconds": 21.818,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.291083593928338
+    },
+    {
+      "path": "Assets/07_Audio/Music/04_candy_workshop.wav",
+      "seconds": 16.0,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.3194242743070783
+    },
+    {
+      "path": "Assets/07_Audio/Music/05_mirror_tower.wav",
+      "seconds": 20.87,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.2733495575998032
+    },
+    {
+      "path": "Assets/07_Audio/Music/06_friendship_portal.wav",
+      "seconds": 18.462,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.281570448668109
+    },
+    {
+      "path": "Assets/07_Audio/Music/victory.wav",
+      "seconds": 5.0,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.2
+    },
+    {
+      "path": "Assets/07_Audio/SFX/jump.wav",
+      "seconds": 0.25,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17297759358972573
+    },
+    {
+      "path": "Assets/07_Audio/SFX/land.wav",
+      "seconds": 0.33,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17511249121126576
+    },
+    {
+      "path": "Assets/07_Audio/SFX/interact.wav",
+      "seconds": 0.41,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17296358743700377
+    },
+    {
+      "path": "Assets/07_Audio/SFX/finn_push.wav",
+      "seconds": 0.49,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17314142930382045
+    },
+    {
+      "path": "Assets/07_Audio/SFX/finn_lever.wav",
+      "seconds": 0.25,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729080435376079
+    },
+    {
+      "path": "Assets/07_Audio/SFX/jake_stretch.wav",
+      "seconds": 0.33,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17296848847830076
+    },
+    {
+      "path": "Assets/07_Audio/SFX/jake_retract.wav",
+      "seconds": 0.41,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729539124136615
+    },
+    {
+      "path": "Assets/07_Audio/SFX/fionna_crank.wav",
+      "seconds": 0.49,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17294558069749805
+    },
+    {
+      "path": "Assets/07_Audio/SFX/cake_tunnel.wav",
+      "seconds": 0.25,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17294292686054935
+    },
+    {
+      "path": "Assets/07_Audio/SFX/cake_stretch.wav",
+      "seconds": 0.33,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729443567236628
+    },
+    {
+      "path": "Assets/07_Audio/SFX/marceline_float.wav",
+      "seconds": 0.41,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17296358743700377
+    },
+    {
+      "path": "Assets/07_Audio/SFX/marceline_music.wav",
+      "seconds": 0.49,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.4623393439722464
+    },
+    {
+      "path": "Assets/07_Audio/SFX/bmo_terminal.wav",
+      "seconds": 0.25,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729080435376079
+    },
+    {
+      "path": "Assets/07_Audio/SFX/bmo_power.wav",
+      "seconds": 0.33,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729554152967569
+    },
+    {
+      "path": "Assets/07_Audio/SFX/switch.wav",
+      "seconds": 0.41,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729539124136615
+    },
+    {
+      "path": "Assets/07_Audio/SFX/door_open.wav",
+      "seconds": 0.49,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17294558069749805
+    },
+    {
+      "path": "Assets/07_Audio/SFX/crystal_collect.wav",
+      "seconds": 0.9,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.47802351789952224
+    },
+    {
+      "path": "Assets/07_Audio/SFX/checkpoint.wav",
+      "seconds": 0.33,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.4104452836983602
+    },
+    {
+      "path": "Assets/07_Audio/SFX/puzzle_complete.wav",
+      "seconds": 0.9,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.47802351789952224
+    },
+    {
+      "path": "Assets/07_Audio/SFX/portal_activate.wav",
+      "seconds": 1.6,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17297239818192345
+    },
+    {
+      "path": "Assets/07_Audio/SFX/portal_loop.wav",
+      "seconds": 2.4,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.15342382095693186
+    },
+    {
+      "path": "Assets/07_Audio/SFX/ui_focus.wav",
+      "seconds": 0.33,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729554152967569
+    },
+    {
+      "path": "Assets/07_Audio/SFX/ui_confirm.wav",
+      "seconds": 0.41,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.1729539124136615
+    },
+    {
+      "path": "Assets/07_Audio/SFX/ui_back.wav",
+      "seconds": 0.49,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17294558069749805
+    },
+    {
+      "path": "Assets/07_Audio/SFX/reset.wav",
+      "seconds": 0.25,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17294292686054935
+    },
+    {
+      "path": "Assets/07_Audio/SFX/mirror_turn.wav",
+      "seconds": 0.33,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17503530879404697
+    },
+    {
+      "path": "Assets/07_Audio/SFX/beam_receiver.wav",
+      "seconds": 0.41,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17296358743700377
+    },
+    {
+      "path": "Assets/07_Audio/SFX/platform_move.wav",
+      "seconds": 0.49,
+      "sample_rate": 22050,
+      "channels": 2,
+      "peak": 0.17294816850923794
+    }
+  ]
+}

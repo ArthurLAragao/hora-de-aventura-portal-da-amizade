@@ -1,0 +1,1 @@
+High-resolution image-generation originals. Engine-ready derivatives are in the numbered asset folders. These source sheets are excluded from Godot import using .gdignore, and are retained for provenance and future revisions.

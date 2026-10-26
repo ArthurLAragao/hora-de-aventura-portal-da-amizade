@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "method": "Visible on-page controls and DOM readouts through the in-app browser. Walk tests used the room one-second moving-cycle button.",
+  "characters_checked": [
+    "finn",
+    "jake",
+    "fionna",
+    "cake",
+    "marceline",
+    "bmo"
+  ],
+  "walk_frames_seen_per_character": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "walk_test_returned_to_idle": true,
+  "character_selection": true,
+  "jump_key_observed": true,
+  "pause_position_and_frame_unchanged": true,
+  "resume_control": true,
+  "catalogue_uses_eight_frame_12fps_walk": true,
+  "catalogue_explicit_play_pause_controls": true,
+  "console_errors": 0,
+  "broken_loaded_images": 0,
+  "horizontal_overflow": false,
+  "viewport_width": 1280,
+  "limits": "Native hardware key hold duration was not measured in the browser. Godot tests cover mapped key events and both player input routes.",
+  "catalogue_pause_and_selection": {
+    "passed": true,
+    "paused_finn_frame_before": "4,1",
+    "paused_finn_frame_after": "4,1",
+    "selecting_interact_resumed_playback": true,
+    "interact_counter": "9 playback frames · 12 fps"
+  }
+}

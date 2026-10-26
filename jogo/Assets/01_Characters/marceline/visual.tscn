@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="SpriteFrames" path="res://Assets/01_Characters/marceline/animations.tres" id="1"]
+[ext_resource type="Script" path="res://marceline_player.gd" id="2"]
+
+[sub_resource type="RectangleShape2D" id="Body"]
+size = Vector2(22, 54)
+
+[node name="MarcelineVisual" type="CharacterBody2D"]
+script = ExtResource("2")
+character_id = &"marceline"
+allowed_abilities = Array[StringName]([&"float", &"music"])
+coyote_time = 0.03
+jump_buffer_time = 0.12
+collision_layer = 2
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("Body")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+sprite_frames = ExtResource("1")
+animation = &"idle"
+autoplay = "idle"

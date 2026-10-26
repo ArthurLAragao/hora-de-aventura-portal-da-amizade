@@ -1,0 +1,12 @@
+# Godot-generated caches
+**/.godot/
+**/.git/
+# Local backups and credentials
+**/.env
+**/.env.*
+**/*.pem
+**/*.p12
+**/*.pfx
+**/*.key
+/backups/
+/work/

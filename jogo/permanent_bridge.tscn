@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://permanent_bridge.gd" id="1_bridge"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/wooden_bridge.png" id="2_bridge"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/platform_move.wav" id="3_move_sfx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_permanent_bridge"]
+size = Vector2(176, 18)
+
+[node name="PermanentBridge" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_bridge")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bridge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_permanent_bridge")
+
+[node name="MoveSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_move_sfx")
+volume_db = -5.0

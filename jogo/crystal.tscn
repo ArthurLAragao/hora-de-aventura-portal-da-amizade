@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://crystal.gd" id="1_crystal"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/crystal_cyan.png" id="2_crystal"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/crystal_collect.wav" id="3_collect_sfx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_crystal"]
+radius = 28.0
+
+[node name="FriendshipCrystal" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_crystal")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_crystal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_crystal")
+
+[node name="CollectSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_collect_sfx")
+volume_db = -5.0

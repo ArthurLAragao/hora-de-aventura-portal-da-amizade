@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://two_player_puzzle.gd" id="1_puzzle"]
+[ext_resource type="PackedScene" path="res://pressure_plate.tscn" id="2_plate"]
+[ext_resource type="PackedScene" path="res://gate.tscn" id="3_gate"]
+
+[node name="TwoPlayerPuzzle" type="Node2D"]
+script = ExtResource("1_puzzle")
+
+[node name="FinnPlate" parent="." instance=ExtResource("2_plate")]
+position = Vector2(-56, 0)
+required_player_id = 1
+
+[node name="JakePlate" parent="." instance=ExtResource("2_plate")]
+position = Vector2(56, 0)
+required_player_id = 2
+
+[node name="Gate" parent="." instance=ExtResource("3_gate")]
+position = Vector2(110, -40)

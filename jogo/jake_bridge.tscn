@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://jake_bridge.gd" id="1_bridge"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/bridge_anchor.png" id="2_anchor"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/temporary_bridge.png" id="3_bridge"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/jake_stretch.wav" id="4_stretch"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/jake_retract.wav" id="5_retract"]
+[ext_resource type="Script" path="res://jake_bridge_visual.gd" id="6_visual"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anchor"]
+size = Vector2(8, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bridge"]
+size = Vector2(178, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_marker"]
+atlas = ExtResource("2_anchor")
+region = Rect2(14, 56, 36, 5)
+
+[node name="JakeBridge" type="Node2D"]
+script = ExtResource("1_bridge")
+
+[node name="AnchorSprite" type="Sprite2D" parent="."]
+position = Vector2(-38, 0)
+texture = ExtResource("2_anchor")
+
+[node name="ActivationMarker" type="Sprite2D" parent="."]
+position = Vector2(-18, 26.3528614)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+texture = SubResource("AtlasTexture_marker")
+centered = false
+
+[node name="BridgeVisual" type="Node2D" parent="."]
+visible = false
+z_index = 2
+texture_filter = 1
+script = ExtResource("6_visual")
+
+[node name="ActivationArea" type="Area2D" parent="."]
+position = Vector2(-4, -8)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActivationArea"]
+shape = SubResource("RectangleShape2D_anchor")
+
+[node name="BridgeBody" type="StaticBody2D" parent="."]
+position = Vector2(71, 24)
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="BridgeBody"]
+visible = false
+texture = ExtResource("3_bridge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BridgeBody"]
+shape = SubResource("RectangleShape2D_bridge")
+
+[node name="StretchSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_stretch")
+volume_db = -5.0
+
+[node name="RetractSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_retract")
+volume_db = -5.0

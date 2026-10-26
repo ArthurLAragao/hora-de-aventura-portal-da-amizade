@@ -1,0 +1,201 @@
+{
+	"characters": [
+		{
+			"air_states": [
+				"jump",
+				"fall",
+				"land",
+				"idle"
+			],
+			"character": "finn",
+			"tested": [
+				"idle",
+				"walk",
+				"direction",
+				"jump",
+				"fall",
+				"land",
+				"interact",
+				"primary",
+				"secondary",
+				"celebrate"
+			],
+			"walk_animation_starts": 1,
+			"walk_frames_visited": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"air_states": [
+				"jump",
+				"fall",
+				"land",
+				"idle"
+			],
+			"character": "jake",
+			"tested": [
+				"idle",
+				"walk",
+				"direction",
+				"jump",
+				"fall",
+				"land",
+				"interact",
+				"primary",
+				"secondary",
+				"celebrate"
+			],
+			"walk_animation_starts": 1,
+			"walk_frames_visited": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"air_states": [
+				"jump",
+				"fall",
+				"land",
+				"idle"
+			],
+			"character": "fionna",
+			"tested": [
+				"idle",
+				"walk",
+				"direction",
+				"jump",
+				"fall",
+				"land",
+				"interact",
+				"primary",
+				"secondary",
+				"celebrate"
+			],
+			"walk_animation_starts": 1,
+			"walk_frames_visited": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"air_states": [
+				"jump",
+				"fall",
+				"land",
+				"idle"
+			],
+			"character": "cake",
+			"tested": [
+				"idle",
+				"walk",
+				"direction",
+				"jump",
+				"fall",
+				"land",
+				"interact",
+				"primary",
+				"secondary",
+				"celebrate"
+			],
+			"walk_animation_starts": 1,
+			"walk_frames_visited": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"air_states": [
+				"jump",
+				"fall",
+				"land",
+				"idle"
+			],
+			"character": "marceline",
+			"tested": [
+				"idle",
+				"walk",
+				"direction",
+				"jump",
+				"fall",
+				"land",
+				"interact",
+				"primary",
+				"secondary",
+				"celebrate"
+			],
+			"walk_animation_starts": 1,
+			"walk_frames_visited": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"air_states": [
+				"jump",
+				"fall",
+				"land",
+				"idle"
+			],
+			"character": "bmo",
+			"tested": [
+				"idle",
+				"walk",
+				"direction",
+				"jump",
+				"fall",
+				"land",
+				"interact",
+				"primary",
+				"secondary",
+				"celebrate"
+			],
+			"walk_animation_starts": 1,
+			"walk_frames_visited": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"checks": 133,
+	"engine": "4.7.2-stable (official)",
+	"errors": [],
+	"passed": true,
+	"scope": "Native Godot animation test room using actual movement and input actions, not the six-stage game."
+}

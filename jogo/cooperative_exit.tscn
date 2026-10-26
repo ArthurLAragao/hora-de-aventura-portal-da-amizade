@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://cooperative_exit.gd" id="1_exit"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/start_flag.png" id="2_flag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(96, 96)
+
+[node name="CooperativeExit" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_exit")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_flag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="Completion" type="Label" parent="."]
+visible = false
+position = Vector2(-150, -120)
+text = "Cristal recuperado! Fase concluida!"

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://cake_player.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Assets/01_Characters/cake/visual.tscn" id="2"]
+[sub_resource type="RectangleShape2D" id="Body"]
+size = Vector2(30,28)
+resource_local_to_scene = true
+[node name="Cake" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1")
+character_id = &"cake"
+allowed_abilities = Array[StringName]([&"crawl", &"stretch"])
+coyote_time = 0.03
+jump_buffer_time = 0.12
+animated_sprite_path = NodePath("Visual/AnimatedSprite2D")
+[node name="Visual" parent="." instance=ExtResource("2")]
+position = Vector2(0,32)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0,18)
+shape = SubResource("Body")

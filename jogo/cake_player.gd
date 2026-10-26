@@ -1,0 +1,113 @@
+extends "res://player.gd"
+@export_range(40,140,1) var crawl_speed: float = 100.0
+var crawling := false
+var crawl_owner: Node
+var pose_owner: Node
+var _needed_low := false
+var _jump_start_left := 0.0
+@onready var body: CollisionShape2D = $CollisionShape2D
+var _normal_shape: RectangleShape2D
+var _low_shape: RectangleShape2D
+
+func _ready() -> void:
+	super._ready()
+	_normal_shape = body.shape.duplicate() as RectangleShape2D
+	_low_shape = RectangleShape2D.new()
+	_low_shape.size = Vector2(38,21)
+	body.shape = _normal_shape
+
+func _physics_process(delta: float) -> void:
+	_jump_start_left = maxf(0,_jump_start_left-delta)
+	if is_instance_valid(pose_owner):
+		velocity = Vector2.ZERO
+		_jump_buffer_left = 0
+		_coyote_left = 0
+		_play_motion_animation(animation_override)
+		return
+	if movement_locked:
+		movement_locked = false
+		animation_override = &""
+	if crawling:
+		if not can_stand(): _needed_low = true
+		if _needed_low and can_stand(): request_stand()
+	var normal_speed := speed
+	if crawling: speed = crawl_speed
+	super._physics_process(delta)
+	speed = normal_speed
+
+func can_stand() -> bool:
+	# Leave 0.2 units of floor clearance in the probe; never shift the feet.
+	var probe := RectangleShape2D.new()
+	probe.size = Vector2(30,27.8)
+	var query := PhysicsShapeQueryParameters2D.new()
+	query.shape = probe
+	query.transform = global_transform * Transform2D(0,Vector2(0,17.9))
+	query.collision_mask = 1
+	query.exclude = [get_rid()]
+	return get_world_2d().direct_space_state.intersect_shape(query,1).is_empty()
+
+func begin_crawl(owner: Node) -> bool:
+	if not has_ability(&"crawl") or crawling or movement_locked or not is_on_floor(): return false
+	var query := PhysicsShapeQueryParameters2D.new()
+	query.shape = _low_shape
+	query.transform = global_transform * Transform2D(0,Vector2(0,21.5))
+	query.collision_mask = 1
+	query.exclude = [get_rid()]
+	if not get_world_2d().direct_space_state.intersect_shape(query,1).is_empty(): return false
+	crawling = true
+	crawl_owner = owner
+	_needed_low = false
+	body.shape = _low_shape
+	body.position = Vector2(0,21.5)
+	_jump_buffer_left = 0
+	_coyote_left = 0
+	_play_motion_animation(&"crawl")
+	return true
+
+func request_stand() -> bool:
+	if not crawling: return true
+	if not can_stand(): return false
+	crawling = false
+	crawl_owner = null
+	_needed_low = false
+	body.shape = _normal_shape
+	body.position = Vector2(0,18)
+	_jump_buffer_left = 0
+	_coyote_left = 0
+	_update_animation()
+	return true
+
+func _start_jump() -> void:
+	if crawling:
+		_jump_buffer_left = 0
+		return
+	super._start_jump()
+	_jump_start_left = get_animation_duration(&"jump_start")
+
+func _update_animation() -> void:
+	if movement_locked and animation_override != &"": _play_motion_animation(animation_override)
+	elif crawling: _play_motion_animation(&"crawl")
+	elif not is_on_floor() or velocity.y < -1:
+		_play_motion_animation((&"jump_start" if _jump_start_left>0 else &"jump") if velocity.y< -1 else &"fall")
+	elif absf(velocity.x)>8: _play_motion_animation(&"walk")
+	elif _landing_left>0: _play_motion_animation(&"land")
+	else: _play_motion_animation(&"idle")
+
+func finish_pose() -> void:
+	pose_owner = null
+	movement_locked = false
+	animation_override = &""
+	velocity = Vector2.ZERO
+	_jump_buffer_left = 0
+	_coyote_left = 0
+	animated_sprite.show()
+	_update_animation()
+
+func reset_after_recovery() -> void:
+	if is_instance_valid(pose_owner): pose_owner.call("cancel_immediately",true)
+	finish_pose()
+	# Called at the current position: still never stand into a roof.
+	request_stand()
+	_jump_start_left = 0
+	_landing_left = 0
+	_interaction_left = 0

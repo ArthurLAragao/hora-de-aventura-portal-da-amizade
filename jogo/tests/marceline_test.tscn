@@ -1,0 +1,111 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://tests/marceline_test.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Assets/01_Characters/marceline/visual.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://player1.tscn" id="3"]
+[ext_resource type="TileSet" path="res://Assets/02_Environments/01_tree_house/tileset.tres" id="4"]
+[ext_resource type="Texture2D" path="res://Assets/02_Environments/01_tree_house/background.png" id="5"]
+[ext_resource type="Script" path="res://tests/music_test_mechanism.gd" id="6"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/clue_panel.png" id="7"]
+[ext_resource type="PackedScene" path="res://gate.tscn" id="8"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/musical_door_closed.png" id="9"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/musical_door_open.png" id="10"]
+[ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="11"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/marceline_music.wav" id="12"]
+
+[sub_resource type="RectangleShape2D" id="MusicRange"]
+size = Vector2(128,100)
+[sub_resource type="RectangleShape2D" id="DoorBody"]
+size = Vector2(48,64)
+
+[node name="MarcelineTest" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(576,324)
+scale = Vector2(1.8,1.8)
+texture = ExtResource("5")
+texture_filter = 1
+
+[node name="Terrain" type="TileMap" parent="."]
+tile_set = ExtResource("4")
+format = 2
+
+[node name="Marceline" parent="." instance=ExtResource("2")]
+position = Vector2(160,245)
+max_partner_distance = 1100.0
+[node name="Finn" parent="." instance=ExtResource("3")]
+position = Vector2(224,245)
+player_id = 2
+max_partner_distance = 1100.0
+
+[node name="MusicPanel" type="Area2D" parent="."]
+position = Vector2(912,530)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("6")
+gate_path = NodePath("../MusicGate")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicPanel"]
+shape = SubResource("MusicRange")
+[node name="Sprite2D" type="Sprite2D" parent="MusicPanel"]
+texture_filter = 1
+texture = ExtResource("7")
+[node name="Prompt" type="Label" parent="MusicPanel"]
+offset_left = -60.0
+offset_top = -72.0
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_outline_color = Color(0.02,0.06,0.1,1)
+theme_override_constants/outline_size = 5
+[node name="Status" type="Label" parent="MusicPanel"]
+offset_left = -102.0
+offset_top = 38.0
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.02,0.06,0.1,1)
+theme_override_constants/outline_size = 5
+[node name="MusicSFX" type="AudioStreamPlayer2D" parent="MusicPanel"]
+stream = ExtResource("12")
+volume_db = -8.0
+
+[node name="MusicGate" parent="." instance=ExtResource("8")]
+position = Vector2(1032,530)
+closed_texture = ExtResource("9")
+open_texture = ExtResource("10")
+[node name="Sprite2D" parent="MusicGate" index="0"]
+position = Vector2(0,0)
+texture_filter = 1
+[node name="CollisionShape2D" parent="MusicGate" index="1"]
+shape = SubResource("DoorBody")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576,324)
+
+[node name="Instructions" type="CanvasLayer" parent="."]
+[node name="Text" type="Label" parent="Instructions"]
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 1135.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 6
+
+[node name="CeilingHint" type="Label" parent="."]
+position = Vector2(268,146)
+text = "TETO"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 4
+[node name="FloatHint" type="Label" parent="."]
+position = Vector2(368,330)
+text = "QUEDA / FLUTUAÇÃO"
+theme_override_fonts/font = ExtResource("11")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
+theme_override_constants/outline_size = 4
+
+[editable path="MusicGate"]

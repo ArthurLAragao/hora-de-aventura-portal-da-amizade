@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfhqymnikvl8y"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_player"]
+[ext_resource type="SpriteFrames" path="res://Assets/01_Characters/jake/animations.tres" id="2_jake_frames"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jake"]
+size = Vector2(29, 37)
+
+[node name="Player2" type="CharacterBody2D"]
+script = ExtResource("1_player")
+player_id = 2
+character_id = &"jake"
+allowed_abilities = Array[StringName]([&"bridge"])
+coyote_time = 0.03
+jump_buffer_time = 0.12
+collision_layer = 2
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 13.5)
+shape = SubResource("RectangleShape2D_jake")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 0)
+z_index = 2
+texture_filter = 1
+sprite_frames = ExtResource("2_jake_frames")
+animation = &"idle"
+autoplay = "idle"

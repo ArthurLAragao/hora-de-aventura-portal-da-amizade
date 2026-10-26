@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://Assets/04_Interface/Godot/screen_controller.gd" id="script"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/screens/instructions.png" id="bg"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/back_normal.png" id="back_normal"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/back_focus.png" id="back_focus"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/back_pressed.png" id="back_pressed"]
+[ext_resource type="Texture2D" path="res://Assets/04_Interface/buttons/back_disabled.png" id="back_disabled"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(640, 360)
+texture_filter = 1
+script = ExtResource("script")
+[node name="Design" type="Control" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
+[node name="Background" type="TextureRect" parent="Design"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("bg")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+[node name="Buttons" type="Control" parent="Design"]
+[node name="back" type="TextureButton" parent="Design/Buttons"]
+offset_left = 454.0
+offset_top = 14.0
+offset_right = 614.0
+offset_bottom = 62.0
+focus_mode = 2
+texture_normal = ExtResource("back_normal")
+texture_pressed = ExtResource("back_pressed")
+texture_hover = ExtResource("back_focus")
+texture_disabled = ExtResource("back_disabled")
+texture_focused = ExtResource("back_focus")

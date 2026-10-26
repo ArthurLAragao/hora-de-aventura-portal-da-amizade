@@ -1,0 +1,530 @@
+[
+  {
+    "character": "finn",
+    "animation": "celebrate",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      67.0,
+      75.84,
+      77.1,
+      57.41
+    ]
+  },
+  {
+    "character": "finn",
+    "animation": "fall",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      36.36,
+      85.86,
+      99.33,
+      49.3
+    ]
+  },
+  {
+    "character": "finn",
+    "animation": "idle",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      9.16,
+      8.64,
+      11.92,
+      14.01
+    ]
+  },
+  {
+    "character": "finn",
+    "animation": "interact",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      80.73,
+      43.98,
+      34.98,
+      64.79
+    ]
+  },
+  {
+    "character": "finn",
+    "animation": "jump",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      118.42,
+      103.97,
+      78.93,
+      87.83
+    ]
+  },
+  {
+    "character": "finn",
+    "animation": "pull_lever",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      72.69,
+      57.11,
+      31.27,
+      84.63
+    ]
+  },
+  {
+    "character": "finn",
+    "animation": "push",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      49.64,
+      39.53,
+      57.76,
+      53.45
+    ]
+  },
+  {
+    "character": "finn",
+    "animation": "walk",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      80.54,
+      59.12,
+      57.86,
+      55.91
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "bridge_extend",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      85.57,
+      74.68,
+      65.28,
+      111.73
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "bridge_retract",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      63.92,
+      65.47,
+      87.33,
+      113.38
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "celebrate",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      73.56,
+      83.48,
+      58.71,
+      65.55
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "fall",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      69.72,
+      58.1,
+      60.7,
+      70.88
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "idle",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      18.54,
+      24.11,
+      19.71,
+      23.55
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "interact",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      100.68,
+      55.41,
+      110.91,
+      43.08
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "jump",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      86.08,
+      59.96,
+      63.8,
+      74.82
+    ]
+  },
+  {
+    "character": "jake",
+    "animation": "walk",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      51.34,
+      41.66,
+      41.58,
+      56.66
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "celebrate",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      87.52,
+      88.85,
+      81.83,
+      84.32
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "crank",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      81.54,
+      63.75,
+      88.24,
+      24.84
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "fall",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      92.35,
+      83.99,
+      82.59,
+      105.88
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "idle",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      19.06,
+      32.7,
+      52.6,
+      51.51
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "interact",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      105.14,
+      101.4,
+      119.99,
+      111.46
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "jump",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      103.28,
+      78.82,
+      110.51,
+      69.04
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "push",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      67.01,
+      27.47,
+      61.69,
+      83.45
+    ]
+  },
+  {
+    "character": "fionna",
+    "animation": "walk",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      44.61,
+      50.17,
+      32.03,
+      40.82
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "celebrate",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      77.43,
+      77.96,
+      95.73,
+      64.83
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "crawl",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      51.77,
+      61.48,
+      82.07,
+      69.54
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "fall",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      100.9,
+      78.93,
+      89.32,
+      84.33
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "idle",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      52.92,
+      31.58,
+      38.06,
+      43.32
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "interact",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      48.3,
+      52.54,
+      63.38,
+      40.67
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "jump",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      73.87,
+      83.27,
+      72.01,
+      72.3
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "stretch",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      114.96,
+      77.69,
+      128.15,
+      48.58
+    ]
+  },
+  {
+    "character": "cake",
+    "animation": "walk",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      51.37,
+      45.69,
+      36.16,
+      52.6
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "celebrate",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      54.0,
+      56.39,
+      57.62,
+      52.5
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "fall",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      71.13,
+      55.37,
+      67.91,
+      81.39
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "float",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      54.4,
+      57.92,
+      52.79,
+      36.89
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "idle",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      33.9,
+      32.67,
+      26.13,
+      27.11
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "interact",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      72.4,
+      66.09,
+      77.19,
+      81.4
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "jump",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      79.15,
+      71.16,
+      48.21,
+      57.52
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "play_music",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      63.33,
+      70.76,
+      61.64,
+      32.1
+    ]
+  },
+  {
+    "character": "marceline",
+    "animation": "walk",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      45.09,
+      37.96,
+      44.07,
+      40.85
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "celebrate",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      57.96,
+      59.78,
+      47.31,
+      40.04
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "connect_power",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      66.66,
+      39.12,
+      22.57,
+      72.64
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "fall",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      41.26,
+      44.98,
+      43.4,
+      41.03
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "idle",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      9.82,
+      23.8,
+      24.77,
+      11.98
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "interact",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      52.98,
+      40.42,
+      47.73,
+      58.99
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "jump",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      84.08,
+      60.3,
+      54.12,
+      67.0
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "terminal",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      26.69,
+      26.16,
+      29.2,
+      22.84
+    ]
+  },
+  {
+    "character": "bmo",
+    "animation": "walk",
+    "frames": 4,
+    "adjacent_pixel_differences": [
+      38.78,
+      30.29,
+      41.08,
+      36.2
+    ]
+  }
+]

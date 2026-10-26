@@ -1,0 +1,38 @@
+{
+  "revision": 2,
+  "passed": true,
+  "images_checked": 716,
+  "transparent_images": 682,
+  "character_playback_frame_pngs": 310,
+  "character_states": 63,
+  "new_walk_pose_drawings": 48,
+  "native_playable_checks": 133,
+  "effect_sequences_checked": 8,
+  "object_transitions_checked": 4,
+  "resource_references_checked": 127,
+  "preserved_audio_files": 36,
+  "errors": [],
+  "validation_reports": [
+    "playable_test_results.json",
+    "animation_sequence_tests.json",
+    "animation_pixel_audit.json",
+    "godot_validation.json",
+    "browser_revision_validation.json"
+  ],
+  "scope": "Revised asset pack plus playable animation test; not the full six-stage SGDD game.",
+  "environment_messages": "Restricted Godot runs reported inaccessible Windows certificate store/editor preference paths; asset and runtime assertions passed.",
+  "clean_archive_validation": {
+    "passed": true,
+    "method": "Extracted the delivery ZIP into a new empty folder, checked every supplied checksum and ZIP CRC, then cold-imported in Godot and ran all three native validators.",
+    "archive_files_checked": 970,
+    "checksummed_files": 969,
+    "cold_import_exit_code": 0,
+    "engine": "4.7.2-stable (official)",
+    "textures_loaded": 716,
+    "native_playable_checks": 133,
+    "character_states_checked": 63,
+    "effects_checked": 8,
+    "object_transitions_checked": 4,
+    "final_repack": "Only verification metadata was updated after this clean-copy run. Final archive CRC and per-file hashes are rechecked by the packager."
+  }
+}

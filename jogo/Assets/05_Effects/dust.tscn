@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="SpriteFrames" path="res://Assets/05_Effects/effects.tres" id="1"]
+[ext_resource type="Script" path="res://Assets/05_Effects/effect_driver.gd" id="2"]
+[node name="Effect" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = ExtResource("1")
+script = ExtResource("2")
+effect_name = &"dust"
