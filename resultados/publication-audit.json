@@ -1,0 +1,70 @@
+{
+  "before_count": 1821,
+  "after_count": 1834,
+  "modified": [
+    "cake_player.gd",
+    "level_1.gd",
+    "tests/cake_anchor.gd",
+    "tests/cake_test.gd",
+    "tests/cake_test.tscn",
+    "tests/verify_cake.gd"
+  ],
+  "added": [
+    "cake_bridge.gd",
+    "cake_bridge.gd.uid",
+    "cake_bridge_visual.gd",
+    "cake_bridge_visual.gd.uid",
+    "level_2.gd",
+    "level_2.gd.uid",
+    "level_2.tscn",
+    "tests/verify_cake_bridge.gd",
+    "tests/verify_cake_bridge.gd.uid",
+    "tests/verify_level_2.gd",
+    "tests/verify_level_2.gd.uid",
+    "Assets/01_Characters/cake/bridge/center.png",
+    "Assets/01_Characters/cake/bridge/center.png.import"
+  ],
+  "deleted": [],
+  "original_published_bytes_equal_tested_copy": true,
+  "all_modified_originals_backed_up": true,
+  "unchanged_count": 1815,
+  "cache_excluded": true,
+  "original_execution": "passed: explicit authorization received; standard Godot import and six headless test suites executed on original",
+  "preview_center_sha256_matches": true,
+  "original_test_results": {
+    "cake": {
+      "exit": 0,
+      "failures": [],
+      "passes": 90
+    },
+    "cake_bridge": {
+      "exit": 0,
+      "failures": [],
+      "passes": 28
+    },
+    "level_2": {
+      "exit": 0,
+      "failures": [],
+      "passes": 53
+    },
+    "level": {
+      "exit": 0,
+      "failures": [],
+      "passes": 49
+    },
+    "checkpoint": {
+      "exit": 0,
+      "failures": [],
+      "passes": 228
+    },
+    "menu": {
+      "exit": 0,
+      "failures": [],
+      "passes": 10
+    }
+  },
+  "original_automated_checks": 458,
+  "unexpected_resource_changes_after_import": [],
+  "standard_import_executed_by_engine": true,
+  "manual_cache_edit": false
+}

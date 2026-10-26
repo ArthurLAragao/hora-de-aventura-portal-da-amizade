@@ -1,0 +1,118 @@
+{
+	"checks": [
+		{
+			"check": "P1: accepted band endpoint -8.0 has physical entry support",
+			"passed": true
+		},
+		{
+			"check": "P1: cancel while occupied defers loss of support",
+			"passed": true
+		},
+		{
+			"check": "P1: endpoint exit is physical, safe, no recovery",
+			"passed": true
+		},
+		{
+			"check": "P1: accepted band endpoint 8.0 has physical entry support",
+			"passed": true
+		},
+		{
+			"check": "P1: cancel while occupied defers loss of support",
+			"passed": true
+		},
+		{
+			"check": "P1: endpoint exit is physical, safe, no recovery",
+			"passed": true
+		},
+		{
+			"check": "P1: pair recovery cleans all state during source",
+			"passed": true
+		},
+		{
+			"check": "P1: pair recovery cleans all state during growth",
+			"passed": true
+		},
+		{
+			"check": "P1: pair recovery cleans all state during hold",
+			"passed": true
+		},
+		{
+			"check": "P1: pair recovery cleans all state during pending",
+			"passed": true
+		},
+		{
+			"check": "P1: pair recovery cleans all state during retract",
+			"passed": true
+		},
+		{
+			"check": "P1: growth still has no collision",
+			"passed": true
+		},
+		{
+			"check": "P1: mid-growth cancellation leaves no support or lock",
+			"passed": true
+		},
+		{
+			"check": "P1: F2 during full support leaves no abandoned bridge",
+			"passed": true
+		},
+		{
+			"check": "P2: accepted band endpoint -8.0 has physical entry support",
+			"passed": true
+		},
+		{
+			"check": "P2: cancel while occupied defers loss of support",
+			"passed": true
+		},
+		{
+			"check": "P2: endpoint exit is physical, safe, no recovery",
+			"passed": true
+		},
+		{
+			"check": "P2: accepted band endpoint 8.0 has physical entry support",
+			"passed": true
+		},
+		{
+			"check": "P2: cancel while occupied defers loss of support",
+			"passed": true
+		},
+		{
+			"check": "P2: endpoint exit is physical, safe, no recovery",
+			"passed": true
+		},
+		{
+			"check": "P2: pair recovery cleans all state during source",
+			"passed": true
+		},
+		{
+			"check": "P2: pair recovery cleans all state during growth",
+			"passed": true
+		},
+		{
+			"check": "P2: pair recovery cleans all state during hold",
+			"passed": true
+		},
+		{
+			"check": "P2: pair recovery cleans all state during pending",
+			"passed": true
+		},
+		{
+			"check": "P2: pair recovery cleans all state during retract",
+			"passed": true
+		},
+		{
+			"check": "P2: growth still has no collision",
+			"passed": true
+		},
+		{
+			"check": "P2: mid-growth cancellation leaves no support or lock",
+			"passed": true
+		},
+		{
+			"check": "P2: F2 during full support leaves no abandoned bridge",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"local_fixtures_only": true
+}

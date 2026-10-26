@@ -1,0 +1,919 @@
+{
+	"checks": [
+		{
+			"check": "Checkpoint Jake P2: inactive checkpoint exports no destinations",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: natural fall before puzzle returns to start, checkpoint stays inactive",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: real bridge crossing without recovery",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: flag reachable without lever but cannot activate",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: Finn legitimately opens permanent passage",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall after lever, before checkpoint safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall after lever, before checkpoint exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall after lever, before checkpoint sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: first puzzle progress survives pre-checkpoint fall",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: Finn crosses preserved passage physically",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: Jake crosses preserved passage physically",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: one legitimate entrant activates after passage, partner outside",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall after activation safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall after activation exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall after activation sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: near simultaneous falls safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: near simultaneous falls exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: near simultaneous falls sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: staggered fall signals produce one recovery",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unfinished usable log safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unfinished usable log exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unfinished usable log sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: usable unsolved log is not unnecessarily reset",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unsupported unsolved log safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unsupported unsolved log exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unsupported unsolved log sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unsupported unsolved log restored via existing reset",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: spawn-obstructing unsolved log safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: spawn-obstructing unsolved log exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: spawn-obstructing unsolved log sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: unsolved log obstructing markers restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: trunk puzzle solved by actual pushing",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: solved trunk puzzle safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: solved trunk puzzle exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: solved trunk puzzle sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: solved trunk gate and object position preserved",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: two-plate puzzle solved by walking assigned controls",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: two puzzles completed safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: two puzzles completed exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: two puzzles completed sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both completed gates and permanent passage preserved",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: crystal collected by movement, exit not completed",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: collected crystal safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: collected crystal exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: collected crystal sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: crystal/HUD/exit collection state persist after recovery",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: recovery does not bypass joint exit",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: joint exit still completes by physical arrival",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: initial overlap with opened passage does not activate",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fresh entry after startup can activate",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: checkpoint activation is latched once",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge normal active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge normal active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge normal active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase normal",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after normal",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge source active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge source active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge source active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase source",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after source",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge growth active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge growth active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge growth active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase growth",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after growth",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge hold active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge hold active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge hold active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge pending active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge pending active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge pending active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge shrink active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge shrink active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge shrink active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge reverse active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge reverse active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge reverse active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: active fixture for hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge hold active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge hold active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge hold active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: permanent bridge survives hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: active fixture for pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge pending active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge pending active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge pending active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: permanent bridge survives pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: active fixture for shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge shrink active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge shrink active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge shrink active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: permanent bridge survives shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: active fixture for reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge reverse active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge reverse active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: bridge reverse active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: fall observed during requested bridge phase reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: permanent bridge survives reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P2: both control slots restored after reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: inactive checkpoint exports no destinations",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: natural fall before puzzle returns to start, checkpoint stays inactive",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: real bridge crossing without recovery",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: flag reachable without lever but cannot activate",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: Finn legitimately opens permanent passage",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall after lever, before checkpoint safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall after lever, before checkpoint exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall after lever, before checkpoint sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: first puzzle progress survives pre-checkpoint fall",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: Finn crosses preserved passage physically",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: Jake crosses preserved passage physically",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: one legitimate entrant activates after passage, partner outside",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall after activation safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall after activation exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall after activation sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: near simultaneous falls safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: near simultaneous falls exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: near simultaneous falls sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: staggered fall signals produce one recovery",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unfinished usable log safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unfinished usable log exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unfinished usable log sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: usable unsolved log is not unnecessarily reset",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unsupported unsolved log safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unsupported unsolved log exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unsupported unsolved log sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unsupported unsolved log restored via existing reset",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: spawn-obstructing unsolved log safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: spawn-obstructing unsolved log exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: spawn-obstructing unsolved log sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: unsolved log obstructing markers restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: trunk puzzle solved by actual pushing",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: solved trunk puzzle safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: solved trunk puzzle exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: solved trunk puzzle sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: solved trunk gate and object position preserved",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: two-plate puzzle solved by walking assigned controls",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: two puzzles completed safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: two puzzles completed exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: two puzzles completed sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both completed gates and permanent passage preserved",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: crystal collected by movement, exit not completed",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: collected crystal safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: collected crystal exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: collected crystal sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: crystal/HUD/exit collection state persist after recovery",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: recovery does not bypass joint exit",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: joint exit still completes by physical arrival",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: initial overlap with opened passage does not activate",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fresh entry after startup can activate",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: checkpoint activation is latched once",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge normal active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge normal active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge normal active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase normal",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after normal",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge source active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge source active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge source active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase source",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after source",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge growth active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge growth active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge growth active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase growth",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after growth",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge hold active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge hold active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge hold active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge pending active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge pending active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge pending active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge shrink active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge shrink active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge shrink active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge reverse active=false safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge reverse active=false exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge reverse active=false sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: active fixture for hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge hold active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge hold active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge hold active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: permanent bridge survives hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after hold",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: active fixture for pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge pending active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge pending active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge pending active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: permanent bridge survives pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after pending",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: active fixture for shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge shrink active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge shrink active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge shrink active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: permanent bridge survives shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after shrink",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: active fixture for reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge reverse active=true safe distinct return",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge reverse active=true exactly one recovery/no new activation",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: bridge reverse active=true sprites, controls and bridge restored",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: fall observed during requested bridge phase reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: permanent bridge survives reverse",
+			"passed": true
+		},
+		{
+			"check": "Checkpoint Jake P1: both control slots restored after reverse",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"fixtures_are_progression_evidence": false,
+	"headless": true
+}

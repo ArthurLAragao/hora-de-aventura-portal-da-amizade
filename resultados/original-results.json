@@ -1,0 +1,32 @@
+{
+  "cake": {
+    "exit": 0,
+    "failures": [],
+    "passes": 90
+  },
+  "cake_bridge": {
+    "exit": 0,
+    "failures": [],
+    "passes": 28
+  },
+  "level_2": {
+    "exit": 0,
+    "failures": [],
+    "passes": 53
+  },
+  "level": {
+    "exit": 0,
+    "failures": [],
+    "passes": 49
+  },
+  "checkpoint": {
+    "exit": 0,
+    "failures": [],
+    "passes": 228
+  },
+  "menu": {
+    "exit": 0,
+    "failures": [],
+    "passes": 10
+  }
+}

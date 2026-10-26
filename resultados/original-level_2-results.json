@@ -1,0 +1,220 @@
+{
+	"checks": [
+		{
+			"check": "Cake P1: safe separate spawns/roles/own ice grid",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: shared camera references and own bounds",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: independent input and marked block can move",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: actual horizontal block push stops",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: block has no drift after push",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: context begins crawl at real entrance",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: tunnel actually traversed and cannot stand under roof",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: low roof prevents jumping",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: real reverse in tunnel",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: exit restores normal posture",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: Cake switch legitimately unlocks first crank",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: Fionna uses the actual ice block as step",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: Fionna reaches top route instead of being trapped",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: first crank extends permanent ice passage",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: both pass first section without recovery",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: Cake bridge works at translated level anchor",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: entry lands on Cake, not bypass jump",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: airborne release waits safely in this level",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: second permanent passage available and Cake released",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: pair reunites without teleport or fall recovery",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: normal route reaches reserved final area",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: reserved crystal/exit are explicitly pending",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: no duplicate tool decoration",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: F2 resets controls, bridge and mechanisms",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: safe separate spawns/roles/own ice grid",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: shared camera references and own bounds",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: independent input and marked block can move",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: actual horizontal block push stops",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: block has no drift after push",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: context begins crawl at real entrance",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: tunnel actually traversed and cannot stand under roof",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: low roof prevents jumping",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: real reverse in tunnel",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: exit restores normal posture",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: Cake switch legitimately unlocks first crank",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: Fionna uses the actual ice block as step",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: Fionna reaches top route instead of being trapped",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: first crank extends permanent ice passage",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: both pass first section without recovery",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: Cake bridge works at translated level anchor",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: entry lands on Cake, not bypass jump",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: airborne release waits safely in this level",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: second permanent passage available and Cake released",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: pair reunites without teleport or fall recovery",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: normal route reaches reserved final area",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: reserved crystal/exit are explicitly pending",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: no duplicate tool decoration",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: F2 resets controls, bridge and mechanisms",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: explicit test start 1 has safe floor and label",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: explicit test start 2 has safe floor and label",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: explicit test start 3 has safe floor and label",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: explicit test start 4 has safe floor and label",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: explicit test start 5 has safe floor and label",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"fixture_positions_are_route_evidence": false,
+	"full_phase_completion": false,
+	"headless": true
+}

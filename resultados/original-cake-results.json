@@ -1,0 +1,372 @@
+{
+	"bridge_functional": true,
+	"checks": [
+		{
+			"check": "Cake P1: identity, role and own capabilities",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: visual scene and original animations reused",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: native size, own shape and foot baseline",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: idle on safe floor",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: partner keys cannot move Cake",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: own walk independent and right facing",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: left facing",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: jump begins without lock",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: rise fall land and idle observed",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: left wall collision",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: right wall and raised floor collision",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: normal body is physically stopped at low roof",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: context starts low posture without repositioning",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: cancel at clear entrance restores normal shape",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: actual movement reaches inside tunnel",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: cannot jump or stand into roof",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: can reverse inside tunnel",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: right exit traversed without teleport and tall posture restored",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: right entrance and left exit work without teleport",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: real Fionna lacks crawl and is refused",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: Fionna also blocked by tunnel geometry",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: partner collider was not changed",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: F2 inside tunnel starts with clean posture and controls",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: refuse outside area/wrong capacity",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: refuse airborne activation",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: extension has no invisible support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: complete bridge single Cake and active support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: retract restores sprite controls and removes support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: extension has no invisible support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: complete bridge single Cake and active support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: retract restores sprite controls and removes support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: extension has no invisible support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: complete bridge single Cake and active support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: retract restores sprite controls and removes support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: early release restores controls",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: safe cancel without partner restores controls",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: Cake physically reaches anchor after tunnel and platforms",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: formed bridge on real route",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: entry jump lands on Cake support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: release with partner on bridge retains support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: airborne partner retains support",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: partner lands back safely",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: existing crank and platform provide independent permanent passage",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: Cake follows only after permanent support exists",
+			"passed": true
+		},
+		{
+			"check": "Cake P1: F2 clears permanent demo and both characters' state",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: identity, role and own capabilities",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: visual scene and original animations reused",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: native size, own shape and foot baseline",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: idle on safe floor",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: partner keys cannot move Cake",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: own walk independent and right facing",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: left facing",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: jump begins without lock",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: rise fall land and idle observed",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: left wall collision",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: right wall and raised floor collision",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: normal body is physically stopped at low roof",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: context starts low posture without repositioning",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: cancel at clear entrance restores normal shape",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: actual movement reaches inside tunnel",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: cannot jump or stand into roof",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: can reverse inside tunnel",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: right exit traversed without teleport and tall posture restored",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: right entrance and left exit work without teleport",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: real Fionna lacks crawl and is refused",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: Fionna also blocked by tunnel geometry",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: partner collider was not changed",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: F2 inside tunnel starts with clean posture and controls",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: refuse outside area/wrong capacity",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: refuse airborne activation",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: extension has no invisible support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: complete bridge single Cake and active support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: retract restores sprite controls and removes support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: extension has no invisible support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: complete bridge single Cake and active support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: retract restores sprite controls and removes support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: extension has no invisible support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: complete bridge single Cake and active support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: retract restores sprite controls and removes support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: early release restores controls",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: safe cancel without partner restores controls",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: Cake physically reaches anchor after tunnel and platforms",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: formed bridge on real route",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: entry jump lands on Cake support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: release with partner on bridge retains support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: airborne partner retains support",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: partner lands back safely",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: existing crank and platform provide independent permanent passage",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: Cake follows only after permanent support exists",
+			"passed": true
+		},
+		{
+			"check": "Cake P2: F2 clears permanent demo and both characters' state",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"headless": true,
+	"unverified": [
+		"manual acceptance of integrated bridge",
+		"export",
+		"multiple resolutions"
+	]
+}

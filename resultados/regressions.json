@@ -1,0 +1,37 @@
+{
+  "level": {
+    "exit": 0,
+    "failed": [],
+    "passes": 49
+  },
+  "jake": {
+    "exit": 0,
+    "failed": [],
+    "passes": 154
+  },
+  "finn": {
+    "exit": 0,
+    "failed": [],
+    "passes": 73
+  },
+  "marceline": {
+    "exit": 0,
+    "failed": [],
+    "passes": 93
+  },
+  "bmo": {
+    "exit": 0,
+    "failed": [],
+    "passes": 106
+  },
+  "fionna": {
+    "exit": 0,
+    "failed": [],
+    "passes": 124
+  },
+  "menu": {
+    "exit": 0,
+    "failed": [],
+    "passes": 10
+  }
+}
