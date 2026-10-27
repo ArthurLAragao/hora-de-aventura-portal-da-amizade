@@ -181,6 +181,12 @@ func _build() -> void:
 	music.get_node("Prompt").position=Vector2(-72,-62)
 	music.get_node("Status").position=Vector2(-100,54)
 	add_child(music)
+	# Seat the indicator on the panel's opaque edge, including the Atlas offset.
+	var panel_sprite=music.get_node("Sprite2D")
+	var panel_top: float=panel_sprite.global_position.y+(panel_sprite.texture.get_image().get_used_rect().position.y-panel_sprite.texture.get_height()*0.5)*panel_sprite.global_scale.y
+	var indicator=receiver.get_node("Sprite2D")
+	var indicator_foot: float=(indicator.texture.get_image().get_used_rect().end.y-indicator.texture.get_height()*0.5+indicator.offset.y)*indicator.global_scale.y
+	receiver.position=Vector2(music.position.x-16,panel_top-indicator_foot)
 	terminal=B.branch("res://tests/bmo_test.tscn","SymbolTerminal")
 	terminal.set_script(load("res://journey_terminal.gd"))
 	terminal.name="SymbolTerminal"

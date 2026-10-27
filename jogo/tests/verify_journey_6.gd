@@ -81,6 +81,11 @@ func route(slot: int) -> void:
 	check("Marceline reaches takeoff using jumps",marceline.is_on_floor() and marceline.position.y<390)
 	await jump(marceline,416,true)
 	check("limited float reaches musical clue shelf",marceline.is_on_floor() and marceline.position.y<390 and level.recovery_count==0)
+	var display=level.music.get_node("Sprite2D")
+	var top: float=display.global_position.y+(display.texture.get_image().get_used_rect().position.y-display.texture.get_height()*0.5)*display.global_scale.y
+	var indicator=level.receiver.get_node("Sprite2D")
+	var bottom: float=indicator.global_position.y+(indicator.texture.get_image().get_used_rect().end.y-indicator.texture.get_height()*0.5+indicator.offset.y)*indicator.global_scale.y
+	check("musical indicator rests on the panel's opaque edge",absf(bottom-top)<1.0)
 	await tap(marceline,"interact")
 	await frames(8)
 	check("music reveals forms and authorizes terminal",level.clue_revealed and level.clue.visible and level.terminal.monitoring and level.receiver.is_open)
