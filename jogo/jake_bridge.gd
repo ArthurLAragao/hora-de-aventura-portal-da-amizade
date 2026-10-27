@@ -20,6 +20,12 @@ enum Step { NONE, SOURCE_EXTEND, GROW, WAIT_RENDER, FULL, SHRINK, SOURCE_RETRACT
 @onready var stretch_sfx: AudioStreamPlayer2D = $StretchSFX
 @onready var retract_sfx: AudioStreamPlayer2D = $RetractSFX
 
+@export var formation_offset:=Vector2(-20,-5.65)
+@export_range(32,100,1) var offer_radius:=72.0
+@export_range(48,140,1) var approach_speed:=96.0
+var approach: RefCounted
+var approach_actor: CoopPlayer
+var approach_hint: Label
 var state: State = State.IDLE
 var step: Step = Step.NONE
 var release_pending := false
@@ -30,26 +36,54 @@ var _timeout := 0.0
 var _progress := 0.0
 var _clear_ticks := 0
 var _prompt_visible := false
+var _cancel_requested:=false
 var _sprite_was_visible := true
 var _locked_origin := Vector2.ZERO
 
 func _ready() -> void:
+	approach=load("res://bridge_approach.gd").new(self)
+	$ActivationMarker.position.x=formation_offset.x-9
+	$ActivationArea.position=formation_offset
+	var offer_shape=$ActivationArea/CollisionShape2D
+	offer_shape.shape=offer_shape.shape.duplicate()
+	offer_shape.shape.size.x=offer_radius*2
+	approach_hint=Label.new()
+	approach_hint.position=Vector2(-128,-88)
+	approach_hint.add_theme_font_override("font",load("res://Assets/08_Fonts/NotoSans.ttf"))
+	approach_hint.add_theme_font_size_override("font_size",14)
+	approach_hint.add_theme_color_override("font_outline_color",Color("102832"))
+	approach_hint.add_theme_constant_override("outline_size",4)
+	add_child(approach_hint)
 	_set_support(false)
 	bridge_visual.hide()
 
 func _physics_process(delta: float) -> void:
+	if approach!=null and approach.active:
+		var result: int=approach.advance(delta,approach_speed)
+		approach_hint.text="Aproximando... solte para cancelar."
+		if result==1 and is_instance_valid(approach_actor): _begin_bridge(approach_actor)
+		return
 	if state == State.IDLE:
 		var candidate := _find_candidate()
 		_set_prompt(is_instance_valid(candidate))
-		if is_instance_valid(candidate) and Input.is_action_pressed(candidate.get_ability_action()):
-			_begin_bridge(candidate)
+		approach_hint.text=""
+		if is_instance_valid(candidate):
+			approach_hint.text=("Q" if candidate.player_id==1 else "Shift direito")+": ponte de Jake"
+			if Input.is_action_just_pressed(candidate.get_ability_action()):
+				approach_actor=candidate
+				approach.begin(candidate,offer_position(),offer_radius)
+		else:
+			for player in get_tree().get_nodes_in_group("players"):
+				if accepts_actor(player) and player.global_position.distance_to(offer_position())<offer_radius:
+					var reason: String=approach.path_reason(player,offer_position(),offer_radius)
+					if reason!="ok": approach_hint.text=reason
 		return
 
 	_elapsed += delta
 	var owner_ok := is_instance_valid(_jake) and _jake.has_ability(required_ability)
 	if owner_ok:
 		owner_ok = to_local(_jake.global_position).distance_to(_locked_origin) < 1.0
-	var held := owner_ok and Input.is_action_pressed(_jake.get_ability_action())
+	var held := owner_ok and Input.is_action_pressed(_jake.get_ability_action()) and not _cancel_requested
 	if not held:
 		release_pending = true
 	elif state == State.HOLDING:
@@ -99,13 +133,24 @@ func _physics_process(delta: float) -> void:
 			if _elapsed >= _timeout:
 				_finish_retraction()
 
+func offer_position() -> Vector2:
+	return to_global(formation_offset)
+
+func accepts_actor(player: CoopPlayer) -> bool:
+	return is_instance_valid(player) and player.has_ability(required_ability) and player.animated_sprite.sprite_frames.has_animation(&"bridge_extend") and player.animated_sprite.sprite_frames.get_frame_count(&"bridge_extend")>=4
+
+func can_request(player: CoopPlayer) -> bool:
+	return accepts_actor(player) and state==State.IDLE and approach!=null and approach.selected(player,offer_position(),offer_radius)
+
 func _find_candidate() -> CoopPlayer:
-	for body in activation_area.get_overlapping_bodies():
-		if body is CoopPlayer and can_activate(body as CoopPlayer):
-			return body as CoopPlayer
+	for body in get_tree().get_nodes_in_group("players"):
+		if body is CoopPlayer and can_request(body): return body
 	return null
 
 func can_activate(player: CoopPlayer) -> bool:
+	return can_request(player)
+
+func _can_form(player: CoopPlayer) -> bool:
 	if not is_instance_valid(player) or not player.has_ability(required_ability) or not player.is_on_floor() or player.movement_locked:
 		return false
 	var point := to_local(player.global_position)
@@ -129,6 +174,9 @@ func can_activate(player: CoopPlayer) -> bool:
 	return flat_start <= support.position.x + 0.001 and origin.x + 48.0 * scale_x <= right_section
 
 func _begin_bridge(player: CoopPlayer) -> void:
+	if approach!=null: approach.cancel()
+	approach_hint.text=""
+	_cancel_requested=false
 	_jake = player
 	_locked_origin = to_local(player.global_position)
 	_sprite_was_visible = player.animated_sprite.visible
@@ -140,6 +188,13 @@ func _begin_bridge(player: CoopPlayer) -> void:
 	var uniform_scale := relative.x.length()
 	var origin := relative.origin + (sprite.offset - Vector2(48, 40)) * uniform_scale
 	var support := get_support_rect()
+	var flat_start:=origin.x+30.0*uniform_scale
+	var right:=support.end.x
+	var shape_node=$BridgeBody/CollisionShape2D
+	shape_node.shape=shape_node.shape.duplicate()
+	shape_node.shape.size.x=right-flat_start
+	$BridgeBody.position.x=(flat_start+right)*0.5
+	support=get_support_rect()
 	bridge_visual.configure(sprite.sprite_frames.get_frame_texture(&"bridge_extend", 3), origin, uniform_scale, support.end.x - 4.0 * uniform_scale, support.position.y)
 	release_pending = false
 	_progress = 0.0
@@ -204,6 +259,8 @@ func _start_source_retraction(from_current_frame: bool) -> void:
 	_play_source(true, from_current_frame)
 
 func _finish_retraction() -> void:
+	if approach!=null: approach.cancel()
+	if is_instance_valid(approach_hint): approach_hint.text=""
 	_set_support(false)
 	bridge_visual.hide()
 	_unlock_player()
@@ -272,6 +329,7 @@ func _set_support(active: bool) -> void:
 		anchor_visual.modulate = Color(1.35, 1.35, 1.0, 1.0) if active else Color.WHITE
 
 func _set_prompt(show_prompt: bool) -> void:
+	$ActivationMarker.modulate=Color(1.2,1.2,0.65) if show_prompt else Color.WHITE
 	if _prompt_visible != show_prompt:
 		_prompt_visible = show_prompt
 		prompt_changed.emit(show_prompt)
@@ -286,5 +344,11 @@ func _on_jake_animation_finished() -> void:
 		_finish_retraction()
 
 func _exit_tree() -> void:
+	if approach!=null: approach.cancel()
 	_unlock_player()
 
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_ESCAPE:
+		if approach!=null and approach.active: approach.cancel()
+		elif state!=State.IDLE: _cancel_requested=true

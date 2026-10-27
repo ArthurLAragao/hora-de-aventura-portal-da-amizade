@@ -37,8 +37,8 @@ func get_flat_back_rect() -> Rect2:
 func _draw() -> void:
 	if source_frame == null:
 		return
-	var origin := source_origin + Vector2(0.0, vertical_adjustment * progress)
-	var extra := extra_length * progress
+	var origin := source_origin + Vector2(0.0, roundf(vertical_adjustment / pixel_scale * progress) * pixel_scale)
+	var extra := roundf(extra_length / pixel_scale * progress) * pixel_scale
 	draw_texture_rect_region(source_frame, Rect2(origin, Vector2(48, 80) * pixel_scale), Rect2(0, 0, 48, 80))
 	var cursor := 0.0
 	while cursor < extra - 0.0001:
