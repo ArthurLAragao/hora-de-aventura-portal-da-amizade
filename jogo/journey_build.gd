@@ -78,6 +78,7 @@ static func plate(parent: Node,name: String,position: Vector2,ability: StringNam
 	node.name=name
 	node.position=position
 	node.required_ability=ability
+	node.visual_kind=&"weight" if pushable else &"step"
 	node.accepts_players=not pushable
 	node.accepts_pushables=pushable
 	node.get_node("Sprite2D").position=Vector2(0,-4)
@@ -144,8 +145,8 @@ static func hud(parent: Node,title: String) -> CanvasLayer:
 	layer.layer=10
 	parent.add_child(layer)
 	var panel:=Panel.new()
-	panel.position=Vector2(12,8)
-	panel.size=Vector2(1128,68)
+	panel.position=Vector2(16,14)
+	panel.size=Vector2(480,60)
 	panel.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	var style:=StyleBoxFlat.new()
 	style.bg_color=Color(0.03,0.08,0.12,0.88)
@@ -154,13 +155,13 @@ static func hud(parent: Node,title: String) -> CanvasLayer:
 	style.set_corner_radius_all(8)
 	panel.add_theme_stylebox_override("panel",style)
 	layer.add_child(panel)
-	label(layer,title.get_slice("•",0),Vector2(24,13),16,"Title")
-	label(layer,"",Vector2(690,16),13,"Hints")
-	label(layer,"",Vector2(24,42),17,"Status")
+	label(layer,title.get_slice("•",0),Vector2(28,20),13,"Title")
+	label(layer,"",Vector2(760,20),13,"Hints")
+	label(layer,"",Vector2(28,43),17,"Status")
 	var message=label(layer,"",Vector2(24,592),16,"Message")
 	message.size=Vector2(1104,48)
 	message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
-	var help=label(layer,"F1: controles",Vector2(1012,81),12,"HelpHint")
+	var help=label(layer,"F1",Vector2(1104,20),12,"HelpHint")
 	help.modulate.a=0.75
 	return layer
 

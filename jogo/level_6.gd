@@ -63,7 +63,7 @@ func _ready() -> void:
 	presentation.set_script(load("res://quality_presentation.gd"))
 	add_child(presentation)
 	live=true
-	_note("Jake e Finn: restaurem o acesso ao portal.")
+	_note("")
 	DisplayServer.window_set_title("Portal da Amizade — um santuário, três reparos")
 
 func _surface(name: String,x: float,y: float,width: float,height: float=12) -> StaticBody2D:
@@ -93,15 +93,15 @@ func _build() -> void:
 	add_child(actors)
 	portal=Node2D.new()
 	portal.name="Portal"
-	portal.set_script(load("res://portal_visual_clean.gd"))
+	portal.set_script(load("res://portal_sanctuary.gd"))
 	portal.set("texture",load(B.OBJECTS+"portal_damaged.png"))
-	portal.position=Vector2(640,FLOOR-122)
+	portal.position=Vector2(688,FLOOR)
 	portal.scale=Vector2.ONE*2
 	portal.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 	add_child(portal)
 	portal.z_index=-2
 	for i in 3:
-		seals.append(B.sprite(self,"Seal%d"%i,B.OBJECTS+"receiver_off.png",Vector2(544+i*96,182),0.65))
+		seals.append(B.sprite(self,"Seal%d"%i,B.OBJECTS+"receiver_off.png",Vector2(688+[-30,0,30][i],FLOOR+[-122,-134,-122][i]+2),0.25))
 		B.label(self,["1 ESTRUTURA","2 MECANISMO","3 SINAL"][i],Vector2(500+i*96,212),12)
 	bridge=B.packed(self,"JakeBridge","res://jake_bridge.tscn",Vector2(448,LEFT_FLOOR-26.35286))
 	permanent=B.packed(self,"PermanentBridge","res://permanent_bridge.tscn",Vector2(528,LEFT_FLOOR-2.35286))
@@ -122,7 +122,11 @@ func _build() -> void:
 	tunnel.get_node("Prompt").position=Vector2(816,536)
 	add_child(tunnel)
 	switch_area=B.area(self,"MechanismSwitch",Vector2(1036,FLOOR-26),Vector2(88,64))
-	B.sprite(self,"SwitchIndicator",B.OBJECTS+"switch_off.png",Vector2(1040,350),0.6)
+	var switch_sprite=B.sprite(self,"SwitchIndicator",B.OBJECTS+"switch_off.png",Vector2(1040,FLOOR-15),0.5)
+	switch_sprite.z_index=1
+	var switch_image=switch_sprite.texture.get_image()
+	switch_sprite.position.y=FLOOR-(switch_image.get_used_rect().end.y-switch_sprite.texture.get_height()*0.5)*0.5
+	B.label(self,"",Vector2(1010,FLOOR-66),14,"SwitchPrompt")
 	lift=AnimatableBody2D.new()
 	lift.name="ReturnLift"
 	lift.position=Vector2(1280,FLOOR-50)
@@ -156,7 +160,7 @@ func _build() -> void:
 	B.label(self,"Marceline: salto + flutuação",Vector2(160,266),13,"FloatHint")
 	receiver=load("res://gate.tscn").instantiate()
 	receiver.name="MusicReceiver"
-	receiver.position=Vector2(416,300)
+	receiver.position=Vector2(416,LEFT_FLOOR-166)
 	receiver.collision_layer=0
 	receiver.get_node("CollisionShape2D").disabled=true
 	receiver.closed_texture=B.receiver_texture(B.OBJECTS+"receiver_off.png")
@@ -206,13 +210,14 @@ func _build() -> void:
 	crystal.get_node("Sprite2D").texture=load(B.OBJECTS+"crystal_purple.png")
 	crystal.hide()
 	add_child(crystal)
-	for plate in confirmation: plate.hide()
+	for plate in confirmation: plate.visual_kind=&"confirm";plate.hide()
+	for plate in reunion_a+reunion_b: plate.visual_kind=&"reunion"
 	exit_area=load("res://cooperative_exit.tscn").instantiate()
 	exit_area.name="PortalExit"
-	exit_area.position=Vector2(640,FLOOR-32)
+	exit_area.position=Vector2(688,FLOOR-32)
 	exit_area.crystal_path=NodePath("../SixthCrystal")
 	var exit_shape:=RectangleShape2D.new()
-	exit_shape.size=Vector2(160,128)
+	exit_shape.size=Vector2(112,128)
 	exit_area.get_node("CollisionShape2D").shape=exit_shape
 	exit_area.get_node("Sprite2D").hide()
 	exit_area.get_node("Completion").modulate.a=0.0
@@ -222,7 +227,8 @@ func _build() -> void:
 	decor.name="Scenery"
 	decor.z_index=-1
 	add_child(decor)
-	for i in 10: B.sprite(decor,"CrystalPlant%d"%i,ENV+"tiles/decor_%02d.png"%(1+i%4),Vector2([32,240,288,344,800,1096,1152,1192,1320,1360][i],(LEFT_FLOOR if i<4 else FLOOR)-16))
+	var art:=Node2D.new();art.name="ArtDirection"
+	art.set_script(load("res://stage_scenery.gd"));add_child(art)
 
 func _activate_pair(index: int) -> void:
 	var names: Array=[['Finn','Jake'],['Fionna','Cake'],['Marceline','BMO']]
@@ -255,12 +261,14 @@ func _activate_pair(index: int) -> void:
 func _set_presentation(index: int) -> void:
 	for node in [receiver,music,terminal]: node.visible=index==2
 	get_node("FloatHint").hide()
-	for node in reunion_a: node.visible=index==0 and repaired[0]
-	for name in ["WeightHint","FinnHint","JakeHint"]: get_node(name).visible=index==0
+	for node in reunion_a: node.visible=index==0
+	for node in confirmation: node.visible=index==2
+	for name in ["WeightHint","FinnHint","JakeHint"]: get_node(name).hide()
 	for node in reunion_b: node.visible=index==1
-	get_node("TerraceHint").visible=index==1
+	get_node("TerraceHint").hide()
 	tunnel.get_node("Prompt").visible=index==1
 	for child in ["Prompt","Status"]: crank.get_node(child).visible=index==1
+	get_node("SwitchPrompt").visible=index==1
 	if index!=0:
 		bridge.get_node("AnchorPrompt").hide() if bridge.has_node("AnchorPrompt") else bridge.hide()
 
@@ -307,6 +315,7 @@ func _advance_pair(index: int) -> void:
 func _repair(index: int) -> void:
 	if repaired[index]: return
 	repaired[index]=true
+	portal.set("repairs",repaired)
 	if index==2:
 		for plate in confirmation: plate.show()
 	if is_instance_valid(repair_sound): repair_sound.play()
@@ -316,10 +325,10 @@ func _repair(index: int) -> void:
 	if index==0:
 		log.settled=true
 		for node in reunion_a: node.show()
-		for name in ["FinnHint","JakeHint"]: get_node(name).show()
+		for name in ["FinnHint","JakeHint"]: get_node(name).hide()
 		permanent.open_gate()
 		log.set("_start_transform",log.global_transform)
-	_note(["Estrutura reparada! Um em cada placa.","Mecanismo reparado!","Sinal restaurado! Confirmem nas placas."][index])
+	_note(["Estrutura restaurada.","Mecanismo reparado!","Sinal restaurado! Confirmem nas placas."][index])
 
 func open_gate() -> void:
 	# Context target of the existing BMO terminal, not a new terminal system.
@@ -345,38 +354,42 @@ func _physics_process(_delta: float) -> void:
 			clue_revealed=true
 			clue.show()
 			terminal.set_deferred("monitoring",true)
-			_note("Marceline revelou: triângulo, círculo, quadrado. BMO, conecte esse sinal no terminal.")
+			_note("Pista revelada.")
 		if repaired[2] and not confirmed and confirmation.all(func(p):return p.is_active()):
 			confirmed=true
 			crystal.show()
 			crystal.collision_mask=2
 			crystal.set_deferred("monitoring",true)
-			_note("CONFIRMAÇÃO EM DUPLA! O sexto cristal está pronto. Entrem juntos no portal.")
+			_note("Cristal restaurado! Entrem juntos.")
 
 func _process(_delta: float) -> void:
 	if not live or Engine.is_editor_hint() or pair.size()!=2: return
 	message_left=maxf(0.0,message_left-_delta)
 	if message_left<=0.0: hud.get_node("Message").text=""
 	hud.get_node("Hints").text="P%d %s   •   P%d %s"%[pair[0].player_id,pair[0].name,pair[1].player_id,pair[1].name]
-	var completed:=int(repaired[0])+int(repaired[1])+int(repaired[2])
-	var objective="Jake: prepare a passagem para Finn."
-	if bridge._bridge_active: objective="Finn: atravesse e leve o tronco ao encaixe."
-	if stage==0 and repaired[0]: objective="Finn e Jake: um em cada placa do portal."
+	for plate in reunion_a: plate.available=repaired[0];plate.completed=stage>0
+	for plate in reunion_b: plate.available=mechanism_unlocked;plate.completed=stage>1
+	for plate in confirmation: plate.available=repaired[2];plate.completed=confirmed
+	structure_plate.completed=repaired[0]
+	var objective="Restaurem o acesso."
+	if bridge._bridge_active: objective="Levem o contrapeso ao encaixe."
+	if stage==0 and repaired[0]: objective="Reúnam-se junto ao portal."
 	if stage==1:
-		objective="Cake: passe pelo túnel e libere a manivela."
-		if mechanism_unlocked: objective="Fionna: use o tronco e opere a manivela."
-		if crank.get("solved"): objective="Reúnam-se no terraço. O apoio de retorno está disponível."
+		objective="Libere o mecanismo pelo túnel."
+		if mechanism_unlocked: objective="Estenda o apoio de retorno."
+		if crank.get("solved"): objective="Reúnam-se no terraço."
 	elif stage==2:
-		objective="Marceline: suba à esquerda para alcançar o painel."
-		if pair[0].is_on_floor() and pair[0].position.y<400: objective="Marceline: segure a habilidade no ar para flutuar."
-		if clue_revealed: objective="BMO: conecte as formas mostradas na pista."
-	if repaired[2]: objective="Marceline: placa da ponte. BMO: placa à direita."
+		objective="Revelem o sinal do santuário."
+		if pair[0].is_on_floor() and pair[0].position.y<400: objective="Alcance o painel elevado."
+		if clue_revealed: objective="Conectem as formas."
+	if repaired[2]: objective="Confirmem juntos nos dois selos."
 	if confirmed: objective="Recuperem o cristal e entrem juntos no portal."
-	if completion_count>0: objective="Os seis reunidos! Portal da Amizade restaurado."
-	hud.get_node("Status").text="%d/3 reparos • "%completed+objective
+	if completion_count>0: objective="Portal da Amizade restaurado."
+	hud.get_node("Status").text=objective
 	if _transitioning or _recovering or completion_count>0: return
 	if stage==1:
 		var cake=pair[1]
+		get_node("SwitchPrompt").text=("E" if cake.player_id==1 else "Enter") if tunnel_visited and not mechanism_unlocked and switch_area.overlaps_body(cake) and cake.is_on_floor() else ""
 		tunnel.call("update_prompt",cake)
 		if mechanism_unlocked: crank.call("update_prompt",pair[0])
 		else: crank.get_node("Prompt").text="Cake: interruptor após o túnel"
@@ -385,7 +398,7 @@ func _process(_delta: float) -> void:
 				mechanism_unlocked=true
 				crank.set_deferred("monitoring",true)
 				get_node("SwitchIndicator").texture=load(B.OBJECTS+"switch_on.png")
-				_note("MANIVELA LIBERADA! Fionna: use o tronco como degrau até o terraço.")
+				_note("Manivela liberada.")
 			elif cake.crawling: cake.request_stand()
 			else: tunnel.call("interact",cake)
 		if Input.is_action_just_pressed(pair[0].get_interact_action()) and not is_instance_valid(pair[0].get("interaction_owner")): crank.call("interact",pair[0])
@@ -421,11 +434,11 @@ func recover_pair() -> void:
 		actor.velocity=Vector2.ZERO
 	recovery_count+=1
 	_recovering=false
-	_note("Dupla do setor %d recuperada. Reparos e cristal conquistados continuam guardados."%(checkpoint_stage+1))
+	_note("De volta. O progresso está guardado.")
 
 func _crystal_collected() -> void:
 	crystal_count+=1
-	_note("SEXTO CRISTAL RECUPERADO! Agora, os dois no portal.")
+	_note("Cristal recuperado! Entrem juntos.")
 
 func _celebrate() -> void:
 	if completion_count>0 or not repaired.all(func(v):return v) or not confirmed: return
@@ -434,6 +447,8 @@ func _celebrate() -> void:
 	music.hide()
 	terminal.hide()
 	clue.hide()
+	receiver.hide()
+	get_node("SwitchPrompt").hide()
 	get_node("FloatHint").hide()
 	for actor in pair:
 		B.clean_actor(actor)
@@ -446,38 +461,9 @@ func _celebrate() -> void:
 	_note("AMIZADE É CONSTRUIR JUNTOS. Portal restaurado, sexto cristal recuperado!")
 	hud.get_node("Message").text=""
 	message_left=0.0
-	var layer:=CanvasLayer.new()
-	layer.name="Celebration"
-	layer.layer=12
-	add_child(layer)
-	var panel:=Panel.new()
-	panel.position=Vector2(112,480)
-	panel.size=Vector2(928,156)
-	var style:=StyleBoxFlat.new()
-	style.bg_color=Color("183642")
-	style.border_color=Color("ffe69a")
-	style.set_border_width_all(3)
-	style.set_corner_radius_all(14)
-	panel.add_theme_stylebox_override("panel",style)
-	layer.add_child(panel)
-	var names=["Finn","Jake","Fionna","Cake","Marceline","BMO"]
-	for i in 6:
-		var sprite:=AnimatedSprite2D.new()
-		sprite.name=names[i]
-		sprite.sprite_frames=load("res://Assets/01_Characters/%s/animations.tres"%names[i].to_lower())
-		sprite.position=Vector2(216+i*144,536)
-		sprite.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
-		layer.add_child(sprite)
-		sprite.play(&"celebrate" if sprite.sprite_frames.has_animation(&"celebrate") else &"idle")
-		B.label(layer,names[i],Vector2(188+i*144,582),16)
-	var button:=Button.new()
-	button.text="Voltar à seleção de fases"
-	button.position=Vector2(448,418)
-	button.size=Vector2(256,42)
-	button.focus_mode=Control.FOCUS_NONE
-	B.style_button(button)
-	button.pressed.connect(func(): get_tree().change_scene_to_file("res://phase_select.tscn"))
-	layer.add_child(button)
+	hud.hide()
+	var layer:=CanvasLayer.new();layer.name="Celebration"
+	layer.set_script(load("res://friendship_ending.gd"));add_child(layer)
 
 func _note(text: String) -> void:
 	hud.get_node("Message").text=text

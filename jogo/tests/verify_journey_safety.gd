@@ -196,8 +196,8 @@ func exits_without_crystal(slot: int) -> void:
 	await frames(5)
 	check("fixture F1: both players at exit cannot finish without crystal/puzzle",level.exit_area._players_in_exit.size()==2 and not level.exit_area._completed and level.completion_count==0 and level.crystal_count==0)
 	await fixture_stage(2,slot)
-	await place(level.pair[0],Vector2(624,437.85))
-	await place(level.pair[1],Vector2(656,437.85))
+	await place(level.pair[0],Vector2(660,437.85))
+	await place(level.pair[1],Vector2(704,437.85))
 	await frames(5)
 	check("fixture F6: both at portal cannot skip final signal/confirmation/crystal",level.exit_area._players_in_exit.size()==2 and not level.exit_area._completed and level.completion_count==0 and level.crystal_count==0)
 

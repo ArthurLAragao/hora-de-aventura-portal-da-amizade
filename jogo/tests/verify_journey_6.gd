@@ -108,11 +108,14 @@ func route(slot: int) -> void:
 	await jump(bmo,720)
 	await jump(bmo,640)
 	check("crystal collected once; one player cannot end",level.crystal_count==1 and level.completion_count==0)
-	await walk(marceline,600)
+	await walk(marceline,560)
+	await jump(marceline,660)
 	await frames(15)
 	check("entire three-pair normal route reaches stable ending",level.completion_count==1 and level.exit_area._completed and level.recovery_count==0 and level.checkpoint_stage==2)
 	check("six friends celebrate without six controlled bodies",level.has_node("Celebration") and get_nodes_in_group("players").is_empty() and level.crystal_count==1)
 	await capture("phase6-celebration")
+	check("ending buttons and six portraits are framed inside the reference canvas",level.get_node("Celebration/Phases").get_rect().end.y<=648 and level.get_node("Celebration/Menu").get_rect().end.x<=1152 and level.get_node("Celebration").get_children().filter(func(n):return n is AnimatedSprite2D).size()==6)
+	check("no orphan music indicator or tutorial HUD in the ending",not level.receiver.visible and not level.hud.visible)
 
 func run() -> void:
 	root.size=viewport_size

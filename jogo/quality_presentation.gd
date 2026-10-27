@@ -10,6 +10,8 @@ var previous_mode: int
 var previous_aspect: int
 var shown_help:=false
 var fade: ColorRect
+var role_time:=4.0
+var previous_roles:=""
 func _ready() -> void:
 	level=get_parent()
 	var window=get_window()
@@ -19,15 +21,10 @@ func _ready() -> void:
 	window.content_scale_size=Vector2i(1152,648)
 	window.content_scale_mode=Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	window.content_scale_aspect=Window.CONTENT_SCALE_ASPECT_KEEP
+	if level.has_node("LogTarget"):level.get_node("LogTarget").hide()
 	for node in level.get_children():
 		if node is Label: node.hide()
 	hint=B.label(self,"",Vector2.ZERO,14,"Context")
-	if level.has_node("TutorialLog"):
-		B.label(self,"Jake",Vector2(1838,level.FLOOR-110),14,"JakeTarget")
-		B.label(self,"Tronco",Vector2(1830,level.FLOOR+20),14,"LogTargetName")
-	else:
-		B.label(self,"Marceline",Vector2(472,level.LEFT_FLOOR+3),13,"MusicTarget")
-		B.label(self,"BMO",Vector2(768,level.FLOOR+20),13,"BmoTarget")
 	var canvas:=CanvasLayer.new()
 	canvas.layer=20
 	add_child(canvas)
@@ -67,21 +64,18 @@ func _process(_delta: float) -> void:
 				if actor.player_id==slot: text+="P%d — %s\n%s\n"%[slot,String(actor.name),B.controls(actor).replace(" Q","").replace(" Shift direito","") if actor.character_id in [&"bmo",&"fionna"] else B.controls(actor)]
 		text+="Finn/Fionna: empurre caminhando.\nF2: reiniciar • R/Backspace: repor objeto próximo\nF1 ou Esc: fechar esta ajuda"
 		help_text.text=text
-	if has_node("JakeTarget"):
-		get_node("JakeTarget").visible=level.checkpoint.activated and not level.relay_solved
-		get_node("LogTargetName").visible=level.checkpoint.activated and not level.relay_solved
-	if has_node("MusicTarget"):
-		var show_targets: bool=level.stage==2 and level.repaired[2] and level.completion_count==0
-		get_node("MusicTarget").visible=show_targets
-		get_node("BmoTarget").visible=show_targets
+	var roles: String=level.hud.get_node("Hints").text
+	if roles!=previous_roles: previous_roles=roles;role_time=3.0
+	role_time=maxf(0,role_time-_delta)
+	level.hud.get_node("Hints").visible=role_time>0 and not shown_help
 	if level.get("completion_count")>0: return
 	if level.has_node("TutorialLog"):
 		var block=level.tutorial_log if not level.tutorial_solved else level.log
 		var actor=level.finn
 		if not block.settled and not level.relay_solved and actor.global_position.distance_to(block.global_position)<100 and actor.is_on_floor():
 			hint.position=block.position+Vector2(-72,-82 if not level.tutorial_solved else 50)
-			hint.text=("A/D" if actor.player_id==1 else "Setas")+": empurrar"
-			if absf(block.position.x-(304 if not level.tutorial_solved else 1360))>80: hint.text+=" • "+("R" if actor.player_id==1 else "Backspace")+": repor"
+			hint.text=""
+			if absf(block.position.x-(304 if not level.tutorial_solved else 1360))>80: hint.text=("R" if actor.player_id==1 else "Backspace")+": repor"
 		for gate in [level.tutorial_gate,level.relay_gate,level.final_gate]:
 			gate.get_node("Sprite2D").visible=not gate.is_open
 	else:

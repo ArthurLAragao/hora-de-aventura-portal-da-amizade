@@ -121,13 +121,17 @@ func _build() -> void:
 	decor.name="Scenery"
 	decor.z_index=-1
 	add_child(decor)
-	for i in 16:
-		var x: float=[48,88,224,464,836,960,1136,1200,1240,1320,1968,2000,2160,2240,2376,2410][i]
-		B.sprite(decor,"Plant%d"%i,"res://Assets/02_Environments/01_tree_house/tiles/decor_%02d.png"%(1+i%4),Vector2(x,(LEFT_FLOOR if x<640 else FLOOR)-16))
+	var art:=Node2D.new()
+	art.name="ArtDirection"
+	art.set_script(load("res://stage_scenery.gd"))
+	add_child(art)
 
 func _physics_process(_delta: float) -> void:
 	if not live or Engine.is_editor_hint(): return
 	B.poll_bridge_cancel(bridge)
+	tutorial_plate.completed=tutorial_solved
+	top_plate.completed=relay_solved
+	log_plate.completed=relay_solved
 	if tutorial_plate.is_active() and tutorial_log.position.x>=400 and not tutorial_solved:
 		tutorial_solved=true
 		tutorial_log.settled=true
@@ -152,17 +156,17 @@ func _process(_delta: float) -> void:
 	message_left=maxf(0.0,message_left-_delta)
 	if message_left<=0.0: hud.get_node("Message").text=""
 	hud.get_node("Hints").text="P%d Finn   •   P%d Jake"%[finn.player_id,jake.player_id]
-	var goal="Finn: leve o tronco à placa."
+	var goal="Abra a trilha."
 	if tutorial_solved:
-		goal="Jake: prepare a ponte para Finn."
+		goal="Construam a passagem."
 		if bridge._bridge_active:
-			goal="Finn: alcance a alavanca do outro lado."
+			goal="Abra o caminho do outro lado."
 			if finn.position.x<640 and finn.is_on_floor(): goal="Finn: "+("Espaço/W" if finn.player_id==1 else "Cima")+" para subir no dorso."
-	if permanent.visible: goal="Reúnam-se na bandeira do acampamento."
+	if permanent.visible: goal="Até o acampamento."
 	if checkpoint.activated:
-		goal="Finn: aproxime o tronco da plataforma."
-		if log.position.x>1460: goal="Jake: use o tronco para subir à sua placa."
-		if top_plate.is_active(): goal="Finn: leve o tronco até o encaixe."
+		goal="Unam os dois caminhos."
+		if log.position.x>1460: goal="Alcancem os dois encaixes."
+		if top_plate.is_active(): goal="Levem o tronco ao encaixe."
 	if relay_solved: goal="Reúnam-se e recuperem o cristal."
 	if crystal_count>0: goal="Cheguem juntos à bandeira de saída."
 	if completion_count>0: goal="Caminho construído em dupla!"
@@ -176,7 +180,7 @@ func _prepare_recovery() -> void:
 	for actor in [finn,jake]: B.clean_actor(actor)
 
 func _recovered(used_checkpoint: bool) -> void:
-	_note("De volta ao acampamento; os reparos estão preservados." if used_checkpoint else "Vamos tentar de novo, juntos, desde o início.")
+	_note("De volta ao acampamento." if used_checkpoint else "Vamos tentar juntos.")
 
 func _crystal_collected() -> void:
 	crystal_count+=1
@@ -190,7 +194,10 @@ func _complete() -> void:
 	for actor in [finn,jake]:
 		B.clean_actor(actor)
 		actor.movement_locked=true
-	_note("CAMINHO CONSTRUÍDO! Finn e Jake chegaram juntos.")
+	_note("")
+	var title=B.label(hud,"Caminho construído em dupla!",Vector2(0,132),28)
+	title.size.x=1152
+	title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	var button:=Button.new()
 	button.text="Voltar à seleção de fases"
 	button.position=Vector2(448,570)
