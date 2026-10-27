@@ -1,9 +1,10 @@
 extends "res://pressure_plate.gd"
-## Local art for the two journey scenes. Trigger geometry and capability rules are unchanged.
+## Environment-local finish; trigger geometry and capability rules stay unchanged.
 @export var required_ability: StringName = &""
 @export var visual_kind: StringName = &"step"
 @export var completed:=false
 @export var available:=true
+var _last_visual:=""
 func _is_accepted(body: Node2D) -> bool:
 	if required_ability!=&"": return body is CoopPlayer and body.has_ability(required_ability)
 	return super._is_accepted(body)
@@ -13,49 +14,45 @@ func _set_visual(pressed: bool) -> void:
 	z_index=1
 	queue_redraw()
 func _process(_dt: float) -> void:
-	queue_redraw()
+	var state:=visual_state()
+	if state!=_last_visual:_last_visual=state;queue_redraw()
 func visual_state() -> String:
 	return "complete" if completed else ("pressed" if is_active() else ("available" if available else "inactive"))
 func _draw() -> void:
-	var ink:=Color("142a36")
-	var trim:=Color("dba754") if available else Color("68838c")
-	var lit:=Color("ffe79b") if is_active() else Color("b88346")
-	if not available: lit=Color("536e7c")
-	if completed: lit=Color("a5ebc1")
-	if visual_kind in [&"reunion",&"confirm"]:
-		draw_colored_polygon(PackedVector2Array([Vector2(-30,-4),Vector2(-22,-9),Vector2(22,-9),Vector2(30,-4),Vector2(22,3),Vector2(-22,3)]),ink)
-		draw_colored_polygon(PackedVector2Array([Vector2(-26,-4),Vector2(-20,-6),Vector2(20,-6),Vector2(26,-4),Vector2(20,0),Vector2(-20,0)]),trim)
-		draw_line(Vector2(-18,-3),Vector2(18,-3),lit,3)
-		# Two small uprights distinguish a gathering seal from a weight switch.
-		for x in [-24,24]:
-			draw_rect(Rect2(x-2,-23,4,18),ink)
-			draw_rect(Rect2(x-1,-22,2,9),lit)
+	var forest:=get_parent()!=null and get_parent().has_node("TutorialLog")
+	var ink:=Color("203941")
+	var side:=Color("6b4d36") if forest else Color("365966")
+	var surface:=Color("ba8b50") if forest else Color("769d9c")
+	var metal:=Color("dba754") if available else Color("68838c")
+	var light:=Color("a5ebc1") if completed else (Color("ffe79b") if is_active() else metal)
+	var gathering:=visual_kind in [&"reunion",&"confirm"]
+	# A recessed paving slab for gathering; a raised, compressible tread for weight.
+	var corners:=PackedVector2Array([Vector2(-39,-3),Vector2(-33,-7),Vector2(33,-7),Vector2(39,-3),Vector2(35,3),Vector2(-35,3)])
+	draw_colored_polygon(corners,ink)
+	draw_rect(Rect2(-34,-4,68,6),side)
+	draw_rect(Rect2(-32,-4,64,3),surface)
+	if forest:
+		for x in [-24,-8,8,24]:draw_line(Vector2(x,-3),Vector2(x,1),side,1)
 	else:
-		draw_rect(Rect2(-36,-7,72,9),ink)
-		draw_rect(Rect2(-34,-5,68,5),Color("6a8590"))
-		draw_rect(Rect2(-19,-4 if is_active() else -10,38,5),ink)
-		draw_rect(Rect2(-17,-3 if is_active() else -8,34,3),lit)
-		for x in [-33,25]: draw_rect(Rect2(x,-5,8,3),trim if not is_active() else lit)
-	var badge_x:=38 if accepts_pushables else -38
-	draw_line(Vector2(signf(badge_x)*26,-4),Vector2(badge_x,-4),ink,3)
-	draw_set_transform(Vector2(badge_x,0))
-	draw_rect(Rect2(-2,-13,4,9),ink)
-	draw_rect(Rect2(-1,-12,2,7),trim)
-	# An enamel emblem is attached to the rim, not a floating instruction label.
-	draw_rect(Rect2(-8,-28,16,17),ink)
-	draw_rect(Rect2(-6,-26,12,12),trim)
-	if completed:
-		draw_polyline(PackedVector2Array([Vector2(-4,-20),Vector2(-1,-17),Vector2(5,-23)]),ink,2)
-	elif accepts_pushables:
-		draw_rect(Rect2(-4,-22,8,5),ink)
-		draw_line(Vector2(-2,-22),Vector2(-2,-17),trim,1)
-	elif required_ability==&"bridge":
-		draw_polyline(PackedVector2Array([Vector2(-4,-17),Vector2(-4,-21),Vector2(4,-21),Vector2(4,-17)]),ink,2)
-	elif required_ability==&"music":
-		draw_line(Vector2(2,-23),Vector2(2,-18),ink,2)
-		draw_rect(Rect2(-2,-19,4,3),ink)
-	elif required_ability==&"terminal":
-		draw_rect(Rect2(-4,-23,8,7),ink)
-		draw_rect(Rect2(-2,-21,4,2),trim)
+		draw_line(Vector2(-15,-3),Vector2(-13,0),side,1)
+		draw_line(Vector2(14,-3),Vector2(16,0),side,1)
+	if gathering:
+		# Inlaid footprints stay in the stone, with no floating badge or interaction key.
+		for x in [-11,7]:
+			draw_rect(Rect2(x,-5,5,3),light if is_active() or completed else ink)
+			draw_rect(Rect2(x+1,-7,3,2),light if is_active() or completed else ink)
 	else:
-		draw_colored_polygon(PackedVector2Array([Vector2(0,-24),Vector2(4,-20),Vector2(0,-16),Vector2(-4,-20)]),ink)
+		var y: int=-4 if is_active() or completed else -10
+		draw_rect(Rect2(-24,y,48,7),ink)
+		draw_rect(Rect2(-22,y+1,44,4),surface)
+		for x in [-16,-5,6,17]:draw_line(Vector2(x,y+1),Vector2(x,y+4),side,1)
+		# Weight/ability cue is an engraving in the tread, not an upright UI tile.
+		if accepts_pushables:draw_rect(Rect2(-5,y+1,10,3),side)
+		elif required_ability==&"bridge":draw_line(Vector2(-7,y+2),Vector2(7,y+2),metal,2)
+	# Exposed end caps remain visible beside a body or the existing 58px log.
+	for x in [-37,29]:
+		draw_rect(Rect2(x,-9 if gathering else -7,8,10),ink)
+		draw_rect(Rect2(x+1,-8 if gathering else -6,6,5),metal)
+		draw_rect(Rect2(x+2,-6 if gathering else -4,4,2),light)
+		if completed:draw_line(Vector2(x+2,-7),Vector2(x+5,-4),ink,1)
+		elif not available:draw_rect(Rect2(x+2,-7,4,4),side)
