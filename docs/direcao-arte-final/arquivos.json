@@ -1,0 +1,29 @@
+{
+  "files": [
+    "journey_plate.gd",
+    "journey_build.gd",
+    "journey_level_1.gd",
+    "level_6.gd",
+    "quality_presentation.gd",
+    "stage_scenery.gd",
+    "portal_sanctuary.gd",
+    "friendship_ending.gd",
+    "README.md",
+    "DIRECAO_ARTE_FINAL.md",
+    "tests/qa_art_states.gd",
+    "tests/verify_journey_6.gd",
+    "tests/verify_journey_safety.gd",
+    "Assets/02_Environments/01_tree_house/tree_midground_v2.png",
+    "Assets/03_Objects_and_Puzzles/sprites/portal_sanctuary_v2.png",
+    "stage_scenery.gd.uid",
+    "portal_sanctuary.gd.uid",
+    "friendship_ending.gd.uid",
+    "tests/qa_art_states.gd.uid",
+    "Assets/02_Environments/01_tree_house/tree_midground_v2.png.import",
+    "Assets/03_Objects_and_Puzzles/sprites/portal_sanctuary_v2.png.import",
+    "tests/qa_art_interface.gd",
+    "tests/qa_art_interface.gd.uid"
+  ],
+  "backup": "external, not versioned",
+  "manual_approval": "pending"
+}

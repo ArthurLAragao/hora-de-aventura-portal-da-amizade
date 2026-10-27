@@ -1,5 +1,7 @@
 # Hora de Aventura: O Portal da Amizade
 
+Atualização mais recente: [direção de arte e apresentação das fases 1 e 6](DIRECAO_ARTE_FINAL.md). Candidata para nova avaliação humana; não aprovada automaticamente pelos testes anteriores.
+
 Projeto cooperativo local para dois jogadores, no **Godot 4.7.2**, com os assets existentes. Rodada atual: correção concentrada de qualidade das fases **1 e 6**. Consulte [REVISAO_QUALIDADE.md](REVISAO_QUALIDADE.md) para causas, correções e limites da validação. A Fase 2 foi preservada; as fases 3, 4 e 5 não foram implementadas nesta rodada.
 
 ## Abrir
