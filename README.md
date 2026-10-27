@@ -1,176 +1,37 @@
 # Hora de Aventura: O Portal da Amizade
 
-Projeto acadêmico de plataforma 2D cooperativa em Godot 4.7.2, com o projeto completo e sua documentação.
+Plataforma 2D cooperativa local para dois jogadores, projeto acadêmico em **Godot 4.7.2**.
 
-O projeto do Godot está na pasta [`jogo/`](jogo/). A documentação inclui relatório integral, inventário dos seis personagens, capturas reais e resultados dos testes. Caches e backups locais ficam fora do versionamento.
+Esta branch reúne a revisão de qualidade das **fases 1 e 6**. É uma versão para nova avaliação humana, com correções de pontes, contato com o chão, portões, tutorial, progressão e recuperação. As aprovações antigas de personagens não aprovam automaticamente os novos layouts.
 
-## Abrir o projeto
+## Abrir
 
-1. Clone ou baixe este repositório.
-2. No **Godot 4.7.2**, importe [`jogo/project.godot`](jogo/project.godot) e aguarde a importação normal dos assets.
-3. Use **F5** para o fluxo atual do menu e a primeira fase.
-4. Para o Reino Gelado, abra [`jogo/level_2.tscn`](jogo/level_2.tscn) e use **F6**. Na raiz, mantenha **Test Start = Normal**; **Cake Player Id** permite alternar P1/P2.
-5. As salas individuais estão em [`jogo/tests/`](jogo/tests/).
+1. Importe [`jogo/project.godot`](jogo/project.godot) no Godot 4.7.2 e aguarde a importação normal.
+2. F5 mantém o fluxo do menu para a primeira fase. Ou abra [`jogo/level_1.tscn`](jogo/level_1.tscn) com F6.
+3. Abra [`jogo/level_6.tscn`](jogo/level_6.tscn) com F6 para os três setores e a celebração, independentemente das fases intermediárias.
+4. Na raiz, **Finn Player Id** / **Primary Player Id** alterna os papéis 1 e 2.
 
-O jogo permanece em desenvolvimento: a primeira fase é a base aprovada; a segunda tem cenário e percurso demonstrável, com coleta do cristal e conclusão conjunta pendentes. O README interno de `jogo/` registra uma etapa anterior da primeira fase; o relatório e o inventário abaixo descrevem o estado atualizado.
+P1: A/D, Espaço/W, E, Q. P2: setas laterais, cima, Enter, Shift direito. F1 ajuda; Esc cancela ação local; F2 reinicia; R/Backspace repõe bloco próximo. No terminal, esquerda/direita escolhe, interação confirma.
 
-Referências fornecidas: [SGDD.pdf](docs/SGDD.pdf), [cronograma-disciplina.png](docs/cronograma-disciplina.png).
+## Revisão e evidências
 
-- [Relatório original completo](docs/ENTREGA_ORIGINAL.md)
-- [Arquivos alterados e adicionados](docs/ARQUIVOS.md)
-- [Inventário dos seis personagens](docs/INVENTARIO_PERSONAGENS.md)
-- [Resultados dos testes no projeto original](resultados/original-results.json)
+- [Causas, correções, testes e checklist manual](jogo/REVISAO_QUALIDADE.md)
+- [Resultados finais com comportamentos verificados](docs/revisao-qualidade/resultados.json)
+- [Arquivos alterados nesta revisão local](docs/revisao-qualidade/arquivos-locais.json)
 
-## Capturas reais
+![Fase 1: capturas reais antes e depois](docs/revisao-qualidade/fase1-antes-depois.png)
+![Fase 6: capturas reais antes e depois](docs/revisao-qualidade/fase6-antes-depois.png)
 
-### Ponte de Cake
+[Contato de Cake](docs/revisao-qualidade/cake-contato-antes-depois.png) · [Terminal contextual](docs/revisao-qualidade/terminal-contextual.png) · [Celebração](docs/revisao-qualidade/celebracao.png)
 
-![Transformação real de Cake](capturas/cake-transformacao-real.gif)
+Os percursos das fases 1 e 6 foram executados por entradas normais automatizadas, com papéis padrão/invertidos, em 1152×648 e 1280×720, sem reposicionamento contado como travessia. As capturas renderizadas foram inspecionadas. Testes isolados provocam estados de risco e não substituem o percurso. Áudio ouvido, duas pessoas jogando, outro computador e build exportado continuam sem avaliação nesta revisão.
 
-[Entrada](capturas/p1-bridge-entry.png) · [Centro](capturas/p1-bridge-center.png) · [Saída](capturas/p1-bridge-exit.png)
+## Escopo preservado
 
-### Fase 1: antes e depois
+Fase 2 sem redesign e com regressão do percurso existente. Seu cristal e conclusão conjunta permanecem pendentes do estado anterior. Fases 3–5 não implementadas. Arte original, versão, controles globais, menu, câmera compartilhada e HUD principal preservados. Os ajustes compartilhados estão descritos no relatório. Backups, caches e logs temporários não são publicados.
 
-![Primeira fase antes e depois](capturas/fase1-antes-depois.png)
+## Referências e histórico
 
-### Fase 2: Reino Gelado
+[SGDD](docs/SGDD.pdf) · [Cronograma](docs/cronograma-disciplina.png) · [Relatório histórico da publicação anterior](docs/ENTREGA_ORIGINAL.md)
 
-![Início da segunda fase](capturas/level2-p1-start.png)
-
-[Túnel e interruptor](capturas/level2-p1-tunnel-switch.png) · [Ponte](capturas/level2-p1-bridge.png) · [Área final reservada](capturas/level2-p1-final.png)
-
-## Estado da entrega
-
-458 verificações automatizadas passaram diretamente no projeto original. A avaliação manual da ponte recém-integrada, exportação e múltiplas resoluções continuam pendentes. A Fase 2 possui cenário e percurso demonstrável; coleta do cristal e conclusão conjunta ainda não estão implementadas.
-
-O relatório abaixo foi preservado integralmente. Seus caminhos locais descrevem o ambiente de desenvolvimento; capturas e resultados publicados estão organizados nas pastas deste repositório.
-
----
-
-# Entrega — ponte de Cake, acabamento da Fase 1 e cenário da Fase 2
-
-Aplicado em 26/10/2026 ao projeto original `C:\Users\Ryzen\Documents\Codex\2026-10-22\quero-que-voc-me-ajude-a\outputs\adventure-time-phase1-corrigida`. Godot 4.7.2 preservado. As três tarefas foram executadas na ordem autorizada. Não foram iniciados outros personagens, fases ou sistemas de menu.
-
-## A — Cake
-
-A ponte usa a composição aprovada de **141×18 pixels visíveis**: as extremidades originais e o centro próprio de Cake de 88×9. O centro publicado é idêntico ao PNG aprovado na prévia, conferido por SHA-256. Os atlas e `animations.tres` originais não foram sobrescritos.
-
-- A extensão usa os frames originais, revela o centro em passos inteiros de pixels e desloca a cabeça sem deformação. Há uma única representação visível de Cake.
-- O apoio só é habilitado depois que a composição completa foi desenhada. Na execução sem janela, valida-se a geometria; a confirmação real de desenho foi exercitada separadamente em janela.
-- O dorso e o contorno da cabeça têm apoio correspondente. A entrada sobe 12 unidades em relação às margens. A saída exige um pequeno salto para vencer o relevo preservado da cabeça; não se alterou salto, gravidade ou terreno para escondê-lo.
-- A faixa válida é **±8 unidades em X e ±4 em Y na âncora**, exige chão, alcance da Area2D e capacidade `stretch`. Não há reposicionamento automático. O centro cresce e recolhe em 0,75 s cada, além dos clipes originais e margem de segurança de término.
-- Cake fica parada. Soltar a habilidade ou cancelar enquanto Fionna depende da ponte deixa a retração pendente; o apoio continua presente. A análise considera a caixa atual e prevista da parceira, inclusive quando está no ar. Chão das margens ou passagem permanente abaixo do dorso constitui apoio independente.
-- Retração sem dependentes retira o apoio antes de recolher o desenho. Ao final, sprite e controles são restaurados. A recuperação da dupla usa a rotina existente, com limpeza forçada apenas nesse contexto.
-- A ponte de Jake e o controlador compartilhado não foram alterados.
-
-Abrir `tests/cake_test.tscn`, escolher **Cake Player Id** na raiz e executar F6. A sala continua separada da primeira fase. A indicação antiga “ponte não implementada” foi substituída.
-
-**Comportamentos verificados:** movimento/túnel anteriores; P1/P2; ativação no chão e recusa fora da área/no ar; ausência de apoio durante crescimento; travessia real com salto curto de entrada, caminhada no centro e salto curto de saída; espera com Fionna apoiada ou saltando; manivela e passagem permanente; reunião da dupla sem queda; cancelamento na extensão e no crescimento; cancelamento ocupado; restauração durante recuperação em cinco estados; reinício com ponte formada; extremos da faixa ±8 com entrada e saída físicas.
-
-As rotas completas de `verify_cake.gd` são movidas por entradas de controle. Os casos isolados de `verify_cake_bridge.gd` usam posições iniciais artificiais para montar condições específicas e **não são contados como percurso completo**.
-
-**Limitações:** avaliação manual da nova ponte ainda pendente; a pequena contração entre dois frames originais continua visível; existe salto de entrada/saída; build exportado e múltiplas resoluções não foram validados.
-
-Capturas reais: `captures/p1-bridge-entry.png`, `p1-bridge-center.png`, `p1-bridge-exit.png` e equivalentes de P2. `cake-transformacao-real.gif` reúne 42 recortes de frames efetivamente renderizados pelo Godot, em preparação isolada da âncora; não é o demonstrador externo e não demonstra o percurso até ela.
-
-## B — Trilha da Casa na Árvore
-
-O acabamento foi deliberadamente localizado:
-
-- Redistribuição dos 16 elementos de vegetação existentes, liberando a vizinhança da âncora, alavanca, tronco, placas e cristal.
-- Vegetação desenhada atrás dos personagens e do terreno, preservando a leitura de pés e mecanismos.
-- Identificação discreta, no mundo, das áreas de ponte, tronco/placa, dupla de placas e cristal/saída. HUD principal preservado.
-- Geração por `@tool` protegida por um grupo único, evitando duplicação de decoração ao carregar a cena. As posições continuam definidas no script e são reproduzidas ao executar.
-
-**Não houve alteração física nesta tarefa.** `level_1.tscn`, malha e grade do TileSet, background/parallax, câmera, spawns, ponte de Jake, alavanca, checkpoint, tronco/placa, placas conjuntas, cristal e saída conjunta permaneceram idênticos ao baseline. Os tratamentos anteriores de continuidade e remoção de células desalinhadas foram preservados. Não se afirma uma reconstrução ou nova arte de bordas.
-
-Regressões: 49 verificações gerais da primeira fase, 154 de Jake/ponte, 73 de Finn e 228 de checkpoint/progresso, sem falhas. O teste de checkpoint inclui o percurso cooperativo, empurrão efetivo, placas, coleta e chegada física à saída; os demais casos de recuperação são identificados como preparações isoladas. Menu, Marceline, BMO e Fionna também passaram suas verificações existentes.
-
-Antes/depois: `captures/phase1-before-576.png`, `phase1-after-576.png`, equivalentes em X1600 e `fase1-antes-depois.png`. Essas capturas inspecionam o cenário com posições de câmera controladas; não substituem a evidência da rota automatizada ou sua avaliação manual anterior.
-
-## C — Passagem do Reino Gelado
-
-Nova cena: **`res://level_2.tscn`**. Abrir diretamente no editor e executar **F6**. O menu e a transição da primeira fase não foram alterados.
-
-A raiz expõe **Cake Player Id** (1 ou 2; padrão 2) e **Test Start** (Normal, Bloco, Túnel, Manivela, Ponte, Final). Fionna recebe o papel complementar. Os modos de teste mostram “INÍCIO DE TESTE” e não contam como conquista do percurso. O modo Manivela libera o primeiro mecanismo exclusivamente para sua avaliação isolada.
-
-| Trecho | Conteúdo atual |
-|---|---|
-| Início | Dupla em posições separadas e seguras; instruções curtas; chão até a área do bloco |
-| Bloco | Bloco de gelo marcado, controlador existente de empurrão; usado como degrau por Fionna; restauração próxima por R/Backspace ou reinício F2 |
-| Túnel | X448–608; altura livre 22,35; corpo normal de Cake 28 e baixo 21; travessia real, recuo e restauração da postura preservados |
-| Interruptor | Cake deve ter efetivamente entrado no túnel e interagir na área da saída; libera a primeira manivela |
-| Primeira manivela | Fionna chega pelo alto com o bloco e estende a passagem de gelo; Cake não deixa Fionna isolada |
-| Trecho intermediário | Pátio com plataformas laterais e chão contínuo; pontos livres para desenvolver desafios futuros |
-| Ponte de Cake | Âncora em (1488;487), com a mesma lógica local, sem coordenadas da fase 1; vão X1504–1568; Fionna atravessa e aciona a segunda manivela |
-| Passagem permanente | Plataforma de gelo permite Cake seguir depois da retração; proteção existente de trajetória ocupada preservada |
-| Final | Espaço seguro para ambos; cristal e bandeira como marcadores **explicitamente reservados**, sem coleta/conclusão implementadas |
-
-O pacote do Reino Gelado forneceu background, TileSet 32×32, terreno, pontes e decoração. O bloco, túneis, interruptor e manivelas usam recursos existentes do projeto. Nenhuma arte nova foi gerada para os cenários e nenhum asset externo foi baixado.
-
-O panorama de 640×360 usa escala **uniforme 3,6×**, cobrindo o mundo de 2304 unidades sem repetição de bordas incompatíveis; parte da altura é recortada pela câmera. A câmera compartilhada usa Fionna/Cake, limites X0–2304/Y0–648 e o controle de distância já existente. Não se reescreveu seu sistema.
-
-As passagens permanentes usam o tile de ponte de gelo com escala uniforme 2×. A faixa opaca principal tem 58 pixels, alinhada ao corpo de apoio de 58 unidades; as pontas de gelo abaixo são decoração, não trajetos. Nenhuma barreira artificial ou teleporte foi acrescentado ao fluxo normal.
-
-**Funcional:** movimento, colisões, bloco/degrau, túnel, interruptor, duas manivelas, passagens permanentes, ponte de Cake, recuperação e F2. O percurso normal inteiro foi movido por entradas de controle, nos dois papéis, com `recovery_count == 0` até a área final.
-
-**Preparado / pendente:** coleta do cristal, condição de saída conjunta e acabamento de seus estados finais. A fase **não está declarada concluível como jogo**. Não há física escorregadia; o movimento global permaneceu intacto. Os vãos de 64 unidades são adequados às demonstrações atuais, mas podem ser vencidos por salto comum: obrigatoriedade cooperativa e balanceamento final dos puzzles do SGDD continuam pendentes. A travessia de teste da ponte pousa no dorso e caminha sobre ele, sem contar um salto que ignore a ponte.
-
-Capturas reais: `level2-p1-start.png`, `level2-p1-tunnel-switch.png`, `level2-p1-bridge.png`, `level2-p1-final.png` e equivalentes com Cake P2.
-
-## Testes e limites da evidência
-
-| Verificação na cópia externa validada | Resultado |
-|---|---|
-| Cake: movimento/túnel/ponte/percurso P1 e P2 | 90 verificações de comportamento, sem falhas |
-| Cake em janela | Mesmos 90 comportamentos + 20 registros de captura; 110 registros não significam 110 comportamentos diferentes |
-| Segurança complementar de Cake | 28 verificações locais, sem falhas |
-| Fase 2 | 53 verificações; versão em janela também sem falhas |
-| Primeira fase / Jake / Finn | 49 / 154 / 73, sem falhas |
-| Checkpoint/progresso | 228, sem falhas |
-| Marceline / BMO / Fionna / menu | 93 / 106 / 124 / 10, sem falhas |
-
-Os testes em janela usam entradas automatizadas. As capturas foram inspecionadas visualmente; isso **não** equivale a jogar com duas pessoas, avaliar conforto manualmente ou validar outras resoluções/exportações. A captura real de transformação é um arranjo isolado, não uma rota iniciada no spawn.
-
-Houve avisos ambientais de certificados, cache gráfico GLES e configurações pessoais do editor, além de avisos de recursos em uso ao encerrar algumas suítes anteriores. Os logs são preservados. As verificações finais não registraram falhas de comportamento ou erros de script/parse/carregamento de recursos na cópia validada.
-
-**Validação direta no original concluída:** após autorização explícita do usuário, o próprio Godot 4.7.2 executou a importação padrão e os testes no projeto original. O bloqueio anterior da revisão automática foi resolvido por essa autorização; nenhuma edição manual de cache foi feita.
-
-| Suíte executada no projeto original | Verificações | Falhas |
-|---|---:|---:|
-| Cake — movimento, túnel, ponte e percurso P1/P2 | 90 | 0 |
-| Cake — segurança complementar | 28 | 0 |
-| Fase 2 | 53 | 0 |
-| Primeira fase | 49 | 0 |
-| Checkpoint e preservação de progresso | 228 | 0 |
-| Menu | 10 | 0 |
-| Total desta reexecução direta | **458** | **0** |
-
-As seis suítes retornaram código zero e não registraram erro de script/parse/carregamento de recursos. Logs detalhados: `logs/original-*.log`; resumo: `original-results.json`. Esses testes finais foram automatizados sem janela; as capturas e a inspeção visual anteriormente descritas continuam sendo da cópia externa, sem serem reapresentadas como novas capturas do original.
-
-Após a importação e os testes, a auditoria SHA-256 conferiu os 1.834 arquivos de recursos/scripts do original: **nenhuma alteração inesperada** em relação ao conjunto publicado. O cache `.godot` foi atualizado exclusivamente pelo Godot, como autorizado, e permanece fora da comparação de recursos. A textura central nova foi importada pelo engine. Não se presume avaliação manual, build exportado ou múltiplas resoluções.
-
-## Segurança, backup e arquivos
-
-Não havia Git no projeto. Backup anterior às alterações: **`C:\Users\Ryzen\Documents\ChatGPT\SGDD\work\priority-cake-levels\backup-original`**.
-
-Foram copiados `cake_player.gd`, `tests/cake_anchor.gd`, `tests/cake_test.gd`, `tests/cake_test.tscn`, `tests/verify_cake.gd`, `level_1.gd` e `level_1.tscn` (este último permaneceu intocado). Os relatórios externos anteriores estão em `backup-records`.
-
-A tentativa inicial de cópia completa encontrou falta de espaço. Foram removidas somente as duas cópias redundantes criadas nesta rodada; o backup foi reduzido aos arquivos envolvidos e reutilizou-se uma cópia anterior, primeiro conferida por hash com o baseline. Não houve limpeza de arquivos do usuário ou do projeto.
-
-Auditoria: **6 arquivos anteriores modificados, 13 adicionados, zero removidos e 1.815 arquivos anteriores preservados**. Os arquivos estão discriminados em `ARQUIVOS.md`; os manifests de publicação registram os hashes. Originais de arte, `player.gd`, Jake, checkpoint, controles, menu, HUD e câmera compartilhada permaneceram preservados.
-
-Registros de aprovação: Cake mantém aprovação manual de movimento/túnel/poses anteriores; a ponte integrada requer avaliação manual nova. BMO e Fionna continuam aprovados manualmente. Marceline não recebeu aprovação manual presumida. A primeira fase continua como base aprovada, com o acabamento novo submetido à sua avaliação.
-
-## Checklist manual curto
-
-- [x] Importação padrão dos novos recursos pelo Godot 4.7.2, autorizada e executada; testes automatizados no original concluídos.
-- [ ] Abrir o projeto no editor para a avaliação manual abaixo.
-- [ ] F6 em `tests/cake_test.tscn`, testar Cake P1/P2; aguardar formação, entrar com salto curto e atravessar com Fionna.
-- [ ] Soltar/usar Esc com Fionna apoiada e saltando; confirmar espera, manivela, apoio permanente e retorno de Cake aos controles. Reiniciar com F2.
-- [ ] Abrir a primeira fase pelo fluxo atual: observar acabamento e repetir ponte/alavanca, checkpoint, tronco/placa, placas conjuntas, cristal e saída.
-- [ ] F6 em `level_2.tscn`, **Test Start = Normal**: bloco/degrau, túnel/interruptor, primeira manivela, ponte de Cake, segunda manivela e reunião da dupla.
-- [ ] Conferir que os marcadores finais dizem “pendente” e que os inícios de teste estão identificados.
-- [ ] Avaliar manualmente visibilidade, conforto e ritmo dos saltos; exportação e múltiplas resoluções continuam fora da validação realizada.
-
-Nenhum outro cenário ou sistema foi iniciado.
+O relatório histórico e os resultados antigos descrevem versões anteriores; não são evidência de aprovação dos layouts desta branch.

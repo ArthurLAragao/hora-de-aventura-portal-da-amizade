@@ -185,7 +185,10 @@ func _test_player(player: CoopPlayer, partner: CoopPlayer, lever: CoopLever, gat
 	Input.action_press(prefix + "_reset")
 	await _frames(2)
 	Input.action_release(prefix + "_reset")
-	_check(tag + "own reset action restores log", absf(log.position.x - 450.0) < 0.1)
+	_check(tag + "reset does not place the log inside its operator", log.reset_pending and absf(log.position.x-450.0)>1)
+	await _place(player,Vector2(410,329))
+	await _frames(4)
+	_check(tag + "own reset restores log after its destination is clear", not log.reset_pending and absf(log.position.x-450.0)<0.1)
 
 	# A request with the log against a solid wall must not show a successful push.
 	log.position.x = 935.9
@@ -357,5 +360,15 @@ func _run() -> void:
 		if report != null:
 			report.store_string(JSON.stringify({"checks": checks, "failures": failures, "checkpoint_validated": false}, "\t"))
 	print("Finn checks: ", checks.size(), " | failures: ", failures)
+	_release_inputs()
+	if is_instance_valid(room):
+		_stop_audio(room)
+		room.queue_free()
+	await _frames(4)
+	OS.delay_msec(160)
 	await create_timer(1.0).timeout
 	quit(0 if failures == 0 else 1)
+
+func _stop_audio(node: Node) -> void:
+	for child in node.get_children(): _stop_audio(child)
+	if node is AudioStreamPlayer or node is AudioStreamPlayer2D or node is AudioStreamPlayer3D: node.stop()
