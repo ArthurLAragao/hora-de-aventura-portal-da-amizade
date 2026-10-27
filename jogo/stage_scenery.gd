@@ -36,6 +36,13 @@ func plant(x: float,floor_y: float,index: int,scale_factor: float) -> void:
 	sprite.position=Vector2(x,floor_y-(used.end.y-texture.get_height()*0.5)*scale_factor)
 	sprite.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 	sprite.set_meta("support_y",floor_y)
+	if forest:
+		var breeze:=ShaderMaterial.new()
+		breeze.shader=load("res://foliage_breeze.gdshader")
+		breeze.set_shader_parameter("phase",x*0.037)
+		breeze.set_shader_parameter("foot_y",float(used.end.y)/texture.get_height())
+		breeze.set_shader_parameter("amplitude",0.65/scale_factor)
+		sprite.material=breeze
 	add_child(sprite)
 func tree_sprite(x: float,floor_y: float,height: float) -> void:
 	var source=load("res://Assets/02_Environments/01_tree_house/tree_midground_v2.png")
@@ -44,7 +51,14 @@ func tree_sprite(x: float,floor_y: float,height: float) -> void:
 	sprite.texture=crop;sprite.scale=Vector2.ONE*(height/1347.0)
 	sprite.position=Vector2(x,floor_y-height*0.5);sprite.z_index=-3
 	sprite.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
-	sprite.set_meta("support_y",floor_y);add_child(sprite)
+	sprite.set_meta("support_y",floor_y)
+	var breeze:=ShaderMaterial.new()
+	breeze.shader=load("res://foliage_breeze.gdshader")
+	breeze.set_shader_parameter("phase",x*0.021)
+	breeze.set_shader_parameter("foot_y",1.0)
+	breeze.set_shader_parameter("amplitude",1.2/sprite.scale.x)
+	sprite.material=breeze
+	add_child(sprite)
 func _draw() -> void:
 	if level==null:return
 	if forest:
