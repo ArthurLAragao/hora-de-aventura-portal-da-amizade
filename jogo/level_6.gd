@@ -101,7 +101,11 @@ func _build() -> void:
 	add_child(portal)
 	portal.z_index=-2
 	for i in 3:
-		seals.append(B.sprite(self,"Seal%d"%i,B.OBJECTS+"receiver_off.png",Vector2(688+[-30,0,30][i],FLOOR+[-122,-134,-122][i]+2),0.25))
+		var legacy_socket:=Sprite2D.new()
+		legacy_socket.name="Seal%d"%i
+		legacy_socket.hide() # Stable node API; the portal draws physical lights from repaired.
+		add_child(legacy_socket)
+		seals.append(legacy_socket)
 		B.label(self,["1 ESTRUTURA","2 MECANISMO","3 SINAL"][i],Vector2(500+i*96,212),12)
 	bridge=B.packed(self,"JakeBridge","res://jake_bridge.tscn",Vector2(448,LEFT_FLOOR-26.35286))
 	permanent=B.packed(self,"PermanentBridge","res://permanent_bridge.tscn",Vector2(528,LEFT_FLOOR-2.35286))
@@ -235,6 +239,8 @@ func _build() -> void:
 	add_child(decor)
 	var art:=Node2D.new();art.name="ArtDirection"
 	art.set_script(load("res://stage_scenery.gd"));add_child(art)
+	var masonry:=Node2D.new();masonry.name="SanctuaryMasonry"
+	masonry.set_script(load("res://sanctuary_masonry.gd"));add_child(masonry)
 
 func _activate_pair(index: int) -> void:
 	var names: Array=[['Finn','Jake'],['Fionna','Cake'],['Marceline','BMO']]
@@ -273,8 +279,11 @@ func _set_presentation(index: int) -> void:
 	for node in reunion_b: node.visible=index==1
 	get_node("TerraceHint").hide()
 	tunnel.get_node("Prompt").visible=index==1
-	for child in ["Prompt","Status"]: crank.get_node(child).visible=index==1
+	crank.get_node("Prompt").visible=index==1
+	crank.get_node("Status").hide()
 	get_node("SwitchPrompt").visible=index==1
+	get_node("SwitchIndicator").visible=index==1
+	crank.visible=index==1
 	if index!=0:
 		bridge.get_node("AnchorPrompt").hide() if bridge.has_node("AnchorPrompt") else bridge.hide()
 
@@ -325,7 +334,7 @@ func _repair(index: int) -> void:
 	if index==2:
 		for plate in confirmation: plate.show()
 	if is_instance_valid(repair_sound): repair_sound.play()
-	seals[index].texture=B.receiver_texture(B.OBJECTS+"receiver_on.png")
+	seals[index].hide()
 	seals[index].modulate=Color.WHITE
 	portal.set("texture",load(B.OBJECTS+("portal_active.png" if repaired.all(func(v):return v) else "portal_repaired.png")))
 	if index==0:
@@ -398,7 +407,7 @@ func _process(_delta: float) -> void:
 		get_node("SwitchPrompt").text=("E" if cake.player_id==1 else "Enter") if tunnel_visited and not mechanism_unlocked and switch_area.overlaps_body(cake) and cake.is_on_floor() else ""
 		tunnel.call("update_prompt",cake)
 		if mechanism_unlocked: crank.call("update_prompt",pair[0])
-		else: crank.get_node("Prompt").text="Cake: interruptor após o túnel"
+		else: crank.get_node("Prompt").text=""
 		if Input.is_action_just_pressed(cake.get_interact_action()):
 			if tunnel_visited and switch_area.overlaps_body(cake) and cake.is_on_floor() and not mechanism_unlocked:
 				mechanism_unlocked=true
@@ -454,6 +463,7 @@ func _celebrate() -> void:
 	terminal.hide()
 	clue.hide()
 	receiver.hide()
+	log.get_node("Sprite2D").hide() # Final tableau only: no controlled actors remain.
 	get_node("SwitchPrompt").hide()
 	get_node("FloatHint").hide()
 	for actor in pair:
