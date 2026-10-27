@@ -1,6 +1,8 @@
+[Refinamento visual mais recente — comparação, clipes e validação](jogo/REFINAMENTO_VISUAL.md)
+
 # Hora de Aventura: O Portal da Amizade
 
-Atualização mais recente: **direção de arte das fases 1 e 6**, candidata para nova avaliação humana. [Causas, recursos, testes e checklist](jogo/DIRECAO_ARTE_FINAL.md). Os resultados anteriores não aprovam automaticamente esta apresentação.
+Rodada anterior: **direção de arte das fases 1 e 6**, candidata para nova avaliação humana. [Causas, recursos, testes e checklist](jogo/DIRECAO_ARTE_FINAL.md). Os resultados anteriores não aprovam automaticamente esta apresentação.
 
 [Placas](docs/direcao-arte-final/placas-fase1-antes-depois.png) · [Trilha](docs/direcao-arte-final/ambiente-fase1-antes-depois.png) · [Portal](docs/direcao-arte-final/portal-antes-depois.png) · [Vegetação](docs/direcao-arte-final/vegetacao-fase6-antes-depois.png) · [Reunião](docs/direcao-arte-final/confirmacao-dupla-antes-depois.png) · [Celebração](docs/direcao-arte-final/celebracao-antes-depois.png) · [Resultados no original](docs/direcao-arte-final/resultados.json)
 
