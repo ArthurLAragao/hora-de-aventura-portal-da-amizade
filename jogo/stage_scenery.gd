@@ -4,6 +4,7 @@ extends Node2D
 var level: Node2D
 var forest:=false
 var last_state:=""
+const PIXELS=preload("res://pixel_environment.gd")
 const ENVS="res://Assets/02_Environments/"
 func _ready() -> void:
 	level=get_parent()
@@ -13,15 +14,44 @@ func _ready() -> void:
 	if old!=null:
 		for child in old.get_children(): child.queue_free()
 	if forest:
-		for spec in [[28,level.LEFT_FLOOR,158],[1160,level.FLOOR,175],[2018,level.FLOOR,164]]: tree_sprite(spec[0],spec[1],spec[2])
+		level.get_node("Background/Panorama").scale=Vector2.ONE*2.0
+		for spec in [[32,level.LEFT_FLOOR,194],[244,level.LEFT_FLOOR,180],[1124,level.FLOOR,224],[1240,level.FLOOR,176],[1994,level.FLOOR,210]]: tree_sprite(spec[0],spec[1],spec[2])
 		for spec in [[32,1,1],[72,3,1],[240,2,1],[470,3,1],[970,1,1],[1120,2,2],[1154,3,1],[1216,1,1],[1270,4,1],[1970,1,2],[2012,3,1],[2158,2,1],[2394,1,2]]:
 			plant(spec[0],level.LEFT_FLOOR if spec[0]<640 else level.FLOOR,spec[1],spec[2])
 	else:
 		for spec in [[32,3],[88,2],[288,4],[344,2],[1144,3],[1192,4],[1328,1],[1360,2]]:
 			plant(spec[0],level.LEFT_FLOOR if spec[0]<480 else level.FLOOR,spec[1],1)
+	# Deliberate clearings around switches, anchors and exits; layered vegetation between them.
+	if forest:
+		for spec in [[100,128],[220,128],[976,96],[1180,128],[1456,96],[1976,128],[2390,96]]:
+			thicket(spec[0],level.LEFT_FLOOR if spec[0]<640 else level.FLOOR,spec[1],Color(0.82,0.90,0.80),-2)
+		for spec in [[60,2],[266,3],[492,2],[1090,3],[1280,2],[1508,3],[1632,2],[1930,3],[2160,3],[2408,2]]:
+			plant(spec[0],level.LEFT_FLOOR if spec[0]<640 else level.FLOOR,spec[1],1)
+	else:
+		thicket(144,level.LEFT_FLOOR,256,Color(0.70,0.82,0.90),-4)
+		for spec in [[304,192],[408,64],[1120,128],[1288,176]]:
+			thicket(spec[0],level.LEFT_FLOOR if spec[0]<480 else level.FLOOR,spec[1],Color.WHITE,-2)
 	queue_redraw()
+func thicket(x: float,floor_y: float,width: int,tint: Color,plane: int) -> void:
+	var path:=ENVS+("01_tree_house" if forest else "06_friendship_portal")+"/undergrowth_v3.png"
+	var tex:=PIXELS.texture(path,width)
+	var used:=tex.get_image().get_used_rect()
+	var sprite:=Sprite2D.new();sprite.name="Thicket%d"%int(x)
+	sprite.texture=tex;sprite.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+	sprite.position=Vector2(x,floor_y-(used.end.y-tex.get_height()*0.5))
+	sprite.z_index=plane;sprite.modulate=tint
+	sprite.set_meta("support_y",floor_y)
+	var breeze:=ShaderMaterial.new();breeze.shader=load("res://foliage_breeze.gdshader")
+	breeze.set_shader_parameter("phase",x*0.029)
+	breeze.set_shader_parameter("amplitude",0.7)
+	breeze.set_shader_parameter("foot_y",float(used.end.y)/tex.get_height())
+	sprite.material=breeze;add_child(sprite)
 func _process(_dt: float) -> void:
 	if level==null:return
+	if forest and not Engine.is_editor_hint() and level.has_node("SharedCamera"):
+		# Modest distant parallax inside the existing raster's spare border; no repeat or camera change.
+		var center: Vector2=level.get_node("SharedCamera").get_screen_center_position()
+		level.get_node("Background/Panorama").position.x=576.0-clampf((center.x-576.0)*0.04,0.0,52.0)
 	var state: String=str(level.tutorial_solved)+str(level.relay_solved) if forest else str(level.repaired)
 	if state!=last_state:last_state=state;queue_redraw()
 func plant(x: float,floor_y: float,index: int,scale_factor: float) -> void:
