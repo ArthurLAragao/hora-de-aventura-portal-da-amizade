@@ -1,3 +1,5 @@
+[Entrega atual: cenários e percursos das fases 2, 3 e 4](FASES_2_3_4_ENTREGA.md)
+
 [Estado atual: cenários 1 e 6 finalizados](STATUS_CENARIOS.md) · [Nova apresentação das fases 2, 3 e 4](CENARIOS_2_3_4.md)
 
 [Fases 3 e 4 integradas — acesso, controles e limites dos testes](INTEGRACAO_FASES_3_4.md)
@@ -10,7 +12,7 @@
 
 Rodada anterior: [direção de arte e apresentação das fases 1 e 6](DIRECAO_ARTE_FINAL.md). Candidata para nova avaliação humana; não aprovada automaticamente pelos testes anteriores.
 
-Projeto cooperativo local para dois jogadores, no **Godot 4.7.2**, com os assets existentes. Rodada atual: correção concentrada de qualidade das fases **1 e 6**. Consulte [REVISAO_QUALIDADE.md](REVISAO_QUALIDADE.md) para causas, correções e limites da validação. A Fase 2 foi preservada; as fases 3, 4 e 5 não foram implementadas nesta rodada.
+Projeto cooperativo local para dois jogadores, no **Godot 4.7.2**, com os assets existentes. Rodada atual: cenários, layouts e percursos das fases **2, 3 e 4**. As fases 1 e 6 permanecem preservadas; relatos das rodadas anteriores abaixo são históricos. Consulte [REVISAO_QUALIDADE.md](REVISAO_QUALIDADE.md) para causas, correções e limites da validação. A Fase 2 foi preservada; as fases 3, 4 e 5 não foram implementadas nesta rodada.
 
 ## Abrir
 

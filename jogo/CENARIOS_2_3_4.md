@@ -1,3 +1,5 @@
+> Registro de rodada anterior. Estado atual: [entrega de 28/10](FASES_2_3_4_ENTREGA.md).
+
 # Cenários 2, 3 e 4 — composição e apresentação
 
 Godot 4.7.2 preservado. Rodada de 27/10/2026. Referência: direção de arte existente nas fases 1 e 6. Foram reutilizados somente os pacotes locais e suas resoluções nativas; não houve download ou geração de arte nova.
