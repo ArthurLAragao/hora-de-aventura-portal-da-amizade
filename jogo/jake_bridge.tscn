@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3]
 
-[ext_resource type="Script" path="res://jake_bridge.gd" id="1_bridge"]
+[ext_resource type="Script" path="res://scripts/bridges/jake_bridge.gd" id="1_bridge"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/bridge_anchor.png" id="2_anchor"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/temporary_bridge.png" id="3_bridge"]
 [ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/jake_stretch.wav" id="4_stretch"]
 [ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/jake_retract.wav" id="5_retract"]
-[ext_resource type="Script" path="res://jake_bridge_visual.gd" id="6_visual"]
+[ext_resource type="Script" path="res://scripts/bridges/jake_bridge_visual.gd" id="6_visual"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anchor"]
 size = Vector2(8, 64)

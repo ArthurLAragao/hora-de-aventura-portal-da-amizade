@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://t86bsaobtcra"]
 
-[ext_resource type="Script" path="res://level_4.gd" id="1_s4mws"]
+[ext_resource type="Script" path="res://scripts/levels/level_4.gd" id="1_s4mws"]
 [ext_resource type="Shader" path="res://background_fade.gdshader" id="2_1umnx"]
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/04_candy_workshop/background.png" id="3_i4yqx"]
 [ext_resource type="PackedScene" path="res://player1.tscn" id="4_finn"]
@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="8_vmpu5"]
 [ext_resource type="PackedScene" path="res://gate.tscn" id="10_lypob"]
 [ext_resource type="PackedScene" path="res://checkpoint.tscn" id="13_rprjf"]
-[ext_resource type="Script" path="res://tests/bmo_terminal.gd" id="14_beulo"]
+[ext_resource type="Script" path="res://mechanisms/bmo_terminal.gd" id="14_beulo"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/terminal_off.png" id="15_v6tvd"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/battery_off.png" id="16_454oc"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/receiver_off.png" id="17_o37gb"]
@@ -17,14 +17,14 @@
 [ext_resource type="TileSet" path="res://Assets/02_Environments/04_candy_workshop/tileset.tres" id="19_j0u7p"]
 [ext_resource type="PackedScene" path="res://crystal.tscn" id="19_t170x"]
 [ext_resource type="PackedScene" path="res://cooperative_exit.tscn" id="20_e85il"]
-[ext_resource type="Script" path="res://shared_camera.gd" id="21_61pco"]
-[ext_resource type="Script" path="res://imported_phase_hud.gd" id="22_rgg5m"]
+[ext_resource type="Script" path="res://scripts/core/shared_camera.gd" id="21_61pco"]
+[ext_resource type="Script" path="res://scripts/ui/imported_phase_hud.gd" id="22_rgg5m"]
 
-[ext_resource type="Script" path="res://imported_phase_checkpoint.gd" id="99_checkpoint_runtime"]
+[ext_resource type="Script" path="res://scripts/puzzles/imported_phase_checkpoint.gd" id="99_checkpoint_runtime"]
 
-[ext_resource type="Script" path="res://region_scenery.gd" id="98_region_art"]
+[ext_resource type="Script" path="res://scripts/scenery/region_scenery.gd" id="98_region_art"]
 
-[ext_resource type="Script" path="res://regional_layout.gd" id="97_local_layout"]
+[ext_resource type="Script" path="res://scripts/scenery/regional_layout.gd" id="97_local_layout"]
 
 [sub_resource type="RectangleShape2D" id="Shape_LeftBoundary"]
 size = Vector2(54, 513)

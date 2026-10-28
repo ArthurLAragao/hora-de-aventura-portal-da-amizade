@@ -7,3 +7,6 @@ Os recursos usados em execução são os PNGs pequenos deste diretório. Foram e
 `sources/.gdignore` mantém as matrizes fora da importação do Godot. O jogo não precisa de gerador, dependência nova ou conexão de rede. Nenhum PNG anterior foi substituído.
 
 As matrizes são arte gerada para este acabamento; isso não constitui auditoria de licença dos demais recursos do projeto.
+
+
+Após a otimização, matrizes/prompts e ferramentas ficam fora do projeto, em `development/art_sources/03_Objects_and_Puzzles/pixel_refinement/sources/` e `development/art_tools/`. Este diretório mantém somente os sprites finais e seus metadados.

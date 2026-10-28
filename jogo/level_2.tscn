@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3]
 
-[ext_resource type="Script" path="res://level_2.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/levels/level_2.gd" id="1"]
 
 [ext_resource type="PackedScene" path="res://Assets/01_Characters/cake/playable.tscn" id="2"]
 
@@ -10,15 +10,15 @@
 
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/02_ice_kingdom/background.png" id="5"]
 
-[ext_resource type="Script" path="res://tests/cake_tunnel.gd" id="6"]
+[ext_resource type="Script" path="res://mechanisms/cake_tunnel.gd" id="6"]
 
-[ext_resource type="Script" path="res://tests/cake_anchor.gd" id="7"]
+[ext_resource type="Script" path="res://scripts/bridges/cake_bridge.gd" id="7"]
 
-[ext_resource type="Script" path="res://tests/fionna_crank.gd" id="8"]
+[ext_resource type="Script" path="res://mechanisms/fionna_crank.gd" id="8"]
 
 [ext_resource type="SpriteFrames" path="res://Assets/03_Objects_and_Puzzles/Godot/crank.tres" id="9"]
 
-[ext_resource type="Script" path="res://tests/fionna_platform.gd" id="10"]
+[ext_resource type="Script" path="res://mechanisms/fionna_platform.gd" id="10"]
 
 [ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="11"]
 
@@ -30,7 +30,7 @@
 
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/tunnel_right.png" id="15"]
 
-[ext_resource type="Script" path="res://shared_camera.gd" id="15"]
+[ext_resource type="Script" path="res://scripts/core/shared_camera.gd" id="15"]
 [ext_resource type="PackedScene" path="res://push_block.tscn" id="16"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/ice_block.png" id="17"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/switch_off.png" id="18"]
@@ -38,7 +38,7 @@
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/start_flag.png" id="20"]
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/02_ice_kingdom/tiles/bridge.png" id="21"]
 
-[ext_resource type="Script" path="res://region_scenery.gd" id="98_region_art"]
+[ext_resource type="Script" path="res://scripts/scenery/region_scenery.gd" id="98_region_art"]
 
 [sub_resource type="RectangleShape2D" id="Entry"]
 size = Vector2(64,60)

@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bnrm0jrkmt617"]
 
-[ext_resource type="Script" path="res://level_3.gd" id="1_833wy"]
+[ext_resource type="Script" path="res://scripts/levels/level_3.gd" id="1_833wy"]
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/03_musical_cave/background.png" id="3_833wy"]
 [ext_resource type="Shader" path="res://background_fade.gdshader" id="3_wnq0t"]
 [ext_resource type="PackedScene" path="res://Assets/01_Characters/marceline/visual.tscn" id="5_marceline"]
@@ -10,25 +10,25 @@
 [ext_resource type="TileSet" path="res://Assets/02_Environments/03_musical_cave/tileset.tres" id="12_ghrvs"]
 [ext_resource type="PackedScene" path="res://crystal.tscn" id="14_kenis"]
 [ext_resource type="PackedScene" path="res://cooperative_exit.tscn" id="15_gkqsa"]
-[ext_resource type="Script" path="res://shared_camera.gd" id="16_3uls0"]
-[ext_resource type="Script" path="res://imported_phase_hud.gd" id="17_oojxo"]
-[ext_resource type="Script" path="res://tests/music_test_mechanism.gd" id="18_music_mech"]
+[ext_resource type="Script" path="res://scripts/core/shared_camera.gd" id="16_3uls0"]
+[ext_resource type="Script" path="res://scripts/ui/imported_phase_hud.gd" id="17_oojxo"]
+[ext_resource type="Script" path="res://mechanisms/music_mechanism.gd" id="18_music_mech"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/clue_panel.png" id="19_clue_panel"]
 [ext_resource type="PackedScene" path="res://gate.tscn" id="20_gate"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/musical_door_closed.png" id="21_mdoor_closed"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/musical_door_open.png" id="22_mdoor_open"]
 [ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="23_font"]
 [ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/marceline_music.wav" id="24_music_sfx"]
-[ext_resource type="Script" path="res://tests/bmo_terminal.gd" id="25_bmo_term"]
+[ext_resource type="Script" path="res://mechanisms/bmo_terminal.gd" id="25_bmo_term"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/terminal_off.png" id="26_term_off"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/receiver_off.png" id="27_rec_off"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/battery_off.png" id="28_bat_off"]
 
-[ext_resource type="Script" path="res://imported_phase_checkpoint.gd" id="99_checkpoint_runtime"]
+[ext_resource type="Script" path="res://scripts/puzzles/imported_phase_checkpoint.gd" id="99_checkpoint_runtime"]
 
-[ext_resource type="Script" path="res://region_scenery.gd" id="98_region_art"]
+[ext_resource type="Script" path="res://scripts/scenery/region_scenery.gd" id="98_region_art"]
 
-[ext_resource type="Script" path="res://regional_layout.gd" id="97_local_layout"]
+[ext_resource type="Script" path="res://scripts/scenery/regional_layout.gd" id="97_local_layout"]
 
 [sub_resource type="RectangleShape2D" id="Shape_LeftBoundary"]
 size = Vector2(54, 513)

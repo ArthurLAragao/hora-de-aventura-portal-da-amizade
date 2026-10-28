@@ -1,0 +1,43 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://mechanisms/music_mechanism.gd" id="1_jp5tu"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/clue_panel.png" id="2_44v42"]
+[ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="3_gvs10"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/marceline_music.wav" id="4_lehxq"]
+
+[sub_resource type="RectangleShape2D" id="MusicRange"]
+size = Vector2(128, 100)
+
+[node name="MusicPanel" type="Area2D" unique_id=1132733896]
+position = Vector2(912, 530)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_jp5tu")
+gate_path = NodePath("../MusicGate")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1456945116]
+shape = SubResource("MusicRange")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1236234196]
+texture_filter = 1
+texture = ExtResource("2_44v42")
+
+[node name="Prompt" type="Label" parent="." unique_id=1992835084]
+offset_left = -60.0
+offset_top = -72.0
+theme_override_fonts/font = ExtResource("3_gvs10")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_outline_color = Color(0.02, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 5
+
+[node name="Status" type="Label" parent="." unique_id=2016516011]
+offset_left = -102.0
+offset_top = 38.0
+theme_override_fonts/font = ExtResource("3_gvs10")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.02, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 5
+
+[node name="MusicSFX" type="AudioStreamPlayer2D" parent="." unique_id=448200737]
+stream = ExtResource("4_lehxq")
+volume_db = -8.0

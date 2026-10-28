@@ -1,6 +1,7 @@
 shader_type canvas_item;
 render_mode unshaded;
 uniform bool powered = false;
+// Calcula a cor e a transparência do efeito local a partir da textura e dos parâmetros.
 void fragment() {
 	vec4 c = texture(TEXTURE, UV);
 	// Only the receiver glass on the right; preserve metal, traces and alpha.

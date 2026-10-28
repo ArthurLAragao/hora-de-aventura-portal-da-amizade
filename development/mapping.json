@@ -1,0 +1,8 @@
+{
+  "res://tests/bmo_terminal.gd": "res://mechanisms/bmo_terminal.gd",
+  "res://tests/music_test_mechanism.gd": "res://mechanisms/music_mechanism.gd",
+  "res://tests/cake_tunnel.gd": "res://mechanisms/cake_tunnel.gd",
+  "res://tests/fionna_crank.gd": "res://mechanisms/fionna_crank.gd",
+  "res://tests/fionna_platform.gd": "res://mechanisms/fionna_platform.gd",
+  "res://tests/cake_anchor.gd": "res://cake_bridge.gd"
+}

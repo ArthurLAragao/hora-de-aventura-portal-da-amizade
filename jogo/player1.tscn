@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c73ssjitns4x5"]
 
-[ext_resource type="Script" uid="uid://vtcp4tuqqatj" path="res://player.gd" id="1_pqb02"]
+[ext_resource type="Script" uid="uid://vtcp4tuqqatj" path="res://scripts/characters/player.gd" id="1_pqb02"]
 [ext_resource type="SpriteFrames" path="res://Assets/01_Characters/finn/animations.tres" id="2_finn_frames"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3ec0"]

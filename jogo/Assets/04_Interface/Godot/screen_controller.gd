@@ -3,6 +3,7 @@ signal action_requested(action: StringName)
 
 @onready var design: Control = $Design
 
+## Prepara as referências e o estado deste componente ao entrar na árvore. Contexto: telas de interface dos assets.
 func _ready() -> void:
 	resized.connect(_fit)
 	_fit()
@@ -16,6 +17,7 @@ func _ready() -> void:
 		if first:
 			first.grab_focus()
 
+## Encaminha a ação do botão para seleção, instruções, menu ou som.
 func _on_button_pressed(action: StringName) -> void:
 	action_requested.emit(action)
 	match action:
@@ -29,6 +31,7 @@ func _on_button_pressed(action: StringName) -> void:
 			var master_bus := AudioServer.get_bus_index("Master")
 			AudioServer.set_bus_mute(master_bus, not AudioServer.is_bus_mute(master_bus))
 
+## Centraliza e escala o desenho da interface preservando a proporção 640×360.
 func _fit() -> void:
 	if not is_instance_valid(design):
 		return

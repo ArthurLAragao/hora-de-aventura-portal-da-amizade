@@ -48,3 +48,8 @@ Fase 2 sem redesign e com regressão do percurso existente. Seu cristal e conclu
 [SGDD](docs/SGDD.pdf) · [Cronograma](docs/cronograma-disciplina.png) · [Relatório histórico da publicação anterior](docs/ENTREGA_ORIGINAL.md)
 
 O relatório histórico e os resultados antigos descrevem versões anteriores; não são evidência de aprovação dos layouts desta branch.
+
+
+## Projeto otimizado
+
+O jogo está em [jogo/](jogo/README.md), com scripts organizados e mecanismos independentes. QA e fontes de arte ficam em [development/](development/README.md), fora do projeto Godot. Consulte [otimização](jogo/docs/OTIMIZACAO.md) e [roteiro de apresentação](jogo/docs/APRESENTACAO.md). A Fase 5 permanece pendente.

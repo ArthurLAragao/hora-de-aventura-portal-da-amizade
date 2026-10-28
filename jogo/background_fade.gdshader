@@ -1,5 +1,6 @@
 shader_type canvas_item;
 
+// Calcula a cor e a transparência do efeito local a partir da textura e dos parâmetros.
 void fragment() {
 	float transition = smoothstep(0.46, 0.54, UV.x);
 	vec2 first_uv = vec2(clamp(UV.x * 2.0, 0.0, 1.0), UV.y);

@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://mechanisms/fionna_crank.gd" id="1_y0da8"]
+[ext_resource type="SpriteFrames" path="res://Assets/03_Objects_and_Puzzles/Godot/crank.tres" id="2_a300s"]
+[ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="3_xq30a"]
+
+[sub_resource type="RectangleShape2D" id="CrankRange"]
+size = Vector2(110, 96)
+
+[node name="Crank" type="Area2D" unique_id=722144408]
+position = Vector2(1060, 350)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_y0da8")
+platform_path = NodePath("../ExtendPlatform")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614864807]
+shape = SubResource("CrankRange")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=309409925]
+texture_filter = 1
+sprite_frames = ExtResource("2_a300s")
+animation = &"crank_0"
+autoplay = "crank_0"
+
+[node name="Prompt" type="Label" parent="." unique_id=66013383]
+offset_left = -70.0
+offset_top = -76.0
+theme_override_fonts/font = ExtResource("3_xq30a")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/outline_size = 5
+
+[node name="Status" type="Label" parent="." unique_id=123768158]
+offset_left = -92.0
+offset_top = 68.0
+theme_override_fonts/font = ExtResource("3_xq30a")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_outline_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/outline_size = 5
+text = "Passagem permanente"
