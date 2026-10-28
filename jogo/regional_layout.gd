@@ -30,7 +30,11 @@ func platform(label: String,at: Vector2,width: int) -> void:
 	for x in range(-width/2,width/2,32):
 		var sprite:=Sprite2D.new();sprite.texture=texture;sprite.centered=false
 		sprite.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
-		sprite.position=Vector2(x,-used.position.y);body.add_child(sprite)
+		sprite.position=Vector2(x,-used.position.y)
+		# Crop the last tile to its physical support width; never stretch pixels.
+		sprite.region_enabled=true
+		sprite.region_rect=Rect2(0,0,mini(32,width/2-x),texture.get_height())
+		body.add_child(sprite)
 	add_child(body)
 
 func _configure() -> void:
@@ -55,6 +59,8 @@ func _configure() -> void:
 		surfaces={"SymbolTerminal/Sprite2D":394,"EnergyTerminal/Sprite2D":338,"MusicPanel/Sprite2D":280,"Battery":394,"EnergyIndicator":394,"Checkpoint/Sprite2D":394,"CooperativeExit/Sprite2D":394}
 	else:
 		surfaces={"EnergyTerminal/Sprite2D":388,"TransportTerminal/Sprite2D":388,"Battery":388,"EnergyIndicator":388,"Checkpoint/Sprite2D":388,"CooperativeExit/Sprite2D":388}
+	# Native pixel size locally; the shared checkpoint scene and its area stay intact.
+	root_level.get_node("Checkpoint/Sprite2D").scale=Vector2.ONE
 	for path in surfaces:_ground_fixture(path,surfaces[path])
 	root_level.get_node("RegionalScenery").queue_redraw()
 	crystal.get_node("Sprite2D").texture=load("res://Assets/03_Objects_and_Puzzles/sprites/crystal_"+("purple" if region==3 else "orange")+".png")

@@ -44,20 +44,22 @@ func _ice() -> void:
 
 func _cave() -> void:
 	# Dark ruins frame the crystal pools; distinct alcoves surround the instruments.
-	for x in [48,384,912,1168,1408,1776,2136]:prop("bush_a",x,394,3,"Distant",Color("706b9a"))
-	for x in [176,880,1376,1760,2128]:prop("bush_b",x,394,2,"Structures",Color("a5b8bd"))
-	for x in [48,368,912,1152,1392,1776,2144]:prop("column",x,394,2,"Structures",Color("8988ad"))
-	for x in [32,160,400,896,1184,1392,1648,2112]:prop(["grass_a","grass_b","grass_c"][posmod(x/16,3)],x,394,1)
+	for x in [48,384,912,1168,1664,1776,2136]:prop("bush_a",x,394,3,"Distant",Color("706b9a"))
+	for x in [176,880,1760,2128]:prop("bush_b",x,394,2,"Structures",Color("a5b8bd"))
+	for x in [48,368,912,1152,1776,2144]:prop("column",x,394,2,"Structures",Color("8988ad"))
+	for x in [32,160,400,896,1184,1648,2112]:prop(["grass_a","grass_b","grass_c"][posmod(x/16,3)],x,394,1)
+	# This tuft belongs to the existing near echo island, not the removed floor.
+	prop("grass_b",1392,370,1)
 	for x in [488,536]:prop("vine",x,352,2,"Distant",Color("7587b0"))
 	prop("vine",1416,390,2,"Distant",Color("7587b0"))
 	for x in [464,1016,1536,2048]:prop("lantern",x,230,1,"Structures")
 
 func _candy() -> void:
 	# Factory bays have their own columns and planters; leave terminals and plate clear.
-	for x in [40,224,928,1152,1760,2128]:prop("column",x,388,3,"Distant",Color("c7b8b5"))
-	for x in [112,944,1808,2144]:prop("bush_a",x,388,2,"Structures")
+	for x in [40,224,832,1152,1760,2128]:prop("column",x,388,3,"Distant",Color("c7b8b5"))
+	for x in [112,864,1808,2144]:prop("bush_a",x,388,2,"Structures")
 	for x in [192,1136,1752,2080]:prop("bush_b",x,388,2,"Structures")
-	for x in [32,160,912,1184,1776,2136]:prop(["grass_a","grass_b","grass_c"][posmod(x/16,3)],x,388,1)
+	for x in [32,160,872,1184,1776,2136]:prop(["grass_a","grass_b","grass_c"][posmod(x/16,3)],x,388,1)
 	for x in [64,960,1776,2144]:prop("vine",x,328,2,"Distant",Color("b2b8a8"))
 	for x in [160,976,1440,1920]:prop("lantern",x,210,1,"Structures")
 

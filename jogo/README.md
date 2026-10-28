@@ -79,3 +79,8 @@ Também são pertinentes `verify_marceline`, `verify_bmo`, `verify_fionna`, `qa_
 As fases novas exigem avaliação humana de clareza e conforto com duas pessoas. Foram exercitadas janelas de 1152×648 e 1280×720; isso não aprova todas as resoluções. Exportação, áudio ouvido, desempenho em outro computador e uso simultâneo por duas pessoas continuam sem validação nesta rodada. BMO, Fionna e as funcionalidades anteriores de Cake continuam com as aprovações manuais dadas pelo usuário; a avaliação fina de Marceline continua pendente.
 
 F1 abre uma ajuda opcional de controles, sem pausar. Os objetivos normais mostram apenas a próxima ação. A ponte tem uma pequena subida de entrada que ainda se vence por salto normal; não houve mudança global de salto ou gravidade.
+
+
+## Refino localizado de pixel art — 28/10/2026
+
+Portas temáticas das fases 3/4, circuito da oficina e ajustes locais de integração visual. Consulte [REFINO_PIXEL_234.md](REFINO_PIXEL_234.md) para recursos, testes, backup e avaliação manual pendente. Layouts e regras preservados.

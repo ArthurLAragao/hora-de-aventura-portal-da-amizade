@@ -25,7 +25,10 @@ func run() -> void:
 				var feet:=visible_feet(actor)
 				check("cave grounded sprite aligns with visible floor: "+actor.name,actor.is_on_floor() and absf(feet-394)<0.2)
 			for node in comp.layers["Vegetation"].get_children():
-				check("cave vegetation reaches the same surface: "+node.name,is_equal_approx(node.get_meta("support_y"),394.0))
+				var surface: float=node.get_meta("support_y")
+				var query:=PhysicsRayQueryParameters2D.create(Vector2(node.position.x,surface-2),Vector2(node.position.x,surface+2),1)
+				var hit:=level.get_world_2d().direct_space_state.intersect_ray(query)
+				check("cave vegetation is anchored on actual terrain or island: "+node.name,not hit.is_empty() and absf(hit.position.y-surface)<0.1)
 			await walk(level.marceline,320)
 			check("walking preserves floor contact within one animation pixel",absf(visible_feet(level.marceline)-394)<1.2)
 		if n==4:
