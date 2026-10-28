@@ -161,16 +161,3 @@ A tentativa inicial de cópia completa encontrou falta de espaço. Foram removid
 Auditoria: **6 arquivos anteriores modificados, 13 adicionados, zero removidos e 1.815 arquivos anteriores preservados**. Os arquivos estão discriminados em `ARQUIVOS.md`; os manifests de publicação registram os hashes. Originais de arte, `player.gd`, Jake, checkpoint, controles, menu, HUD e câmera compartilhada permaneceram preservados.
 
 Registros de aprovação: Cake mantém aprovação manual de movimento/túnel/poses anteriores; a ponte integrada requer avaliação manual nova. BMO e Fionna continuam aprovados manualmente. Marceline não recebeu aprovação manual presumida. A primeira fase continua como base aprovada, com o acabamento novo submetido à sua avaliação.
-
-## Checklist manual curto
-
-- [x] Importação padrão dos novos recursos pelo Godot 4.7.2, autorizada e executada; testes automatizados no original concluídos.
-- [ ] Abrir o projeto no editor para a avaliação manual abaixo.
-- [ ] F6 em `tests/cake_test.tscn`, testar Cake P1/P2; aguardar formação, entrar com salto curto e atravessar com Fionna.
-- [ ] Soltar/usar Esc com Fionna apoiada e saltando; confirmar espera, manivela, apoio permanente e retorno de Cake aos controles. Reiniciar com F2.
-- [ ] Abrir a primeira fase pelo fluxo atual: observar acabamento e repetir ponte/alavanca, checkpoint, tronco/placa, placas conjuntas, cristal e saída.
-- [ ] F6 em `level_2.tscn`, **Test Start = Normal**: bloco/degrau, túnel/interruptor, primeira manivela, ponte de Cake, segunda manivela e reunião da dupla.
-- [ ] Conferir que os marcadores finais dizem “pendente” e que os inícios de teste estão identificados.
-- [ ] Avaliar manualmente visibilidade, conforto e ritmo dos saltos; exportação e múltiplas resoluções continuam fora da validação realizada.
-
-Nenhum outro cenário ou sistema foi iniciado.
