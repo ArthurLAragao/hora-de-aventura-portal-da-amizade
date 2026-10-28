@@ -34,7 +34,7 @@
 [ext_resource type="PackedScene" path="res://push_block.tscn" id="16"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/ice_block.png" id="17"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/switch_off.png" id="18"]
-[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/crystal_cyan.png" id="19"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/crystal_green.png" id="19"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/start_flag.png" id="20"]
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/02_ice_kingdom/tiles/bridge.png" id="21"]
 

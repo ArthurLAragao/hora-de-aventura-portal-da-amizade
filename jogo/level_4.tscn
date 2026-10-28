@@ -157,7 +157,7 @@ checkpoint_path = NodePath("../Checkpoint")
 bridge_path = NodePath("")
 
 [node name="FriendshipCrystal" parent="." unique_id=422630020 instance=ExtResource("19_t170x")]
-position = Vector2(1963, 364)
+position = Vector2(1963, 357)
 
 [node name="CooperativeExit" parent="." unique_id=963033379 instance=ExtResource("20_e85il")]
 position = Vector2(2101, 362)

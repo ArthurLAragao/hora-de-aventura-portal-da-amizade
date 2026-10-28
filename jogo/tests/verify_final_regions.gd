@@ -57,15 +57,18 @@ func route() -> void:
 	await tap(b,"left")
 	await tap(b,"interact")
 	check("3: entered sequence opens symbol gate and releases controls",level.symbol_terminal.solved and level.get_node("SymbolGate").is_open and not b.movement_locked)
-	await duo(a,b,1470)
+	check("3: Marceline crosses the stepped echo islands",await echo_cross(a,1512))
+	check("3: BMO crosses the stepped echo islands",await echo_cross(b,1470))
 	await tap(b,"interact")
 	await frames(100)
 	check("3: energy completes and releases BMO",level.energy_terminal.energized and not b.movement_locked)
 	check("3: revealed visual clue",level.get_node("MusicalClue").visible)
+	check("3: both regain the far bank",await jump(a,1648) and await jump(b,1600))
 	await walk(a,1712)
 	await walk(b,1808)
 	await frames(6)
 	check("3: two plates confirm the duet",level.get_node("RegionalLayout").confirmation_solved)
+	await capture("cave-duet-crystal")
 	await duo(a,b,1980)
 	check("3: crystal collected on input-driven route",level.get_node("CooperativeExit")._crystal_collected)
 	await duo(a,b,2090)
@@ -83,10 +86,10 @@ func route() -> void:
 	await frames(220)
 	check("4: BMO transports supported block",level.carrier.arrived and level.transport_terminal.energized)
 	await capture("workshop-carrier-arrival")
-	check("4: Finn reaches rail landing",await jump(a,640))
+	check("4: Finn reaches rail landing",await jump(a,584))
 	check("4: Finn pushes delivered block to pressure plate",await push_until(a,func():return level.get_node("TrunkPuzzle/Gate").is_open,260))
 	await walk(b,520)
-	check("4: BMO crosses the rail opening",await jump(b,640))
+	check("4: BMO crosses the rail opening",await jump(b,584))
 	check("4: BMO safely approaches the delivered block",await walk(b,690))
 	await jump(b,840)
 	await jump(a,880)
@@ -111,3 +114,10 @@ func route() -> void:
 	await duo(a,b,2090)
 	check("4: joint completion without recovery",level.get_node("CooperativeExit")._completed and level.get_node("FallZone").recovery_count==0)
 	await capture("imported-4-complete")
+
+func echo_cross(actor: CoopPlayer,goal: float) -> bool:
+	if not await walk(actor,1288):return false
+	if not await jump(actor,1376):return false
+	if not await walk(actor,1400):return false
+	if not await jump(actor,goal):return false
+	return actor.is_on_floor()

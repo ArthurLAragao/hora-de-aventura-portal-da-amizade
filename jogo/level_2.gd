@@ -30,7 +30,7 @@ func _ready() -> void:
 	fionna.player_id=3-cake_player_id
 	fionna.set_meta("player_id",fionna.player_id)
 	first_crank.monitoring=false
-	var origins: Array[Vector2]=[Vector2(128,487),Vector2(224,487),Vector2(420,487),Vector2(704,487),Vector2(1488,487),Vector2(2144,487)]
+	var origins: Array[Vector2]=[Vector2(128,487),Vector2(224,487),Vector2(420,487),Vector2(704,487),Vector2(1488,487),Vector2(2240,487)]
 	var origin: Vector2=origins[test_start]
 	cake.position=origin
 	fionna.position=origin+Vector2(-64 if test_start>=2 else 64,0)
@@ -53,8 +53,12 @@ func _build_terrain() -> void:
 	$Roof.clear()
 	for column in range(14,19):
 		for row in [13,14]: $Roof.set_cell(0,Vector2i(column,row),0,Vector2i(1,0 if row==13 else 1))
+	# A short terraced ridge develops jumping after the checkpoint, before the bridge.
+	for spec in [[36,39,15],[39,42,14],[42,44,15],[63,67,15]]:
+		for column in range(spec[0],spec[1]):
+			for row in range(spec[2],16):terrain.set_cell(0,Vector2i(column,row),0,Vector2i(1,0 if row==spec[2] else 1))
 	# Clear side platforms mark the approach; they do not obstruct the main floor.
-	for column in range(34,37): terrain.set_cell(0,Vector2i(column,13),0,Vector2i(3,0))
+	# The former overhead trio was removed: it obstructed the ridge approach.
 
 func _build_decoration() -> void:
 	if has_node("IceScenery"): return
@@ -138,8 +142,10 @@ func _setup_finish() -> void:
 	$CrystalReserved.hide();$ExitReserved.hide();$FinalHint.hide()
 	$SwitchIndicator.position.y=488
 	final_crystal=load("res://crystal.tscn").instantiate()
-	final_crystal.name="FriendshipCrystal";final_crystal.position=Vector2(2112,479)
+	final_crystal.name="FriendshipCrystal";final_crystal.position=Vector2(2112,447)
 	add_child(final_crystal)
+	final_crystal.get_node("Sprite2D").texture=load("res://Assets/03_Objects_and_Puzzles/sprites/crystal_green.png")
+	final_crystal.get_node("Sprite2D").texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 	final_crystal.monitoring=false
 	final_crystal.collected.connect(func():crystal_collected=true)
 	final_exit=load("res://cooperative_exit.tscn").instantiate()

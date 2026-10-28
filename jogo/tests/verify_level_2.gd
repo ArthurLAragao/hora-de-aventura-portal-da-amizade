@@ -128,7 +128,8 @@ func route(slot: int) -> void:
 	await frames(100)
 	check("first crank extends permanent ice passage",room.first_crank.solved and room.get_node("FirstPlatform").extended)
 	await walk(cake,1000)
-	await walk(fionna,1250)
+	check("Fionna traverses the stepped ice ridge",await ridge(fionna))
+	check("Cake traverses the same ridge",await ridge(cake))
 	await walk(cake,1475)
 	await frames(15)
 	check("both pass first section without recovery",room.recovery_count==0 and cake.is_on_floor() and room.anchor.can_activate(cake))
@@ -153,7 +154,12 @@ func route(slot: int) -> void:
 	check("second permanent passage available and Cake released",room.crank.solved and room.get_node("ExtendPlatform").extended and not cake.movement_locked and cake.animated_sprite.visible and not room.anchor._support_active)
 	await walk(cake,1760)
 	check("pair reunites without teleport or fall recovery",cake.is_on_floor() and fionna.is_on_floor() and room.recovery_count==0)
+	await walk(fionna,1984)
+	await capture("crystal-terrace")
+	check("Fionna reaches the crystal terrace",await jump(fionna,2056))
 	await walk(fionna,2190)
+	await walk(cake,1984)
+	check("Cake reaches the crystal terrace",await jump(cake,2056))
 	await walk(cake,2150)
 	Input.action_press(action(cake,"right"))
 	await until(func():return room.completed,120)
@@ -184,3 +190,9 @@ func run() -> void:
 	if not report_path.is_empty(): FileAccess.open(report_path,FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures,"headless":DisplayServer.get_name()=="headless","full_phase_completion":true,"fixture_positions_are_route_evidence":false},"\t"))
 	print("Level2 checks: ",checks.size()," failures: ",failures)
 	quit(0 if failures==0 else 1)
+
+func ridge(actor: CoopPlayer) -> bool:
+	if not await walk(actor,1120):return false
+	if not await jump(actor,1184):return false
+	if not await jump(actor,1280):return false
+	return await walk(actor,1424)

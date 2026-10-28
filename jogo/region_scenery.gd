@@ -4,6 +4,8 @@ extends Node2D
 @export_enum("Reino Gelado:2","Caverna Musical:3","Oficina Doce:4") var region: int = 2
 var level: Node2D
 var env: String
+var tunnel_wall_texture: Texture2D
+var underside_texture: Texture2D
 var floor_y := 388.0
 var motes: Array[Sprite2D] = []
 var lamps: Array[Sprite2D] = []
@@ -12,6 +14,8 @@ var elapsed := 0.0
 func _ready() -> void:
 	level=get_parent()
 	env="res://Assets/02_Environments/"+{2:"02_ice_kingdom",3:"03_musical_cave",4:"04_candy_workshop"}[region]+"/tiles/"
+	underside_texture=load(env+"bottom.png")
+	if region==2:tunnel_wall_texture=load("res://Assets/02_Environments/regional_refinement/ice_tunnel_wall_detail.png")
 	floor_y=519.0 if region==2 else 388.0
 	z_index=-1
 	texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
@@ -85,21 +89,27 @@ func _draw() -> void:
 		for x in [432,624]:
 			draw_rect(Rect2(x-9,416,3,103),Color("3d6278"))
 			draw_rect(Rect2(x-9,416,11,3),Color("9db8c4"))
-		# No collision in this cutaway rear wall; approved roof/floor remain intact.
+		# Detailed cutaway: rear ice strata, arch ribs and floor reveal, behind Cake.
+		var wall:=tunnel_wall_texture
 		for x in range(448,608,32):
-			draw_texture_rect_region(load(env+"fill.png"),Rect2(x,497,32,22),Rect2(0,8,32,22),Color("41638e"))
-		draw_line(Vector2(448,498),Vector2(608,498),Color("173c66"),2)
-		for x in range(450,608,16):
-			draw_line(Vector2(x,500),Vector2(x+7,505),Color("2c6088"),1)
-		for left in [0,896,1568]:
-			var right: int={0:864,896:1504,1568:2304}[left]
-			for x in range(left,right,32):
-				draw_texture_rect(load(env+"bottom.png"),Rect2(x,657,32,32),false,Color("91b7d2"))
+			draw_texture_rect_region(wall,Rect2(x,497,32,22),Rect2(0,4,32,22),Color("b0c1d5"))
+		for x in range(448,609,32):
+			draw_rect(Rect2(x,496,3,23),Color("173d62"))
+			draw_rect(Rect2(x+1,498,1,17),Color("6ca2bb"))
+			draw_rect(Rect2(x+3,497,5,2),Color("375f80"))
+		for x in [446,606]:
+			draw_rect(Rect2(x,493,4,26),Color("1c4265"))
+			draw_rect(Rect2(x,493,8,3),Color("a5d8e5"))
+			draw_rect(Rect2(x,516,8,3),Color("6d9bb8"))
+		draw_rect(Rect2(448,517,160,2),Color("accbd7"))
+		for x in range(0,2304,32):
+			if level.get_node("Terrain").get_cell_source_id(0,Vector2i(x/32,16))<0:continue
+			draw_texture_rect(underside_texture,Rect2(x,657,32,32),false,Color("91b7d2"))
 	elif region==3:
 		# Muted veins and darker undersides carry the cave material beneath the path.
-		for span in [[0,576],[608,2176]]:
-			for x in range(span[0],span[1],32):
-				draw_texture_rect(load(env+"bottom.png"),Rect2(x,516,32,32),false,Color("a6a0bc"))
+		for x in range(0,2176,32):
+			if level.get_node("TileMapLayer").get_cell_source_id(Vector2i(x/32,12))<0:continue
+			draw_texture_rect(underside_texture,Rect2(x,516,32,32),false,Color("a6a0bc"))
 	else:
 		# Pipe routes live in the background: they connect bays without suggesting platforms.
 		for span in [[24,340],[856,1210],[1360,1870],[1990,2160]]:
@@ -112,8 +122,9 @@ func _draw() -> void:
 				draw_line(Vector2(x,y),Vector2(x,382),Color("795a62"),12)
 				draw_line(Vector2(x-2,y),Vector2(x-2,382),Color("93a991"),7)
 		for x in [160,980,1440,1920]:draw_line(Vector2(x,160),Vector2(x,187),Color("715560"),2)
-		for span in [[0,576],[608,2176]]:
-			for x in range(span[0],span[1],32):draw_texture_rect(load(env+"bottom.png"),Rect2(x,516,32,32),false,Color("dec7bf"))
+		for x in range(0,2176,32):
+			if level.get_node("TileMapLayer").get_cell_source_id(Vector2i(x/32,12))<0:continue
+			draw_texture_rect(underside_texture,Rect2(x,516,32,32),false,Color("dec7bf"))
 
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():return

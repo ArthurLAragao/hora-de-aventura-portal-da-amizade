@@ -4,8 +4,8 @@ var block: PushBlock
 var requested:=false
 var arrived:=false
 var blocked:=false
-var start:=Vector2(544,388)
-var target:=Vector2(688,388)
+var start:=Vector2(512,388)
+var target:=Vector2(640,388)
 var activation_count:=0
 func _ready() -> void:
 	sync_to_physics=false;position=start;collision_layer=1;collision_mask=0

@@ -92,7 +92,7 @@ player_id = 2
 max_partner_distance = 1100.0
 
 [node name="MusicPanel" type="Area2D" parent="." unique_id=1247942302]
-position = Vector2(528, 242)
+position = Vector2(528, 246)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("18_music_mech")
@@ -127,7 +127,7 @@ stream = ExtResource("24_music_sfx")
 volume_db = -8.0
 
 [node name="MusicGate" parent="." unique_id=760824109 instance=ExtResource("20_gate")]
-position = Vector2(700, 352)
+position = Vector2(700, 362)
 closed_texture = ExtResource("21_mdoor_closed")
 open_texture = ExtResource("22_mdoor_open")
 
@@ -175,7 +175,7 @@ theme_override_fonts/font = ExtResource("23_font")
 theme_override_font_sizes/font_size = 14
 
 [node name="SymbolGate" parent="." unique_id=36037300 instance=ExtResource("20_gate")]
-position = Vector2(1260, 352)
+position = Vector2(1260, 359)
 
 [node name="Sprite2D" parent="SymbolGate" index="0"]
 texture_filter = 1
