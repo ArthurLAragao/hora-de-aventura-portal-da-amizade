@@ -33,6 +33,7 @@ func _ready() -> void:
 	set_meta("player_id", player_id)
 	collision_layer = 2
 	collision_mask = 1
+	animated_sprite.z_index=maxi(animated_sprite.z_index,2)
 	animated_sprite.animation_finished.connect(_on_animation_finished)
 
 func _physics_process(delta: float) -> void:

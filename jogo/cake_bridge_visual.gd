@@ -13,6 +13,12 @@ func _draw() -> void:
 	if frame==null: return
 	var length := roundi(progress*88)
 	draw_texture_rect_region(frame,Rect2(-48,-40,52,80),Rect2(0,0,52,80))
-	if length>0: draw_texture_rect_region(CENTER,Rect2(4,20,length,9),Rect2(0,0,length,9))
-	draw_texture_rect_region(frame,Rect2(4+length,-40,44,80),Rect2(52,0,44,80))
+	if length>0:
+		var back_length:=roundi(progress*108)
+		var cursor:=0
+		while cursor<back_length:
+			var width:=mini(88,back_length-cursor)
+			draw_texture_rect_region(CENTER,Rect2(4+cursor,20,width,9),Rect2(0,0,width,9))
+			cursor+=width
+	draw_texture_rect_region(frame,Rect2(4+length,-40+roundi(progress*4),44,80),Rect2(52,0,44,80))
 	full_rendered=progress>=1

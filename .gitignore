@@ -10,3 +10,8 @@
 **/*.key
 /backups/
 /work/
+
+# Transient quality artifacts; selected evidence is versioned under docs/
+**/*.log
+/capturas/temporarias/
+/resultados/logs/

@@ -24,6 +24,9 @@ func _physics_process(delta: float) -> void:
 		_coyote_left = 0
 		_play_motion_animation(animation_override)
 		return
+	if movement_locked and (has_meta("bridge_approach_owner") or get_meta("pair_handoff_lock",false)):
+		super._physics_process(delta)
+		return
 	if movement_locked:
 		movement_locked = false
 		animation_override = &""
@@ -104,6 +107,9 @@ func finish_pose() -> void:
 	_update_animation()
 
 func reset_after_recovery() -> void:
+	if has_meta("pair_handoff_lock"): remove_meta("pair_handoff_lock")
+	var approach_owner=get_meta("bridge_approach_owner") if has_meta("bridge_approach_owner") else null
+	if is_instance_valid(approach_owner) and approach_owner.has_method("cancel_immediately"): approach_owner.call("cancel_immediately",true)
 	if is_instance_valid(pose_owner): pose_owner.call("cancel_immediately",true)
 	finish_pose()
 	# Called at the current position: still never stand into a roof.

@@ -5,6 +5,10 @@ enum Step { NONE, SOURCE, GROW, WAIT_RENDER, FULL, SHRINK, REVERSE }
 @export_range(2,12,1) var activation_half_width := 8.0
 @export_range(0.2,2,0.05) var growth_duration := 0.75
 @export_range(0.2,2,0.05) var shrink_duration := 0.75
+@export_range(24,90,1) var offer_radius:=64.0
+@export_range(48,140,1) var approach_speed:=96.0
+var approach: RefCounted
+var approach_actor: CoopPlayer
 var state := State.IDLE
 var step := Step.NONE
 var owner_actor: CoopPlayer
@@ -20,6 +24,9 @@ var support: StaticBody2D
 @onready var prompt: Label = $Prompt
 
 func _ready() -> void:
+	approach=load("res://bridge_approach.gd").new(self)
+	$CollisionShape2D.shape=$CollisionShape2D.shape.duplicate()
+	$CollisionShape2D.shape.size.x=offer_radius*2
 	visual=Node2D.new()
 	visual.set_script(load("res://cake_bridge_visual.gd"))
 	visual.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
@@ -30,8 +37,22 @@ func _ready() -> void:
 	support.collision_mask=0
 	add_child(support)
 	var shape:=CollisionPolygon2D.new()
-	shape.polygon=PackedVector2Array([Vector2(-13,20),Vector2(99,20),Vector2(99,18),Vector2(100,16),Vector2(102,16),Vector2(103,17),Vector2(106,17),Vector2(107,16),Vector2(108,16),Vector2(109,19),Vector2(110,20),Vector2(111,21),Vector2(112,22),Vector2(112,32),Vector2(-13,32)])
+	shape.polygon=PackedVector2Array([Vector2(-13,20),Vector2(112,20),Vector2(112,32),Vector2(-13,32)])
 	support.add_child(shape)
+
+func offer_position() -> Vector2:
+	return global_position
+
+func accepts_actor(actor: CoopPlayer) -> bool:
+	return is_instance_valid(actor) and actor.has_ability(&"stretch") and actor.has_method("finish_pose") and not actor.get("crawling")
+
+func can_request(actor: CoopPlayer) -> bool:
+	return accepts_actor(actor) and state==State.IDLE and approach!=null and approach.selected(actor,offer_position(),offer_radius)
+
+func request(actor: CoopPlayer) -> bool:
+	if not can_request(actor): return false
+	approach_actor=actor
+	return approach.begin(actor,offer_position(),offer_radius)
 
 func can_activate(actor: CoopPlayer) -> bool:
 	if not is_instance_valid(actor) or not actor.has_ability(&"stretch") or not actor.has_method("finish_pose") or actor.get("crawling") or actor.movement_locked or not actor.is_on_floor() or not overlaps_body(actor): return false
@@ -40,7 +61,12 @@ func can_activate(actor: CoopPlayer) -> bool:
 	return absf(p.x)<=activation_half_width and absf(p.y)<=4 and relative.x.is_equal_approx(Vector2.RIGHT) and relative.y.is_equal_approx(Vector2.DOWN)
 
 func activate(actor: CoopPlayer) -> bool:
-	if state!=State.IDLE or not can_activate(actor): return false
+	if not is_instance_valid(actor) or not Input.is_action_just_pressed(actor.get_ability_action()): return false
+	return request(actor)
+
+func _form(actor: CoopPlayer) -> bool:
+	if state!=State.IDLE: return false
+	if not can_activate(actor): return false
 	for clip in [&"stretch",&"stretch_hold",&"stretch_retract"]:
 		if not actor.animated_sprite.sprite_frames.has_animation(clip): return false
 	owner_actor=actor
@@ -70,7 +96,16 @@ func _play(reverse: bool, keep_frame: bool) -> void:
 	owner_actor.animated_sprite.set_frame_and_progress(old_frame if keep_frame else (2 if reverse else 0),0)
 
 func _physics_process(delta: float) -> void:
-	if state==State.IDLE: return
+	if approach!=null and approach.active:
+		var result: int=approach.advance(delta,approach_speed)
+		if result==1 and is_instance_valid(approach_actor): _form(approach_actor)
+		return
+	if state==State.IDLE:
+		for actor in get_tree().get_nodes_in_group("players"):
+			if actor is CoopPlayer and Input.is_action_just_pressed(actor.get_ability_action()) and can_request(actor):
+				request(actor)
+				break
+		return
 	if not is_instance_valid(owner_actor):
 		cancel_immediately(true)
 		return
@@ -141,9 +176,10 @@ func get_dependents() -> Array[CoopPlayer]:
 	return result
 
 func cancel_immediately(force: bool=false) -> void:
-	if not force and _support_active and not get_dependents().is_empty():
-		release_pending=true
+	if not force:
+		request_cancel()
 		return
+	if approach!=null: approach.cancel()
 	if is_instance_valid(support): support.collision_layer=0
 	if is_instance_valid(visual): visual.hide()
 	if is_instance_valid(owner_actor): owner_actor.call("finish_pose")
@@ -155,9 +191,25 @@ func cancel_immediately(force: bool=false) -> void:
 	_progress=0
 
 func update_prompt(actor: CoopPlayer) -> void:
-	if state!=State.IDLE: prompt.text="Aguardando a parceira sair com segurança." if release_pending and _support_active else "Ponte de Cake — solte para recolher."
-	elif can_activate(actor): prompt.text=("Q" if actor.player_id==1 else "Shift direito")+": formar ponte"
-	else: prompt.text="Cake: aproxime-se da marca no chão."
+	$Marker.modulate=Color(1.2,1.2,0.65) if can_request(actor) else Color.WHITE
+	prompt.text=""
+	if approach!=null and approach.active: prompt.text="Aproximando... solte para cancelar."
+	elif state!=State.IDLE: prompt.text="Aguarde a parceira sair." if release_pending and _support_active else ""
+	elif can_request(actor): prompt.text=("Q" if actor.player_id==1 else "Shift direito")+": ponte de Cake"
+	elif accepts_actor(actor) and actor.global_position.distance_to(offer_position())<offer_radius:
+		var reason: String=approach.path_reason(actor,offer_position(),offer_radius)
+		if reason!="ok": prompt.text=reason
 
 func _exit_tree() -> void:
+	if approach!=null: approach.cancel()
 	if is_instance_valid(owner_actor): owner_actor.call("finish_pose")
+
+func request_cancel() -> void:
+	if approach!=null and approach.active:
+		approach.cancel()
+	elif step==Step.SOURCE: _reverse_source(true)
+	elif _support_active: release_pending=true
+	elif step in [Step.GROW,Step.WAIT_RENDER]: _shrink()
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_ESCAPE: request_cancel()
