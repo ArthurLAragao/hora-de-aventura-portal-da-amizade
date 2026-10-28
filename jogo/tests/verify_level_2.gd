@@ -158,7 +158,7 @@ func route(slot: int) -> void:
 	check("normal route reaches reserved final area",cake.position.x>2100 and fionna.position.x>2100 and room.recovery_count==0)
 	check("reserved crystal/exit are explicitly pending",room.get_node("FinalHint").text.contains("pendentes") and room.get_node("CrystalReserved") is Sprite2D and room.get_node_or_null("CooperativeExit")==null)
 	await capture("final")
-	check("no duplicate tool decoration",room.get_node("IceScenery").get_child_count()==18)
+	check("one authored scenery layer without legacy duplicates",room.get_node("RegionalScenery").get_child_count()>20 and room.get_node_or_null("IceScenery")==null)
 	var key:=InputEventKey.new()
 	key.pressed=true
 	key.keycode=KEY_F2

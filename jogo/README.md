@@ -1,3 +1,5 @@
+[Estado atual: cenários 1 e 6 finalizados](STATUS_CENARIOS.md) · [Nova apresentação das fases 2, 3 e 4](CENARIOS_2_3_4.md)
+
 [Fases 3 e 4 integradas — acesso, controles e limites dos testes](INTEGRACAO_FASES_3_4.md)
 
 [Revisão atual: pixel art do terreno, túnel e composição ambiental](PIXEL_ART_AMBIENTE.md)

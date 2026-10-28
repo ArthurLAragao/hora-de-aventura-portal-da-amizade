@@ -1,3 +1,5 @@
+[Cenários 1 e 6 finalizados; apresentação das fases 2, 3 e 4](jogo/CENARIOS_2_3_4.md)
+
 [Integração funcional das fases 3 e 4](jogo/INTEGRACAO_FASES_3_4.md)
 
 [Atualização: pixel art, vegetação e comparações reais](jogo/PIXEL_ART_AMBIENTE.md)

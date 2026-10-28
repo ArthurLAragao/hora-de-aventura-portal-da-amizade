@@ -49,8 +49,8 @@ func _run() -> void:
 			phase_buttons.append(button)
 		if button != null and button.disabled:
 			unavailable += 1
-	_check("only phases 2, 5 and 6 remain unavailable in the selector", unavailable == 3)
-	for phase in [3,4]:
+	_check("only phase 5 remains unavailable in the selector", unavailable == 1)
+	for phase in [2,3,4,6]:
 		_check("imported phase %d is enabled" % phase, not (phase_select.get_node("Design/Phase%d" % phase) as Button).disabled)
 	var cards_do_not_overlap := true
 	phase_buttons.append(first)
