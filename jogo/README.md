@@ -1,3 +1,5 @@
+[Latest manual-feedback revision: Phases 2, 3 and 4](FEEDBACK_PHASES_2_3_4.md)
+
 [Entrega atual: cenários e percursos das fases 2, 3 e 4](FASES_2_3_4_ENTREGA.md)
 
 [Estado atual: cenários 1 e 6 finalizados](STATUS_CENARIOS.md) · [Nova apresentação das fases 2, 3 e 4](CENARIOS_2_3_4.md)

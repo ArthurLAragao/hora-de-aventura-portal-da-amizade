@@ -1,3 +1,5 @@
+[Latest manual-feedback revision: Phases 2, 3 and 4](FEEDBACK_PHASES_2_3_4.md)
+
 # Fases 2, 3 e 4 — cenário e percurso, 28/10/2026
 
 Godot **4.7.2** mantido. Abrir `level_2.tscn`, `level_3.tscn` ou `level_4.tscn` e pressionar F6; também acessíveis por F5 > Jogar. Fases 1 e 6 preservadas; fase 5 aguarda molde do colega.
