@@ -38,6 +38,8 @@
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/start_flag.png" id="20"]
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/02_ice_kingdom/tiles/bridge.png" id="21"]
 
+[ext_resource type="Script" path="res://region_scenery.gd" id="98_region_art"]
+
 [sub_resource type="RectangleShape2D" id="Entry"]
 size = Vector2(64,60)
 
@@ -355,3 +357,6 @@ position = Vector2(2314,300)
 collision_layer = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
 shape = SubResource("WorldWall")
+[node name="RegionalScenery" type="Node2D" parent="."]
+script = ExtResource("98_region_art")
+region = 2

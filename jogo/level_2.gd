@@ -16,7 +16,7 @@ var _starts: Array[Vector2]=[]
 
 func _ready() -> void:
 	_build_terrain()
-	_build_decoration()
+	# Decoration is now composed by RegionalScenery, with no duplicate instances.
 	if Engine.is_editor_hint(): return
 	cake.player_id=cake_player_id
 	cake.set_meta("player_id",cake.player_id)
