@@ -33,3 +33,10 @@ Capturas de conclusão dos percursos automatizados por entradas, com pares norma
 Os relatórios selecionados estão em [results.json](results.json). D3D12 nas janelas 1280×720 e 1152×648; portas/circuito também conferidos em Compatibility. A inspeção das imagens foi realizada separadamente das asserções.
 
 Pendentes: avaliação humana da aparência desta revisão, sessão com duas pessoas, áudio ouvido, build exportado e outro computador. Quantidade de verificações não comprova diversão nem aprovação estética.
+
+
+## Auditoria da cópia publicada
+
+Foram encontradas e preservadas duas diferenças anteriores a esta rodada: o `project.godot` original declara 1280×720, enquanto o arquivo já versionado usa os valores padrão do Godot; um UID de teste local também não estava versionado. Esses arquivos não foram sincronizados indiscriminadamente nem alterados para obter igualdade artificial. Os arquivos desta rodada são idênticos no original e na cópia de publicação.
+
+A cópia publicada foi importada pelo próprio Godot e validada separadamente com sua configuração existente: percursos completos 3/4 com papéis normais/invertidos e renderização do circuito/portas. Ambas as execuções terminaram sem falhas e sem mensagens de erro/aviso no console de execução. Captura da oficina publicada também inspecionada. A apresentação pode ter enquadramento/escala de tela diferentes por causa da configuração prévia preservada.
