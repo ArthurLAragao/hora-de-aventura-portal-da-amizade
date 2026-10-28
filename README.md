@@ -1,3 +1,5 @@
+[Integração funcional das fases 3 e 4](jogo/INTEGRACAO_FASES_3_4.md)
+
 [Atualização: pixel art, vegetação e comparações reais](jogo/PIXEL_ART_AMBIENTE.md)
 
 [Refinamento visual mais recente — comparação, clipes e validação](jogo/REFINAMENTO_VISUAL.md)

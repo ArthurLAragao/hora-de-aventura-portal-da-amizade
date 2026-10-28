@@ -1,3 +1,5 @@
+[Fases 3 e 4 integradas — acesso, controles e limites dos testes](INTEGRACAO_FASES_3_4.md)
+
 [Revisão atual: pixel art do terreno, túnel e composição ambiental](PIXEL_ART_AMBIENTE.md)
 
 [Refinamento visual mais recente — cenário e apresentação](REFINAMENTO_VISUAL.md)
