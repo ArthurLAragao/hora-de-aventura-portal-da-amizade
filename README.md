@@ -1,3 +1,5 @@
+[Atualização: pixel art, vegetação e comparações reais](jogo/PIXEL_ART_AMBIENTE.md)
+
 [Refinamento visual mais recente — comparação, clipes e validação](jogo/REFINAMENTO_VISUAL.md)
 
 # Hora de Aventura: O Portal da Amizade

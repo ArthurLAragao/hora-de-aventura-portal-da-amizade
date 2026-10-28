@@ -1,3 +1,5 @@
+[Revisão atual: pixel art do terreno, túnel e composição ambiental](PIXEL_ART_AMBIENTE.md)
+
 [Refinamento visual mais recente — cenário e apresentação](REFINAMENTO_VISUAL.md)
 
 # Hora de Aventura: O Portal da Amizade
