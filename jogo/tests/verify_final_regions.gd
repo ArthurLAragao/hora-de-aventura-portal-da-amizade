@@ -1,0 +1,113 @@
+extends "res://tests/journey_driver.gd"
+
+func open_level(number: int) -> void:
+	release()
+	if is_instance_valid(level):
+		stop_test_audio(level)
+		level.queue_free()
+		await frames(4)
+	level=load("res://level_%d.tscn"%number).instantiate()
+	level.lead_player_id=role
+	root.add_child(level)
+	current_scene=level
+	await frames(30)
+
+func duo(a: CoopPlayer,b: CoopPlayer,x: float) -> void:
+	check("partner reaches %s"%x,await walk(b,x-40))
+	check("lead reaches %s"%x,await walk(a,x))
+
+func run() -> void:
+	root.size=viewport_size
+	var roles: Array[int]=[1,2]
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--roles="):roles.assign([int(arg.trim_prefix("--roles="))])
+	for slot in roles:
+		role=slot
+		await route()
+	await finish("Complete regions 3 and 4: normal/inverted controls")
+
+func route() -> void:
+	await open_level(3)
+	var a: CoopPlayer=level.marceline
+	var b: CoopPlayer=level.bmo
+	check("3: correct pair and independent inputs",a.character_id==&"marceline" and b.character_id==&"bmo" and a.player_id==role and b.player_id==3-role)
+	check("3: grounded initial pair",a.is_on_floor() and b.is_on_floor())
+	check("3: HUD retains received pair instructions",level.get_node("HUD/Hints").text.contains("Marceline"))
+	await capture("imported-3-start")
+	check("3: clue starts hidden",not level.get_node("MusicalClue").visible)
+	check("3: reach lower balcony",await walk(a,340) and await jump(a,384))
+	check("3: reach raised music panel",await jump(a,512,true))
+	await tap(a,"interact")
+	await frames(12)
+	check("3: musical action opens received gate",level.get_node("MusicGate").is_open)
+	await walk(b,514)
+	await jump(b,646)
+	await jump(a,682)
+	await duo(a,b,860)
+	check("3: checkpoint earned after musical gate",level.get_node("Checkpoint").activated)
+	await duo(a,b,1050)
+	await tap(b,"interact")
+	check("3: panel opens without accidental first confirmation",level.symbol_terminal.panel_open and level.symbol_terminal.entered.is_empty())
+	await capture("imported-3-terminal")
+	# Default selection 0; supplied sequence is circle, triangle, square.
+	await tap(b,"interact")
+	await tap(b,"right")
+	await tap(b,"right")
+	await tap(b,"interact")
+	await tap(b,"left")
+	await tap(b,"interact")
+	check("3: entered sequence opens symbol gate and releases controls",level.symbol_terminal.solved and level.get_node("SymbolGate").is_open and not b.movement_locked)
+	await duo(a,b,1470)
+	await tap(b,"interact")
+	await frames(100)
+	check("3: energy completes and releases BMO",level.energy_terminal.energized and not b.movement_locked)
+	check("3: revealed visual clue",level.get_node("MusicalClue").visible)
+	await walk(a,1712)
+	await walk(b,1808)
+	await frames(6)
+	check("3: two plates confirm the duet",level.get_node("RegionalLayout").confirmation_solved)
+	await duo(a,b,1980)
+	check("3: crystal collected on input-driven route",level.get_node("CooperativeExit")._crystal_collected)
+	await duo(a,b,2090)
+	check("3: joint completion without recovery",level.get_node("CooperativeExit")._completed and level.get_node("FallZone").recovery_count==0)
+	await capture("imported-3-complete")
+	await open_level(4)
+	a=level.finn;b=level.bmo
+	check("4: grounded correct pair",a.is_on_floor() and b.is_on_floor() and a.character_id==&"finn" and b.character_id==&"bmo")
+	check("4: one energy activation connection",level.energy_terminal.activated.get_connections().size()==1)
+	await capture("imported-4-start")
+	await walk(b,376)
+	await walk(a,410)
+	check("4: Finn loads the actual carrier",await push_until(a,func():return level.carrier.loaded(),240))
+	await tap(b,"interact")
+	await frames(220)
+	check("4: BMO transports supported block",level.carrier.arrived and level.transport_terminal.energized)
+	await capture("workshop-carrier-arrival")
+	check("4: Finn reaches rail landing",await jump(a,640))
+	check("4: Finn pushes delivered block to pressure plate",await push_until(a,func():return level.get_node("TrunkPuzzle/Gate").is_open,260))
+	await walk(b,520)
+	check("4: BMO crosses the rail opening",await jump(b,640))
+	check("4: BMO safely approaches the delivered block",await walk(b,690))
+	await jump(b,840)
+	await jump(a,880)
+	await duo(a,b,1056)
+	check("4: checkpoint earned after log gate",level.get_node("Checkpoint").activated)
+	await walk(a,1432)
+	await tap(a,"interact")
+	await walk(a,1520)
+	await tap(a,"interact")
+	check("4: physical conduit shapes aligned",level.connections.solved())
+	await walk(a,1580)
+	await walk(b,1320)
+	check("4: Finn cannot operate energy",not level.energy_terminal.interact(a))
+	await tap(b,"interact")
+	await frames(100)
+	check("4: energy opens gate once",level.energy_terminal.energized and level.energy_gate.is_open and level.energy_terminal.activation_count==1)
+	await tap(b,"interact")
+	check("4: repeated energy is idempotent",level.energy_terminal.activation_count==1 and not b.movement_locked)
+	await capture("imported-4-energy")
+	await duo(a,b,1980)
+	check("4: crystal collected on input-driven route",level.get_node("CooperativeExit")._crystal_collected)
+	await duo(a,b,2090)
+	check("4: joint completion without recovery",level.get_node("CooperativeExit")._completed and level.get_node("FallZone").recovery_count==0)
+	await capture("imported-4-complete")

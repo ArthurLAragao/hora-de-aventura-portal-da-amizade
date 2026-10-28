@@ -24,6 +24,8 @@
 
 [ext_resource type="Script" path="res://region_scenery.gd" id="98_region_art"]
 
+[ext_resource type="Script" path="res://regional_layout.gd" id="97_local_layout"]
+
 [sub_resource type="RectangleShape2D" id="Shape_LeftBoundary"]
 size = Vector2(54, 513)
 
@@ -68,7 +70,7 @@ scroll_scale = Vector2(0.7, 1)
 texture_filter = 1
 material = SubResource("ShaderMaterial_panorama_blend")
 position = Vector2(1152, 320.93668)
-scale = Vector2(3.6, 1.8)
+scale = Vector2(3.6, 3.6)
 texture = ExtResource("3_i4yqx")
 
 [node name="Players" type="Node2D" parent="." unique_id=718501052]
@@ -233,6 +235,10 @@ tile_set = ExtResource("19_j0u7p")
 
 [node name="RegionalScenery" type="Node2D" parent="."]
 script = ExtResource("98_region_art")
+region = 4
+
+[node name="RegionalLayout" type="Node2D" parent="."]
+script = ExtResource("97_local_layout")
 region = 4
 
 [connection signal="activated" from="EnergyTerminal" to="EnergyGate" method="open_gate"]

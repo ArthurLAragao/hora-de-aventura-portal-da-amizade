@@ -25,7 +25,7 @@ func run() -> void:
 					hud.help_panel.show();await frames(3)
 					check("phase %d optional help fits viewport"%number,hud.help_panel.get_rect().end.x<=size.x and hud.help_panel.get_rect().end.y<=size.y)
 					await capture("region%d-help-%d"%[number,size.x]);hud.help_panel.hide()
-				else:check("phase 2 still identifies unfinished completion",level.get_node("FinalHint").text.contains("pendentes"))
+				else:check("phase 2 has real crystal and joint exit",level.get_node_or_null("FriendshipCrystal")!=null and level.get_node_or_null("CooperativeExit")!=null)
 	await finish("Regional presentation")
 
 func count_physics(node: Node) -> int:
@@ -34,6 +34,6 @@ func count_physics(node: Node) -> int:
 	return total
 
 func capture_selector(name: String) -> void:
-	if capture_dir=="":return
+	if capture_dir=="" or DisplayServer.get_name()=="headless":return
 	await RenderingServer.frame_post_draw
 	root.get_texture().get_image().save_png(capture_dir.path_join(name+".png"))

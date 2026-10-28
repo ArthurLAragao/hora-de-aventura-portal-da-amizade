@@ -15,11 +15,10 @@ func _ready() -> void:
 	floor_y=519.0 if region==2 else 388.0
 	z_index=-1
 	texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
-	if region==2: _ice()
-	elif region==3: _cave()
-	else: _workshop()
+	# Composed layers replace the earlier scatter; original helper methods remain available.
 	process_priority=10
 	_configure_presentation.call_deferred()
+	_add_finish.call_deferred()
 	queue_redraw()
 
 func prop(file: String,x: float,y: float,scale_factor: float=1.0,tint: Color=Color.WHITE,plane: int=-1,flip: bool=false) -> Sprite2D:
@@ -69,17 +68,20 @@ func _workshop() -> void:
 	for x in [72,268,908,1168,1764,2072]:
 		prop("decor_02",x,floor_y,2.0,Color("b6c9b0"),-3)
 	for x in [34,892,1760,2152]:
-		var gear:=prop("decor_01",x,floor_y-18,1.5,Color("d6b77b"),-2)
+		var gear:=prop("decor_01",x,floor_y-18,2.0,Color("d6b77b"),-2)
 		gear.set_meta("gear",true)
 	for x in [160,980,1440,1920]:
 		var lamp:=prop("decor_04",x,210,2.0,Color.WHITE,-3)
 		lamps.append(lamp)
 	for x in [86,958,1790,2164]:
-		prop("decor_03",x,floor_y,1.5,Color("ead5bd"),-2)
+		prop("decor_03",x,floor_y,2.0,Color("ead5bd"),-2)
 
 func _draw() -> void:
 	if level==null:return
 	if region==2:
+		draw_rect(Rect2(645,501,6,18),Color("25435c"))
+		draw_rect(Rect2(647,503,2,14),Color("a4c2cd"))
+		draw_rect(Rect2(636,516,24,3),Color("7195a8"))
 		# No collision in this cutaway rear wall; approved roof/floor remain intact.
 		for x in range(448,608,32):
 			draw_texture_rect_region(load(env+"fill.png"),Rect2(x,497,32,22),Rect2(0,8,32,22),Color("41638e"))
@@ -121,7 +123,7 @@ func _process(delta: float) -> void:
 		lamps[i].self_modulate=Color(brightness,brightness,brightness)
 	if region==4:
 		for child in get_children():
-			if child.has_meta("gear"):child.rotation=sin(elapsed*0.4+child.position.x)*0.07
+			if child.has_meta("gear"):child.rotation=0.0 # Preserve crisp pixel contours.
 
 func _configure_presentation() -> void:
 	if Engine.is_editor_hint():return
@@ -145,9 +147,10 @@ func _configure_presentation() -> void:
 	var keys:=Label.new();keys.text="P1: A/D, Espaço/W, E, Q\nP2: setas, Cima, Enter, Shift direito\nCake: interação no túnel; habilidade na âncora.\nFionna: empurre o bloco e use a manivela.\nEsc: cancelar | F2: reiniciar"
 	keys.add_theme_font_size_override("font_size",14);panel.add_child(keys)
 	help.pressed.connect(func():panel.visible=not panel.visible)
-	level.get_node("FinalHint").text="Fim do percurso de cenário\nColeta e conclusão pendentes"
+	level.get_node("FinalHint").hide()
 
 func _context() -> void:
+	if region==2 and level.completed:return
 	if region==2:
 		var cake=level.cake
 		var prompt: Label=level.tunnel.prompt
@@ -162,7 +165,7 @@ func _context() -> void:
 		if not level.first_unlocked:goal="Cake: atravesse o túnel. Fionna: use o bloco."
 		elif not level.first_crank.solved:goal="Fionna: estenda a primeira passagem."
 		elif not level.crank.solved:goal="Cake sustenta; Fionna libera a passagem."
-		else:goal="Explorem juntos até a área final."
+		else:goal="Recuperem o cristal e encontrem-se na saída."
 		level.get_node("Instructions/Text").text="Cake P%d • Fionna P%d\n%s"%[cake.player_id,level.fionna.player_id,goal]+(" • INÍCIO DE TESTE" if level.test_start>0 else "")
 	else:
 		var actors: Array=level.get_node("Players").get_children()
@@ -171,3 +174,24 @@ func _context() -> void:
 			if mechanism==null:continue
 			var status:=mechanism.get_node_or_null("Status") as Label
 			if status!=null:status.visible=false
+
+func _add_finish() -> void:
+	var details:=Node2D.new()
+	details.set_script(load("res://regional_composition.gd"))
+	details.name="RegionalComposition"
+	details.region=region
+	details.floor_y=floor_y
+	details.z_index=0
+	add_child(details)
+	if region in [3,4]:_finish_gates(level)
+
+func _finish_gates(node: Node) -> void:
+	if node is CoopGate:
+		if node.has_node("RegionalFinish"):return
+		var art:=Node2D.new()
+		art.set_script(load("res://regional_gate_finish.gd"))
+		art.name="RegionalFinish"
+		art.region=region
+		node.add_child(art)
+		return
+	for child in node.get_children():_finish_gates(child)

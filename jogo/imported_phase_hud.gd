@@ -29,6 +29,10 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var level:=get_parent()
+	var lead: int=level.lead_player_id
+	var actor_name: String="Marceline" if region==3 else "Finn"
+	var help_text: String=actor_name+" P%d • BMO P%d\n"%[lead,3-lead]+"P1: A/D, Espaço/W, E, Q\nP2: setas, Cima, Enter, Shift direito\nTerminal: mover escolhe; interação confirma.\nEsc: cancelar | F2: reiniciar"
+	if help_panel!=null:help_panel.get_child(0).text=help_text
 	if level.completion_count>0:
 		hint_label.text="Cristal recuperado. Caminho concluído!"
 		return
@@ -36,9 +40,12 @@ func _process(_delta: float) -> void:
 		if not level.get_node("MusicGate").is_open:hint_label.text="Marceline: toque no painel musical."
 		elif not level.symbol_terminal.solved:hint_label.text="BMO: reproduza a sequência da pista."
 		elif not level.energy_terminal.energized:hint_label.text="BMO: conecte a energia."
+		elif not level.get_node("RegionalLayout").confirmation_solved:hint_label.text="Toquem juntos as duas placas. Depois, o cristal."
 		else:hint_label.text="Recuperem o cristal e sigam juntos."
 	else:
-		if not level.get_node("TrunkPuzzle/Gate").is_open:hint_label.text="Finn: leve o tronco até a placa."
+		if not level.carrier.arrived:hint_label.text="Finn: carregue o bloco. BMO: mova a plataforma."
+		elif not level.get_node("TrunkPuzzle/Gate").is_open:hint_label.text="Finn: leve o bloco até a placa."
+		elif not level.connections.solved():hint_label.text="Finn: alinhe os tubos. BMO: conecte a energia."
 		elif not level.energy_terminal.energized:hint_label.text="BMO: conecte a energia da oficina."
 		else:hint_label.text="Recuperem o cristal e sigam juntos."
 

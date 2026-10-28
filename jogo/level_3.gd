@@ -1,5 +1,7 @@
 extends "res://imported_phase_runtime.gd"
 
+@export_range(1,2) var lead_player_id:=1
+
 @export var symbol_sequence: Array[int] = [0, 2, 1]
 
 const Terminal = preload("res://tests/bmo_terminal.gd")
@@ -12,10 +14,10 @@ const Terminal = preload("res://tests/bmo_terminal.gd")
 func _ready() -> void:
 	configure_imported_phase()
 	# Define Marceline como P1 e BMO como P2 (mesma lógica das salas de teste)
-	marceline.player_id = 1
-	marceline.set_meta("player_id", 1)
-	bmo.player_id = 2
-	bmo.set_meta("player_id", 2)
+	marceline.player_id = lead_player_id
+	marceline.set_meta("player_id", lead_player_id)
+	bmo.player_id = 3-lead_player_id
+	bmo.set_meta("player_id", bmo.player_id)
 
 	if is_instance_valid(symbol_terminal):
 		symbol_terminal.sequence.assign(symbol_sequence)
@@ -23,7 +25,9 @@ func _ready() -> void:
 
 func _build_clue() -> void:
 	var clue := PanelContainer.new()
-	clue.position = Vector2(520, 180)
+	clue.name="MusicalClue"
+	clue.visible=false
+	clue.position = Vector2(480, 116)
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color("172b38")
 	style.border_color = Color("c7e2dc")
@@ -53,6 +57,8 @@ func _build_clue() -> void:
 	stack.add_child(symbol_terminal._label(" → ".join(names), 12))
 
 func _process(_delta: float) -> void:
+	var clue:=get_node_or_null("MusicalClue") as Control
+	if clue!=null:clue.visible=$MusicGate.is_open
 	for terminal in [symbol_terminal, energy_terminal]:
 		if is_instance_valid(terminal):
 			terminal.update_prompt(bmo)
