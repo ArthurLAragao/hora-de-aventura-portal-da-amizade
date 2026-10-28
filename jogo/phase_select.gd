@@ -3,7 +3,7 @@ extends Control
 
 const DESIGN_SIZE := Vector2(640.0, 360.0)
 const PHASE_SCENE := "res://level_1.tscn"
-const PLAYABLE_PHASES := {1: PHASE_SCENE, 3: "res://level_3.tscn", 4: "res://level_4.tscn"}
+const PLAYABLE_PHASES := {1: PHASE_SCENE, 2: "res://level_2.tscn", 3: "res://level_3.tscn", 4: "res://level_4.tscn", 6: "res://level_6.tscn"}
 const MENU_SCENE := "res://Assets/04_Interface/Godot/main_menu.tscn"
 
 const COLOR_INK := Color("17263d")
