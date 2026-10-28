@@ -82,6 +82,9 @@ func _draw() -> void:
 		draw_rect(Rect2(645,501,6,18),Color("25435c"))
 		draw_rect(Rect2(647,503,2,14),Color("a4c2cd"))
 		draw_rect(Rect2(636,516,24,3),Color("7195a8"))
+		for x in [432,624]:
+			draw_rect(Rect2(x-9,416,3,103),Color("3d6278"))
+			draw_rect(Rect2(x-9,416,11,3),Color("9db8c4"))
 		# No collision in this cutaway rear wall; approved roof/floor remain intact.
 		for x in range(448,608,32):
 			draw_texture_rect_region(load(env+"fill.png"),Rect2(x,497,32,22),Rect2(0,8,32,22),Color("41638e"))
@@ -97,8 +100,6 @@ func _draw() -> void:
 		for span in [[0,576],[608,2176]]:
 			for x in range(span[0],span[1],32):
 				draw_texture_rect(load(env+"bottom.png"),Rect2(x,516,32,32),false,Color("a6a0bc"))
-		for x in [80,352,912,1408,1776,2112]:
-			draw_line(Vector2(x,110),Vector2(x+32,110),Color("5e6892"),2)
 	else:
 		# Pipe routes live in the background: they connect bays without suggesting platforms.
 		for span in [[24,340],[856,1210],[1360,1870],[1990,2160]]:

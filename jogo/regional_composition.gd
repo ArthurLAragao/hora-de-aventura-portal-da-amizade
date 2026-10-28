@@ -45,7 +45,8 @@ func _cave() -> void:
 	for x in [176,880,1376,1760,2128]:prop("bush_b",x,388,2,"Structures",Color("a5b8bd"))
 	for x in [48,368,912,1152,1392,1776,2144]:prop("column",x,388,2,"Structures",Color("8988ad"))
 	for x in [32,160,400,896,1184,1392,1648,2112]:prop(["grass_a","grass_b","grass_c"][posmod(x/16,3)],x,388,1)
-	for x in [64,352,928,1184,1408,1760,2128]:prop("vine",x,140,2,"Distant",Color("7587b0"))
+	for x in [488,536]:prop("vine",x,348,2,"Distant",Color("7587b0"))
+	prop("vine",1416,386,2,"Distant",Color("7587b0"))
 	for x in [464,1016,1536,2048]:prop("lantern",x,230,1,"Structures")
 
 func _candy() -> void:
@@ -54,7 +55,7 @@ func _candy() -> void:
 	for x in [112,944,1808,2144]:prop("bush_a",x,388,2,"Structures")
 	for x in [192,1136,1752,2080]:prop("bush_b",x,388,2,"Structures")
 	for x in [32,160,912,1184,1776,2136]:prop(["grass_a","grass_b","grass_c"][posmod(x/16,3)],x,388,1)
-	for x in [64,960,1776,2144]:prop("vine",x,198,2,"Distant",Color("b2b8a8"))
+	for x in [64,960,1776,2144]:prop("vine",x,328,2,"Distant",Color("b2b8a8"))
 	for x in [160,976,1440,1920]:prop("lantern",x,210,1,"Structures")
 
 func _skin_terrain() -> void:
