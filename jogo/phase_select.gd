@@ -3,6 +3,7 @@ extends Control
 
 const DESIGN_SIZE := Vector2(640.0, 360.0)
 const PHASE_SCENE := "res://level_1.tscn"
+const PLAYABLE_PHASES := {1: PHASE_SCENE, 3: "res://level_3.tscn", 4: "res://level_4.tscn"}
 const MENU_SCENE := "res://Assets/04_Interface/Godot/main_menu.tscn"
 
 const COLOR_INK := Color("17263d")
@@ -42,7 +43,7 @@ func _build_screen() -> void:
 	_design.add_child(shade)
 
 	_add_label("ESCOLHAM UMA FASE", Rect2(20, 15, 600, 34), 25, Color("fff1be"))
-	_add_label("A trilha da casa na árvore", Rect2(20, 51, 600, 22), 13, Color("b9f5ec"))
+	_add_label("Escolham uma aventura", Rect2(20, 51, 600, 22), 13, Color("b9f5ec"))
 
 	for index in range(6):
 		var column := index % 3
@@ -65,11 +66,12 @@ func _add_phase_button(phase_number: int, rect: Rect2) -> void:
 	button.name = "Phase%d" % phase_number
 	button.position = rect.position
 	button.size = rect.size
-	button.text = "FASE 1   |   JOGAR" if phase_number == 1 else "FASE %d   |   EM BREVE" % phase_number
-	button.disabled = phase_number != 1
-	_style_button(button, phase_number == 1)
-	if phase_number == 1:
-		button.pressed.connect(func() -> void: get_tree().change_scene_to_file(PHASE_SCENE))
+	var available := PLAYABLE_PHASES.has(phase_number)
+	button.text = "FASE %d   |   JOGAR" % phase_number if available else "FASE %d   |   EM BREVE" % phase_number
+	button.disabled = not available
+	_style_button(button, available)
+	if available:
+		button.pressed.connect(func() -> void: get_tree().change_scene_to_file(PLAYABLE_PHASES[phase_number]))
 	_design.add_child(button)
 
 func _style_button(button: Button, enabled: bool, compact: bool = false) -> void:

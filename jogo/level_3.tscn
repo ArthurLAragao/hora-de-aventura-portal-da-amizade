@@ -1,0 +1,320 @@
+[gd_scene format=4 uid="uid://bnrm0jrkmt617"]
+
+[ext_resource type="Script" path="res://level_3.gd" id="1_833wy"]
+[ext_resource type="Texture2D" path="res://Assets/02_Environments/03_musical_cave/background.png" id="3_833wy"]
+[ext_resource type="Shader" path="res://background_fade.gdshader" id="3_wnq0t"]
+[ext_resource type="PackedScene" path="res://Assets/01_Characters/marceline/visual.tscn" id="5_marceline"]
+[ext_resource type="PackedScene" path="res://Assets/01_Characters/bmo/playable.tscn" id="6_bmo"]
+[ext_resource type="PackedScene" path="res://checkpoint.tscn" id="10_v4n82"]
+[ext_resource type="PackedScene" path="res://fall_zone.tscn" id="11_fo8ya"]
+[ext_resource type="TileSet" path="res://Assets/02_Environments/03_musical_cave/tileset.tres" id="12_ghrvs"]
+[ext_resource type="PackedScene" path="res://crystal.tscn" id="14_kenis"]
+[ext_resource type="PackedScene" path="res://cooperative_exit.tscn" id="15_gkqsa"]
+[ext_resource type="Script" path="res://shared_camera.gd" id="16_3uls0"]
+[ext_resource type="Script" path="res://imported_phase_hud.gd" id="17_oojxo"]
+[ext_resource type="Script" path="res://tests/music_test_mechanism.gd" id="18_music_mech"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/clue_panel.png" id="19_clue_panel"]
+[ext_resource type="PackedScene" path="res://gate.tscn" id="20_gate"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/musical_door_closed.png" id="21_mdoor_closed"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/musical_door_open.png" id="22_mdoor_open"]
+[ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="23_font"]
+[ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/marceline_music.wav" id="24_music_sfx"]
+[ext_resource type="Script" path="res://tests/bmo_terminal.gd" id="25_bmo_term"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/terminal_off.png" id="26_term_off"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/receiver_off.png" id="27_rec_off"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/battery_off.png" id="28_bat_off"]
+
+[ext_resource type="Script" path="res://imported_phase_checkpoint.gd" id="99_checkpoint_runtime"]
+
+[sub_resource type="RectangleShape2D" id="Shape_LeftBoundary"]
+size = Vector2(54, 513)
+
+[sub_resource type="RectangleShape2D" id="Shape_RightBoundary"]
+size = Vector2(82, 543)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_panorama_blend"]
+shader = ExtResource("3_wnq0t")
+
+[sub_resource type="RectangleShape2D" id="MusicRange"]
+size = Vector2(128, 100)
+
+[sub_resource type="RectangleShape2D" id="Door"]
+size = Vector2(48, 64)
+
+[sub_resource type="RectangleShape2D" id="Range"]
+size = Vector2(134, 96)
+
+[node name="level3" type="Node2D" unique_id=1182175112]
+script = ExtResource("1_833wy")
+
+[node name="WorldBounds" type="Node2D" parent="." unique_id=1468794023]
+
+[node name="LeftWall" type="StaticBody2D" parent="WorldBounds" unique_id=1404763590]
+position = Vector2(-8, 30)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBounds/LeftWall" unique_id=45340457]
+position = Vector2(-19, 214.5)
+shape = SubResource("Shape_LeftBoundary")
+
+[node name="RightWall" type="StaticBody2D" parent="WorldBounds" unique_id=614079595]
+position = Vector2(2184, 30)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBounds/RightWall" unique_id=1090385351]
+position = Vector2(48, 246.5)
+shape = SubResource("Shape_RightBoundary")
+
+[node name="BackgroundParallax" type="Parallax2D" parent="." unique_id=2095916726]
+z_index = -10
+scroll_scale = Vector2(0.7, 1)
+
+[node name="BackgroundPanorama" type="Sprite2D" parent="BackgroundParallax" unique_id=552434862]
+texture_filter = 1
+material = SubResource("ShaderMaterial_panorama_blend")
+position = Vector2(1152, 320.93668)
+scale = Vector2(3.6, 1.8)
+texture = ExtResource("3_833wy")
+
+[node name="Players" type="Node2D" parent="." unique_id=718501052]
+
+[node name="Marceline" parent="Players" unique_id=657381159 instance=ExtResource("5_marceline")]
+position = Vector2(256, 245)
+max_partner_distance = 1100.0
+
+[node name="BMO" parent="Players" unique_id=1548651656 instance=ExtResource("6_bmo")]
+position = Vector2(300, 245)
+player_id = 2
+max_partner_distance = 1100.0
+
+[node name="MusicPanel" type="Area2D" parent="." unique_id=1247942302]
+position = Vector2(560, 352)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("18_music_mech")
+gate_path = NodePath("../MusicGate")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicPanel" unique_id=2077049671]
+shape = SubResource("MusicRange")
+
+[node name="Sprite2D" type="Sprite2D" parent="MusicPanel" unique_id=1144827183]
+texture_filter = 1
+texture = ExtResource("19_clue_panel")
+
+[node name="Prompt" type="Label" parent="MusicPanel" unique_id=1469357028]
+offset_left = -60.0
+offset_top = -72.0
+theme_override_colors/font_outline_color = Color(0.02, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("23_font")
+theme_override_font_sizes/font_size = 16
+
+[node name="Status" type="Label" parent="MusicPanel" unique_id=1756635517]
+offset_left = -102.0
+offset_top = 38.0
+theme_override_colors/font_outline_color = Color(0.02, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("23_font")
+theme_override_font_sizes/font_size = 14
+
+[node name="MusicSFX" type="AudioStreamPlayer2D" parent="MusicPanel" unique_id=327670539]
+position = Vector2(0, 4)
+stream = ExtResource("24_music_sfx")
+volume_db = -8.0
+
+[node name="MusicGate" parent="." unique_id=760824109 instance=ExtResource("20_gate")]
+position = Vector2(700, 352)
+closed_texture = ExtResource("21_mdoor_closed")
+open_texture = ExtResource("22_mdoor_open")
+
+[node name="Sprite2D" parent="MusicGate" index="0"]
+texture_filter = 1
+position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="MusicGate" index="1"]
+shape = SubResource("Door")
+
+[node name="Checkpoint" parent="." unique_id=1192570721 instance=ExtResource("10_v4n82")]
+script = ExtResource("99_checkpoint_runtime")
+progress_gate_path = NodePath("../MusicGate")
+position = Vector2(822, 388)
+
+[node name="SymbolTerminal" type="Area2D" parent="." unique_id=119461295]
+position = Vector2(1050, 352)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("25_bmo_term")
+gate_path = NodePath("../SymbolGate")
+indicator_path = NodePath("../EnergyIndicator")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SymbolTerminal" unique_id=254608516]
+shape = SubResource("Range")
+
+[node name="Sprite2D" type="Sprite2D" parent="SymbolTerminal" unique_id=1822230836]
+texture_filter = 1
+texture = ExtResource("26_term_off")
+
+[node name="Prompt" type="Label" parent="SymbolTerminal" unique_id=850928990]
+offset_left = -70.0
+offset_top = -72.0
+theme_override_colors/font_outline_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("23_font")
+theme_override_font_sizes/font_size = 15
+
+[node name="Status" type="Label" parent="SymbolTerminal" unique_id=818883474]
+offset_left = -90.0
+offset_top = 60.0
+theme_override_colors/font_outline_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("23_font")
+theme_override_font_sizes/font_size = 14
+
+[node name="SymbolGate" parent="." unique_id=36037300 instance=ExtResource("20_gate")]
+position = Vector2(1260, 352)
+
+[node name="Sprite2D" parent="SymbolGate" index="0"]
+texture_filter = 1
+position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="SymbolGate" index="1"]
+position = Vector2(-3, 3)
+shape = SubResource("Door")
+
+[node name="OpenSFX" parent="SymbolGate" index="2"]
+position = Vector2(3, 22)
+
+[node name="EnergyTerminal" type="Area2D" parent="." unique_id=1698598910]
+position = Vector2(1480, 352)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("25_bmo_term")
+mode = 1
+gate_path = NodePath("../SymbolGate")
+indicator_path = NodePath("../EnergyIndicator")
+battery_path = NodePath("../Battery")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnergyTerminal" unique_id=385316078]
+shape = SubResource("Range")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnergyTerminal" unique_id=365121641]
+texture_filter = 1
+texture = ExtResource("26_term_off")
+
+[node name="Prompt" type="Label" parent="EnergyTerminal" unique_id=12444580]
+offset_left = -70.0
+offset_top = -72.0
+theme_override_colors/font_outline_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("23_font")
+theme_override_font_sizes/font_size = 15
+
+[node name="Status" type="Label" parent="EnergyTerminal" unique_id=690746828]
+offset_left = -90.0
+offset_top = 60.0
+theme_override_colors/font_outline_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("23_font")
+theme_override_font_sizes/font_size = 14
+
+[node name="Battery" type="Sprite2D" parent="." unique_id=365497064]
+texture_filter = 1
+position = Vector2(1590, 368)
+texture = ExtResource("28_bat_off")
+
+[node name="EnergyIndicator" type="Sprite2D" parent="." unique_id=733673462]
+texture_filter = 1
+position = Vector2(1671, 393)
+texture = ExtResource("27_rec_off")
+
+[node name="FallZone" parent="." unique_id=101693028 instance=ExtResource("11_fo8ya")]
+position = Vector2(1096, 603)
+finn_path = NodePath("../Players/Marceline")
+jake_path = NodePath("../Players/BMO")
+starting_positions = Array[Vector2]([Vector2(256, 245), Vector2(300, 245)])
+checkpoint_path = NodePath("../Checkpoint")
+bridge_path = NodePath("")
+trunk_puzzle_path = NodePath("")
+
+[node name="FriendshipCrystal" parent="." unique_id=422630020 instance=ExtResource("14_kenis")]
+position = Vector2(1963, 364)
+
+[node name="CooperativeExit" parent="." unique_id=963033379 instance=ExtResource("15_gkqsa")]
+position = Vector2(2101, 362)
+crystal_path = NodePath("../FriendshipCrystal")
+
+[node name="SharedCamera" type="Camera2D" parent="." unique_id=2054536525]
+position = Vector2(278, 245)
+limit_left = 0
+limit_top = 0
+limit_right = 2304
+limit_bottom = 640
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+script = ExtResource("16_3uls0")
+player_a_path = NodePath("../Players/Marceline")
+player_b_path = NodePath("../Players/BMO")
+world_right = 2176.0
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1374524324]
+script = ExtResource("17_oojxo")
+
+[node name="Hints" type="Label" parent="HUD" unique_id=176722972]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 680.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 16
+text = "Marceline (P1): A/D andar | W/Espaco pular | Q flutuar | E tocar musica
+BMO (P2): Setas andar | Cima pular | Enter operar terminais"
+
+[node name="CrystalStatus" type="Label" parent="HUD" unique_id=855063224]
+offset_left = 12.0
+offset_top = 78.0
+offset_right = 340.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 18
+text = "Cristal da Amizade: nao recuperado"
+
+[node name="Message" type="Label" parent="HUD" unique_id=385673513]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -30.0
+offset_right = 280.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 28
+text = "Fase concluida!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReturnToPhases" type="Button" parent="HUD" unique_id=637738784]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = 32.0
+offset_right = 120.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 18
+text = "Seleção de fases"
+
+[node name="MessageTimer" type="Timer" parent="HUD" unique_id=696103206]
+one_shot = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=120008691]
+tile_map_data = PackedByteArray("AAACAAwAAAABAAAAAAADAAwAAAABAAAAAAAEAAwAAAABAAAAAAAFAAwAAAABAAAAAAAGAAwAAAABAAAAAAAHAAwAAAABAAAAAAAIAAwAAAABAAAAAAAJAAwAAAABAAAAAAAKAAwAAAABAAAAAAALAAwAAAABAAAAAAAMAAwAAAABAAAAAAANAAwAAAABAAAAAAAOAAwAAAABAAAAAAAPAAwAAAABAAAAAAAQAAwAAAABAAAAAAARAAwAAAABAAAAAAATAAwAAAABAAAAAAAUAAwAAAABAAAAAAAVAAwAAAABAAAAAAAWAAwAAAABAAAAAAAXAAwAAAABAAAAAAAYAAwAAAABAAAAAAAZAAwAAAABAAAAAAAaAAwAAAABAAAAAAAbAAwAAAABAAAAAAAcAAwAAAABAAAAAAAdAAwAAAABAAAAAAAeAAwAAAABAAAAAAAfAAwAAAABAAAAAAAgAAwAAAABAAAAAAAhAAwAAAABAAAAAAAiAAwAAAABAAAAAAAjAAwAAAABAAAAAAAkAAwAAAABAAAAAAAlAAwAAAABAAAAAAAmAAwAAAABAAAAAAAnAAwAAAABAAAAAAAoAAwAAAABAAAAAAApAAwAAAABAAAAAAAqAAwAAAABAAAAAAArAAwAAAABAAAAAAAsAAwAAAABAAAAAAAtAAwAAAABAAAAAAAtAA0AAAABAAEAAAAuAA0AAAABAAEAAAAvAA0AAAABAAEAAAAuAAwAAAABAAAAAAAvAAwAAAABAAAAAAAwAAwAAAABAAAAAAAxAAwAAAABAAAAAAAyAAwAAAABAAAAAAAzAAwAAAABAAAAAAA0AAwAAAABAAAAAAA1AAwAAAABAAAAAAA2AAwAAAABAAAAAAA3AAwAAAABAAAAAAA4AAwAAAABAAAAAAA5AAwAAAABAAAAAAA6AAwAAAABAAAAAAA7AAwAAAABAAAAAAA8AAwAAAABAAAAAAA9AAwAAAABAAAAAAA+AAwAAAABAAAAAAA/AAwAAAABAAAAAABAAAwAAAABAAAAAABBAAwAAAABAAAAAABCAAwAAAABAAAAAABDAAwAAAACAAAAAABDAA0AAAACAAEAAABDAA4AAAACAAEAAAAAAAwAAAAAAAAAAAAAAA0AAAAAAAEAAAAAAA4AAAAAAAEAAAABAAwAAAABAAAAAAAAAA8AAAAAAAEAAAAAABAAAAAAAAIAAABDAA8AAAACAAEAAABDABAAAAACAAIAAABCABAAAAABAAIAAABBABAAAAABAAIAAABAABAAAAABAAIAAAA/ABAAAAABAAIAAAA+ABAAAAABAAIAAAA9ABAAAAABAAIAAAA8ABAAAAABAAIAAAA7ABAAAAABAAIAAAA6ABAAAAABAAIAAAA5ABAAAAABAAIAAAA4ABAAAAABAAIAAAA3ABAAAAABAAIAAAA2ABAAAAABAAIAAAA1ABAAAAABAAIAAAA0ABAAAAABAAIAAAAzABAAAAABAAIAAAAyABAAAAABAAIAAAAxABAAAAABAAIAAAAwABAAAAABAAIAAAAvABAAAAABAAIAAAAuABAAAAABAAIAAAAtABAAAAABAAIAAAAsABAAAAABAAIAAAArABAAAAABAAIAAAAqABAAAAABAAIAAAApABAAAAABAAIAAAAoABAAAAABAAIAAAAnABAAAAABAAIAAAAmABAAAAABAAIAAAAlABAAAAABAAIAAAAkABAAAAABAAIAAAAjABAAAAABAAIAAAAiABAAAAABAAIAAAAhABAAAAABAAIAAAAgABAAAAABAAIAAAAfABAAAAABAAIAAAAeABAAAAABAAIAAAAdABAAAAABAAIAAAAcABAAAAABAAIAAAAbABAAAAABAAIAAAAaABAAAAABAAIAAAAZABAAAAABAAIAAAAYABAAAAABAAIAAAAXABAAAAABAAIAAAAWABAAAAABAAIAAAAVABAAAAABAAIAAAAUABAAAAABAAIAAAATABAAAAABAAIAAAARABAAAAABAAIAAAAQABAAAAABAAIAAAAPABAAAAABAAIAAAAOABAAAAABAAIAAAANABAAAAABAAIAAAAMABAAAAABAAIAAAALABAAAAABAAIAAAAKABAAAAABAAIAAAAJABAAAAABAAIAAAAIABAAAAABAAIAAAAHABAAAAABAAIAAAAGABAAAAABAAIAAAAFABAAAAABAAIAAAAEABAAAAABAAIAAAADABAAAAABAAIAAAACABAAAAABAAIAAAABABAAAAABAAIAAAALAA4AAAABAAEAAAALAA0AAAABAAEAAAAKAA0AAAABAAEAAAAJAA0AAAABAAEAAAAIAA0AAAABAAEAAAAHAA0AAAABAAEAAAAGAA0AAAABAAEAAAAFAA0AAAABAAEAAAAEAA0AAAABAAEAAAADAA0AAAABAAEAAAACAA0AAAABAAEAAAABAA0AAAABAAEAAAABAA4AAAABAAEAAAABAA8AAAABAAEAAAACAA8AAAABAAEAAAACAA4AAAABAAEAAAADAA4AAAABAAEAAAADAA8AAAABAAEAAAAEAA8AAAABAAEAAAAEAA4AAAABAAEAAAAFAA4AAAABAAEAAAAFAA8AAAABAAEAAAAGAA8AAAABAAEAAAAGAA4AAAABAAEAAAAHAA4AAAABAAEAAAAHAA8AAAABAAEAAAAIAA8AAAABAAEAAAAIAA4AAAABAAEAAAAJAA4AAAABAAEAAAAJAA8AAAABAAEAAAAKAA8AAAABAAEAAAAKAA4AAAABAAEAAAALAA8AAAABAAEAAAAMAA8AAAABAAEAAAAMAA4AAAABAAEAAAAMAA0AAAABAAEAAAANAA0AAAABAAEAAAANAA4AAAABAAEAAAANAA8AAAABAAEAAAAOAA8AAAABAAEAAAAOAA4AAAABAAEAAAAOAA0AAAABAAEAAAAPAA0AAAABAAEAAAAPAA4AAAABAAEAAAAPAA8AAAABAAEAAAAQAA8AAAABAAEAAAAQAA4AAAABAAEAAAAQAA0AAAABAAEAAAARAA0AAAABAAEAAAARAA4AAAABAAEAAAARAA8AAAABAAEAAAATAA0AAAABAAEAAAATAA4AAAABAAEAAAATAA8AAAABAAEAAAAUAA8AAAABAAEAAAAUAA4AAAABAAEAAAAUAA0AAAABAAEAAAAVAA0AAAABAAEAAAAVAA4AAAABAAEAAAAVAA8AAAABAAEAAAAWAA8AAAABAAEAAAAWAA4AAAABAAEAAAAWAA0AAAABAAEAAAAXAA0AAAABAAEAAAAXAA4AAAABAAEAAAAXAA8AAAABAAEAAAAYAA8AAAABAAEAAAAYAA4AAAABAAEAAAAYAA0AAAABAAEAAAAZAA0AAAABAAEAAAAZAA4AAAABAAEAAAAZAA8AAAABAAEAAAAaAA8AAAABAAEAAAAaAA4AAAABAAEAAAAaAA0AAAABAAEAAAAbAA0AAAABAAEAAAAbAA4AAAABAAEAAAAbAA8AAAABAAEAAAAcAA8AAAABAAEAAAAcAA4AAAABAAEAAAAcAA0AAAABAAEAAAAdAA0AAAABAAEAAAAdAA4AAAABAAEAAAAdAA8AAAABAAEAAAAeAA8AAAABAAEAAAAeAA4AAAABAAEAAAAeAA0AAAABAAEAAAAfAA0AAAABAAEAAAAfAA4AAAABAAEAAAAfAA8AAAABAAEAAAAgAA8AAAABAAEAAAAgAA4AAAABAAEAAAAgAA0AAAABAAEAAAAhAA0AAAABAAEAAAAhAA4AAAABAAEAAAAhAA8AAAABAAEAAAAiAA8AAAABAAEAAAAiAA4AAAABAAEAAAAiAA0AAAABAAEAAAAjAA0AAAABAAEAAAAjAA4AAAABAAEAAAAjAA8AAAABAAEAAAAkAA8AAAABAAEAAAAkAA4AAAABAAEAAAAkAA0AAAABAAEAAAAlAA0AAAABAAEAAAAlAA4AAAABAAEAAAAlAA8AAAABAAEAAAAmAA8AAAABAAEAAAAmAA4AAAABAAEAAAAmAA0AAAABAAEAAAAnAA0AAAABAAEAAAAnAA4AAAABAAEAAAAnAA8AAAABAAEAAAAoAA8AAAABAAEAAAAoAA4AAAABAAEAAAAoAA0AAAABAAEAAAApAA0AAAABAAEAAAApAA4AAAABAAEAAAApAA8AAAABAAEAAAAqAA8AAAABAAEAAAAqAA4AAAABAAEAAAAqAA0AAAABAAEAAAArAA0AAAABAAEAAAArAA4AAAABAAEAAAArAA8AAAABAAEAAAAsAA8AAAABAAEAAAAsAA4AAAABAAEAAAAsAA0AAAABAAEAAAAtAA4AAAABAAEAAAAtAA8AAAABAAEAAAAuAA8AAAABAAEAAAAuAA4AAAABAAEAAAAvAA4AAAABAAEAAAAvAA8AAAABAAEAAAAwAA8AAAABAAEAAAAwAA4AAAABAAEAAAAwAA0AAAABAAEAAAAxAA0AAAABAAEAAAAxAA4AAAABAAEAAAAxAA8AAAABAAEAAAAyAA8AAAABAAEAAAAyAA4AAAABAAEAAAAyAA0AAAABAAEAAAAzAA0AAAABAAEAAAAzAA4AAAABAAEAAAAzAA8AAAABAAEAAAA0AA8AAAABAAEAAAA0AA4AAAABAAEAAAA0AA0AAAABAAEAAAA1AA0AAAABAAEAAAA1AA4AAAABAAEAAAA1AA8AAAABAAEAAAA2AA8AAAABAAEAAAA2AA4AAAABAAEAAAA2AA0AAAABAAEAAAA3AA0AAAABAAEAAAA3AA4AAAABAAEAAAA3AA8AAAABAAEAAAA4AA8AAAABAAEAAAA4AA4AAAABAAEAAAA4AA0AAAABAAEAAAA5AA0AAAABAAEAAAA5AA4AAAABAAEAAAA5AA8AAAABAAEAAAA6AA8AAAABAAEAAAA6AA4AAAABAAEAAAA6AA0AAAABAAEAAAA7AA0AAAABAAEAAAA7AA4AAAABAAEAAAA7AA8AAAABAAEAAAA8AA8AAAABAAEAAAA8AA4AAAABAAEAAAA8AA0AAAABAAEAAAA9AA0AAAABAAEAAAA9AA4AAAABAAEAAAA9AA8AAAABAAEAAAA+AA8AAAABAAEAAAA+AA4AAAABAAEAAAA+AA0AAAABAAEAAAA/AA0AAAABAAEAAAA/AA4AAAABAAEAAAA/AA8AAAABAAEAAABAAA8AAAABAAEAAABAAA4AAAABAAEAAABAAA0AAAABAAEAAABBAA0AAAABAAEAAABBAA4AAAABAAEAAABBAA8AAAABAAEAAABCAA8AAAABAAEAAABCAA4AAAABAAEAAABCAA0AAAABAAEAAAA=")
+tile_set = ExtResource("12_ghrvs")
+
+[connection signal="collected" from="FriendshipCrystal" to="HUD" method="set_crystal_collected"]
+[connection signal="level_completed" from="CooperativeExit" to="HUD" method="show_completion"]
+
+[editable path="MusicGate"]
+[editable path="SymbolGate"]
