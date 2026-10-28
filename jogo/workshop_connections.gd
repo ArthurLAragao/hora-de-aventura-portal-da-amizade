@@ -56,7 +56,8 @@ func _draw() -> void:
 		draw_rect(Rect2(p-Vector2(5,5),Vector2(10,10)),outline)
 		draw_rect(Rect2(p-Vector2(3,3),Vector2(6,6)),Color("e4f0bd") if locked else edge)
 		draw_rect(Rect2(p-Vector2(1,2),Vector2(2,4)),outline)
-	for x in [1384,1464,1552]:
-		draw_rect(Rect2(x,348,22,12),outline)
-		draw_rect(Rect2(x,350,22,8),pipe)
-		draw_rect(Rect2(x,351,22,2),Color("bed4ad"))
+	for span in [[1378,1406],[1458,1494],[1546,1576]]:
+		var x: int=span[0];var width: int=span[1]-span[0]
+		draw_rect(Rect2(x,348,width,12),outline)
+		draw_rect(Rect2(x,350,width,8),pipe)
+		draw_rect(Rect2(x,351,width,2),Color("bed4ad"))

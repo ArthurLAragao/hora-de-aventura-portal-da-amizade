@@ -38,6 +38,11 @@ func run() -> void:
 				var hit:=level.get_world_2d().direct_space_state.intersect_ray(query)
 				check("bridge supports entry/center/exit at x=%s"%x,not hit.is_empty() and absf(hit.position.y-388)<0.1)
 			await capture("feedback-4-covered-gap")
+			# A prepared visual state only, separate from the input-driven route evidence.
+			level.finn.position=Vector2(1580,356);level.bmo.position=Vector2(1320,356)
+			level.connections.turns.assign([0,0]);level.connections.queue_redraw()
+			await frames(40)
+			await capture("feedback-workshop-connections")
 	await finish("Feedback art alignment and coverage fixtures")
 func visible_feet(actor: CoopPlayer) -> float:
 	var sprite:=actor.animated_sprite
