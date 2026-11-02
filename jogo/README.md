@@ -1,10 +1,10 @@
 # Hora de Aventura: O Portal da Amizade
 
-Plataforma 2D cooperativo local para dois jogadores. Abra `project.godot` com **Godot 4.7.2** e use **F5** para o menu. Fases disponíveis: **1, 2, 3, 4 e 6**. A Fase 5 continua pendente; seus assets foram preservados.
+Plataforma 2D cooperativo local para dois jogadores. Abra `project.godot` com **Godot 4.7.2** e use **F5** para o menu. Fases disponíveis: **1, 2, 3, 4, 5 e 6**. A Torre dos Espelhos possui percurso cooperativo, cristal e ligação com a Fase 6.
 
 ## Estrutura enxuta
 
-- `Assets/`: recursos do jogo, incluindo materiais reservados para a Fase 5.
+- `Assets/`: recursos do jogo e materiais dos seis ambientes.
 - `scripts/characters`, `bridges`, `levels`, `puzzles`, `scenery`, `ui`, `core`: scripts por responsabilidade, mantendo nomes e identidades de classe.
 - `mechanisms/`: terminal, túnel, manivela, plataforma e painel musical reutilizáveis.
 - `docs/`: arquitetura, funções, manutenção, apresentação e registros históricos.
@@ -24,6 +24,7 @@ F2 reinicia a cena; Esc cancela ações contextuais. A ajuda disponível na cena
 ## Documentação
 
 - [Roteiro para a professora](docs/APRESENTACAO.md)
+- [Fase 5 — percurso, óptica e testes](docs/FASE_5.md)
 - [Arquitetura e estados](docs/ARQUITETURA.md)
 - [Índice de todas as funções](docs/CODIGO.md)
 - [Otimização e validação](docs/OTIMIZACAO.md)

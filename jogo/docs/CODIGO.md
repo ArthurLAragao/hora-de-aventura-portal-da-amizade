@@ -383,3 +383,21 @@ Cada função mantida tem comentário `##` de propósito. Parâmetros, tipos e r
 | `scripts/ui/quality_presentation.gd:96` | `_exit_tree` | Limpa referências/estado temporário ao retirar o componente da árvore. Contexto: ajuda opcional e apresentação contextual das jornadas. |
 | `scripts/ui/quality_presentation.gd:104` | `fade_out` | Executa o escurecimento breve da transição e aguarda o tween terminar. |
 | `scripts/ui/quality_presentation.gd:109` | `fade_in` | Restaura gradualmente a visão após a transição. |
+
+
+## Torre dos Espelhos (Fase 5)
+
+`scripts/levels/level_5.gd`: [percurso, óptica e recuperação](FASE_5.md).
+
+- `_ready`: Constrói somente esta fase e reutiliza personagens/mecanismos de execução.
+- `surface`: Desenha terreno com textura nativa e apoio físico de tamanho correspondente.
+- `build_tunnel`: Monta teto sólido e entradas reutilizando o túnel aprovado, sem teleporte.
+- `add_mirror`: Registra um espelho de duas orientações; capacidade vazia indica peça fixa.
+- `add_receiver`: Registra receptor identificado por forma, além da cor do feixe.
+- `stop_distance`: Encontra o obstáculo mais próximo de um raio, incluindo portas e teto.
+- `refresh_light`: Recalcula raios por eventos; limita reflexões e interrompe ciclos determinísticos.
+- `_physics_process`: Processa uma interação por personagem, priorizando entrada de túnel no alcance.
+- `recover_pair`: Recupera a dupla sem conceder solução ou apagar estados conquistados.
+- `complete`: Finaliza uma vez e oferece ligação explícita com a fase final existente.
+- `_unhandled_key_input`: Reinicia por F2 preservando papéis; Esc solicita postura normal somente se livre.
+- `_draw`: Desenha feixes não nocivos atrás dos personagens e emissores fixados na arquitetura.

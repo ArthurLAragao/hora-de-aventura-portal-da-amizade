@@ -49,8 +49,8 @@ func _run() -> void:
 			phase_buttons.append(button)
 		if button != null and button.disabled:
 			unavailable += 1
-	_check("only phase 5 remains unavailable in the selector", unavailable == 1)
-	for phase in [2,3,4,6]:
+	_check("all six phases are available in the selector", unavailable == 0)
+	for phase in [2,3,4,5,6]:
 		_check("imported phase %d is enabled" % phase, not (phase_select.get_node("Design/Phase%d" % phase) as Button).disabled)
 	var cards_do_not_overlap := true
 	phase_buttons.append(first)
@@ -71,5 +71,12 @@ func _run() -> void:
 	await process_frame
 	await process_frame
 	_check("phase one button opens the playable level", current_scene != null and current_scene.name == "Level1")
+	change_scene_to_file("res://phase_select.tscn")
+	await process_frame
+	await process_frame
+	(current_scene.get_node("Design/Phase5") as Button).pressed.emit()
+	await process_frame
+	await process_frame
+	_check("phase five button opens MirrorTower", current_scene != null and current_scene.name == "MirrorTower")
 	print("Menu check failures: ", failures)
 	quit(0 if failures == 0 else 1)
