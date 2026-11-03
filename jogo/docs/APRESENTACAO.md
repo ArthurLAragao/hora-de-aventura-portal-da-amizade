@@ -39,3 +39,8 @@ Há seis fases acessíveis pelo seletor. A Fase 5 foi implementada após a otimi
 ## Item de 29/10 — desafios e obstáculos
 
 A tabela de desafios, contribuições de cada jogador, correções e roteiro curto está em [DESAFIOS_29_10.md](DESAFIOS_29_10.md). Demonstre erro e nova tentativa, além da solução. Não apresente preparação de estado de testes isolados como percurso concluído.
+
+
+## Item de 03/11 — conteúdo do jogo
+
+Demonstre as miniconversas da abertura e as reações às conquistas. Explique como a cooperação dos puzzles expressa amizade: compartilhar pistas, dividir tarefas e deixar caminho para o parceiro. Tab avança e F3 relê a conversa mais recente, sem interromper os controles. O roteiro e as falas estão em [CONTEUDO_03_11.md](CONTEUDO_03_11.md).

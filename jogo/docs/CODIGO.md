@@ -401,3 +401,23 @@ Cada função mantida tem comentário `##` de propósito. Parâmetros, tipos e r
 - `complete`: Finaliza uma vez e oferece ligação explícita com a fase final existente.
 - `_unhandled_key_input`: Reinicia por F2 preservando papéis; Esc solicita postura normal somente se livre.
 - `_draw`: Desenha feixes não nocivos atrás dos personagens e emissores fixados na arquitetura.
+
+
+## Conteúdo e miniconversas de amizade
+
+`scripts/content/friendship_lines.gd`: falas por fase e acontecimento. `scripts/ui/friendship_story.gd`: apresentação observadora de estados; [roteiro e manutenção](CONTEUDO_03_11.md).
+
+- `_ready`: Constrói o cartão e aguarda a montagem da fase antes de consultar seus eventos.
+- `make_label`: Cria rótulos sem foco nem captura de cliques ou teclas dos jogadores.
+- `start`: Abre o contexto da fase sem simular cristais anteriores nem conceder progresso.
+- `snapshot`: Consulta somente estados conquistados no jogo, com frequência reduzida.
+- `queue_moment`: Enfileira um acontecimento uma vez; conclusões substituem comentários atrasados.
+- `next_sequence`: Inicia a próxima conversa e conserva somente a última para a releitura opcional.
+- `show_line`: Mostra retrato original, nome, papel atual e uma fala completa, sem efeito de digitação.
+- `layout_card`: Posiciona o cartão fora da faixa principal do chão, respeitando a tela atual.
+- `settle_height`: Espera a largura dos contêineres estabilizar antes de reduzir a altura do texto quebrado.
+- `advance`: Avança ou encerra a fala sem consumir interação, salto ou habilidade dos jogadores.
+- `clear_card`: Limpa fila e cartão ao recuperar, trocar de dupla ou priorizar um novo contexto.
+- `obstructed`: Identifica painéis e transições que precisam de toda a atenção visual.
+- `_process`: Reage a conquistas e erros sem escrever em estados dos puzzles ou dos personagens.
+- `_input`: Tab avança texto; F3 relê a conversa mais recente. As teclas de jogo não são capturadas.
