@@ -26,6 +26,7 @@ func _ready() -> void:
 	_build_terrain()
 	# Decoration is now composed by RegionalScenery, with no duplicate instances.
 	if Engine.is_editor_hint(): return
+	preload("res://scripts/core/journey_build.gd").restore_restart_role(self,"cake_player_id")
 	cake.player_id=cake_player_id
 	cake.set_meta("player_id",cake.player_id)
 	fionna.player_id=3-cake_player_id
@@ -92,7 +93,7 @@ func _unlock_first() -> void:
 
 ## Atualiza a lógica/apresentação deste componente a cada quadro. Contexto: percurso e mecanismos da Fase 2.
 func _process(_delta: float) -> void:
-	if Engine.is_editor_hint(): return
+	if Engine.is_editor_hint() or completed: return
 	tunnel.update_prompt(cake)
 	anchor.update_prompt(cake)
 	crank.update_prompt(fionna)
@@ -114,12 +115,12 @@ func _process(_delta: float) -> void:
 ## Atualiza a lógica em passos fixos de física; delta representa segundos. Contexto: percurso e mecanismos da Fase 2.
 func _physics_process(_delta: float) -> void:
 	if Engine.is_editor_hint() or completed: return
-	if not checkpoint_active and first_crank.solved and $FirstPlatform.extended and cake.position.x>990 and fionna.position.x>990:
+	if not checkpoint_active and first_crank.solved and $FirstPlatform.extended and cake.position.x>990 and fionna.position.x>990 and cake.is_on_floor() and fionna.is_on_floor():
 		checkpoint_active=true
 		_starts=[Vector2(1024,487),Vector2(1088,487)]
 		checkpoint_flag.texture=load("res://Assets/03_Objects_and_Puzzles/sprites/checkpoint_on.png")
 	if is_instance_valid(final_crystal):
-		var available: bool=crank.solved and $ExtendPlatform.extended
+		var available: bool=first_crank.solved and $FirstPlatform.extended and crank.solved and $ExtendPlatform.extended
 		final_crystal.monitoring=available
 		final_crystal.modulate=Color.WHITE if available else Color(0.45,0.55,0.65,1)
 	if cake.position.y>720 or fionna.position.y>720: recover_pair()
@@ -140,7 +141,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if Engine.is_editor_hint() or not event is InputEventKey or not event.pressed or event.echo: return
 	if event.keycode==KEY_F2:
 		get_viewport().set_input_as_handled()
-		get_tree().reload_current_scene()
+		preload("res://scripts/core/journey_build.gd").restart(self,"cake_player_id")
 	elif event.keycode==KEY_ESCAPE:
 		if is_instance_valid(cake.pose_owner): cake.pose_owner.cancel_immediately()
 		elif cake.crawling: cake.request_stand()
@@ -172,5 +173,7 @@ func _complete_level() -> void:
 	completed=true;completion_count+=1
 	cake.reset_after_recovery();fionna.reset_after_recovery()
 	cake.movement_locked=true;fionna.movement_locked=true
+	# Encerra a execução dos atores; Cake não deve limpar a trava da conclusão.
+	cake.process_mode=Node.PROCESS_MODE_DISABLED;fionna.process_mode=Node.PROCESS_MODE_DISABLED
 	final_exit.completion_label.hide()
 	$Instructions/Text.text="Cristal recuperado! Vocês atravessaram juntos.\nF2: repetir • Fases: escolher outra aventura."

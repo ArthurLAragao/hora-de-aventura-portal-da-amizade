@@ -4,6 +4,8 @@ var completion_count := 0
 
 ## Conecta a cena recebida aos controles, conclusão, recuperação e interface existentes.
 func configure_imported_phase() -> void:
+	# Mantém o papel escolhido ao reiniciar as Fases 3 e 4 pelo padrão existente.
+	preload("res://scripts/core/journey_build.gd").restore_restart_role(self,"lead_player_id")
 	$FallZone.recovery_started.connect(_cancel_local_actions)
 	$CooperativeExit.level_completed.connect(_on_imported_completion)
 	_configure_respawn_markers.call_deferred()
@@ -33,7 +35,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F2:
 		_cancel_local_actions()
 		get_viewport().set_input_as_handled()
-		get_tree().reload_current_scene()
+		preload("res://scripts/core/journey_build.gd").restart(self,"lead_player_id")
 
 ## Configura marcadores de retorno para os dois personagens ativos.
 func _configure_respawn_markers() -> void:

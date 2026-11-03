@@ -46,16 +46,26 @@ func _sprite(file: String,at: Vector2,center: bool) -> Sprite2D:
 ## Retorna se os dois condutores estão na orientação que permite conectar energia.
 func solved() -> bool:return turns==[0,0]
 
-## Atualiza a lógica/apresentação deste componente a cada quadro. Contexto: alinhamento dos dois condutores e apresentação da energia.
+## Escolhe um único condutor por entrada e preserva o circuito durante a conexão de BMO.
 func _process(_delta: float) -> void:
-	for i in 2:
-		indicators[i].text=""
-		if locked:continue
-		for actor in [root_level.finn,root_level.bmo]:
-			if not actor.has_ability(&"lever") or actor.movement_locked or not areas[i].overlaps_body(actor):continue
-			indicators[i].text=("E" if actor.player_id==1 else "Enter")+": girar"
-			if Input.is_action_just_pressed(actor.get_interact_action()):turns[i]=1-turns[i]
-	if root_level.energy_terminal.energized and not locked:locked=true
+	for indicator in indicators:indicator.text=""
+	if root_level.energy_terminal.energized:locked=true
+	# A ligação em andamento usa a geometria aceita no início. Esc libera nova tentativa.
+	if locked or root_level.energy_terminal.pending:
+		_sync_art()
+		return
+	for actor in [root_level.finn,root_level.bmo]:
+		if not actor.has_ability(&"lever") or actor.movement_locked:continue
+		var nearest:=-1
+		var distance:=INF
+		for i in areas.size():
+			if not areas[i].overlaps_body(actor):continue
+			var candidate: float=actor.global_position.distance_squared_to(areas[i].global_position)
+			if candidate<distance:
+				nearest=i;distance=candidate
+		if nearest<0:continue
+		indicators[nearest].text=("E" if actor.player_id==1 else "Enter")+": girar"
+		if Input.is_action_just_pressed(actor.get_interact_action()):turns[nearest]=1-turns[nearest]
 	_sync_art()
 
 ## Atualiza orientação e receptor somente quando o estado visual muda.
