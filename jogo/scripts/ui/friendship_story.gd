@@ -42,7 +42,7 @@ func _ready() -> void:
 	var column:=VBoxContainer.new();column.size_flags_horizontal=Control.SIZE_EXPAND_FILL;column.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_child(column)
 	speaker=make_label(16);column.add_child(speaker)
 	dialogue=make_label(18);dialogue.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;dialogue.custom_minimum_size=Vector2(0,52);column.add_child(dialogue)
-	footer=make_label(11);footer.modulate=Color("c2c8c5");column.add_child(footer)
+	footer=make_label(11);footer.modulate=Color("c2c8c5");column.add_child(footer);footer.hide()
 	card.hide()
 	start.call_deferred()
 

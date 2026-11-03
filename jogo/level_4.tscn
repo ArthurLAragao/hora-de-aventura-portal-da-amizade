@@ -1,4 +1,5 @@
 [gd_scene format=4 uid="uid://t86bsaobtcra"]
+[ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
 [ext_resource type="Script" path="res://scripts/ui/friendship_story.gd" id="story_content"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_4.gd" id="1_s4mws"]
@@ -251,3 +252,6 @@ region = 4
 [node name="FriendshipStory" type="Node" parent="."]
 script = ExtResource("story_content")
 phase = 4
+
+[node name="CleanPresentation" type="Node" parent="."]
+script = ExtResource("clean_presentation")
