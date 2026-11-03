@@ -34,3 +34,8 @@ Não é necessário abrir todas as funções durante a apresentação. Deixe a d
 ## Falar com precisão
 
 Há seis fases acessíveis pelo seletor. A Fase 5 foi implementada após a otimização; seu percurso e limites de validação estão em `FASE_5.md`. Foram realizados testes automatizados de percurso e inspeção de capturas reais; isso não equivale a validar exportação, outros computadores ou todos os cenários possíveis. A otimização reduziu o material dentro do projeto e o trabalho de preparação de recursos, sem alterar os puzzles.
+
+
+## Item de 29/10 — desafios e obstáculos
+
+A tabela de desafios, contribuições de cada jogador, correções e roteiro curto está em [DESAFIOS_29_10.md](DESAFIOS_29_10.md). Demonstre erro e nova tentativa, além da solução. Não apresente preparação de estado de testes isolados como percurso concluído.

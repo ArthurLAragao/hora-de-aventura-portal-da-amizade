@@ -7,9 +7,11 @@ var failures:=0
 var checks: Array[Dictionary]=[]
 var capture_dir:=""
 var report_path:=""
+var viewport_size:=Vector2i(1152,648)
 func _initialize() -> void:
 	if DisplayServer.get_name()!="headless": DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 	for arg in OS.get_cmdline_user_args():
+		if arg=="--resolution=1280x720":viewport_size=Vector2i(1280,720)
 		if arg.begins_with("--report="): report_path=arg.trim_prefix("--report=")
 		if arg.begins_with("--capture-dir="): capture_dir=arg.trim_prefix("--capture-dir=")
 	call_deferred("run")
@@ -164,7 +166,7 @@ func route(slot: int) -> void:
 	Input.action_press(action(cake,"right"))
 	await until(func():return room.completed,120)
 	Input.action_release(action(cake,"right"))
-	check("normal route reaches reserved final area",cake.position.x>2100 and fionna.position.x>2100 and room.recovery_count==0 and room.completed)
+	check("normal route collects crystal and reaches joint completion",cake.position.x>2100 and fionna.position.x>2100 and room.recovery_count==0 and room.completed)
 	check("crystal and joint exit complete once",room.crystal_collected and room.completion_count==1 and room.final_exit._completed)
 	await capture("final")
 	check("one composed scenery layer",room.has_node("RegionalScenery/RegionalComposition") and room.get_node_or_null("IceScenery")==null)
@@ -176,10 +178,10 @@ func route(slot: int) -> void:
 	room=current_scene
 	cake=room.get_node("Cake")
 	fionna=room.get_node("Fionna")
-	check("F2 resets controls, bridge and mechanisms",not cake.movement_locked and not fionna.movement_locked and room.anchor.support.collision_layer==0 and not room.crank.solved)
+	check("F2 preserves roles and resets controls, bridge and mechanisms",cake.player_id==slot and fionna.player_id==3-slot and not cake.movement_locked and not fionna.movement_locked and room.anchor.support.collision_layer==0 and not room.crank.solved)
 
 func run() -> void:
-	root.size=Vector2i(1152,648)
+	root.size=viewport_size
 	for slot in [1,2]: await route(slot)
 	for start in range(1,6):
 		await fresh(2,start)
@@ -187,7 +189,7 @@ func run() -> void:
 	release()
 	room.queue_free()
 	await frames(4)
-	if not report_path.is_empty(): FileAccess.open(report_path,FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures,"headless":DisplayServer.get_name()=="headless","full_phase_completion":true,"fixture_positions_are_route_evidence":false},"\t"))
+	if not report_path.is_empty(): FileAccess.open(report_path,FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures,"headless":DisplayServer.get_name()=="headless","viewport":str(root.size),"full_phase_completion":true,"fixture_positions_are_route_evidence":false},"\t"))
 	print("Level2 checks: ",checks.size()," failures: ",failures)
 	quit(0 if failures==0 else 1)
 
