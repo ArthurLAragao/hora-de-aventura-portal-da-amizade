@@ -19,10 +19,11 @@ QA e matrizes de arte ficam **fora da pasta do projeto**, na área opcional `dev
 | P1 | A / D | Espaço ou W | E | Q |
 | P2 | Setas laterais | Seta para cima | Enter | Shift direito |
 
-F2 reinicia a cena; Esc cancela ações contextuais. A ajuda disponível na cena descreve os comandos específicos. Habilidades dependem do personagem, não do número do jogador.
+F1 abre orientações opcionais; F2 reinicia a cena; Esc fecha as orientações ou cancela ações contextuais. A ajuda disponível na cena descreve os comandos específicos. Habilidades dependem do personagem, não do número do jogador.
 
 ## Documentação
 
+- [Telas e instruções de 05/11](docs/TELAS_05_11.md)
 - [Apresentação limpa — retirada dos tutoriais](docs/APRESENTACAO_LIMPA.md)
 - [Conteúdo de 03/11 — história e miniconversas](docs/CONTEUDO_03_11.md)
 - [Desafios e obstáculos — revisão do item de 29/10](docs/DESAFIOS_29_10.md)

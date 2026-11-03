@@ -433,3 +433,47 @@ Cada função mantida tem comentário `##` de propósito. Parâmetros, tipos e r
 - `protected`: Preserva conversas, celebração, pistas e interfaces abertas voluntariamente.
 - `apply`: Desativa apenas o desenho dos textos externos e fundos de tutorial, sem disputar updates de gameplay.
 - `_exit_tree`: Desconecta o observador ao trocar de cena, sem deixar callbacks de uma fase anterior.
+
+
+## Telas e instruções de 05/11
+
+[Fluxo, manutenção e testes](TELAS_05_11.md).
+
+### `scripts/ui/menu_layout.gd`
+
+- `label`: Cria um rótulo legível na posição definida, com quebra de linha opcional.
+- `panel`: Cria o material escuro de uma área de leitura, preservando a paleta atual.
+- `button`: Cria um botão com foco de teclado claramente desenhado.
+- `fit`: Ajusta uma composição completa à área disponível sem deformar imagens ou fontes.
+- `game_input_held`: Confere as entradas dos jogadores antes de devolver controle após uma tela modal.
+
+### `scripts/ui/instructions_screen.gd`
+
+- `_ready`: Monta três páginas curtas e adapta a composição à janela atual.
+- `build_team_page`: Explica objetivo, cooperação e recuperação sem depender de textos sobre o cenário.
+- `build_controls_page`: Apresenta os comandos reais dos dois jogadores e as ações comuns às fases.
+- `build_friends_page`: Reutiliza retratos e explica brevemente o talento de cada personagem.
+- `select_page`: Troca apenas a página visível, preservando foco e os controles do jogo.
+- `set_roles`: Mostra a dupla atual somente quando as orientações são abertas dentro de uma fase.
+- `close`: Fecha a orientação pelo contexto que a abriu, sem recarregar uma fase em andamento.
+- `fit`: Preserva proporções nos formatos de janela suportados.
+- `_unhandled_key_input`: Permite retornar ao menu pelo teclado na tela independente.
+
+### `scripts/ui/game_screens.gd`
+
+- `_ready`: Mantém somente as telas processando durante a leitura opcional pausada.
+- `connect_help_buttons`: Substitui apenas os vínculos dos botões de ajuda já existentes.
+- `completed`: Consulta a conclusão conquistada pela lógica original da fase.
+- `open_help`: Abre as orientações sobre a fase, conservando posições, painéis e interações em andamento.
+- `close_help`: Espera a liberação das entradas para evitar salto ou confirmação acidental ao voltar.
+- `restore_help`: Restaura exatamente a pausa e a conversa que existiam antes das orientações.
+- `restart_phase`: Reinicia pelo padrão da fase, preservando papéis e encerrando a leitura opcional.
+- `show_result`: Cria a conclusão das Fases 1–5; a Fase 6 conserva sua celebração própria.
+- `hide_legacy_buttons`: Retira os botões anteriores de conclusão sem apagar nós ou callbacks existentes.
+- `arm_result`: Libera foco da conclusão depois que as entradas de jogo forem soltas.
+- `continue_phase`: Continua por escolha explícita, mantendo os lugares de P1/P2 na dupla seguinte.
+- `navigate`: Troca de tela após liberar entradas; apenas o papel é transferido, não progresso inventado.
+- `fit_result`: Mantém a conclusão ajustada à área virtual disponível, sem alterar a câmera.
+- `_process`: Observa somente a conquista final; os puzzles continuam sendo processados pelos scripts originais.
+- `_input`: F1 abre orientações e Esc retorna à fase; F2 reinicia com segurança mesmo durante a leitura.
+- `_exit_tree`: Garante que sair de uma cena durante a leitura não deixe o menu pausado.

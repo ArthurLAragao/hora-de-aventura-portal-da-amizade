@@ -49,3 +49,8 @@ Demonstre as miniconversas da abertura e as reações às conquistas. Explique c
 ## Apresentação sem tutoriais permanentes
 
 As fases mostram o cenário e as conversas, sem ordens de ação ou teclas flutuantes. Pistas e o painel operacional do terminal permanecem. Tab/F3 continuam disponíveis, com a legenda retirada do cartão. Ver [APRESENTACAO_LIMPA.md](APRESENTACAO_LIMPA.md).
+
+
+## Item de 05/11 — telas e instruções
+
+A tela inicial mantém Jogar, Como jogar e Som. As orientações têm três páginas e podem ser abertas por F1 durante a fase, com retorno ao progresso atual. As conclusões das Fases 1–5 oferecem continuação, repetição, seleção e menu; a celebração da Fase 6 conserva os seis personagens e retorno estável. Consulte [TELAS_05_11.md](TELAS_05_11.md) para o fluxo e a matriz de validação.

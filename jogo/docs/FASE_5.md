@@ -17,7 +17,7 @@ Mapa lateral (unidades do mundo; piso em Y=500):
 2. **Galeria cooperativa:** Cake entra rastejando, desvia a luz sob o teto e pode recuar. Marceline usa os degraus/balcão e sua flutuação limitada para alcançar o ajuste alto. Um espelho fixo conecta as duas partes; ○ abre a segunda passagem. As distâncias não permitem o ajuste alto a partir do chão.
 3. **Checkpoint:** conquistado pelas duas no chão, após os dois circuitos anteriores. A bandeira muda de estado; uma queda anterior não concede esse progresso.
 4. **Final:** Cake ativa △ pelo túnel; Marceline ativa □ no balcão. Os dois receptores precisam estar acesos na mesma atualização. Não é necessário manter teclas pressionadas. A solução trava os ajustes e preserva o portão aberto.
-5. **Recompensa:** cristal rosa existente, coleta única. A saída exige o cristal e as duas personagens. O botão Continuar abre a Fase 6, preservando os papéis de controle. A Fase 4 mantém seu retorno existente ao seletor; a Fase 5 está disponível ali.
+5. **Recompensa:** cristal rosa existente, coleta única. A saída exige o cristal e as duas personagens. O botão Próxima fase abre a Fase 6, preservando os papéis de controle. A Fase 4 mantém seu retorno existente ao seletor; a Fase 5 está disponível ali.
 
 ## Execução e controles
 
@@ -53,6 +53,6 @@ Capturas reais inspecionadas para fundo, contato com o piso, balcões, túnel, l
 - Cake atravessa/recua no túnel; Marceline chega ao balcão sem ajustes no chão.
 - Conquistar o checkpoint em dupla; confirmar △ e □ e a abertura permanente.
 - Tentar sair sozinha e sem cristal; depois coletar e concluir juntas.
-- Continuar para a Fase 6; testar ajuda opcional e F2 durante o percurso.
+- Usar Próxima fase para a Fase 6; testar ajuda opcional e F2 durante o percurso.
 
 Os layouts e arquivos das Fases 1, 2, 3, 4 e 6 foram preservados. O pacote ZIP anterior e os arquivos de exportação não foram refeitos.

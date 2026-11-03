@@ -40,7 +40,7 @@ func _run() -> void:
 	await process_frame
 	var first := phase_select.get_node("Design/Phase1") as Button
 	_check("phase one is enabled", first != null and not first.disabled)
-	_check("phase selector renders each button caption only once", first != null and first.text == "FASE 1   |   JOGAR" and first.get_child_count() == 0)
+	_check("phase selector renders each button caption only once", first != null and first.text == "1 · Casa na Árvore\nFinn + Jake" and first.get_child_count() == 0)
 	var unavailable := 0
 	var phase_buttons: Array[Button] = []
 	for phase in range(2, 7):
