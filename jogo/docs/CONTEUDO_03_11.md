@@ -21,6 +21,8 @@ As conversas são vinhetas de diálogo **sem bloquear o jogo**. O texto aparece 
 
 ## Apresentação e controles
 
+Refinamento posterior: as dicas de tutorial e a legenda de comandos do cartão foram retiradas da tela. Os diálogos, o avanço automático e as teclas abaixo continuam funcionando. Consulte [APRESENTACAO_LIMPA.md](APRESENTACAO_LIMPA.md).
+
 - Leitura automática com mínimo inicial de **7 segundos por fala**; frases maiores podem permanecer mais tempo. É um valor provisório, não uma validação de velocidade de leitura para crianças.
 - **Tab** passa para a próxima fala. **F3** relê a conversa mais recente. Saltar uma fala não resolve puzzles nem avança a fase.
 - Movimento, salto, interação e habilidade mantêm seus controles. O cartão não toma foco nem captura esses comandos.

@@ -44,3 +44,8 @@ A tabela de desafios, contribuições de cada jogador, correções e roteiro cur
 ## Item de 03/11 — conteúdo do jogo
 
 Demonstre as miniconversas da abertura e as reações às conquistas. Explique como a cooperação dos puzzles expressa amizade: compartilhar pistas, dividir tarefas e deixar caminho para o parceiro. Tab avança e F3 relê a conversa mais recente, sem interromper os controles. O roteiro e as falas estão em [CONTEUDO_03_11.md](CONTEUDO_03_11.md).
+
+
+## Apresentação sem tutoriais permanentes
+
+As fases mostram o cenário e as conversas, sem ordens de ação ou teclas flutuantes. Pistas e o painel operacional do terminal permanecem. Tab/F3 continuam disponíveis, com a legenda retirada do cartão. Ver [APRESENTACAO_LIMPA.md](APRESENTACAO_LIMPA.md).

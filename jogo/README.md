@@ -23,6 +23,7 @@ F2 reinicia a cena; Esc cancela ações contextuais. A ajuda disponível na cena
 
 ## Documentação
 
+- [Apresentação limpa — retirada dos tutoriais](docs/APRESENTACAO_LIMPA.md)
 - [Conteúdo de 03/11 — história e miniconversas](docs/CONTEUDO_03_11.md)
 - [Desafios e obstáculos — revisão do item de 29/10](docs/DESAFIOS_29_10.md)
 - [Roteiro para a professora](docs/APRESENTACAO.md)

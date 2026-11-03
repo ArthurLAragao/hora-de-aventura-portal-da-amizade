@@ -421,3 +421,15 @@ Cada função mantida tem comentário `##` de propósito. Parâmetros, tipos e r
 - `obstructed`: Identifica painéis e transições que precisam de toda a atenção visual.
 - `_process`: Reage a conquistas e erros sem escrever em estados dos puzzles ou dos personagens.
 - `_input`: Tab avança texto; F3 relê a conversa mais recente. As teclas de jogo não são capturadas.
+
+
+## Apresentação limpa
+
+`scripts/ui/clean_phase_presentation.gd` retira o desenho dos tutoriais sem alterar os mecanismos.
+
+- `_ready`: Observa elementos criados pelos construtores e configura os controles já existentes.
+- `scan`: Percorre uma vez a cena pronta, incluindo os elementos montados em execução.
+- `on_node_added`: Trata somente novos controles desta fase, após sua hierarquia estar disponível.
+- `protected`: Preserva conversas, celebração, pistas e interfaces abertas voluntariamente.
+- `apply`: Desativa apenas o desenho dos textos externos e fundos de tutorial, sem disputar updates de gameplay.
+- `_exit_tree`: Desconecta o observador ao trocar de cena, sem deixar callbacks de uma fase anterior.
