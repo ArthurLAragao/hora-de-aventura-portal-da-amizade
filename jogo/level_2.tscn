@@ -1,4 +1,5 @@
-[gd_scene load_steps=32 format=3]
+[gd_scene load_steps=33 format=3]
+[ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
 [ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
 [ext_resource type="Script" path="res://scripts/ui/friendship_story.gd" id="story_content"]
 
@@ -369,3 +370,7 @@ phase = 2
 
 [node name="CleanPresentation" type="Node" parent="."]
 script = ExtResource("clean_presentation")
+
+[node name="GameScreens" type="Node" parent="."]
+script = ExtResource("game_screens")
+phase = 2

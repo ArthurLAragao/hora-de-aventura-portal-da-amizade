@@ -29,7 +29,33 @@ func _ready() -> void:
 	for i in 2:
 		var button:=Button.new();button.name="Phases" if i==0 else "Menu"
 		button.text="Seleção de fases" if i==0 else "Menu"
-		button.position=Vector2(384+i*200,608);button.size=Vector2(184,32);button.focus_mode=Control.FOCUS_NONE
+		button.position=Vector2(384+i*200,608);button.size=Vector2(184,32);button.focus_mode=Control.FOCUS_ALL
 		B.style_button(button);add_child(button)
+		var focus:=button.get_theme_stylebox("normal").duplicate() as StyleBoxFlat;focus.border_color=Color("ffe69a");focus.set_border_width_all(3);button.add_theme_stylebox_override("focus",focus)
 		var path: String="res://phase_select.tscn" if i==0 else "res://Assets/04_Interface/Godot/main_menu.tscn"
 		button.pressed.connect(func():get_tree().change_scene_to_file(path))
+
+	get_viewport().size_changed.connect(fit_screen)
+	fit_screen()
+	arm_buttons.call_deferred()
+
+## Escala a celebração inteira, preservando proporções dos seis personagens e dos textos.
+func fit_screen() -> void:
+	if not is_inside_tree() or get_viewport()==null:return
+	var available:=get_viewport().get_visible_rect().size
+	var factor:=minf(available.x/1152.0,available.y/648.0)
+	scale=Vector2.ONE*factor;offset=(available-Vector2(1152,648)*factor)*0.5
+
+## Evita que uma tecla ainda segurada na fase escolha um botão de encerramento.
+func arm_buttons() -> void:
+	for child in get_children():
+		if child is Button:child.disabled=true
+	while preload("res://scripts/ui/menu_layout.gd").game_input_held():await get_tree().process_frame
+	for child in get_children():
+		if child is Button:child.disabled=false
+	get_node("Phases").grab_focus()
+
+## Oferece retorno estável ao menu também pelo teclado.
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_ESCAPE:
+		get_viewport().set_input_as_handled();get_tree().change_scene_to_file("res://Assets/04_Interface/Godot/main_menu.tscn")

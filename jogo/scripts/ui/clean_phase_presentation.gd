@@ -21,7 +21,7 @@ func on_node_added(node: Node) -> void:
 func protected(node: Node) -> bool:
 	var ancestor:=node.get_parent()
 	while ancestor!=null and ancestor!=level:
-		if ancestor.name in [&"FriendshipStory",&"Celebration",&"MusicalClue",&"Clue"] or ancestor is PanelContainer:return true
+		if ancestor.name in [&"FriendshipStory",&"Celebration",&"GameScreens",&"MusicalClue",&"Clue"] or ancestor is PanelContainer:return true
 		ancestor=ancestor.get_parent()
 	return node.name==&"Help" or (node is Label and node.text in ["◇","○","△","□"])
 

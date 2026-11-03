@@ -13,10 +13,14 @@ const COLOR_TEAL := Color("21b9bf")
 const COLOR_DISABLED := Color("65717d")
 const COLOR_GOLD := Color("f4c95d")
 
+const PHASE_CAPTIONS=["1 · Casa na Árvore\nFinn + Jake","2 · Reino Gelado\nFionna + Cake","3 · Caverna Musical\nMarceline + BMO","4 · Oficina Doce\nFinn + BMO","5 · Torre dos Espelhos\nMarceline + Cake","6 · Portal da Amizade\nTrês duplas"]
+
 var _design: Control
 
 ## Prepara as referências e o estado deste componente ao entrar na árvore. Contexto: seleção das fases disponíveis.
 func _ready() -> void:
+	texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+	var fill:=ColorRect.new();fill.name="WindowBackdrop";fill.color=Color("081a26");fill.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(fill);move_child(fill,0);fill.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_build_screen()
 	resized.connect(_fit_design)
 	_fit_design()
@@ -60,8 +64,9 @@ func _build_screen() -> void:
 	back.size = Vector2(200, 42)
 	_style_button(back, false, true)
 	back.pressed.connect(func() -> void: get_tree().change_scene_to_file(MENU_SCENE))
+	back.mouse_default_cursor_shape=Control.CURSOR_POINTING_HAND
 	_design.add_child(back)
-	back.grab_focus()
+	_design.get_node("Phase1").grab_focus()
 
 ## Cria o botão da fase, mantendo indisponíveis as ainda não integradas.
 func _add_phase_button(phase_number: int, rect: Rect2) -> void:
@@ -70,7 +75,7 @@ func _add_phase_button(phase_number: int, rect: Rect2) -> void:
 	button.position = rect.position
 	button.size = rect.size
 	var available := PLAYABLE_PHASES.has(phase_number)
-	button.text = "FASE %d   |   JOGAR" % phase_number if available else "FASE %d   |   EM BREVE" % phase_number
+	button.text = PHASE_CAPTIONS[phase_number-1] if available else "FASE %d   |   EM BREVE" % phase_number
 	button.disabled = not available
 	_style_button(button, available)
 	if available:
