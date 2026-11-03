@@ -11,7 +11,7 @@ func _ready() -> void:
 	add_child(shade)
 	var title=B.label(self,"Portal da Amizade restaurado!",Vector2(0,96),28)
 	title.size.x=1152;title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	var sub=B.label(self,"Seis amigos. Um caminho construído juntos.",Vector2(0,138),16)
+	var sub=B.label(self,"Cada amigo trouxe uma parte. Juntos, encontramos o caminho de casa.",Vector2(0,138),16)
 	sub.size.x=1152;sub.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	var top=load("res://Assets/02_Environments/06_friendship_portal/tiles/top.png")
 	for i in 28:

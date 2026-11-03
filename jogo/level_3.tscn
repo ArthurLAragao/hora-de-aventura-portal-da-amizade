@@ -1,4 +1,5 @@
 [gd_scene format=4 uid="uid://bnrm0jrkmt617"]
+[ext_resource type="Script" path="res://scripts/ui/friendship_story.gd" id="story_content"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_3.gd" id="1_833wy"]
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/03_musical_cave/background.png" id="3_833wy"]
@@ -330,3 +331,7 @@ region = 3
 
 [editable path="MusicGate"]
 [editable path="SymbolGate"]
+
+[node name="FriendshipStory" type="Node" parent="."]
+script = ExtResource("story_content")
+phase = 3

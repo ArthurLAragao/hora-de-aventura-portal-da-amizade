@@ -95,7 +95,7 @@ func process_operator_input() -> void:
 				activated.emit()
 				return
 			entered.clear()
-			feedback.text = "Ainda não. Tente a sequência da pista."
+			feedback.text = "Tudo bem! Confiram a pista juntos e tentem de novo."
 	_refresh_panel()
 
 ## Cancela a ação corrente e libera as referências/controles pertencentes a este mecanismo.
