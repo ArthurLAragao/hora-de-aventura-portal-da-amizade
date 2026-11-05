@@ -67,11 +67,11 @@ func run() -> void:
 		var partner_x: float=a.position.x
 		await walk(a,1000)
 		check("parceira continua controlável durante painel",a.position.x>partner_x+20 and level.symbol_terminal.panel_open and level.symbol_terminal.entered.is_empty())
-		for i in 3:await tap(b,"interact")
+		for i in 4:await tap(b,"interact")
 		check("sequência errada permite tentar novamente",level.symbol_terminal.attempts==1 and not level.symbol_terminal.solved and level.symbol_terminal.entered.is_empty() and not level.get_node("SymbolGate").is_open)
 		await key(KEY_ESCAPE)
 		check("Esc fecha painel e devolve controles",not level.symbol_terminal.panel_open and not b.movement_locked)
 		await tap(b,"interact")
-		await tap(b,"interact");await tap(b,"right");await tap(b,"right");await tap(b,"interact");await tap(b,"left");await tap(b,"interact")
+		await tap(b,"interact");await tap(b,"right");await tap(b,"right");await tap(b,"interact");await tap(b,"left");await tap(b,"interact");await tap(b,"left");await tap(b,"interact")
 		check("nova tentativa correta abre somente a porta correspondente",level.symbol_terminal.solved and level.symbol_terminal.activation_count==1 and level.get_node("SymbolGate").is_open and not b.movement_locked)
 	await finish("Limites de desafios: reinício, checkpoint e circuito")

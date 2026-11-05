@@ -197,4 +197,5 @@ func ridge(actor: CoopPlayer) -> bool:
 	if not await walk(actor,1120):return false
 	if not await jump(actor,1184):return false
 	if not await jump(actor,1280):return false
+	if not await jump(actor,1312):return false
 	return await walk(actor,1424)

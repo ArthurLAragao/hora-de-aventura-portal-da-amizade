@@ -56,6 +56,8 @@ func route() -> void:
 	await tap(b,"interact")
 	await tap(b,"left")
 	await tap(b,"interact")
+	await tap(b,"left")
+	await tap(b,"interact")
 	check("3: entered sequence opens symbol gate and releases controls",level.symbol_terminal.solved and level.get_node("SymbolGate").is_open and not b.movement_locked)
 	check("3: Marceline crosses the stepped echo islands",await echo_cross(a,1512))
 	check("3: BMO crosses the stepped echo islands",await echo_cross(b,1470))

@@ -99,7 +99,7 @@ func route(slot: int) -> void:
 	await walk(marceline,424)
 	check("partner still moves during BMO panel",marceline.position.x>420 and level.terminal.get("selection")==0)
 	await capture("phase6-terminal-open")
-	for key in ["right","right","interact","right","interact","right","interact"]: await tap(bmo,key)
+	for key in ["right","right","interact","right","interact","right","interact","right","interact"]: await tap(bmo,key)
 	await frames(10)
 	check("BMO enters clue through own controls and restores third seal",level.repaired==[true,true,true] and level.terminal.get("solved") and level.terminal.get("activation_count")==1 and not bmo.movement_locked and not level.terminal.get("panel_open"))
 	await capture("phase6-signal")

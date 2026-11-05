@@ -9,7 +9,7 @@ def main():
     parser.add_argument('--godot',required=True)
     parser.add_argument('--output',type=Path,default=Path(tempfile.gettempdir())/'portal-da-amizade-qa')
     parser.add_argument('--resolution',default='1280x720',choices=['1280x720','1152x648'])
-    parser.add_argument('test',choices=['verify_journey_1','verify_level_2','verify_final_regions','verify_journey_6','verify_journey_safety','verify_regional_states','verify_menu','verify_pixel_art_finish','verify_feedback234','verify_optimization','verify_mirror_tower','verify_mirror_safety','verify_challenge_edges','verify_friendship_story','verify_clean_presentation','verify_screens'])
+    parser.add_argument('test',choices=['verify_journey_1','verify_level_2','verify_final_regions','verify_journey_6','verify_journey_safety','verify_regional_states','verify_menu','verify_pixel_art_finish','verify_feedback234','verify_optimization','verify_mirror_tower','verify_mirror_safety','verify_challenge_edges','verify_friendship_story','verify_clean_presentation','verify_screens','verify_design_review'])
     args=parser.parse_args();project=args.project.resolve();output=args.output.resolve()
     if not (project/'project.godot').is_file():parser.error('project.godot not found')
     if output.is_relative_to(project):parser.error('QA output must be outside the game project')

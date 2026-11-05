@@ -7,7 +7,7 @@ func run() -> void:
 		var a: CoopPlayer=level.marceline;var b: CoopPlayer=level.cake
 		await capture("tower-start")
 		check("dupla segura",a.is_on_floor() and b.is_on_floor())
-		await walk(a,360);await tap(a,"interact")
+		await walk(a,280);check("Marceline alcança o primeiro espelho pelo balcão",await jump(a,344));await tap(a,"interact")
 		check("primeiro receptor",level.solved[0])
 		await walk(b,675);await tap(b,"interact");await walk(b,780);await tap(b,"interact")
 		check("Cake rasteja e ajusta desvio",b.crawling and level.mirrors[1].orientation==1)

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-05",
+  "godot": "4.7.2",
+  "reports": {
+    "verify_challenge_edges": {
+      "checks": 31,
+      "failures": 0
+    },
+    "verify_design_review": {
+      "checks": 16,
+      "failures": 0
+    },
+    "verify_final_regions": {
+      "checks": 94,
+      "failures": 0
+    },
+    "verify_friendship_story": {
+      "checks": 140,
+      "failures": 0
+    },
+    "verify_journey_1": {
+      "checks": 36,
+      "failures": 0
+    },
+    "verify_journey_6": {
+      "checks": 66,
+      "failures": 0
+    },
+    "verify_journey_safety": {
+      "checks": 98,
+      "failures": 0
+    },
+    "verify_level_2": {
+      "checks": 61,
+      "failures": 0
+    },
+    "verify_menu": {
+      "checks": 16,
+      "failures": 0
+    },
+    "verify_mirror_safety": {
+      "checks": 30,
+      "failures": 0
+    },
+    "verify_mirror_tower": {
+      "checks": 20,
+      "failures": 0
+    },
+    "verify_regional_states": {
+      "checks": 12,
+      "failures": 0
+    },
+    "verify_screens": {
+      "checks": 121,
+      "failures": 0
+    }
+  },
+  "modified": [
+    "level_1.tscn",
+    "level_2.tscn",
+    "level_3.tscn",
+    "level_4.tscn",
+    "level_5.tscn",
+    "level_6.tscn",
+    "scripts/levels/level_2.gd",
+    "scripts/levels/level_3.gd",
+    "scripts/levels/level_5.gd",
+    "scripts/levels/level_6.gd"
+  ],
+  "new": [
+    "scripts/scenery/level_identity.gd",
+    "docs/REVISAO_DESIGN_05_11.md"
+  ],
+  "prior_fix_published": [
+    "scripts/ui/friendship_story.gd"
+  ],
+  "all_other_preexisting_files_preserved": true,
+  "manual_approval": false,
+  "evidence_root": "D:\\TEMP\\revisao-design-2026-11-03",
+  "limitations": [
+    "Áudio Dummy",
+    "Sem duas pessoas reais",
+    "Sem exportação",
+    "Capturas de composição não são percurso"
+  ]
+}
