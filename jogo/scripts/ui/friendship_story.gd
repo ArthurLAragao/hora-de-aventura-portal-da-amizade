@@ -62,9 +62,9 @@ func snapshot() -> Dictionary:
 	match phase:
 		1:return {"first":level.tutorial_solved,"passage":level.permanent.visible,"cooperation":level.relay_solved,"crystal":level.crystal_count>0,"ending":level.completion_count>0,"recovery":level.fall.recovery_count}
 		2:return {"first":level.first_unlocked,"passage":level.first_crank.solved,"cooperation":level.crank.solved and level.get_node("ExtendPlatform").extended,"crystal":level.crystal_collected,"ending":level.completed,"recovery":level.recovery_count}
-		3:return {"first":level.get_node("MusicGate").is_open,"passage":level.symbol_terminal.solved,"cooperation":level.get_node("RegionalLayout").confirmation_solved,"crystal":level.get_node("FriendshipCrystal").is_collected,"ending":level.completion_count>0,"recovery":level.get_node("FallZone").recovery_count}
-		4:return {"first":level.carrier.arrived,"passage":level.get_node("TrunkPuzzle/Gate").is_open,"cooperation":level.energy_terminal.energized,"crystal":level.get_node("FriendshipCrystal").is_collected,"ending":level.completion_count>0,"recovery":level.get_node("FallZone").recovery_count}
-		5:return {"first":level.solved[0],"passage":level.solved[1],"cooperation":level.solved[2],"crystal":level.crystal.is_collected,"ending":level.completion_count>0,"recovery":level.recovery_count}
+		3:return {"first":level.get_node("MusicGate").is_open,"passage":level.symbol_terminal.solved,"cooperation":level.get_node("RegionalLayout").confirmation_solved,"crystal":level.get_node("CooperativeExit")._crystal_collected,"ending":level.completion_count>0,"recovery":level.get_node("FallZone").recovery_count}
+		4:return {"first":level.carrier.arrived,"passage":level.get_node("TrunkPuzzle/Gate").is_open,"cooperation":level.energy_terminal.energized,"crystal":level.get_node("CooperativeExit")._crystal_collected,"ending":level.completion_count>0,"recovery":level.get_node("FallZone").recovery_count}
+		5:return {"first":level.solved[0],"passage":level.solved[1],"cooperation":level.solved[2],"crystal":level.exit_area._crystal_collected,"ending":level.completion_count>0,"recovery":level.recovery_count}
 		6:return {"first":level.repaired[0],"passage":level.clue_revealed,"cooperation":level.repaired[2],"crystal":level.crystal_count>0,"ending":level.completion_count>0,"recovery":level.recovery_count}
 	return {}
 
