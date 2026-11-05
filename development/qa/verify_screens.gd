@@ -145,7 +145,7 @@ func result_cases() -> void:
 				await finish_fixture(number);screens=level.get_node("GameScreens")
 			var lead: int=3-slot if number==2 else slot
 			var expected: int=3-lead if number+1==2 else lead
-			screens.result_design.get_node("Continue").pressed.emit();await frames(30);level=current_scene
+			screens.result_design.get_node("Continue").pressed.emit();await until(func():return is_instance_valid(current_scene) and current_scene!=level,600);level=current_scene
 			check("F%d continua na fase correta com papéis preservados"%number,level.scene_file_path=="res://level_%d.tscn"%(number+1) and level.get(ROLES[number+1])==expected and not paused)
 	await fresh("res://level_4.tscn",1,"lead_player_id");await finish_fixture(4)
 	level.get_node("GameScreens").result_design.get_node("Menu").pressed.emit();await frames(20);ui_scene=current_scene;level=null
