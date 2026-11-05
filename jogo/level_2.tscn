@@ -1,4 +1,6 @@
-[gd_scene load_steps=33 format=3]
+[gd_scene load_steps=34 format=3]
+
+[ext_resource type="Script" path="res://scripts/scenery/level_identity.gd" id="identity_finish"]
 [ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
 [ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
 [ext_resource type="Script" path="res://scripts/ui/friendship_story.gd" id="story_content"]
@@ -373,4 +375,8 @@ script = ExtResource("clean_presentation")
 
 [node name="GameScreens" type="Node" parent="."]
 script = ExtResource("game_screens")
+phase = 2
+
+[node name="LevelIdentity" type="Node2D" parent="."]
+script = ExtResource("identity_finish")
 phase = 2

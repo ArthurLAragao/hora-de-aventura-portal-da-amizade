@@ -1,4 +1,6 @@
 [gd_scene format=4 uid="uid://t86bsaobtcra"]
+
+[ext_resource type="Script" path="res://scripts/scenery/level_identity.gd" id="identity_finish"]
 [ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
 [ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
 [ext_resource type="Script" path="res://scripts/ui/friendship_story.gd" id="story_content"]
@@ -243,6 +245,11 @@ region = 4
 [node name="RegionalLayout" type="Node2D" parent="."]
 script = ExtResource("97_local_layout")
 region = 4
+
+
+[node name="LevelIdentity" type="Node2D" parent="."]
+script = ExtResource("identity_finish")
+phase = 4
 
 [connection signal="activated" from="EnergyTerminal" to="EnergyGate" method="open_gate"]
 [connection signal="collected" from="FriendshipCrystal" to="HUD" method="set_crystal_collected"]

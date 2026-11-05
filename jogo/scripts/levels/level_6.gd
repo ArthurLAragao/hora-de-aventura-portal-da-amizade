@@ -201,7 +201,7 @@ func _build() -> void:
 	terminal.get_node("Sprite2D").position.y=3
 	terminal.get_node("Status").position=Vector2(-72,88)
 	terminal.get_node("Prompt").position=Vector2(-56,-68)
-	terminal.set("sequence",Array([2,0,1],TYPE_INT,"",null))
+	terminal.set("sequence",Array([2,0,1,2],TYPE_INT,"",null))
 	terminal.set("gate_path",NodePath(".."))
 	terminal.monitoring=false
 	terminal.process_mode=Node.PROCESS_MODE_DISABLED
@@ -210,8 +210,8 @@ func _build() -> void:
 	clue.name="Clue"
 	clue.position=Vector2(296,204)
 	add_child(clue)
-	for i in 3: B.sprite(clue,"Rune%d"%i,[B.OBJECTS+"rune_triangle.png",B.OBJECTS+"rune_circle.png",B.OBJECTS+"rune_square.png"][i],Vector2(i*48,0),0.6)
-	B.label(clue,"triângulo • círculo • quadrado",Vector2(-36,26),12)
+	for i in 4: B.sprite(clue,"Rune%d"%i,[B.OBJECTS+"rune_triangle.png",B.OBJECTS+"rune_circle.png",B.OBJECTS+"rune_square.png",B.OBJECTS+"rune_triangle.png"][i],Vector2(i*48,0),0.6)
+	B.label(clue,"triângulo • círculo • quadrado • triângulo",Vector2(-36,26),12)
 	clue.hide()
 	confirmation.append(B.plate(self,"MusicConfirmation",Vector2(512,LEFT_FLOOR-11.35286),&"music"))
 	confirmation.append(B.plate(self,"SignalConfirmation",Vector2(784,FLOOR),&"terminal"))

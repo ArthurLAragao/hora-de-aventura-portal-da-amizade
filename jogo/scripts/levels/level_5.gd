@@ -49,9 +49,11 @@ func _ready() -> void:
 		gate.position=Vector2(x,372);gate.collision_shape.shape.size=Vector2(64,256)
 		blockers.append(Rect2(x-32,244,64,256));gate.get_node("Sprite2D").hide()
 	# Primeiro circuito: incidência horizontal, saída para cima.
-	add_mirror(Vector2(360,450),0,&"float",1)
-	add_receiver(Vector2(360,330),0,"◇")
-	emitters.append({"at":Vector2(260,450),"dir":Vector2.RIGHT,"sector":0})
+	surface("FirstMirrorStep",288,452,96,18)
+	get_node("FirstMirrorStep/CollisionShape2D").one_way_collision=true
+	add_mirror(Vector2(360,394),0,&"float",1)
+	add_receiver(Vector2(360,274),0,"◇")
+	emitters.append({"at":Vector2(260,394),"dir":Vector2.RIGHT,"sector":0})
 	# Galeria: Cake desvia o raio sob o teto; Marceline completa o trajeto elevado.
 	build_tunnel(700,"Tunnel");build_tunnel(1300,"Tunnel2")
 	for x in [640,1240]:surface("Step%d"%x,x,452,64,18)
@@ -156,7 +158,7 @@ func _physics_process(_delta: float) -> void:
 	for mirror in mirrors:mirror.prompt.text=""
 	for node in [tunnel,tunnel2]:node.prompt.text=("E" if cake.player_id==1 else "Enter")+": rastejar" if node.can_interact(cake) and not cake.crawling else ""
 	for actor in [marceline,cake]:
-		var candidates:=mirrors.filter(func(m):return m.ability!=&"" and actor.has_ability(m.ability) and not solved[m.sector] and actor.position.distance_to(m.at)<76 and (m.ability!=&"crawl" or actor.crawling))
+		var candidates:=mirrors.filter(func(m):return m.ability!=&"" and actor.has_ability(m.ability) and not solved[m.sector] and actor.position.distance_to(m.at)<(54 if m.sector==0 else 76) and (m.ability!=&"crawl" or actor.crawling))
 		candidates.sort_custom(func(a,b):return actor.position.distance_squared_to(a.at)<actor.position.distance_squared_to(b.at))
 		if not candidates.is_empty():candidates[0].prompt.text=("E" if actor.player_id==1 else "Enter")+": girar"
 		if Input.is_action_just_pressed(actor.get_interact_action()):

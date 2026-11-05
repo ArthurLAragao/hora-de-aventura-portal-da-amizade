@@ -57,7 +57,7 @@ func _build_terrain() -> void:
 	for column in range(14,19):
 		for row in [13,14]: $Roof.set_cell(0,Vector2i(column,row),0,Vector2i(1,0 if row==13 else 1))
 	# A short terraced ridge develops jumping after the checkpoint, before the bridge.
-	for spec in [[36,39,15],[39,42,14],[42,44,15],[63,67,15]]:
+	for spec in [[36,39,15],[39,40,14],[40,42,13],[42,43,14],[43,44,15],[63,67,15]]:
 		for column in range(spec[0],spec[1]):
 			for row in range(spec[2],16):terrain.set_cell(0,Vector2i(column,row),0,Vector2i(1,0 if row==spec[2] else 1))
 	# Clear side platforms mark the approach; they do not obstruct the main floor.
