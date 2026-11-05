@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bnrm0jrkmt617"]
 
+[ext_resource type="Script" path="res://scripts/scenery/habitat_finish.gd" id="habitat_finish"]
 [ext_resource type="Script" path="res://scripts/scenery/level_identity.gd" id="identity_finish"]
 [ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
 [ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
@@ -350,4 +351,8 @@ script = ExtResource("clean_presentation")
 
 [node name="GameScreens" type="Node" parent="."]
 script = ExtResource("game_screens")
+phase = 3
+
+[node name="HabitatFinish" type="Node2D" parent="."]
+script = ExtResource("habitat_finish")
 phase = 3

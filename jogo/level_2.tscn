@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3]
+[gd_scene load_steps=35 format=3]
 
+[ext_resource type="Script" path="res://scripts/scenery/habitat_finish.gd" id="habitat_finish"]
 [ext_resource type="Script" path="res://scripts/scenery/level_identity.gd" id="identity_finish"]
 [ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
 [ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
@@ -379,4 +380,8 @@ phase = 2
 
 [node name="LevelIdentity" type="Node2D" parent="."]
 script = ExtResource("identity_finish")
+phase = 2
+
+[node name="HabitatFinish" type="Node2D" parent="."]
+script = ExtResource("habitat_finish")
 phase = 2
