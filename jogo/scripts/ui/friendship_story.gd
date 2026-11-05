@@ -110,12 +110,15 @@ func layout_card(force:=false) -> void:
 	if viewport==last_viewport and not force:return
 	last_viewport=viewport
 	var width:=minf(400.0,viewport.x-32)
-	card.size=Vector2(width,0);card.position=Vector2(viewport.x-width-16,112)
+	card.size=Vector2(width,0);card.position=Vector2(viewport.x-width-16,float(get_meta("presentation_top_margin",112.0)))
 	settle_height.call_deferred()
 
 ## Espera a largura dos contêineres estabilizar antes de reduzir a altura do texto quebrado.
 func settle_height() -> void:
+	# Uma troca de cena pode retirar a conversa antes da chamada adiada.
+	if not is_inside_tree() or is_queued_for_deletion():return
 	await get_tree().process_frame
+	if not is_inside_tree() or not is_instance_valid(card):return
 	card.size=Vector2(card.size.x,0)
 
 ## Avança ou encerra a fala sem consumir interação, salto ou habilidade dos jogadores.

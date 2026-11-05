@@ -17,12 +17,17 @@ var leaving:=false
 var previous_paused:=false
 var story_was_visible:=false
 var poll_left:=0.0
+var interlude: Control
+var travel_was_paused:=false
+var adventure_hud: Control
 
 ## Mantém somente as telas processando durante a leitura opcional pausada.
 func _ready() -> void:
 	process_mode=Node.PROCESS_MODE_ALWAYS;level=get_parent()
 	layer=CanvasLayer.new();layer.name="ScreenLayer";layer.layer=40;add_child(layer)
 	connect_help_buttons.call_deferred()
+	var adventure_layer:=CanvasLayer.new();adventure_layer.name="AdventureLayer";adventure_layer.layer=18;add_child(adventure_layer)
+	adventure_hud=preload("res://scripts/ui/adventure_hud.gd").new();adventure_layer.add_child(adventure_hud)
 	get_viewport().size_changed.connect(fit_result)
 
 ## Substitui apenas os vínculos dos botões de ajuda já existentes.
@@ -34,6 +39,7 @@ func connect_help_buttons() -> void:
 			if child is Button and child.text=="Controles":
 				for connection in child.pressed.get_connections():child.pressed.disconnect(connection.callable)
 				child.pressed.connect(open_help)
+			if child is Button:child.hide()
 
 ## Consulta a conclusão conquistada pela lógica original da fase.
 func completed() -> bool:
@@ -135,12 +141,25 @@ func continue_phase() -> void:
 ## Troca de tela após liberar entradas; apenas o papel é transferido, não progresso inventado.
 func navigate(path: String,role: int) -> void:
 	if leaving:return
+	if is_instance_valid(adventure_hud):adventure_hud.sync()
 	leaving=true
 	while UI.game_input_held():
 		if not is_inside_tree():return
 		await get_tree().process_frame
 	if not is_inside_tree():return
-	if role>0:get_tree().set_meta("journey_restart",{"scene":path,"role":role})
+	if role>0:
+		# Interlúdio só no avanço explícito. F6 e seleção direta não inventam conquistas.
+		if is_instance_valid(adventure_hud):adventure_hud.sync();adventure_hud.hide()
+		interlude=preload("res://scripts/ui/journey_interlude.gd").new();interlude.destination=phase+1
+		for actor in get_tree().get_nodes_in_group("players"):
+			if actor.is_visible_in_tree():interlude.travelers.append(String(actor.character_id))
+		travel_was_paused=get_tree().paused;get_tree().paused=true
+		layer.add_child(interlude)
+		await interlude.finished
+		while UI.game_input_held():await get_tree().process_frame
+		get_tree().paused=travel_was_paused
+		interlude.queue_free();interlude=null
+		get_tree().set_meta("journey_restart",{"scene":path,"role":role})
 	var error:=get_tree().change_scene_to_file(path)
 	if error!=OK:leaving=false;push_error("Não foi possível abrir a tela: "+path)
 
@@ -157,6 +176,7 @@ func _process(delta: float) -> void:
 
 ## F1 abre orientações e Esc retorna à fase; F2 reinicia com segurança mesmo durante a leitura.
 func _input(event: InputEvent) -> void:
+	if leaving:return
 	if not event is InputEventKey or not event.pressed or event.echo:return
 	if help_open:
 		if event.keycode==KEY_F1 or event.keycode==KEY_ESCAPE:close_help();get_viewport().set_input_as_handled()
@@ -168,3 +188,4 @@ func _input(event: InputEvent) -> void:
 ## Garante que sair de uma cena durante a leitura não deixe o menu pausado.
 func _exit_tree() -> void:
 	if help_open and get_tree()!=null:get_tree().paused=previous_paused
+	if is_instance_valid(interlude) and get_tree()!=null:get_tree().paused=travel_was_paused
