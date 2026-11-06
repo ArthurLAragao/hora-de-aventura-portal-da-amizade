@@ -1,0 +1,14 @@
+{
+  "before_bytes": 96080465,
+  "before_files": 2129,
+  "functions_documented": 379,
+  "broken_literal_references": [],
+  "stale_test_dependencies": [],
+  "modified_retained_original_pngs": [],
+  "prepared_textures_identical": true,
+  "after_bytes": 35683138,
+  "after_files": 1984,
+  "reduction_percent": 62.861193479860866,
+  "zip_bytes": 29709953,
+  "zip": "D:\\TEMP\\godot-optimization-2026-10-28\\entrega\\Portal_da_Amizade_otimizado.zip"
+}

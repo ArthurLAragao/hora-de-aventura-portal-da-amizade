@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://crystal.gd" id="1_crystal"]
+[ext_resource type="Script" path="res://scripts/puzzles/crystal.gd" id="1_crystal"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/crystal_cyan.png" id="2_crystal"]
 [ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/crystal_collect.wav" id="3_collect_sfx"]
 

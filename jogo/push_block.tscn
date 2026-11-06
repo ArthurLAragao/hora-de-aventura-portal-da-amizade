@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://58ch8n5liuop"]
 
-[ext_resource type="Script" uid="uid://bl77uy6xbjmfe" path="res://push_block.gd" id="1_abov3"]
+[ext_resource type="Script" uid="uid://bl77uy6xbjmfe" path="res://scripts/puzzles/push_block.gd" id="1_abov3"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/log.png" id="2_log"]
 [ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/finn_push.wav" id="3_push_sfx"]
 

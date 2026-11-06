@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://permanent_bridge.gd" id="1_bridge"]
+[ext_resource type="Script" path="res://scripts/bridges/permanent_bridge.gd" id="1_bridge"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/wooden_bridge.png" id="2_bridge"]
 [ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/platform_move.wav" id="3_move_sfx"]
 

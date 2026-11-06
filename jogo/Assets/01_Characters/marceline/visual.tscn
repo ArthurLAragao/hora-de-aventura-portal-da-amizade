@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3]
 [ext_resource type="SpriteFrames" path="res://Assets/01_Characters/marceline/animations.tres" id="1"]
-[ext_resource type="Script" path="res://marceline_player.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/characters/marceline_player.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="Body"]
 size = Vector2(22, 54)

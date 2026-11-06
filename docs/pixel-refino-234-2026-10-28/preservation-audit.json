@@ -1,0 +1,17 @@
+{
+  "game_files_compared": 2129,
+  "original_pngs_preserved": true,
+  "phase_scenes_unchanged": {
+    "level_1.tscn": true,
+    "level_2.tscn": true,
+    "level_3.tscn": true,
+    "level_4.tscn": true,
+    "level_6.tscn": true
+  },
+  "phase2_decoration_branch_unchanged": true,
+  "preexisting_preserved_differences": [
+    "project.godot",
+    "tests\\verify_regional_finish.gd.uid"
+  ],
+  "task_file_mismatches": []
+}

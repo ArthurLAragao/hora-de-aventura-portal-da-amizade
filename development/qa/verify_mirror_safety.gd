@@ -1,0 +1,43 @@
+extends "res://tests/journey_driver.gd"
+## Fixtures isoladas: reposicionamentos abaixo não representam travessias normais.
+func run() -> void:
+	root.size=viewport_size
+	for slot in [1,2]:
+		await fresh("res://level_5.tscn",slot,"lead_player_id")
+		check("portão fechado bloqueia o feixe",level.beams.any(func(segment):return absf(segment[1].x-592)<0.1))
+		level.cake.position=Vector2(675,467);await frames(8);await tap(level.cake,"interact");await walk(level.cake,780)
+		check("teto impede levantar",level.cake.crawling and not level.cake.request_stand())
+		await walk(level.cake,650);level.cake.request_stand()
+		check("recuo restaura postura e controles",not level.cake.crawling and not level.cake.movement_locked)
+		level.cake.position.y=800;await frames(15)
+		check("queda inicial não concede progresso",level.recovery_count==1 and level.marceline.position.x<300 and not level.checkpoint_active and not level.solved[0])
+		level.marceline.position=Vector2(2100,467);level.cake.position=Vector2(2140,467);await frames(20)
+		check("saída sem cristal recusada",level.completion_count==0)
+		level.mirrors[4].orientation=0;level.mirrors[5].orientation=0;level.refresh_light()
+		check("um receptor final não basta",level.receivers[3].active and not level.receivers[2].active and not level.solved[2])
+		level.mirrors[5].orientation=1;level.refresh_light()
+		check("orientação errada desativa receptor",not level.receivers[3].active)
+		for i in 20:level.mirrors[5].orientation=1-level.mirrors[5].orientation;level.refresh_light()
+		check("giros repetidos não concluem indevidamente",not level.solved[2])
+		level.mirrors[0].orientation=0;level.mirrors[1].orientation=1;level.mirrors[3].orientation=0;level.refresh_light()
+		level.marceline.position=Vector2(1210,467);level.cake.position=Vector2(1210,467);await frames(15)
+		check("checkpoint após os dois primeiros circuitos",level.checkpoint_active)
+		level.marceline.position.y=800;level.cake.position.y=800;await frames(15)
+		check("queda conjunta conserva circuitos e retorna antes do desafio final",level.recovery_count==2 and level.solved[0] and level.solved[1] and level.marceline.position.x<1240 and level.cake.position.x<1240 and not level.cake.crawling and not level.marceline.movement_locked)
+		level.mirrors[4].orientation=1;level.mirrors[5].orientation=0;level.refresh_light()
+		level.cake.position=Vector2(1940,467);await frames(20)
+		check("cristal final coletado",level.exit_area._crystal_collected)
+		level.marceline.position=Vector2(2110,467);await frames(10)
+		check("um jogador na saída não conclui",level.completion_count==0)
+		level.marceline.position.y=800;level.cake.position.y=800;await frames(15)
+		check("recuperação preserva cristal e porta final",level.exit_area._crystal_collected and level.gates[2].is_open and level.completion_count==0)
+		var before: int=level.beams.size()
+		var original=level.emitters.duplicate(true);var count: int=level.mirrors.size()
+		for spec in [[Vector2(400,200),0],[Vector2(400,100),1],[Vector2(300,100),0],[Vector2(300,200),1]]:
+			level.add_mirror(spec[0],2,&"",spec[1])
+		level.emitters.append({"at":Vector2(320,200),"dir":Vector2.RIGHT,"sector":2});level.refresh_light()
+		check("ciclo óptico termina sem travar",level.beams.size()<before+14)
+		level.emitters.assign(original);level.mirrors.resize(count);level.refresh_light()
+		var event:=InputEventKey.new();event.keycode=KEY_F2;event.pressed=true;level._unhandled_key_input(event);await frames(30);level=current_scene
+		check("reinício limpa progresso e preserva papéis",not level.solved[0] and not level.checkpoint_active and level.marceline.player_id==slot)
+	await finish("Torre - estados adversariais isolados")

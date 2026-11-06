@@ -20,11 +20,13 @@ var last_grounded := true
 var animation_starts := 0
 var loops_seen := 0
 
+## Prepara as referências e o estado deste componente ao entrar na árvore. Contexto: prévia reutilizável de animações dos assets.
 func _ready() -> void:
 	sprite.animation_finished.connect(_finished)
 	sprite.animation_looped.connect(func() -> void: loops_seen += 1)
 	set_character(character_id)
 
+## Seleciona os SpriteFrames do personagem válido e reinicia sua apresentação visual.
 func set_character(id: StringName) -> void:
 	if not CHARACTERS.has(id):
 		return
@@ -38,6 +40,7 @@ func set_character(id: StringName) -> void:
 	landing_time = 0.0
 	_start(&"idle", true)
 
+## Inicia um clipe existente sem reiniciar a reprodução se ela já estiver correta.
 func _start(state: StringName, force: bool = false) -> void:
 	if not sprite.sprite_frames.has_animation(state):
 		return
@@ -50,15 +53,18 @@ func _start(state: StringName, force: bool = false) -> void:
 		sprite.set_frame_and_progress(0, 0.0)
 	animation_starts += 1
 
+## Limpa a ação temporária e seus temporizadores.
 func clear_action() -> void:
 	action = &""
 	action_time = 0.0
 	action_limit = 0.0
 	hold_time = 0.0
 
+## Informa se a ação visual atual exige bloqueio de movimento.
 func is_movement_locked() -> bool:
 	return action != &"" and action not in [&"push", &"crawl", &"float"]
 
+## Sincroniza o estado visual da habilidade pressionada, incluindo sustentação e retração.
 func set_ability(held: bool) -> void:
 	if held == ability_held:
 		return
@@ -70,9 +76,11 @@ func set_ability(held: bool) -> void:
 	elif action in [&"push", &"crawl", &"float", &"terminal"]:
 		clear_action()
 
+## Reproduz a ação secundária correspondente à identidade configurada.
 func play_secondary() -> void:
 	play_action(SECONDARY[character_id])
 
+## Inicia uma ação existente e configura o prazo de recuperação de seu clipe.
 func play_action(state: StringName, held: bool = false) -> void:
 	if not sprite.sprite_frames.has_animation(state):
 		return
@@ -86,6 +94,7 @@ func play_action(state: StringName, held: bool = false) -> void:
 	action_limit = -1.0 if held else maxf(0.7, duration + 0.12)
 	_start(state, true)
 
+## Escolhe locomoção, aterrissagem ou ação a partir de velocidade, apoio e tempo decorrido.
 func update_motion(velocity: Vector2, grounded: bool, delta: float) -> void:
 	last_velocity = velocity
 	last_grounded = grounded
@@ -117,6 +126,7 @@ func update_motion(velocity: Vector2, grounded: bool, delta: float) -> void:
 	else:
 		_start(&"idle")
 
+## Converte extensão em sustentação ou encerra a ação e emite sua conclusão.
 func _finished() -> void:
 	var ended := sprite.animation
 	if ended != action:

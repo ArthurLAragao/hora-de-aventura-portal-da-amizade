@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfhqymnikvl8y"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_player"]
+[ext_resource type="Script" path="res://scripts/characters/player.gd" id="1_player"]
 [ext_resource type="SpriteFrames" path="res://Assets/01_Characters/jake/animations.tres" id="2_jake_frames"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jake"]

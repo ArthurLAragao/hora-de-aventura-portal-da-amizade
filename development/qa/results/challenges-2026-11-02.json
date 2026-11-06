@@ -1,0 +1,157 @@
+{
+  "date": "2026-11-02",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "assessment_item": "29/10: desafios e obstáculos programados",
+  "rows": [
+    {
+      "test": "verify_journey_1",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 36,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_level_2",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 61,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_final_regions",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 94,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_mirror_tower",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 18,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_journey_6",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 66,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_challenge_edges",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 31,
+      "failures": 0,
+      "isolated_fixtures": true
+    },
+    {
+      "test": "verify_journey_safety",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 98,
+      "failures": 0,
+      "isolated_fixtures": true
+    },
+    {
+      "test": "verify_regional_states",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 12,
+      "failures": 0,
+      "isolated_fixtures": true
+    },
+    {
+      "test": "verify_mirror_safety",
+      "requested_resolution": "1280x720",
+      "reported_viewport": "(1280, 720)",
+      "checks": 30,
+      "failures": 0,
+      "isolated_fixtures": true
+    },
+    {
+      "test": "verify_menu",
+      "requested_resolution": "1280x720",
+      "reported_viewport": null,
+      "checks": 16,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_journey_1",
+      "requested_resolution": "1152x648",
+      "reported_viewport": "(1152, 648)",
+      "checks": 36,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_level_2",
+      "requested_resolution": "1152x648",
+      "reported_viewport": "(1152, 648)",
+      "checks": 61,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_final_regions",
+      "requested_resolution": "1152x648",
+      "reported_viewport": "(1152, 648)",
+      "checks": 94,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_mirror_tower",
+      "requested_resolution": "1152x648",
+      "reported_viewport": "(1152, 648)",
+      "checks": 18,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_journey_6",
+      "requested_resolution": "1152x648",
+      "reported_viewport": "(1152, 648)",
+      "checks": 66,
+      "failures": 0,
+      "isolated_fixtures": false
+    },
+    {
+      "test": "verify_challenge_edges",
+      "requested_resolution": "1152x648",
+      "reported_viewport": "(1152, 648)",
+      "checks": 31,
+      "failures": 0,
+      "isolated_fixtures": true
+    }
+  ],
+  "modified_existing_game_files": [
+    "README.md",
+    "docs/APRESENTACAO.md",
+    "scripts/levels/imported_phase_runtime.gd",
+    "scripts/levels/level_2.gd",
+    "scripts/puzzles/workshop_connections.gd"
+  ],
+  "new_game_docs": [
+    "docs/DESAFIOS_29_10.md"
+  ],
+  "all_scene_layouts_unchanged": true,
+  "all_art_character_control_files_unchanged": true,
+  "input_routes": "all six phases; normal and inverted player roles; no scripted repositioning to complete routes",
+  "rendering": "D3D12, representative captures inspected in all six phases",
+  "limits": [
+    "audio muted",
+    "no real two-person or child session",
+    "no exported build",
+    "no second computer",
+    "comfort and enjoyment require human validation"
+  ],
+  "regression_test_fix": "Phase 2 QA previously forced 1152x648; now honors resolution argument and reports actual viewport."
+}

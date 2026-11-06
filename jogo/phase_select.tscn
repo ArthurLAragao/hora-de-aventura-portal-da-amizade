@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://phase_select.gd" id="1_phase_select"]
+[ext_resource type="Script" path="res://scripts/ui/phase_select.gd" id="1_phase_select"]
 
 [node name="PhaseSelect" type="Control"]
 layout_mode = 3

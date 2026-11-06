@@ -1,0 +1,2306 @@
+{
+  "final1": {
+    "checks": 52,
+    "passed": true,
+    "script": "res://tests/qa_forest_depth.gd",
+    "rendered": true,
+    "resolution": "1152x648",
+    "behaviors": [
+      {
+        "check": "P1: correct duo and unchanged 32x20 grid",
+        "passed": true
+      },
+      {
+        "check": "P1: safe independent initial floor",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-start: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-start: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake cannot push or activate tutorial alone",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn physically moves tutorial log and opens path",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake requests bridge from the safe bank",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn entry actually lands on Jake",
+        "passed": true
+      },
+      {
+        "check": "P1: airborne partner retains the bridge",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-bridge: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-bridge: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn lever repairs permanent connection",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake follows physically on permanent support",
+        "passed": true
+      },
+      {
+        "check": "P1: checkpoint reached legitimately after shared passage",
+        "passed": true
+      },
+      {
+        "check": "P1: same log becomes Jake's step",
+        "passed": true
+      },
+      {
+        "check": "P1: upper capability plate opens Finn's route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-parallel-routes: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-parallel-routes: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P1: leaving the upper plate removes unsolved cooperation",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn push plus Jake position solves final combination",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal requires the final combination",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal collected by real arrival exactly once",
+        "passed": true
+      },
+      {
+        "check": "P1: one character alone cannot finish",
+        "passed": true
+      },
+      {
+        "check": "P1: complete cooperative route without recovery or reposition",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-complete: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-complete: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: correct duo and unchanged 32x20 grid",
+        "passed": true
+      },
+      {
+        "check": "P2: safe independent initial floor",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-start: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-start: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake cannot push or activate tutorial alone",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn physically moves tutorial log and opens path",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake requests bridge from the safe bank",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn entry actually lands on Jake",
+        "passed": true
+      },
+      {
+        "check": "P2: airborne partner retains the bridge",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-bridge: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-bridge: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn lever repairs permanent connection",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake follows physically on permanent support",
+        "passed": true
+      },
+      {
+        "check": "P2: checkpoint reached legitimately after shared passage",
+        "passed": true
+      },
+      {
+        "check": "P2: same log becomes Jake's step",
+        "passed": true
+      },
+      {
+        "check": "P2: upper capability plate opens Finn's route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-parallel-routes: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-parallel-routes: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: leaving the upper plate removes unsolved cooperation",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn push plus Jake position solves final combination",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal requires the final combination",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal collected by real arrival exactly once",
+        "passed": true
+      },
+      {
+        "check": "P2: one character alone cannot finish",
+        "passed": true
+      },
+      {
+        "check": "P2: complete cooperative route without recovery or reposition",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-complete: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-complete: panorama keeps its aspect ratio",
+        "passed": true
+      }
+    ]
+  },
+  "final1280-1": {
+    "checks": 52,
+    "passed": true,
+    "script": "res://tests/qa_forest_depth.gd",
+    "rendered": true,
+    "resolution": "1280x720",
+    "behaviors": [
+      {
+        "check": "P1: correct duo and unchanged 32x20 grid",
+        "passed": true
+      },
+      {
+        "check": "P1: safe independent initial floor",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-start: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-start: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake cannot push or activate tutorial alone",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn physically moves tutorial log and opens path",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake requests bridge from the safe bank",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn entry actually lands on Jake",
+        "passed": true
+      },
+      {
+        "check": "P1: airborne partner retains the bridge",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-bridge: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-bridge: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn lever repairs permanent connection",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake follows physically on permanent support",
+        "passed": true
+      },
+      {
+        "check": "P1: checkpoint reached legitimately after shared passage",
+        "passed": true
+      },
+      {
+        "check": "P1: same log becomes Jake's step",
+        "passed": true
+      },
+      {
+        "check": "P1: upper capability plate opens Finn's route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-parallel-routes: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-parallel-routes: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P1: leaving the upper plate removes unsolved cooperation",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn push plus Jake position solves final combination",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal requires the final combination",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal collected by real arrival exactly once",
+        "passed": true
+      },
+      {
+        "check": "P1: one character alone cannot finish",
+        "passed": true
+      },
+      {
+        "check": "P1: complete cooperative route without recovery or reposition",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-complete: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P1: phase1-complete: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: correct duo and unchanged 32x20 grid",
+        "passed": true
+      },
+      {
+        "check": "P2: safe independent initial floor",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-start: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-start: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake cannot push or activate tutorial alone",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn physically moves tutorial log and opens path",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake requests bridge from the safe bank",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn entry actually lands on Jake",
+        "passed": true
+      },
+      {
+        "check": "P2: airborne partner retains the bridge",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-bridge: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-bridge: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn lever repairs permanent connection",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake follows physically on permanent support",
+        "passed": true
+      },
+      {
+        "check": "P2: checkpoint reached legitimately after shared passage",
+        "passed": true
+      },
+      {
+        "check": "P2: same log becomes Jake's step",
+        "passed": true
+      },
+      {
+        "check": "P2: upper capability plate opens Finn's route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-parallel-routes: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-parallel-routes: panorama keeps its aspect ratio",
+        "passed": true
+      },
+      {
+        "check": "P2: leaving the upper plate removes unsolved cooperation",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn push plus Jake position solves final combination",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal requires the final combination",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal collected by real arrival exactly once",
+        "passed": true
+      },
+      {
+        "check": "P2: one character alone cannot finish",
+        "passed": true
+      },
+      {
+        "check": "P2: complete cooperative route without recovery or reposition",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-complete: background covers the reference canvas through the real camera route",
+        "passed": true
+      },
+      {
+        "check": "P2: phase1-complete: panorama keeps its aspect ratio",
+        "passed": true
+      }
+    ]
+  },
+  "scale6": {
+    "checks": 86,
+    "passed": true,
+    "script": "res://tests/qa_visual_refinement.gd",
+    "rendered": true,
+    "resolution": "1152x648",
+    "behaviors": [
+      {
+        "check": "P1: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P1: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-damaged: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P1: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P1: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-structure: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P1: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P1: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P1: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P1: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P1: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P1: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P1: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P1: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-tunnel-crank: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P1: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P1: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P1: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P1: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P1: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P1: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P1: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P1: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-terminal-open: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-signal: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: completed crank and tunnel switch no longer crowd the signal sector",
+        "passed": true
+      },
+      {
+        "check": "P1: walking surfaces retain original bounds",
+        "passed": true
+      },
+      {
+        "check": "P1: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P1: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P1: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-celebration: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P1: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      },
+      {
+        "check": "P2: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P2: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-damaged: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P2: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P2: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-structure: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P2: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P2: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P2: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P2: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P2: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P2: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P2: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P2: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-tunnel-crank: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P2: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P2: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P2: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P2: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P2: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P2: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P2: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P2: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-terminal-open: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-signal: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: completed crank and tunnel switch no longer crowd the signal sector",
+        "passed": true
+      },
+      {
+        "check": "P2: walking surfaces retain original bounds",
+        "passed": true
+      },
+      {
+        "check": "P2: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P2: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P2: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-celebration: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P2: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      }
+    ]
+  },
+  "final1280-6": {
+    "checks": 86,
+    "passed": true,
+    "script": "res://tests/qa_visual_refinement.gd",
+    "rendered": true,
+    "resolution": "1280x720",
+    "behaviors": [
+      {
+        "check": "P1: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P1: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-damaged: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P1: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P1: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-structure: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P1: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P1: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P1: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P1: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P1: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P1: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P1: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P1: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-tunnel-crank: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P1: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P1: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P1: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P1: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P1: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P1: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P1: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P1: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-terminal-open: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-signal: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: completed crank and tunnel switch no longer crowd the signal sector",
+        "passed": true
+      },
+      {
+        "check": "P1: walking surfaces retain original bounds",
+        "passed": true
+      },
+      {
+        "check": "P1: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P1: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P1: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P1: phase6-celebration: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P1: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P1: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      },
+      {
+        "check": "P2: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P2: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-damaged: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P2: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P2: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-structure: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P2: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P2: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P2: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P2: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P2: tunnel cutaway preserves crawling and physical clearance",
+        "passed": true
+      },
+      {
+        "check": "P2: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P2: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P2: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-tunnel-crank: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P2: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P2: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P2: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P2: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P2: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P2: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P2: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P2: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-terminal-open: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-signal: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: completed crank and tunnel switch no longer crowd the signal sector",
+        "passed": true
+      },
+      {
+        "check": "P2: walking surfaces retain original bounds",
+        "passed": true
+      },
+      {
+        "check": "P2: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P2: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P2: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P2: phase6-celebration: three lights follow the real repair array",
+        "passed": true
+      },
+      {
+        "check": "P2: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P2: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      }
+    ]
+  },
+  "states": {
+    "checks": 90,
+    "passed": true,
+    "script": "res://tests/qa_art_states.gd",
+    "rendered": true,
+    "resolution": "1152x648",
+    "behaviors": [
+      {
+        "check": "P1: Tree32: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree244: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree1124: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree1240: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree1994: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant5: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant6: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant7: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant8: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant9: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant10: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant11: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant12: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant13: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant14: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant15: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant16: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant17: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket100: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket220: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket976: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1180: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1456: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1976: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket2390: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant25: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant26: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant27: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant28: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant29: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant30: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant31: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant32: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant33: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant34: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 initial: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 initial: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 initial: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 socket complete: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 socket complete: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 socket complete: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 upper available: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 upper available: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 upper available: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 lower available: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 lower available: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 lower available: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 upper pressed: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 upper pressed: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 upper pressed: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant0: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant1: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant2: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant3: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant4: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant5: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant6: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant7: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket144: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket304: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket408: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1120: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1288: opaque footprint meets its terrain baseline",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion before repair: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion before repair: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion before repair: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion available: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion available: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion available: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion pressed left: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion pressed left: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion pressed left: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion pressed right: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion pressed right: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 reunion pressed right: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 new pair: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 new pair: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 new pair: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 final before signal: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 final before signal: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 final before signal: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 final confirmed: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 final confirmed: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 final confirmed: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 confirmation after recovery: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 confirmation after recovery: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 confirmation after recovery: actual rendered emblem/rim pixels are present",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart: mechanism is visible before/during/after activation",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart: plate is above terrain and below characters",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart: actual rendered emblem/rim pixels are present",
+        "passed": true
+      }
+    ]
+  },
+  "ambient-final": {
+    "checks": 41,
+    "passed": true,
+    "script": "res://tests/qa_visual_states.gd",
+    "rendered": true,
+    "resolution": "1152x648",
+    "behaviors": [
+      {
+        "check": "P1: lamp state matches repair 0",
+        "passed": true
+      },
+      {
+        "check": "P1: lamp state matches repair 1",
+        "passed": true
+      },
+      {
+        "check": "P1: lamp state matches repair 2",
+        "passed": true
+      },
+      {
+        "check": "P1: recovery keeps the three acquired lights",
+        "passed": true
+      },
+      {
+        "check": "P1: full restart switches all three lights off",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree32: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree244: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree1124: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree1240: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Tree1994: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant5: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant6: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant7: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant8: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant9: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant10: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant11: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant12: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant13: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant14: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant15: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant16: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant17: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket100: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket220: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket976: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1180: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1456: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket1976: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: Thicket2390: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant25: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant26: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant27: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant28: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant29: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant30: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant31: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant32: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant33: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: GroundedPlant34: decorative breeze uses a pinned foot",
+        "passed": true
+      },
+      {
+        "check": "P1: breeze is limited to decorative foliage",
+        "passed": true
+      }
+    ]
+  },
+  "safety": {
+    "checks": 98,
+    "passed": true,
+    "script": "res://tests/verify_journey_safety.gd",
+    "rendered": true,
+    "resolution": "1152x648",
+    "behaviors": [
+      {
+        "check": "P1: fixture: early fall returns BOTH to initial safe ground",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: checkpoint refuses unearned arrival",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: unearned marker never becomes respawn",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: ordinary jump does not replace Jake over raised gap",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: fresh checkpoint entry requires repaired passage",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: grounded unresolved log keeps useful position after fall",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: obstructing unresolved log restored without erasing passage",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: final combination latches permanently",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: first crystal records a single collection",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: fall preserves final gate, checkpoint and crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: near-simultaneous falls enqueue one pair recovery",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 complete restart clears puzzles/crystal and keeps swapped controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6 sector 0: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart during sector 0 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6 sector 1: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart during sector 1 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6 sector 2: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart during sector 2 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: early bridge cancel restores controls/no invisible floor",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: Cake cannot stand up during a real crawl under the roof",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: crank refuses before Cake's tunnel/switch",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: crank cancellation restores local controls and coherent retry",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: interrupted crank animation cancels safely without awarding progress",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: BMO cannot guess symbols before clue or use music capability",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: opening interaction never enters first symbol",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: terminal cancel unblocks only operator",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: wrong sequence is retryable and cannot repair signal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: correct retry activates signal once",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: repeated interaction is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: one confirmation alone cannot reveal crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: both confirmations required before crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: portal refuses single player even with sixth crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: C recovery retains crystal, seals and current pair",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: both players at exit cannot finish without crystal/puzzle",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: both at portal cannot skip final signal/confirmation/crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: early fall returns BOTH to initial safe ground",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: checkpoint refuses unearned arrival",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: unearned marker never becomes respawn",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: ordinary jump does not replace Jake over raised gap",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: fresh checkpoint entry requires repaired passage",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: grounded unresolved log keeps useful position after fall",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: obstructing unresolved log restored without erasing passage",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: final combination latches permanently",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: first crystal records a single collection",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: fall preserves final gate, checkpoint and crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: near-simultaneous falls enqueue one pair recovery",
+        "passed": true
+      },
+      {
+        "check": "P2: F1 complete restart clears puzzles/crystal and keeps swapped controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6 sector 0: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: F6 restart during sector 0 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6 sector 1: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: F6 restart during sector 1 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6 sector 2: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: F6 restart during sector 2 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: early bridge cancel restores controls/no invisible floor",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: Cake cannot stand up during a real crawl under the roof",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: crank refuses before Cake's tunnel/switch",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: crank cancellation restores local controls and coherent retry",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: interrupted crank animation cancels safely without awarding progress",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: BMO cannot guess symbols before clue or use music capability",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: opening interaction never enters first symbol",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: terminal cancel unblocks only operator",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: wrong sequence is retryable and cannot repair signal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: correct retry activates signal once",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: repeated interaction is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: one confirmation alone cannot reveal crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: both confirmations required before crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: portal refuses single player even with sixth crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: C recovery retains crystal, seals and current pair",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: both players at exit cannot finish without crystal/puzzle",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: both at portal cannot skip final signal/confirmation/crystal",
+        "passed": true
+      }
+    ]
+  },
+  "phase2": {
+    "checks": 53,
+    "passed": true,
+    "script": "res://tests/verify_level_2.gd",
+    "rendered": true,
+    "resolution": "1152x648",
+    "behaviors": [
+      {
+        "check": "Cake P1: safe separate spawns/roles/own ice grid",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: shared camera references and own bounds",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: independent input and marked block can move",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: actual horizontal block push stops",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: block has no drift after push",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: context begins crawl at real entrance",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: tunnel actually traversed and cannot stand under roof",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: low roof prevents jumping",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: real reverse in tunnel",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: exit restores normal posture",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Cake switch legitimately unlocks first crank",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Fionna uses the actual ice block as step",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Fionna reaches top route instead of being trapped",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: first crank extends permanent ice passage",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: both pass first section without recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Cake bridge works at translated level anchor",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: entry lands on Cake, not bypass jump",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: airborne release waits safely in this level",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: second permanent passage available and Cake released",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: pair reunites without teleport or fall recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: normal route reaches reserved final area",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: reserved crystal/exit are explicitly pending",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: no duplicate tool decoration",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: F2 resets controls, bridge and mechanisms",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: safe separate spawns/roles/own ice grid",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: shared camera references and own bounds",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: independent input and marked block can move",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: actual horizontal block push stops",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: block has no drift after push",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: context begins crawl at real entrance",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: tunnel actually traversed and cannot stand under roof",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: low roof prevents jumping",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: real reverse in tunnel",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: exit restores normal posture",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Cake switch legitimately unlocks first crank",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Fionna uses the actual ice block as step",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Fionna reaches top route instead of being trapped",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: first crank extends permanent ice passage",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: both pass first section without recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Cake bridge works at translated level anchor",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: entry lands on Cake, not bypass jump",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: airborne release waits safely in this level",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: second permanent passage available and Cake released",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: pair reunites without teleport or fall recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: normal route reaches reserved final area",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: reserved crystal/exit are explicitly pending",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: no duplicate tool decoration",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: F2 resets controls, bridge and mechanisms",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 1 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 2 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 3 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 4 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 5 has safe floor and label",
+        "passed": true
+      }
+    ]
+  }
+}

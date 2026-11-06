@@ -3,11 +3,13 @@ extends AnimatedSprite2D
 @export var effect_name: StringName = &"interaction"
 @export var autoplay_effect := true
 
+## Prepara as referências e o estado deste componente ao entrar na árvore. Contexto: animação de efeitos dos assets.
 func _ready() -> void:
 	animation_finished.connect(func() -> void: hide())
 	if autoplay_effect:
 		trigger(effect_name)
 
+## Mostra e reinicia um efeito existente no recurso de animações.
 func trigger(effect: StringName) -> void:
 	if not sprite_frames.has_animation(effect):
 		return

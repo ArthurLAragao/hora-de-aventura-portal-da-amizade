@@ -1,0 +1,4685 @@
+{
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "human_acceptance": "pending for this revision",
+  "results": [
+    {
+      "test": "original-qa_bridge_matrix",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 136,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "(1152, 648)",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "P1: Jake: wide safe request at offset -64.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: wide safe request at offset -36.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: wide safe request at offset 0.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: wide safe request at offset 16.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: quick release cancels approach without support",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: repeated taps do not retain a lock",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: Esc cancels even while ability remains held",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: opposite direction cancels the assisted walk",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: jump cancels approach and retains the jump request",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: occupied trajectory refuses rather than crossing partner",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: refusal leaves controls available",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: airborne request refused",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: no midair bridge or lock",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: physical wall rejects assisted path",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: removing obstruction restores truthful offer",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: late obstacle cancels rather than crushing or continuing",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: isolated rider really stands on support",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: standing rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: airborne rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake: forced recovery leaves no invisible support",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: wide safe request at offset -32.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: wide safe request at offset -16.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: wide safe request at offset 0.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: wide safe request at offset 10.0",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: quick release cancels approach without support",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: repeated taps do not retain a lock",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: Esc cancels even while ability remains held",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: opposite direction cancels the assisted walk",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: jump cancels approach and retains the jump request",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: occupied trajectory refuses rather than crossing partner",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: refusal leaves controls available",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: airborne request refused",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: no midair bridge or lock",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: physical wall rejects assisted path",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: removing obstruction restores truthful offer",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: late obstacle cancels rather than crushing or continuing",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: isolated rider really stands on support",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: standing rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: airborne rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: walking across the head has no upward snag or recovery",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake: forced recovery leaves no invisible support",
+          "passed": true
+        },
+        {
+          "check": "P1: two anchors: exactly the nearest safe anchor claims the input",
+          "passed": true
+        },
+        {
+          "check": "P1: two anchors: selection stays with the same owner through formation",
+          "passed": true
+        },
+        {
+          "check": "P1: two anchors: complete cleanup",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: wide safe request at offset -64.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: wide safe request at offset -36.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: wide safe request at offset 0.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: wide safe request at offset 16.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: quick release cancels approach without support",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: repeated taps do not retain a lock",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: Esc cancels even while ability remains held",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: opposite direction cancels the assisted walk",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: jump cancels approach and retains the jump request",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: occupied trajectory refuses rather than crossing partner",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: refusal leaves controls available",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: airborne request refused",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: no midair bridge or lock",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: physical wall rejects assisted path",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: removing obstruction restores truthful offer",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: late obstacle cancels rather than crushing or continuing",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: isolated rider really stands on support",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: standing rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: airborne rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake: forced recovery leaves no invisible support",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: wide safe request at offset -32.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: wide safe request at offset -16.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: wide safe request at offset 0.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: wide safe request at offset 10.0",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: early motion is a walk, not a teleport",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: fixed formation reached with original mask restored",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: release restores sprite and controls",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: quick release cancels approach without support",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: repeated taps do not retain a lock",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: Esc cancels even while ability remains held",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: opposite direction cancels the assisted walk",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: jump cancels approach and retains the jump request",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: occupied trajectory refuses rather than crossing partner",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: refusal leaves controls available",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: airborne request refused",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: no midair bridge or lock",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: physical wall rejects assisted path",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: removing obstruction restores truthful offer",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: late obstacle cancels rather than crushing or continuing",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: isolated rider really stands on support",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: standing rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: airborne rider retains support",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: walking across the head has no upward snag or recovery",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake: forced recovery leaves no invisible support",
+          "passed": true
+        },
+        {
+          "check": "P2: two anchors: exactly the nearest safe anchor claims the input",
+          "passed": true
+        },
+        {
+          "check": "P2: two anchors: selection stays with the same owner through formation",
+          "passed": true
+        },
+        {
+          "check": "P2: two anchors: complete cleanup",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-qa_progression_risks",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 22,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "(1152, 648)",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "P1: normal inputs: tutorial log settles into its socket instead of floating over the gap",
+          "passed": true
+        },
+        {
+          "check": "P1: isolated log cannot be pushed onto unsupported void",
+          "passed": true
+        },
+        {
+          "check": "P1: reset waits while its destination is occupied",
+          "passed": true
+        },
+        {
+          "check": "P1: reset completes after the player leaves, without trapping either body",
+          "passed": true
+        },
+        {
+          "check": "P1: held input during handoff keeps new Cake/Fionna local controls locked",
+          "passed": true
+        },
+        {
+          "check": "P1: release hands control to exactly the new pair and updates camera",
+          "passed": true
+        },
+        {
+          "check": "P1: normal jump cannot replace the float gap",
+          "passed": true
+        },
+        {
+          "check": "P1: music refuses interaction from the ground below its shelf",
+          "passed": true
+        },
+        {
+          "check": "P1: airborne music attempt cannot reveal the clue",
+          "passed": true
+        },
+        {
+          "check": "P1: full restart after a handoff clears repairs and action locks",
+          "passed": true
+        },
+        {
+          "check": "P1: restart during fade leaves initial pair and no abandoned input owner",
+          "passed": true
+        },
+        {
+          "check": "P2: normal inputs: tutorial log settles into its socket instead of floating over the gap",
+          "passed": true
+        },
+        {
+          "check": "P2: isolated log cannot be pushed onto unsupported void",
+          "passed": true
+        },
+        {
+          "check": "P2: reset waits while its destination is occupied",
+          "passed": true
+        },
+        {
+          "check": "P2: reset completes after the player leaves, without trapping either body",
+          "passed": true
+        },
+        {
+          "check": "P2: held input during handoff keeps new Cake/Fionna local controls locked",
+          "passed": true
+        },
+        {
+          "check": "P2: release hands control to exactly the new pair and updates camera",
+          "passed": true
+        },
+        {
+          "check": "P2: normal jump cannot replace the float gap",
+          "passed": true
+        },
+        {
+          "check": "P2: music refuses interaction from the ground below its shelf",
+          "passed": true
+        },
+        {
+          "check": "P2: airborne music attempt cannot reveal the clue",
+          "passed": true
+        },
+        {
+          "check": "P2: full restart after a handoff clears repairs and action locks",
+          "passed": true
+        },
+        {
+          "check": "P2: restart during fade leaves initial pair and no abandoned input owner",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-verify_journey_safety",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 98,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "(1152, 648)",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "P1: fixture: early fall returns BOTH to initial safe ground",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: checkpoint refuses unearned arrival",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: unearned marker never becomes respawn",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: ordinary jump does not replace Jake over raised gap",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: fresh checkpoint entry requires repaired passage",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: grounded unresolved log keeps useful position after fall",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: obstructing unresolved log restored without erasing passage",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: final combination latches permanently",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: first crystal records a single collection",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: fall preserves final gate, checkpoint and crystal",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: near-simultaneous falls enqueue one pair recovery",
+          "passed": true
+        },
+        {
+          "check": "P1: F1 complete restart clears puzzles/crystal and keeps swapped controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6 sector 0: fall restores correct pair/roles and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P1: F6 restart during sector 0 returns to initial duo/progress, preserving configured roles",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6 sector 1: fall restores correct pair/roles and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P1: F6 restart during sector 1 returns to initial duo/progress, preserving configured roles",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6 sector 2: fall restores correct pair/roles and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P1: F6 restart during sector 2 returns to initial duo/progress, preserving configured roles",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: early bridge cancel restores controls/no invisible floor",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: Cake cannot stand up during a real crawl under the roof",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: crank refuses before Cake's tunnel/switch",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: crank cancellation restores local controls and coherent retry",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: interrupted crank animation cancels safely without awarding progress",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: BMO cannot guess symbols before clue or use music capability",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: opening interaction never enters first symbol",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: terminal cancel unblocks only operator",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: wrong sequence is retryable and cannot repair signal",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: correct retry activates signal once",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: repeated interaction is idempotent",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: one confirmation alone cannot reveal crystal",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: both confirmations required before crystal",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: portal refuses single player even with sixth crystal",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture: C recovery retains crystal, seals and current pair",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: fall during approach clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: fall during source clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: fall during growth clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: fall during hold clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: fall during pending clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: fall during shrink clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: fall during reverse clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: fall during approach clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: fall during source clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: fall during growth clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: fall during hold clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: fall during pending clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: fall during shrink clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: fall during reverse clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F1: both players at exit cannot finish without crystal/puzzle",
+          "passed": true
+        },
+        {
+          "check": "P1: fixture F6: both at portal cannot skip final signal/confirmation/crystal",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: early fall returns BOTH to initial safe ground",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: checkpoint refuses unearned arrival",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: unearned marker never becomes respawn",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: ordinary jump does not replace Jake over raised gap",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: fresh checkpoint entry requires repaired passage",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: grounded unresolved log keeps useful position after fall",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: obstructing unresolved log restored without erasing passage",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: final combination latches permanently",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: first crystal records a single collection",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: fall preserves final gate, checkpoint and crystal",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: near-simultaneous falls enqueue one pair recovery",
+          "passed": true
+        },
+        {
+          "check": "P2: F1 complete restart clears puzzles/crystal and keeps swapped controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6 sector 0: fall restores correct pair/roles and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P2: F6 restart during sector 0 returns to initial duo/progress, preserving configured roles",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6 sector 1: fall restores correct pair/roles and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P2: F6 restart during sector 1 returns to initial duo/progress, preserving configured roles",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6 sector 2: fall restores correct pair/roles and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P2: F6 restart during sector 2 returns to initial duo/progress, preserving configured roles",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: early bridge cancel restores controls/no invisible floor",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: Cake cannot stand up during a real crawl under the roof",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: crank refuses before Cake's tunnel/switch",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: crank cancellation restores local controls and coherent retry",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: interrupted crank animation cancels safely without awarding progress",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: BMO cannot guess symbols before clue or use music capability",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: opening interaction never enters first symbol",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: terminal cancel unblocks only operator",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: wrong sequence is retryable and cannot repair signal",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: correct retry activates signal once",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: repeated interaction is idempotent",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: one confirmation alone cannot reveal crystal",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: both confirmations required before crystal",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: portal refuses single player even with sixth crystal",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture: C recovery retains crystal, seals and current pair",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: fall during approach clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: fall during source clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: fall during growth clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: fall during hold clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: fall during pending clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: fall during shrink clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: fall during reverse clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: fall during approach clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: fall during source clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: fall during growth clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: fall during hold clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: fall during pending clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: fall during shrink clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: fall during reverse clears support, sprite and both local controls",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F1: both players at exit cannot finish without crystal/puzzle",
+          "passed": true
+        },
+        {
+          "check": "P2: fixture F6: both at portal cannot skip final signal/confirmation/crystal",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-verify_journey_1",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 36,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "(1152, 648)",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "P1: correct duo and unchanged 32x20 grid",
+          "passed": true
+        },
+        {
+          "check": "P1: safe independent initial floor",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake cannot push or activate tutorial alone",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn physically moves tutorial log and opens path",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake requests bridge from the safe bank",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn entry actually lands on Jake",
+          "passed": true
+        },
+        {
+          "check": "P1: airborne partner retains the bridge",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn lever repairs permanent connection",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake follows physically on permanent support",
+          "passed": true
+        },
+        {
+          "check": "P1: checkpoint reached legitimately after shared passage",
+          "passed": true
+        },
+        {
+          "check": "P1: same log becomes Jake's step",
+          "passed": true
+        },
+        {
+          "check": "P1: upper capability plate opens Finn's route",
+          "passed": true
+        },
+        {
+          "check": "P1: leaving the upper plate removes unsolved cooperation",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn push plus Jake position solves final combination",
+          "passed": true
+        },
+        {
+          "check": "P1: crystal requires the final combination",
+          "passed": true
+        },
+        {
+          "check": "P1: crystal collected by real arrival exactly once",
+          "passed": true
+        },
+        {
+          "check": "P1: one character alone cannot finish",
+          "passed": true
+        },
+        {
+          "check": "P1: complete cooperative route without recovery or reposition",
+          "passed": true
+        },
+        {
+          "check": "P2: correct duo and unchanged 32x20 grid",
+          "passed": true
+        },
+        {
+          "check": "P2: safe independent initial floor",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake cannot push or activate tutorial alone",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn physically moves tutorial log and opens path",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake requests bridge from the safe bank",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn entry actually lands on Jake",
+          "passed": true
+        },
+        {
+          "check": "P2: airborne partner retains the bridge",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn lever repairs permanent connection",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake follows physically on permanent support",
+          "passed": true
+        },
+        {
+          "check": "P2: checkpoint reached legitimately after shared passage",
+          "passed": true
+        },
+        {
+          "check": "P2: same log becomes Jake's step",
+          "passed": true
+        },
+        {
+          "check": "P2: upper capability plate opens Finn's route",
+          "passed": true
+        },
+        {
+          "check": "P2: leaving the upper plate removes unsolved cooperation",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn push plus Jake position solves final combination",
+          "passed": true
+        },
+        {
+          "check": "P2: crystal requires the final combination",
+          "passed": true
+        },
+        {
+          "check": "P2: crystal collected by real arrival exactly once",
+          "passed": true
+        },
+        {
+          "check": "P2: one character alone cannot finish",
+          "passed": true
+        },
+        {
+          "check": "P2: complete cooperative route without recovery or reposition",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-verify_journey_6",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 60,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "(1152, 648)",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "P1: independent opening, correct duo and no fictitious loaded progress",
+          "passed": true
+        },
+        {
+          "check": "P1: only two active actors, safe separate starts",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake requests approach from the bank",
+          "passed": true
+        },
+        {
+          "check": "P1: A entry lands on Jake support",
+          "passed": true
+        },
+        {
+          "check": "P1: A standing dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P1: A airborne dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P1: A remote counterweight physically repairs structure",
+          "passed": true
+        },
+        {
+          "check": "P1: A finishes only after physical reunion",
+          "passed": true
+        },
+        {
+          "check": "P1: old duo has no controls/collision/group, camera follows new pair",
+          "passed": true
+        },
+        {
+          "check": "P1: B inherits roles, not temporary actions",
+          "passed": true
+        },
+        {
+          "check": "P1: B context enters geometrically low tunnel",
+          "passed": true
+        },
+        {
+          "check": "P1: B real tunnel traversal cannot stand into roof",
+          "passed": true
+        },
+        {
+          "check": "P1: B can retreat in tunnel",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake legitimately frees Fionna's crank",
+          "passed": true
+        },
+        {
+          "check": "P1: Fionna reuses previous counterweight as step",
+          "passed": true
+        },
+        {
+          "check": "P1: crank provides actual return support",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake reaches the extended return platform",
+          "passed": true
+        },
+        {
+          "check": "P1: B reciprocal reunion advances C and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P1: C has correct roles and two active players",
+          "passed": true
+        },
+        {
+          "check": "P1: C terminal cannot precede legitimate clue",
+          "passed": true
+        },
+        {
+          "check": "P1: Marceline reaches takeoff using jumps",
+          "passed": true
+        },
+        {
+          "check": "P1: limited float reaches musical clue shelf",
+          "passed": true
+        },
+        {
+          "check": "P1: music reveals forms and authorizes terminal",
+          "passed": true
+        },
+        {
+          "check": "P1: terminal opens without accidental confirmation",
+          "passed": true
+        },
+        {
+          "check": "P1: partner still moves during BMO panel",
+          "passed": true
+        },
+        {
+          "check": "P1: BMO enters clue through own controls and restores third seal",
+          "passed": true
+        },
+        {
+          "check": "P1: joint confirmation makes sixth crystal available",
+          "passed": true
+        },
+        {
+          "check": "P1: crystal collected once; one player cannot end",
+          "passed": true
+        },
+        {
+          "check": "P1: entire three-pair normal route reaches stable ending",
+          "passed": true
+        },
+        {
+          "check": "P1: six friends celebrate without six controlled bodies",
+          "passed": true
+        },
+        {
+          "check": "P2: independent opening, correct duo and no fictitious loaded progress",
+          "passed": true
+        },
+        {
+          "check": "P2: only two active actors, safe separate starts",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake requests approach from the bank",
+          "passed": true
+        },
+        {
+          "check": "P2: A entry lands on Jake support",
+          "passed": true
+        },
+        {
+          "check": "P2: A standing dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P2: A airborne dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P2: A remote counterweight physically repairs structure",
+          "passed": true
+        },
+        {
+          "check": "P2: A finishes only after physical reunion",
+          "passed": true
+        },
+        {
+          "check": "P2: old duo has no controls/collision/group, camera follows new pair",
+          "passed": true
+        },
+        {
+          "check": "P2: B inherits roles, not temporary actions",
+          "passed": true
+        },
+        {
+          "check": "P2: B context enters geometrically low tunnel",
+          "passed": true
+        },
+        {
+          "check": "P2: B real tunnel traversal cannot stand into roof",
+          "passed": true
+        },
+        {
+          "check": "P2: B can retreat in tunnel",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake legitimately frees Fionna's crank",
+          "passed": true
+        },
+        {
+          "check": "P2: Fionna reuses previous counterweight as step",
+          "passed": true
+        },
+        {
+          "check": "P2: crank provides actual return support",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake reaches the extended return platform",
+          "passed": true
+        },
+        {
+          "check": "P2: B reciprocal reunion advances C and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P2: C has correct roles and two active players",
+          "passed": true
+        },
+        {
+          "check": "P2: C terminal cannot precede legitimate clue",
+          "passed": true
+        },
+        {
+          "check": "P2: Marceline reaches takeoff using jumps",
+          "passed": true
+        },
+        {
+          "check": "P2: limited float reaches musical clue shelf",
+          "passed": true
+        },
+        {
+          "check": "P2: music reveals forms and authorizes terminal",
+          "passed": true
+        },
+        {
+          "check": "P2: terminal opens without accidental confirmation",
+          "passed": true
+        },
+        {
+          "check": "P2: partner still moves during BMO panel",
+          "passed": true
+        },
+        {
+          "check": "P2: BMO enters clue through own controls and restores third seal",
+          "passed": true
+        },
+        {
+          "check": "P2: joint confirmation makes sixth crystal available",
+          "passed": true
+        },
+        {
+          "check": "P2: crystal collected once; one player cannot end",
+          "passed": true
+        },
+        {
+          "check": "P2: entire three-pair normal route reaches stable ending",
+          "passed": true
+        },
+        {
+          "check": "P2: six friends celebrate without six controlled bodies",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-verify_level_2",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 53,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "Cake P1: safe separate spawns/roles/own ice grid",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: shared camera references and own bounds",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: independent input and marked block can move",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: actual horizontal block push stops",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: block has no drift after push",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: context begins crawl at real entrance",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: tunnel actually traversed and cannot stand under roof",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: low roof prevents jumping",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real reverse in tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: exit restores normal posture",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: Cake switch legitimately unlocks first crank",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: Fionna uses the actual ice block as step",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: Fionna reaches top route instead of being trapped",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: first crank extends permanent ice passage",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: both pass first section without recovery",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: Cake bridge works at translated level anchor",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: entry lands on Cake, not bypass jump",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: airborne release waits safely in this level",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: second permanent passage available and Cake released",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: pair reunites without teleport or fall recovery",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: normal route reaches reserved final area",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: reserved crystal/exit are explicitly pending",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: no duplicate tool decoration",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: F2 resets controls, bridge and mechanisms",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: safe separate spawns/roles/own ice grid",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: shared camera references and own bounds",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: independent input and marked block can move",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: actual horizontal block push stops",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: block has no drift after push",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: context begins crawl at real entrance",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: tunnel actually traversed and cannot stand under roof",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: low roof prevents jumping",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real reverse in tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: exit restores normal posture",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: Cake switch legitimately unlocks first crank",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: Fionna uses the actual ice block as step",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: Fionna reaches top route instead of being trapped",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: first crank extends permanent ice passage",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: both pass first section without recovery",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: Cake bridge works at translated level anchor",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: entry lands on Cake, not bypass jump",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: airborne release waits safely in this level",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: second permanent passage available and Cake released",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: pair reunites without teleport or fall recovery",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: normal route reaches reserved final area",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: reserved crystal/exit are explicitly pending",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: no duplicate tool decoration",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: F2 resets controls, bridge and mechanisms",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: explicit test start 1 has safe floor and label",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: explicit test start 2 has safe floor and label",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: explicit test start 3 has safe floor and label",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: explicit test start 4 has safe floor and label",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: explicit test start 5 has safe floor and label",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-verify_journey_finn",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 77,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "Finn uses existing resource without copied frames",
+          "passed": true
+        },
+        {
+          "check": "Input Map retains Space and adds physical W",
+          "passed": true
+        },
+        {
+          "check": "physical key event jumps Finn P1: W",
+          "passed": true
+        },
+        {
+          "check": "physical key event jumps Finn P1: Space",
+          "passed": true
+        },
+        {
+          "check": "render capture finn-test-room.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: identity and capabilities independent of slot",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: original speed and jump preserved",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: ground collision and idle",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: independent motion and walk",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: right-facing sprite",
+          "passed": true
+        },
+        {
+          "check": "render capture p1-walk.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: left-facing sprite",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: empty ability does not fake a push",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: immediate jump with ascent pose",
+          "passed": true
+        },
+        {
+          "check": "render capture p1-jump.png",
+          "passed": true
+        },
+        {
+          "check": "render capture p1-fall.png",
+          "passed": true
+        },
+        {
+          "check": "render capture p1-land.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: descent and landing poses observed",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: jump height remains about 63-69 px",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: landing returns to idle without locking",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: ledge setup grounded",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: coyote jump after leaving ledge",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: expired coyote cannot become an air jump",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: buffer request occurs in descent after coyote expired",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: buffer executes jump upon landing",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: expired buffer does not jump on later landing",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: left wall blocks without sinking",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: cannot push a distant log",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: actual log motion triggers push animation",
+          "passed": true
+        },
+        {
+          "check": "render capture p1-push.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: push ends when object stops",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: reset does not place the log inside its operator",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: own reset restores log after its destination is clear",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: wall-blocked log has no false push pose",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: lever prompt matches player input",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: other slot cannot activate this Finn",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: valid lever opens gate and starts correct clip",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: interaction survives movement without locking controls",
+          "passed": true
+        },
+        {
+          "check": "render capture p1-lever.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: interaction naturally returns to locomotion",
+          "passed": true
+        },
+        {
+          "check": "Finn p1: solved lever cannot replay a fake action",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: identity and capabilities independent of slot",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: original speed and jump preserved",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: ground collision and idle",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: independent motion and walk",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: right-facing sprite",
+          "passed": true
+        },
+        {
+          "check": "render capture p2-walk.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: left-facing sprite",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: empty ability does not fake a push",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: immediate jump with ascent pose",
+          "passed": true
+        },
+        {
+          "check": "render capture p2-jump.png",
+          "passed": true
+        },
+        {
+          "check": "render capture p2-fall.png",
+          "passed": true
+        },
+        {
+          "check": "render capture p2-land.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: descent and landing poses observed",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: jump height remains about 63-69 px",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: landing returns to idle without locking",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: ledge setup grounded",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: coyote jump after leaving ledge",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: expired coyote cannot become an air jump",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: buffer request occurs in descent after coyote expired",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: buffer executes jump upon landing",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: expired buffer does not jump on later landing",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: left wall blocks without sinking",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: cannot push a distant log",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: actual log motion triggers push animation",
+          "passed": true
+        },
+        {
+          "check": "render capture p2-push.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: push ends when object stops",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: reset does not place the log inside its operator",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: own reset restores log after its destination is clear",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: wall-blocked log has no false push pose",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: lever prompt matches player input",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: other slot cannot activate this Finn",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: valid lever opens gate and starts correct clip",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: interaction survives movement without locking controls",
+          "passed": true
+        },
+        {
+          "check": "render capture p2-lever.png",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: interaction naturally returns to locomotion",
+          "passed": true
+        },
+        {
+          "check": "Finn p2: solved lever cannot replay a fake action",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-1280-verify_journey_1",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 36,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "(1280, 720)",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "P1: correct duo and unchanged 32x20 grid",
+          "passed": true
+        },
+        {
+          "check": "P1: safe independent initial floor",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake cannot push or activate tutorial alone",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn physically moves tutorial log and opens path",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake requests bridge from the safe bank",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn entry actually lands on Jake",
+          "passed": true
+        },
+        {
+          "check": "P1: airborne partner retains the bridge",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn lever repairs permanent connection",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake follows physically on permanent support",
+          "passed": true
+        },
+        {
+          "check": "P1: checkpoint reached legitimately after shared passage",
+          "passed": true
+        },
+        {
+          "check": "P1: same log becomes Jake's step",
+          "passed": true
+        },
+        {
+          "check": "P1: upper capability plate opens Finn's route",
+          "passed": true
+        },
+        {
+          "check": "P1: leaving the upper plate removes unsolved cooperation",
+          "passed": true
+        },
+        {
+          "check": "P1: Finn push plus Jake position solves final combination",
+          "passed": true
+        },
+        {
+          "check": "P1: crystal requires the final combination",
+          "passed": true
+        },
+        {
+          "check": "P1: crystal collected by real arrival exactly once",
+          "passed": true
+        },
+        {
+          "check": "P1: one character alone cannot finish",
+          "passed": true
+        },
+        {
+          "check": "P1: complete cooperative route without recovery or reposition",
+          "passed": true
+        },
+        {
+          "check": "P2: correct duo and unchanged 32x20 grid",
+          "passed": true
+        },
+        {
+          "check": "P2: safe independent initial floor",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake cannot push or activate tutorial alone",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn physically moves tutorial log and opens path",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake requests bridge from the safe bank",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn entry actually lands on Jake",
+          "passed": true
+        },
+        {
+          "check": "P2: airborne partner retains the bridge",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn lever repairs permanent connection",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake follows physically on permanent support",
+          "passed": true
+        },
+        {
+          "check": "P2: checkpoint reached legitimately after shared passage",
+          "passed": true
+        },
+        {
+          "check": "P2: same log becomes Jake's step",
+          "passed": true
+        },
+        {
+          "check": "P2: upper capability plate opens Finn's route",
+          "passed": true
+        },
+        {
+          "check": "P2: leaving the upper plate removes unsolved cooperation",
+          "passed": true
+        },
+        {
+          "check": "P2: Finn push plus Jake position solves final combination",
+          "passed": true
+        },
+        {
+          "check": "P2: crystal requires the final combination",
+          "passed": true
+        },
+        {
+          "check": "P2: crystal collected by real arrival exactly once",
+          "passed": true
+        },
+        {
+          "check": "P2: one character alone cannot finish",
+          "passed": true
+        },
+        {
+          "check": "P2: complete cooperative route without recovery or reposition",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "original-1280-verify_journey_6",
+      "project": "original",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 60,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "(1280, 720)",
+      "environment_note": null,
+      "behaviors": [
+        {
+          "check": "P1: independent opening, correct duo and no fictitious loaded progress",
+          "passed": true
+        },
+        {
+          "check": "P1: only two active actors, safe separate starts",
+          "passed": true
+        },
+        {
+          "check": "P1: Jake requests approach from the bank",
+          "passed": true
+        },
+        {
+          "check": "P1: A entry lands on Jake support",
+          "passed": true
+        },
+        {
+          "check": "P1: A standing dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P1: A airborne dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P1: A remote counterweight physically repairs structure",
+          "passed": true
+        },
+        {
+          "check": "P1: A finishes only after physical reunion",
+          "passed": true
+        },
+        {
+          "check": "P1: old duo has no controls/collision/group, camera follows new pair",
+          "passed": true
+        },
+        {
+          "check": "P1: B inherits roles, not temporary actions",
+          "passed": true
+        },
+        {
+          "check": "P1: B context enters geometrically low tunnel",
+          "passed": true
+        },
+        {
+          "check": "P1: B real tunnel traversal cannot stand into roof",
+          "passed": true
+        },
+        {
+          "check": "P1: B can retreat in tunnel",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake legitimately frees Fionna's crank",
+          "passed": true
+        },
+        {
+          "check": "P1: Fionna reuses previous counterweight as step",
+          "passed": true
+        },
+        {
+          "check": "P1: crank provides actual return support",
+          "passed": true
+        },
+        {
+          "check": "P1: Cake reaches the extended return platform",
+          "passed": true
+        },
+        {
+          "check": "P1: B reciprocal reunion advances C and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P1: C has correct roles and two active players",
+          "passed": true
+        },
+        {
+          "check": "P1: C terminal cannot precede legitimate clue",
+          "passed": true
+        },
+        {
+          "check": "P1: Marceline reaches takeoff using jumps",
+          "passed": true
+        },
+        {
+          "check": "P1: limited float reaches musical clue shelf",
+          "passed": true
+        },
+        {
+          "check": "P1: music reveals forms and authorizes terminal",
+          "passed": true
+        },
+        {
+          "check": "P1: terminal opens without accidental confirmation",
+          "passed": true
+        },
+        {
+          "check": "P1: partner still moves during BMO panel",
+          "passed": true
+        },
+        {
+          "check": "P1: BMO enters clue through own controls and restores third seal",
+          "passed": true
+        },
+        {
+          "check": "P1: joint confirmation makes sixth crystal available",
+          "passed": true
+        },
+        {
+          "check": "P1: crystal collected once; one player cannot end",
+          "passed": true
+        },
+        {
+          "check": "P1: entire three-pair normal route reaches stable ending",
+          "passed": true
+        },
+        {
+          "check": "P1: six friends celebrate without six controlled bodies",
+          "passed": true
+        },
+        {
+          "check": "P2: independent opening, correct duo and no fictitious loaded progress",
+          "passed": true
+        },
+        {
+          "check": "P2: only two active actors, safe separate starts",
+          "passed": true
+        },
+        {
+          "check": "P2: Jake requests approach from the bank",
+          "passed": true
+        },
+        {
+          "check": "P2: A entry lands on Jake support",
+          "passed": true
+        },
+        {
+          "check": "P2: A standing dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P2: A airborne dependency keeps support",
+          "passed": true
+        },
+        {
+          "check": "P2: A remote counterweight physically repairs structure",
+          "passed": true
+        },
+        {
+          "check": "P2: A finishes only after physical reunion",
+          "passed": true
+        },
+        {
+          "check": "P2: old duo has no controls/collision/group, camera follows new pair",
+          "passed": true
+        },
+        {
+          "check": "P2: B inherits roles, not temporary actions",
+          "passed": true
+        },
+        {
+          "check": "P2: B context enters geometrically low tunnel",
+          "passed": true
+        },
+        {
+          "check": "P2: B real tunnel traversal cannot stand into roof",
+          "passed": true
+        },
+        {
+          "check": "P2: B can retreat in tunnel",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake legitimately frees Fionna's crank",
+          "passed": true
+        },
+        {
+          "check": "P2: Fionna reuses previous counterweight as step",
+          "passed": true
+        },
+        {
+          "check": "P2: crank provides actual return support",
+          "passed": true
+        },
+        {
+          "check": "P2: Cake reaches the extended return platform",
+          "passed": true
+        },
+        {
+          "check": "P2: B reciprocal reunion advances C and preserves repairs",
+          "passed": true
+        },
+        {
+          "check": "P2: C has correct roles and two active players",
+          "passed": true
+        },
+        {
+          "check": "P2: C terminal cannot precede legitimate clue",
+          "passed": true
+        },
+        {
+          "check": "P2: Marceline reaches takeoff using jumps",
+          "passed": true
+        },
+        {
+          "check": "P2: limited float reaches musical clue shelf",
+          "passed": true
+        },
+        {
+          "check": "P2: music reveals forms and authorizes terminal",
+          "passed": true
+        },
+        {
+          "check": "P2: terminal opens without accidental confirmation",
+          "passed": true
+        },
+        {
+          "check": "P2: partner still moves during BMO panel",
+          "passed": true
+        },
+        {
+          "check": "P2: BMO enters clue through own controls and restores third seal",
+          "passed": true
+        },
+        {
+          "check": "P2: joint confirmation makes sixth crystal available",
+          "passed": true
+        },
+        {
+          "check": "P2: crystal collected once; one player cannot end",
+          "passed": true
+        },
+        {
+          "check": "P2: entire three-pair normal route reaches stable ending",
+          "passed": true
+        },
+        {
+          "check": "P2: six friends celebrate without six controlled bodies",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "regression-qa_jake_regression",
+      "project": "validation copy with matching game code",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 42,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": "sandbox CA store access",
+      "behaviors": [
+        {
+          "check": "Jake p1: identity and bridge capability, no Finn powers",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: controls/meta follow player slot",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: original speed, jump and collider preserved",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: jump tolerances configured",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: existing animations and frame counts",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: grounded and idle, feet match Finn",
+          "passed": true
+        },
+        {
+          "check": "real render p1-idle.png",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: walk moves only Jake, facing right",
+          "passed": true
+        },
+        {
+          "check": "real render p1-walk.png",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: facing left",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: ascent clip and immediate jump",
+          "passed": true
+        },
+        {
+          "check": "real render p1-jump.png",
+          "passed": true
+        },
+        {
+          "check": "real render p1-fall.png",
+          "passed": true
+        },
+        {
+          "check": "real render p1-land.png",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: fall/land clips observed, original jump height",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: land returns to idle without lock",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: ledge test starts grounded",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: short coyote jump after ledge",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: buffer pressed in descent, no air jump",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: buffered jump upon landing",
+          "passed": true
+        },
+        {
+          "check": "Jake p1: wall collision and stable ground",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: identity and bridge capability, no Finn powers",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: controls/meta follow player slot",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: original speed, jump and collider preserved",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: jump tolerances configured",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: existing animations and frame counts",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: grounded and idle, feet match Finn",
+          "passed": true
+        },
+        {
+          "check": "real render p2-idle.png",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: walk moves only Jake, facing right",
+          "passed": true
+        },
+        {
+          "check": "real render p2-walk.png",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: facing left",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: ascent clip and immediate jump",
+          "passed": true
+        },
+        {
+          "check": "real render p2-jump.png",
+          "passed": true
+        },
+        {
+          "check": "real render p2-fall.png",
+          "passed": true
+        },
+        {
+          "check": "real render p2-land.png",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: fall/land clips observed, original jump height",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: land returns to idle without lock",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: ledge test starts grounded",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: short coyote jump after ledge",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: buffer pressed in descent, no air jump",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: buffered jump upon landing",
+          "passed": true
+        },
+        {
+          "check": "Jake p2: wall collision and stable ground",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "regression-verify_marceline",
+      "project": "validation copy with matching game code",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 109,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": "sandbox CA store access",
+      "behaviors": [
+        {
+          "check": "Marceline P1: identity, abilities and controls independent",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: original animation resource and complete clips",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: uniform scale, aligned feet and usable collider",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: ground idle and full landing charge",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: test controls describe selected role",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-idle-scale",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: walk right moves only Marceline",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-walk",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: sprite faces left",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: other slot moves reference only",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: jump_start does not delay upward movement",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-jump",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-fall",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-land",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: jump ascent, fall and land clips really occur",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: existing jump strength and free idle after landing",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: ability on ground cannot start or consume float",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: holding float cannot increase jump height",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: left wall and safe floor collide",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: right wall collides",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: jump hits existing-tile ceiling without crossing",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: lands on raised platform",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: other player's ability does not activate float",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: float uses own key, slows descent and existing animation",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-float",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: release ends float immediately without restoring charge",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: repress uses remaining charge, not a fresh duration",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: recovery clears ability and action state immediately",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: recovered character lands normally and recharges",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: repeated presses cannot renew airtime budget",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: duration expires and normal gravity resumes",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: exhausted charge cannot restart midair",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: only landing restores full charge",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: float still collides with the wall",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: active float lands on floor, ends and refills",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: float requires character capability",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: floating cannot pass the ceiling",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: music is refused outside range",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: Finn cannot activate music even in range",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: music authorization is capability based",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: other slot cannot trigger Marceline interaction",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: ability key does not also perform music",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: own interaction opens door and begins real music clip",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-music",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: music pose survives idle/walk update without locking controls",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: music ends naturally and normal idle returns",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: visual feedback and door collision update",
+          "passed": true
+        },
+        {
+          "check": "real capture p1-music-complete",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: solved mechanism cannot replay false music",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: opened musical door is physically passable",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: music can start for interruption test",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: timeout releases stopped music animation",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: jump can interrupt music and retains control",
+          "passed": true
+        },
+        {
+          "check": "Marceline P1: new test instance starts with clean states",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: identity, abilities and controls independent",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: original animation resource and complete clips",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: uniform scale, aligned feet and usable collider",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: ground idle and full landing charge",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: test controls describe selected role",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-idle-scale",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: walk right moves only Marceline",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-walk",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: sprite faces left",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: other slot moves reference only",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: jump_start does not delay upward movement",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-jump",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-fall",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-land",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: jump ascent, fall and land clips really occur",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: existing jump strength and free idle after landing",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: ability on ground cannot start or consume float",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: holding float cannot increase jump height",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: left wall and safe floor collide",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: right wall collides",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: jump hits existing-tile ceiling without crossing",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: lands on raised platform",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: other player's ability does not activate float",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: float uses own key, slows descent and existing animation",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-float",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: release ends float immediately without restoring charge",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: repress uses remaining charge, not a fresh duration",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: recovery clears ability and action state immediately",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: recovered character lands normally and recharges",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: repeated presses cannot renew airtime budget",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: duration expires and normal gravity resumes",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: exhausted charge cannot restart midair",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: only landing restores full charge",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: float still collides with the wall",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: active float lands on floor, ends and refills",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: float requires character capability",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: floating cannot pass the ceiling",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: music is refused outside range",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: Finn cannot activate music even in range",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: music authorization is capability based",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: other slot cannot trigger Marceline interaction",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: ability key does not also perform music",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: own interaction opens door and begins real music clip",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-music",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: music pose survives idle/walk update without locking controls",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: music ends naturally and normal idle returns",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: visual feedback and door collision update",
+          "passed": true
+        },
+        {
+          "check": "real capture p2-music-complete",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: solved mechanism cannot replay false music",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: opened musical door is physically passable",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: music can start for interruption test",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: timeout releases stopped music animation",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: jump can interrupt music and retains control",
+          "passed": true
+        },
+        {
+          "check": "Marceline P2: new test instance starts with clean states",
+          "passed": true
+        },
+        {
+          "check": "F2 actually reloads scene and clears float/music/door",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "regression-verify_bmo",
+      "project": "validation copy with matching game code",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 130,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": "sandbox CA store access",
+      "behaviors": [
+        {
+          "check": "BMO P1: identity/capabilities independent of role",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: visual scene reused, original resource and no distortion",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: BMO body has own proportions and shared foot baseline",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: idle and unchanged movement values",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: instructions and contextual key match role",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture scale-idle",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: partner input does not move BMO",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: own input walks and leaves partner independent",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture walk",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: left facing",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: jump_start moves immediately",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture jump",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture fall",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture land",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: ascent fall landing clips observed and controls restored",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: existing jump strength, gravity and apex preserved",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: left wall and floor collision",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: right wall collision",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: ceiling blocks jump",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: lands on raised platform",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: symbols refused outside range",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: partner in range is refused by capability",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: capability is required even for BMO",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: partner interaction cannot open BMO panel",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: unused ability key does not operate terminals",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: opening press held cannot enter first symbol",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture panel-open",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: panel selection changes without moving BMO",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: partner moves while panel open; cannot select or confirm",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: Escape closes panel and clears local control lock",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: movement available after cancel",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: reopening starts empty and selected circle",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: wrong sequence gives retry without opening door",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture sequence-retry",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: Marceline reaches elevated clue using movement/jumps while BMO operates",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture cooperation-clue",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: progress records first deliberate confirmation",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture sequence-progress",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: correct sequence opens door once and closes panel",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: opened door collider disabled and visual feedback exists",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: repeated terminal interaction and activation signal are idempotent",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: BMO traverses platforms from terminal using real movement",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: room and opened door traversed without recovery or fixture reposition",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture door-open",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: energy rejected outside range",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: Marceline cannot connect energy",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: partner key cannot connect energy",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: contextual energy starts existing connect clip only",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: repeating while pending has no extra effect",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture energy-action",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: connection completes once and restores normal controls",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: indicator, battery and status reflect success",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: repeated energy interaction and activation signal are idempotent",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: real rendered capture energy-complete",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: energy cancellation clears pending without activation",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: stopped non-ending clip watchdog restores controls and completes once",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: looping instead of finishing clip cannot trap control",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: recovery clears panel and control lock",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: F2 during panel removes old UI and restores both controls",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: F2 during energy clears action, pending and indicator",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: F2 after solving both starts clean test and no stale lock",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: one press with overlapping ranges starts exactly one interaction",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: final confirmation cannot also start energy",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: removing an active terminal restores owner controls",
+          "passed": true
+        },
+        {
+          "check": "BMO P1: Inspector sequence configuration is used by terminal and clue",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: identity/capabilities independent of role",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: visual scene reused, original resource and no distortion",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: BMO body has own proportions and shared foot baseline",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: idle and unchanged movement values",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: instructions and contextual key match role",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture scale-idle",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: partner input does not move BMO",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: own input walks and leaves partner independent",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture walk",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: left facing",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: jump_start moves immediately",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture jump",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture fall",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture land",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: ascent fall landing clips observed and controls restored",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: existing jump strength, gravity and apex preserved",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: left wall and floor collision",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: right wall collision",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: ceiling blocks jump",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: lands on raised platform",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: symbols refused outside range",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: partner in range is refused by capability",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: capability is required even for BMO",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: partner interaction cannot open BMO panel",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: unused ability key does not operate terminals",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: opening press held cannot enter first symbol",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture panel-open",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: panel selection changes without moving BMO",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: partner moves while panel open; cannot select or confirm",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: Escape closes panel and clears local control lock",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: movement available after cancel",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: reopening starts empty and selected circle",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: wrong sequence gives retry without opening door",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture sequence-retry",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: Marceline reaches elevated clue using movement/jumps while BMO operates",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture cooperation-clue",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: progress records first deliberate confirmation",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture sequence-progress",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: correct sequence opens door once and closes panel",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: opened door collider disabled and visual feedback exists",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: repeated terminal interaction and activation signal are idempotent",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: BMO traverses platforms from terminal using real movement",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: room and opened door traversed without recovery or fixture reposition",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture door-open",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: energy rejected outside range",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: Marceline cannot connect energy",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: partner key cannot connect energy",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: contextual energy starts existing connect clip only",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: repeating while pending has no extra effect",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture energy-action",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: connection completes once and restores normal controls",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: indicator, battery and status reflect success",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: repeated energy interaction and activation signal are idempotent",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: real rendered capture energy-complete",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: energy cancellation clears pending without activation",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: stopped non-ending clip watchdog restores controls and completes once",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: looping instead of finishing clip cannot trap control",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: recovery clears panel and control lock",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: F2 during panel removes old UI and restores both controls",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: F2 during energy clears action, pending and indicator",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: F2 after solving both starts clean test and no stale lock",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: one press with overlapping ranges starts exactly one interaction",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: final confirmation cannot also start energy",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: removing an active terminal restores owner controls",
+          "passed": true
+        },
+        {
+          "check": "BMO P2: Inspector sequence configuration is used by terminal and clue",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "regression-verify_fionna",
+      "project": "validation copy with matching game code",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 150,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": "sandbox CA store access",
+      "behaviors": [
+        {
+          "check": "Fionna P1: identity and abilities independent of player",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: original visual reused without distortion",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: human scale, collider and foot baseline aligned with Finn",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: grounded idle and original movement",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render idle-scale",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: partner input cannot move Fionna",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: right walk and separate controls",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render walk",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: left-facing sprite",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: jump_start does not block jump",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render jump",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render fall",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render land",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: ascent fall landing and idle actually observed",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: left wall and floor collision",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: right wall collision",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: ceiling stops ascent",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: raised platform collision",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: no artificial Q/Shift action or push just from proximity",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: player alone cannot activate block plate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: actual movement pushes marked crate onto plate and opens door",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render push-plate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: release stops crate and push pose without jitter",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: walk/jump from solved block through door without fixture placement",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render crank-normal-traversal",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: same traversal reaches and operates crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: reaches passage by climbing test platforms",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: extended passage walked across continuously without reset",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render passage-crossed",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: leftward push uses contact and existing animation",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render push-left",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: crate also stops before the partner without pushing through him",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: crate stops at left wall and cannot tunnel",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: existing reset control restores nearby crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real Marceline without push capability cannot move crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: Finn is legitimately allowed to push same crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: moving away does not pull or carry crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: closed gate physically stops crate; no false push animation",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render blocked-by-door",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: crate cannot cross right wall",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: plate accepts crate and changes texture",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: reset releases plate but door stays permanently open",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: walking on crate top does not push it",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: crank refuses outside range",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: Finn really lacks crank capability and is refused",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: identity alone cannot authorize crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: prompt uses owner role when both players in area",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: other player's interaction cannot operate crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: own key begins original crank clip and only local lock",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render crank-action",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: partner remains controllable during crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: cancel before completion leaves coherent retry state",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: repeat while busy is refused",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: natural finish extends support and restores motion",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: activation and signal remain idempotent",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: support surface matches original visual width and bank height",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render passage-extended",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: stopped clip cancels safely without awarding passage",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: control available after stopped clip",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: incorrect loop cannot keep controls locked",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: zero clip speed has bounded timeout",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: missing clip refuses action without taking controls",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: valid clip can retry after cancellation failures",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: removing active mechanism restores controls without activation",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: occupied path stops platform without moving or trapping Finn",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: real render platform-waiting",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: platform resumes after player walks clear and stays extended",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: permanent support does not retract or lose collider",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: player entering during extension cannot be swept through",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: one contextual press near block and crank starts only crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: room recovery clears local action and leaves both visible",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: restart fixture has active action",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: F2 during action clears locks and pending state",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: restart fixture has both tests solved",
+          "passed": true
+        },
+        {
+          "check": "Fionna P1: F2 after both tests restores saved clean state",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: identity and abilities independent of player",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: original visual reused without distortion",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: human scale, collider and foot baseline aligned with Finn",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: grounded idle and original movement",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render idle-scale",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: partner input cannot move Fionna",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: right walk and separate controls",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render walk",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: left-facing sprite",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: jump_start does not block jump",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render jump",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render fall",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render land",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: ascent fall landing and idle actually observed",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: left wall and floor collision",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: right wall collision",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: ceiling stops ascent",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: raised platform collision",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: no artificial Q/Shift action or push just from proximity",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: player alone cannot activate block plate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: actual movement pushes marked crate onto plate and opens door",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render push-plate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: release stops crate and push pose without jitter",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: walk/jump from solved block through door without fixture placement",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render crank-normal-traversal",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: same traversal reaches and operates crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: reaches passage by climbing test platforms",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: extended passage walked across continuously without reset",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render passage-crossed",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: leftward push uses contact and existing animation",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render push-left",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: crate also stops before the partner without pushing through him",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: crate stops at left wall and cannot tunnel",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: existing reset control restores nearby crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real Marceline without push capability cannot move crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: Finn is legitimately allowed to push same crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: moving away does not pull or carry crate",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: closed gate physically stops crate; no false push animation",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render blocked-by-door",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: crate cannot cross right wall",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: plate accepts crate and changes texture",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: reset releases plate but door stays permanently open",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: walking on crate top does not push it",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: crank refuses outside range",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: Finn really lacks crank capability and is refused",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: identity alone cannot authorize crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: prompt uses owner role when both players in area",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: other player's interaction cannot operate crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: own key begins original crank clip and only local lock",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render crank-action",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: partner remains controllable during crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: cancel before completion leaves coherent retry state",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: repeat while busy is refused",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: natural finish extends support and restores motion",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: activation and signal remain idempotent",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: support surface matches original visual width and bank height",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render passage-extended",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: stopped clip cancels safely without awarding passage",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: control available after stopped clip",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: incorrect loop cannot keep controls locked",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: zero clip speed has bounded timeout",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: missing clip refuses action without taking controls",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: valid clip can retry after cancellation failures",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: removing active mechanism restores controls without activation",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: occupied path stops platform without moving or trapping Finn",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: real render platform-waiting",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: platform resumes after player walks clear and stays extended",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: permanent support does not retract or lose collider",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: player entering during extension cannot be swept through",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: one contextual press near block and crank starts only crank",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: room recovery clears local action and leaves both visible",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: restart fixture has active action",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: F2 during action clears locks and pending state",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: restart fixture has both tests solved",
+          "passed": true
+        },
+        {
+          "check": "Fionna P2: F2 after both tests restores saved clean state",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "regression-qa_cake_regression",
+      "project": "validation copy with matching game code",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 84,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": "sandbox CA store access",
+      "behaviors": [
+        {
+          "check": "Cake P1: identity, role and own capabilities",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: visual scene and original animations reused",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: native size, own shape and foot baseline",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: idle on safe floor",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture scale-idle",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: partner keys cannot move Cake",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: own walk independent and right facing",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: left facing",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: jump begins without lock",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture jump",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture fall",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture land",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: rise fall land and idle observed",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: left wall collision",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: right wall and raised floor collision",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: normal body is physically stopped at low roof",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: context starts low posture without repositioning",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: cancel at clear entrance restores normal shape",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: actual movement reaches inside tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture inside-tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: cannot jump or stand into roof",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: can reverse inside tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: right exit traversed without teleport and tall posture restored",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture right-exit",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: right entrance and left exit work without teleport",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real Fionna lacks crawl and is refused",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: Fionna also blocked by tunnel geometry",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: partner collider was not changed",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: F2 inside tunnel starts with clean posture and controls",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: Cake physically reaches anchor after tunnel and platforms",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: formed bridge on real route",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: entry jump lands on Cake support",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture bridge-entry",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: release with partner on bridge retains support",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: airborne partner retains support",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: partner lands back safely",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture bridge-center",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture bridge-exit",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: existing crank and platform provide independent permanent passage",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: Cake follows only after permanent support exists",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: real capture permanent-passage-test-route",
+          "passed": true
+        },
+        {
+          "check": "Cake P1: F2 clears permanent demo and both characters' state",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: identity, role and own capabilities",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: visual scene and original animations reused",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: native size, own shape and foot baseline",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: idle on safe floor",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture scale-idle",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: partner keys cannot move Cake",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: own walk independent and right facing",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: left facing",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: jump begins without lock",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture jump",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture fall",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture land",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: rise fall land and idle observed",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: left wall collision",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: right wall and raised floor collision",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: normal body is physically stopped at low roof",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: context starts low posture without repositioning",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: cancel at clear entrance restores normal shape",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: actual movement reaches inside tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture inside-tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: cannot jump or stand into roof",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: can reverse inside tunnel",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: right exit traversed without teleport and tall posture restored",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture right-exit",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: right entrance and left exit work without teleport",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real Fionna lacks crawl and is refused",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: Fionna also blocked by tunnel geometry",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: partner collider was not changed",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: F2 inside tunnel starts with clean posture and controls",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: Cake physically reaches anchor after tunnel and platforms",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: formed bridge on real route",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: entry jump lands on Cake support",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture bridge-entry",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: release with partner on bridge retains support",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: airborne partner retains support",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: partner lands back safely",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture bridge-center",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture bridge-exit",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: existing crank and platform provide independent permanent passage",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: Cake follows only after permanent support exists",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: real capture permanent-passage-test-route",
+          "passed": true
+        },
+        {
+          "check": "Cake P2: F2 clears permanent demo and both characters' state",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "regression-verify_cake_bridge",
+      "project": "validation copy with matching game code",
+      "exit": 0,
+      "fresh_report": true,
+      "checks": 28,
+      "failures": 0,
+      "rendered": true,
+      "viewport": "character-room reference",
+      "environment_note": "sandbox CA store access",
+      "behaviors": [
+        {
+          "check": "P1: accepted band endpoint -8.0 has physical entry support",
+          "passed": true
+        },
+        {
+          "check": "P1: cancel while occupied defers loss of support",
+          "passed": true
+        },
+        {
+          "check": "P1: endpoint exit is physical, safe, no recovery",
+          "passed": true
+        },
+        {
+          "check": "P1: accepted band endpoint 8.0 has physical entry support",
+          "passed": true
+        },
+        {
+          "check": "P1: cancel while occupied defers loss of support",
+          "passed": true
+        },
+        {
+          "check": "P1: endpoint exit is physical, safe, no recovery",
+          "passed": true
+        },
+        {
+          "check": "P1: pair recovery cleans all state during source",
+          "passed": true
+        },
+        {
+          "check": "P1: pair recovery cleans all state during growth",
+          "passed": true
+        },
+        {
+          "check": "P1: pair recovery cleans all state during hold",
+          "passed": true
+        },
+        {
+          "check": "P1: pair recovery cleans all state during pending",
+          "passed": true
+        },
+        {
+          "check": "P1: pair recovery cleans all state during retract",
+          "passed": true
+        },
+        {
+          "check": "P1: growth still has no collision",
+          "passed": true
+        },
+        {
+          "check": "P1: mid-growth cancellation leaves no support or lock",
+          "passed": true
+        },
+        {
+          "check": "P1: F2 during full support leaves no abandoned bridge",
+          "passed": true
+        },
+        {
+          "check": "P2: accepted band endpoint -8.0 has physical entry support",
+          "passed": true
+        },
+        {
+          "check": "P2: cancel while occupied defers loss of support",
+          "passed": true
+        },
+        {
+          "check": "P2: endpoint exit is physical, safe, no recovery",
+          "passed": true
+        },
+        {
+          "check": "P2: accepted band endpoint 8.0 has physical entry support",
+          "passed": true
+        },
+        {
+          "check": "P2: cancel while occupied defers loss of support",
+          "passed": true
+        },
+        {
+          "check": "P2: endpoint exit is physical, safe, no recovery",
+          "passed": true
+        },
+        {
+          "check": "P2: pair recovery cleans all state during source",
+          "passed": true
+        },
+        {
+          "check": "P2: pair recovery cleans all state during growth",
+          "passed": true
+        },
+        {
+          "check": "P2: pair recovery cleans all state during hold",
+          "passed": true
+        },
+        {
+          "check": "P2: pair recovery cleans all state during pending",
+          "passed": true
+        },
+        {
+          "check": "P2: pair recovery cleans all state during retract",
+          "passed": true
+        },
+        {
+          "check": "P2: growth still has no collision",
+          "passed": true
+        },
+        {
+          "check": "P2: mid-growth cancellation leaves no support or lock",
+          "passed": true
+        },
+        {
+          "check": "P2: F2 during full support leaves no abandoned bridge",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}
