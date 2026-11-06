@@ -2,7 +2,7 @@ extends "res://scripts/levels/imported_phase_runtime.gd"
 
 @export_range(1,2) var lead_player_id:=1
 
-@export var symbol_sequence: Array[int] = [0, 2, 1, 0]
+@export var symbol_sequence: Array[int] = [0, 2, 1]
 
 const Terminal = preload("res://mechanisms/bmo_terminal.gd")
 

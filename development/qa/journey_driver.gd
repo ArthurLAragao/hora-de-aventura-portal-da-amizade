@@ -11,12 +11,16 @@ var role:=1
 var level: Node2D
 
 func _initialize() -> void:
+	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_ALWAYS_ON_TOP,true)
+	DisplayServer.window_move_to_foreground()
 	if DisplayServer.get_name()!="headless": DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--report="): report_path=arg.trim_prefix("--report=")
 		if arg.begins_with("--capture-dir="): capture_dir=arg.trim_prefix("--capture-dir=")
 		if arg.begins_with("--record-dir="): record_dir=arg.trim_prefix("--record-dir=")
-		if arg=="--resolution=1280x720": viewport_size=Vector2i(1280,720)
+		if arg.begins_with("--resolution="):
+			var size:=arg.trim_prefix("--resolution=").split("x")
+			viewport_size=Vector2i(int(size[0]),int(size[1]))
 		if arg.begins_with("--record-interval="): record_interval=maxi(1,arg.trim_prefix("--record-interval=").to_int())
 	if record_dir!="": DirAccess.make_dir_recursive_absolute(record_dir)
 	call_deferred("run")
@@ -27,7 +31,7 @@ func frames(n: int) -> void:
 		await process_frame
 		recorded_ticks+=1
 		if record_dir!="" and recorded_ticks%record_interval==0:
-			await RenderingServer.frame_post_draw
+			RenderingServer.force_draw(false)
 			root.get_texture().get_image().save_png(record_dir.path_join("%06d.png"%recorded_ticks))
 
 func check(text: String,ok: bool) -> void:
@@ -110,7 +114,7 @@ func push_until(actor: CoopPlayer,predicate: Callable,limit: int=360) -> bool:
 
 func capture(name: String) -> void:
 	if capture_dir.is_empty() or DisplayServer.get_name()=="headless": return
-	await RenderingServer.frame_post_draw
+	RenderingServer.force_draw(false)
 	root.get_texture().get_image().save_png(capture_dir.path_join("p%d-%s.png"%[role,name]))
 
 func stop_test_audio(node: Node) -> void:

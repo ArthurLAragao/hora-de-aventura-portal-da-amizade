@@ -1,91 +1,68 @@
 extends Node2D
-## The original two rotary pieces, presented as one physical candy-workshop circuit.
-const ART = "res://Assets/03_Objects_and_Puzzles/pixel_refinement/"
-var turns: Array[int]=[1,1]
+## Circuito espacial da oficina: dois cotovelos, quatro posições e ligação final por BMO.
+const ART="res://Assets/03_Objects_and_Puzzles/pixel_refinement/"
+const SOCKETS=[Vector2(1432,354),Vector2(1520,284)]
+var turns: Array[int]=[1,3]
 var areas: Array[Area2D]=[]
 var indicators: Array[Label]=[]
 var locked:=false
 var root_level: Node2D
-var rotors: Array[Sprite2D]=[]
-var panel_material: ShaderMaterial
-var conduit_texture: Texture2D
-var _art_state := -1
+var _art_state:=-1
 
-## Prepara as referências e o estado deste componente ao entrar na árvore. Contexto: alinhamento dos dois condutores e apresentação da energia.
+## Reutiliza os alojamentos existentes; somente o segundo conjunto muda de altura.
 func _ready() -> void:
-	root_level=get_parent()
-	texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
-	var panel:=_sprite("candy_circuit_backplate.png",Vector2(1328,308),false)
-	# In front of the level's distant pipes, behind these sockets and the actors.
-	panel.show_behind_parent=true
-	conduit_texture=panel.texture
-	panel_material=ShaderMaterial.new()
-	panel_material.shader=load(ART+"circuit_receiver.gdshader")
-	panel.material=panel_material
-	# Their nodes/signals remain available to the existing energy terminal.
-	# The backplate contains the source and receiver, so they aren't drawn twice.
-	root_level.get_node("Battery").hide()
-	root_level.get_node("EnergyIndicator").hide()
-	for i in 2:
-		var at:=Vector2(1432+i*88,354)
-		_sprite("candy_circuit_housing.png",at,true)
-		rotors.append(_sprite("candy_circuit_rotor.png",at,true))
+	root_level=get_parent();texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+	for at in SOCKETS:
+		var housing:=Sprite2D.new();housing.texture=load(ART+"candy_circuit_housing.png")
+		housing.position=at;housing.show_behind_parent=true;add_child(housing)
 		var area:=Area2D.new();area.position=at;area.collision_layer=0;area.collision_mask=2
-		var shape:=CollisionShape2D.new();var rect:=RectangleShape2D.new();rect.size=Vector2(68,70);shape.shape=rect;area.add_child(shape)
-		var prompt:=Label.new();prompt.position=Vector2(-24,-98);prompt.add_theme_font_size_override("font_size",14)
-		prompt.add_theme_constant_override("outline_size",3);area.add_child(prompt);indicators.append(prompt)
-		add_child(area);areas.append(area)
+		var shape:=CollisionShape2D.new();var rect:=RectangleShape2D.new();rect.size=Vector2(68,70)
+		shape.shape=rect;area.add_child(shape)
+		var prompt:=Label.new();prompt.position=Vector2(-24,-72);prompt.add_theme_font_size_override("font_size",14)
+		prompt.add_theme_constant_override("outline_size",3);area.add_child(prompt)
+		indicators.append(prompt);add_child(area);areas.append(area)
 	_sync_art()
 
-## Cria o sprite local mantendo sua escala nativa e referência de textura.
-func _sprite(file: String,at: Vector2,center: bool) -> Sprite2D:
-	var sprite:=Sprite2D.new();sprite.texture=load(ART+file)
-	sprite.position=at;sprite.centered=center;add_child(sprite)
-	return sprite
-
-## Retorna se os dois condutores estão na orientação que permite conectar energia.
+## A continuidade da rota física corresponde exatamente às posições resolvidas.
 func solved() -> bool:return turns==[0,0]
 
-## Escolhe um único condutor por entrada e preserva o circuito durante a conexão de BMO.
+## Uma entrada escolhe apenas o encaixe mais próximo; o terminal reserva o circuito ao ligar.
 func _process(_delta: float) -> void:
 	for indicator in indicators:indicator.text=""
 	if root_level.energy_terminal.energized:locked=true
-	# A ligação em andamento usa a geometria aceita no início. Esc libera nova tentativa.
-	if locked or root_level.energy_terminal.pending:
-		_sync_art()
-		return
+	if locked or root_level.energy_terminal.pending:_sync_art();return
 	for actor in [root_level.finn,root_level.bmo]:
 		if not actor.has_ability(&"lever") or actor.movement_locked:continue
-		var nearest:=-1
-		var distance:=INF
+		var nearest:=-1;var distance:=INF
 		for i in areas.size():
 			if not areas[i].overlaps_body(actor):continue
 			var candidate: float=actor.global_position.distance_squared_to(areas[i].global_position)
-			if candidate<distance:
-				nearest=i;distance=candidate
+			if candidate<distance:nearest=i;distance=candidate
 		if nearest<0:continue
 		indicators[nearest].text=("E" if actor.player_id==1 else "Enter")+": girar"
-		if Input.is_action_just_pressed(actor.get_interact_action()):turns[nearest]=1-turns[nearest]
+		if Input.is_action_just_pressed(actor.get_interact_action()):turns[nearest]=posmod(turns[nearest]+1,4)
 	_sync_art()
 
-## Atualiza orientação e receptor somente quando o estado visual muda.
+## Redesenha somente ao girar uma peça ou energizar o circuito.
 func _sync_art() -> void:
-	var state:=turns[0]+turns[1]*2+(4 if locked else 0)
+	var state:=turns[0]+turns[1]*4+(16 if locked else 0)
 	if state==_art_state:return
-	_art_state=state
-	for i in rotors.size():
-		# Exact quarter turns preserve native pixels and make the broken route visible.
-		rotors[i].rotation=0 if turns[i]==0 else PI*0.5
-		rotors[i].modulate=Color.WHITE if locked else Color("e2d4bd")
-	panel_material.set_shader_parameter("powered",locked)
-	queue_redraw()
+	_art_state=state;queue_redraw()
 
-## Desenha a apresentação local; este método não concede progresso nem altera colisões. Contexto: alinhamento dos dois condutores e apresentação da energia.
+## Desenha cobre com contorno e luz; a mesma linha mostra a conexão real entre encaixes.
+func conduit(points: PackedVector2Array,powered: bool) -> void:
+	draw_polyline(points,Color("493b50"),10)
+	draw_polyline(points,Color("b48058"),6)
+	draw_polyline(points,Color("fff0b0") if powered else Color("e4b57a"),2)
+
+## Integra fonte, cotovelos e receptor sem processar imagens durante a execução.
 func _draw() -> void:
-	# Continuous sockets join the two interactive housings to the source/receiver.
-	# Decoration only: no new input, puzzle conditions or collision.
-	for span in [[1372,1408],[1456,1496],[1544,1570]]:
-		var x: int=span[0];var width: int=span[1]-span[0]
-		for offset in range(0,width,24):
-			var length:=mini(24,width-offset)
-			draw_texture_rect_region(conduit_texture,Rect2(x+offset,350,length,8),Rect2(72,66,length,8))
+	conduit(PackedVector2Array([Vector2(1360,366),Vector2(1360,354),Vector2(1408,354)]),locked)
+	conduit(PackedVector2Array([Vector2(1432,330),Vector2(1432,284),Vector2(1496,284)]),locked)
+	conduit(PackedVector2Array([Vector2(1520,308),Vector2(1520,312),Vector2(1576,312),Vector2(1576,366)]),locked)
+	for i in 2:
+		var points:=PackedVector2Array([Vector2(-24,0),Vector2.ZERO,Vector2(0,-24 if i==0 else 24)])
+		for k in points.size():points[k]=points[k].rotated(turns[i]*PI*0.5).round()+SOCKETS[i]
+		conduit(points,locked)
+		draw_rect(Rect2(SOCKETS[i]-Vector2(4,4),Vector2(8,8)),Color("493b50"))
+		draw_rect(Rect2(SOCKETS[i]-Vector2(2,2),Vector2(4,4)),Color("f4d79c"))

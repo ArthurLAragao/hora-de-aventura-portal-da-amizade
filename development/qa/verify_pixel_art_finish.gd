@@ -30,23 +30,23 @@ func run() -> void:
 	await open(4)
 	level.finn.position=Vector2(1260,350);level.bmo.position=Vector2(1320,350)
 	await frames(25)
-	check("circuit starts with clearly vertical disconnected conductors",level.connections.turns==[1,1] and is_equal_approx(level.connections.rotors[0].rotation,PI*0.5))
-	check("receiver begins unpowered",not level.connections.locked and not level.connections.panel_material.get_shader_parameter("powered"))
+	check("circuit starts with disconnected elbows at different heights",level.connections.turns==[1,3] and level.connections.areas[0].position.y>level.connections.areas[1].position.y)
+	check("receiver begins unpowered",not level.connections.locked and not level.energy_terminal.energized)
 	await capture("pixel-circuit-disconnected-%d"%viewport_size.x)
 	await circuit_detail("disconnected")
 	level.finn.position=Vector2(1432,350);await frames(8)
-	await tap(level.finn,"interact")
+	for turn in 3:await tap(level.finn,"interact")
 	check("original contextual input rotates the first conductor",level.connections.turns[0]==0)
-	await walk(level.finn,1520);await tap(level.finn,"interact")
-	check("both physical conductor paths align",level.connections.solved() and is_zero_approx(level.connections.rotors[1].rotation))
+	await jump(level.finn,1520);await tap(level.finn,"interact")
+	check("both physical conductor paths align",level.connections.solved() and level.connections.turns[1]==0)
 	await walk(level.finn,1260)
 	await capture("pixel-circuit-aligned-%d"%viewport_size.x)
 	await tap(level.bmo,"interact");await frames(100)
-	check("existing BMO action powers receiver and opens original gate",level.energy_terminal.energized and level.energy_gate.is_open and level.connections.locked and level.connections.panel_material.get_shader_parameter("powered"))
+	check("existing BMO action powers receiver and opens original gate",level.energy_terminal.energized and level.energy_gate.is_open and level.connections.locked and level.connections.solved())
 	await capture("pixel-circuit-powered-%d"%viewport_size.x)
 	await circuit_detail("powered")
 	await open(4)
-	check("scene restart restores circuit and door visuals",not level.connections.locked and not level.energy_gate.is_open and level.connections.turns==[1,1])
+	check("scene restart restores circuit and door visuals",not level.connections.locked and not level.energy_gate.is_open and level.connections.turns==[1,3])
 	await finish("Native pixel art and live circuit presentation")
 
 func open(number: int) -> void:
@@ -66,9 +66,9 @@ func pixel_palette(img: Image,limit: int) -> bool:
 
 func circuit_detail(state: String) -> void:
 	if DisplayServer.get_name()=="headless" or capture_dir=="":return
-	await RenderingServer.frame_post_draw
+	RenderingServer.force_draw(false)
 	var canvas:=root.get_final_transform()*root.get_canvas_transform()
-	var start:=Vector2i(canvas*Vector2(1328,308))
+	var start:=Vector2i(canvas*Vector2(1328,252))
 	var end:=Vector2i(canvas*Vector2(1584,388))
 	var detail:=root.get_texture().get_image().get_region(Rect2i(start,end-start))
 	detail.resize(detail.get_width()*4,detail.get_height()*4,Image.INTERPOLATE_NEAREST)

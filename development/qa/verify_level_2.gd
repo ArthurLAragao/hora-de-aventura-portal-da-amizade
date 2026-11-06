@@ -9,9 +9,13 @@ var capture_dir:=""
 var report_path:=""
 var viewport_size:=Vector2i(1152,648)
 func _initialize() -> void:
+	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_ALWAYS_ON_TOP,true)
+	DisplayServer.window_move_to_foreground()
 	if DisplayServer.get_name()!="headless": DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 	for arg in OS.get_cmdline_user_args():
-		if arg=="--resolution=1280x720":viewport_size=Vector2i(1280,720)
+		if arg.begins_with("--resolution="):
+			var size:=arg.trim_prefix("--resolution=").split("x")
+			viewport_size=Vector2i(int(size[0]),int(size[1]))
 		if arg.begins_with("--report="): report_path=arg.trim_prefix("--report=")
 		if arg.begins_with("--capture-dir="): capture_dir=arg.trim_prefix("--capture-dir=")
 	call_deferred("run")
@@ -34,6 +38,7 @@ func until(predicate: Callable,count: int=240) -> bool:
 func fresh(slot: int,start: int=0) -> void:
 	release()
 	if is_instance_valid(room):
+		stop_test_audio(room)
 		room.queue_free()
 		await frames(4)
 	role=slot
@@ -72,7 +77,7 @@ func jump(actor: CoopPlayer,target: float) -> bool:
 	return reached
 func capture(label: String) -> void:
 	if capture_dir.is_empty() or DisplayServer.get_name()=="headless": return
-	await RenderingServer.frame_post_draw
+	RenderingServer.force_draw(false)
 	root.get_texture().get_image().save_png(capture_dir.path_join("level2-p%d-%s.png"%[role,label]))
 func has_clear_body(actor: CoopPlayer) -> bool:
 	var collider:=actor.get_node("CollisionShape2D") as CollisionShape2D
@@ -187,10 +192,12 @@ func run() -> void:
 		await fresh(2,start)
 		check("explicit test start %d has safe floor and label"%start,cake.is_on_floor() and fionna.is_on_floor() and has_clear_body(cake) and has_clear_body(fionna) and room.get_node("Instructions/Text").text.contains("INÍCIO DE TESTE"))
 	release()
+	stop_test_audio(room)
 	room.queue_free()
 	await frames(4)
 	if not report_path.is_empty(): FileAccess.open(report_path,FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures,"headless":DisplayServer.get_name()=="headless","viewport":str(root.size),"full_phase_completion":true,"fixture_positions_are_route_evidence":false},"\t"))
 	print("Level2 checks: ",checks.size()," failures: ",failures)
+	OS.delay_msec(160)
 	quit(0 if failures==0 else 1)
 
 func ridge(actor: CoopPlayer) -> bool:
@@ -199,3 +206,7 @@ func ridge(actor: CoopPlayer) -> bool:
 	if not await jump(actor,1280):return false
 	if not await jump(actor,1312):return false
 	return await walk(actor,1424)
+
+func stop_test_audio(node: Node) -> void:
+	for child in node.get_children():stop_test_audio(child)
+	if node is AudioStreamPlayer or node is AudioStreamPlayer2D or node is AudioStreamPlayer3D:node.stop()

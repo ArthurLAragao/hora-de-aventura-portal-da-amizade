@@ -4,7 +4,7 @@ const B=preload("res://scripts/core/journey_build.gd")
 const ENV="res://Assets/02_Environments/05_mirror_tower/"
 @export_range(1,2) var lead_player_id:=1
 @export_range(1,16) var reflection_limit:=12
-@export var initial_orientations: Array[int]=[1,0,0,1,0,1]
+@export var initial_orientations: Array[int]=[1,0,0,1,0,0]
 var marceline: CoopPlayer
 var cake: CoopPlayer
 var mirrors: Array[Dictionary]=[]
@@ -63,13 +63,15 @@ func _ready() -> void:
 	add_mirror(Vector2(980,336),1,&"float",1)
 	add_receiver(Vector2(1056,336),1,"○")
 	emitters.append({"at":Vector2(780,480),"dir":Vector2.DOWN,"sector":1})
-	# Dois receptores independentes: ajustes persistem, sem manter teclas pressionadas.
+	# Dois feixes compartilham o espelho superior: cada ajuste influencia o mesmo sistema.
 	add_mirror(Vector2(1400,488),2,&"crawl",0)
-	add_receiver(Vector2(1510,488),2,"△")
+	add_receiver(Vector2(1510,336),2,"△")
 	emitters.append({"at":Vector2(1400,480),"dir":Vector2.DOWN,"sector":2})
 	add_mirror(Vector2(1620,336),2,&"float",1)
-	add_receiver(Vector2(1656,336),2,"□")
-	emitters.append({"at":Vector2(1620,488),"dir":Vector2.UP,"sector":2})
+	add_receiver(Vector2(1620,248),2,"□")
+	emitters.append({"at":Vector2(1700,336),"dir":Vector2.LEFT,"sector":2})
+	# O relé fixo recebe Cake depois do teto; nenhum raio atravessa a rocha do túnel.
+	add_mirror(Vector2(1620,488),2,&"",0)
 	B.area(self,"CheckpointArea",Vector2(1230,475),Vector2(80,50))
 	checkpoint_sprite=B.sprite(self,"Checkpoint",B.OBJECTS+"checkpoint_off.png",Vector2(1220,468))
 	crystal=load("res://crystal.tscn").instantiate();crystal.name="FriendshipCrystal";crystal.position=Vector2(1940,467);add_child(crystal)

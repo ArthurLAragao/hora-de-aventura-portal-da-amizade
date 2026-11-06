@@ -13,6 +13,8 @@ var checkpoint_flag: Sprite2D
 var recovery_count := 0
 var tunnel_visited := false
 var first_unlocked := false
+var counterweight: PressurePlate
+var counterweight_link: Node2D
 var _starts: Array[Vector2]=[]
 @onready var cake=$Cake
 @onready var fionna=$Fionna
@@ -40,6 +42,7 @@ func _ready() -> void:
 	if test_start==3: _unlock_first()
 	_starts=[cake.position,fionna.position]
 	_setup_finish()
+	_setup_counterweight()
 	var ck:="A/D, Espaço/W, E, Q" if cake_player_id==1 else "Setas, Cima, Enter, Shift direito"
 	var fk:="A/D, Espaço/W, E; R restaura bloco" if fionna.player_id==1 else "Setas, Cima, Enter; Backspace restaura bloco"
 	$Instructions/Text.text="REINO GELADO • Cake P%d: %s • Fionna P%d: %s\nBloco como degrau; Cake rasteja e aciona o interruptor. Depois, manivelas e ponte. F2 reinicia; Esc cancela.\nCristal e saída: áreas reservadas; coleta/conclusão ainda pendentes.%s" % [cake_player_id,ck,fionna.player_id,fk,"\nINÍCIO DE TESTE: não representa progressão normal." if test_start>0 else ""]
@@ -87,6 +90,9 @@ func _build_decoration() -> void:
 ## Libera a primeira etapa após a condição prevista ser cumprida.
 func _unlock_first() -> void:
 	first_unlocked=true
+	if is_instance_valid(counterweight):
+		counterweight.set("completed",true)
+		counterweight_link.queue_redraw()
 	first_crank.set_deferred("monitoring",true)
 	$SwitchIndicator.modulate=Color(0.65,1,0.7)
 	$SwitchHint.text="V Interruptor acionado — manivela liberada"
@@ -103,7 +109,7 @@ func _process(_delta: float) -> void:
 	if not first_unlocked and $SwitchArea.overlaps_body(cake) and tunnel_visited:
 		$SwitchHint.text=("E" if cake.player_id==1 else "Enter")+": liberar a manivela"
 	if Input.is_action_just_pressed(cake.get_interact_action()) and not cake.movement_locked:
-		if not first_unlocked and tunnel_visited and $SwitchArea.overlaps_body(cake) and cake.has_ability(&"crawl"):
+		if not first_unlocked and tunnel_visited and counterweight.is_active() and $SwitchArea.overlaps_body(cake) and cake.has_ability(&"crawl"):
 			_unlock_first()
 		elif cake.crawling: cake.request_stand()
 		else: tunnel.interact(cake)
@@ -177,3 +183,23 @@ func _complete_level() -> void:
 	cake.process_mode=Node.PROCESS_MODE_DISABLED;fionna.process_mode=Node.PROCESS_MODE_DISABLED
 	final_exit.completion_label.hide()
 	$Instructions/Text.text="Cristal recuperado! Vocês atravessaram juntos.\nF2: repetir • Fases: escolher outra aventura."
+
+## O bloco tem dois usos: degrau para Fionna e contrapeso para o interruptor de Cake.
+func _setup_counterweight() -> void:
+	counterweight=preload("res://scripts/core/journey_build.gd").plate(self,"Counterweight",Vector2(408,519),&"",true)
+	counterweight.activation_changed.connect(_counterweight_changed)
+	counterweight_link=Node2D.new();counterweight_link.name="CounterweightLink";counterweight_link.z_index=2
+	add_child(counterweight_link);counterweight_link.draw.connect(_draw_counterweight_link)
+	_counterweight_changed(false)
+
+## A relação fica desenhada no gelo; o circuito permanece conquistado após a liberação.
+func _counterweight_changed(_active: bool) -> void:
+	if not first_unlocked:$SwitchIndicator.modulate=Color.WHITE if counterweight.is_active() else Color("65788a")
+	counterweight_link.queue_redraw()
+
+## Um veio mecânico abaixo da superfície conecta peso e interruptor sem novas colisões.
+func _draw_counterweight_link() -> void:
+	var active:=first_unlocked or (is_instance_valid(counterweight) and counterweight.is_active())
+	var route:=PackedVector2Array([Vector2(408,522),Vector2(408,532),Vector2(648,532),Vector2(648,514)])
+	counterweight_link.draw_polyline(route,Color("284957"),6)
+	counterweight_link.draw_polyline(route,Color("d8ead3") if active else Color("77919c"),2)

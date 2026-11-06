@@ -8,8 +8,8 @@ def main():
     parser.add_argument('--project',type=Path,default=Path(__file__).resolve().parent.parent/'jogo')
     parser.add_argument('--godot',required=True)
     parser.add_argument('--output',type=Path,default=Path(tempfile.gettempdir())/'portal-da-amizade-qa')
-    parser.add_argument('--resolution',default='1280x720',choices=['1280x720','1152x648'])
-    parser.add_argument('test',choices=['verify_journey_1','verify_level_2','verify_final_regions','verify_journey_6','verify_journey_safety','verify_regional_states','verify_menu','verify_pixel_art_finish','verify_feedback234','verify_optimization','verify_mirror_tower','verify_mirror_safety','verify_challenge_edges','verify_friendship_story','verify_clean_presentation','verify_screens','verify_design_review','verify_adventure_presentation'])
+    parser.add_argument('--resolution',default='1280x720',choices=['1280x720','1152x648','1920x1080'])
+    parser.add_argument('test',choices=['verify_layout_polish','verify_journey_1','verify_level_2','verify_final_regions','verify_journey_6','verify_journey_safety','verify_regional_states','verify_menu','verify_pixel_art_finish','verify_feedback234','verify_optimization','verify_mirror_tower','verify_mirror_safety','verify_challenge_edges','verify_friendship_story','verify_clean_presentation','verify_screens','verify_design_review','verify_adventure_presentation'])
     args=parser.parse_args();project=args.project.resolve();output=args.output.resolve()
     if not (project/'project.godot').is_file():parser.error('project.godot not found')
     if output.is_relative_to(project):parser.error('QA output must be outside the game project')
@@ -22,7 +22,7 @@ def main():
         report=output/(args.test+'.json')
         if report.exists():report=output/(args.test+'-'+str(__import__('time').time_ns())+'.json')
         command=[args.godot,'--path',str(project),'--fixed-fps','60','--audio-driver','Dummy','--script',str(qa/(args.test+'.gd')),'--','--report='+str(report),'--capture-dir='+str(output)]
-        if args.resolution=='1280x720':command+=['--resolution=1280x720']
+        command+=['--resolution='+args.resolution]
         result=subprocess.run(command,capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=240)
         console=result.stdout+result.stderr
         (output/(report.stem+'.log')).write_text(console,encoding='utf-8')

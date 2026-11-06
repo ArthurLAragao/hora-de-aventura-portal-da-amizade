@@ -13,12 +13,16 @@ func _ready() -> void:
 	if region==3:
 		platform("LowerApproach",Vector2(384,336),64)
 		platform("MusicBalcony",Vector2(512,280),112)
-		platform("EchoIslandNear",Vector2(1376,370),96)
-		platform("EchoIslandFar",Vector2(1488,338),96)
+		platform("EchoIslandNear",Vector2(1384,334),96)
+		platform("EchoIslandFar",Vector2(1496,306),96)
+		platform("DuetStep",Vector2(1632,350),64)
+		platform("DuetBalcony",Vector2(1712,306),96)
 	elif region==4:
 		platform("LowerServiceWalk",Vector2(944,324),96)
 		platform("UpperServiceWalk",Vector2(1072,264),112)
 		platform("ReturnServiceWalk",Vector2(1200,324),80)
+		platform("CircuitServiceWalk",Vector2(1520,320),96)
+		get_node("CircuitServiceWalk").get_child(0).one_way_collision=true
 	if not Engine.is_editor_hint():_configure.call_deferred()
 
 ## Cria a plataforma local e recorta a textura final na largura real do apoio.
@@ -45,10 +49,10 @@ func _configure() -> void:
 		var ground: TileMapLayer=root_level.get_node("TileMapLayer")
 		for cell in ground.get_used_cells():
 			if cell.x>=42 and cell.x<=47:ground.erase_cell(cell)
-		root_level.get_node("EnergyTerminal").position.y=306
+		root_level.get_node("EnergyTerminal").position.y=274
 		for x in [1712,1808]:
 			var plate:=load("res://pressure_plate.tscn").instantiate() as PressurePlate
-			plate.name="DuetPlate"+str(x);plate.position=Vector2(x,394)
+			plate.name="DuetPlate"+str(x);plate.position=Vector2(x,306 if x==1712 else 394)
 			add_child(plate);plates.append(plate)
 			var sprite:=plate.get_node("Sprite2D") as Sprite2D
 			var used:=sprite.texture.get_image().get_used_rect()
@@ -59,7 +63,7 @@ func _configure() -> void:
 	crystal.monitoring=false
 	var surfaces: Dictionary
 	if region==3:
-		surfaces={"SymbolTerminal/Sprite2D":394,"EnergyTerminal/Sprite2D":338,"MusicPanel/Sprite2D":280,"Battery":394,"EnergyIndicator":394,"Checkpoint/Sprite2D":394,"CooperativeExit/Sprite2D":394}
+		surfaces={"SymbolTerminal/Sprite2D":394,"EnergyTerminal/Sprite2D":306,"MusicPanel/Sprite2D":280,"Battery":394,"EnergyIndicator":394,"Checkpoint/Sprite2D":394,"CooperativeExit/Sprite2D":394}
 	else:
 		surfaces={"EnergyTerminal/Sprite2D":388,"TransportTerminal/Sprite2D":388,"Battery":388,"EnergyIndicator":388,"Checkpoint/Sprite2D":388,"CooperativeExit/Sprite2D":388}
 	# Native pixel size locally; the shared checkpoint scene and its area stay intact.

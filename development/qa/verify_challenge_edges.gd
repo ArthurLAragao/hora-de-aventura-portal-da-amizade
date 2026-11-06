@@ -37,7 +37,9 @@ func run() -> void:
 	for slot in [1,2]:
 		await fresh("res://level_4.tscn",slot,"lead_player_id")
 		a=level.finn;b=level.bmo
-		a.position=Vector2(1476,352);b.position=Vector2(1320,352);await frames(12)
+		# Sobreposição provocada apenas na fixture; no percurso os encaixes ficam em alturas diferentes.
+		level.connections.areas[1].position=level.connections.areas[0].position
+		a.position=Vector2(1432,352);b.position=Vector2(1320,352);await frames(12)
 		check("fixture de sobreposição real dos dois condutores",level.connections.areas.all(func(area):return area.overlaps_body(a)))
 		var before: Array=level.connections.turns.duplicate()
 		await capture("circuit-overlap-before")
@@ -45,6 +47,7 @@ func run() -> void:
 		var changes:=int(level.connections.turns[0]!=before[0])+int(level.connections.turns[1]!=before[1])
 		check("uma entrada gira somente um condutor",changes==1)
 		await capture("circuit-overlap-after")
+		level.connections.areas[1].position=Vector2(1520,284)
 		level.connections.turns.assign([0,0])
 		a.position=Vector2(1432,352);b.position=Vector2(1320,352);await frames(12)
 		await tap(b,"interact",1)
@@ -55,7 +58,8 @@ func run() -> void:
 		check("cancelar conexão devolve controles sem conceder energia",not b.movement_locked and not level.energy_terminal.pending and not level.energy_terminal.energized)
 		await tap(a,"interact")
 		check("cancelamento permite realinhar circuito",not level.connections.solved() and not level.connections.locked)
-		await tap(a,"interact");await tap(b,"interact");await frames(100)
+		for turn in 3:await tap(a,"interact")
+		await tap(b,"interact");await frames(100)
 		await tap(b,"interact");await frames(100)
 		check("energia conclui uma vez após nova tentativa",level.energy_terminal.energized and level.energy_terminal.activation_count==1 and level.energy_gate.is_open and not b.movement_locked)
 	for slot in [1,2]:
@@ -67,11 +71,11 @@ func run() -> void:
 		var partner_x: float=a.position.x
 		await walk(a,1000)
 		check("parceira continua controlável durante painel",a.position.x>partner_x+20 and level.symbol_terminal.panel_open and level.symbol_terminal.entered.is_empty())
-		for i in 4:await tap(b,"interact")
+		for i in 3:await tap(b,"interact")
 		check("sequência errada permite tentar novamente",level.symbol_terminal.attempts==1 and not level.symbol_terminal.solved and level.symbol_terminal.entered.is_empty() and not level.get_node("SymbolGate").is_open)
 		await key(KEY_ESCAPE)
 		check("Esc fecha painel e devolve controles",not level.symbol_terminal.panel_open and not b.movement_locked)
 		await tap(b,"interact")
-		await tap(b,"interact");await tap(b,"right");await tap(b,"right");await tap(b,"interact");await tap(b,"left");await tap(b,"interact");await tap(b,"left");await tap(b,"interact")
+		await tap(b,"interact");await tap(b,"right");await tap(b,"right");await tap(b,"interact");await tap(b,"left");await tap(b,"interact")
 		check("nova tentativa correta abre somente a porta correspondente",level.symbol_terminal.solved and level.symbol_terminal.activation_count==1 and level.get_node("SymbolGate").is_open and not b.movement_locked)
 	await finish("Limites de desafios: reinício, checkpoint e circuito")

@@ -53,7 +53,7 @@ func _cave() -> void:
 	for x in [48,368,912,1152,1776,2144]:prop("column",x,394,2,"Structures",Color("8988ad"))
 	for x in [32,160,400,896,1184,1648,2112]:prop(["grass_a","grass_b","grass_c"][posmod(x/16,3)],x,394,1)
 	# This tuft belongs to the existing near echo island, not the removed floor.
-	prop("grass_b",1392,370,1)
+	prop("grass_b",1392,334,1)
 	for x in [488,536]:prop("vine",x,352,2,"Distant",Color("7587b0"))
 	prop("vine",1416,390,2,"Distant",Color("7587b0"))
 	for x in [464,1016,1536,2048]:prop("lantern",x,230,1,"Structures")

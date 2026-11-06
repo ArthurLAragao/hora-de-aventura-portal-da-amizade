@@ -56,18 +56,16 @@ func route() -> void:
 	await tap(b,"interact")
 	await tap(b,"left")
 	await tap(b,"interact")
-	await tap(b,"left")
-	await tap(b,"interact")
 	check("3: entered sequence opens symbol gate and releases controls",level.symbol_terminal.solved and level.get_node("SymbolGate").is_open and not b.movement_locked)
-	check("3: Marceline crosses the stepped echo islands",await echo_cross(a,1512))
-	check("3: BMO crosses the stepped echo islands",await echo_cross(b,1470))
+	check("3: Marceline crosses the stepped echo islands",await echo_cross(a,1520))
+	check("3: BMO crosses the stepped echo islands",await echo_cross(b,1480))
 	await tap(b,"interact")
 	await frames(100)
 	check("3: energy completes and releases BMO",level.energy_terminal.energized and not b.movement_locked)
 	check("3: revealed visual clue",level.get_node("MusicalClue").visible)
-	check("3: both regain the far bank",await jump(a,1648) and await jump(b,1600))
-	await walk(a,1712)
-	await walk(b,1808)
+	check("3: both regain the far bank",await jump(a,1632) and await jump(b,1600))
+	check("3: elevated duet balcony",await jump(a,1712))
+	check("3: BMO crosses below the duet return",await jump(b,1788) and await walk(b,1808))
 	await frames(6)
 	check("3: two plates confirm the duet",level.get_node("RegionalLayout").confirmation_solved)
 	await capture("cave-duet-crystal")
@@ -98,8 +96,8 @@ func route() -> void:
 	await duo(a,b,1056)
 	check("4: checkpoint earned after log gate",level.get_node("Checkpoint").activated)
 	await walk(a,1432)
-	await tap(a,"interact")
-	await walk(a,1520)
+	for turn in 3:await tap(a,"interact")
+	check("4: upper socket reached by jump",await jump(a,1520))
 	await tap(a,"interact")
 	check("4: physical conduit shapes aligned",level.connections.solved())
 	await walk(a,1580)
@@ -119,7 +117,7 @@ func route() -> void:
 
 func echo_cross(actor: CoopPlayer,goal: float) -> bool:
 	if not await walk(actor,1288):return false
-	if not await jump(actor,1376):return false
+	if not await jump(actor,1384):return false
 	if not await walk(actor,1400):return false
 	if not await jump(actor,goal):return false
 	return actor.is_on_floor()
