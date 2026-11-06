@@ -7,6 +7,8 @@ enum Step { NONE, SOURCE, GROW, WAIT_RENDER, FULL, SHRINK, REVERSE }
 @export_range(0.2,2,0.05) var shrink_duration := 0.75
 @export_range(24,90,1) var offer_radius:=64.0
 @export_range(48,140,1) var approach_speed:=96.0
+## Comprimento adicional local. Zero preserva todas as âncoras aprovadas.
+@export_range(0,160,1) var extra_length:=0.0
 var approach: RefCounted
 var approach_actor: CoopPlayer
 var state := State.IDLE
@@ -30,6 +32,7 @@ func _ready() -> void:
 	$CollisionShape2D.shape.size.x=offer_radius*2
 	visual=Node2D.new()
 	visual.set_script(load("res://scripts/bridges/cake_bridge_visual.gd"))
+	visual.set("extra_length",extra_length)
 	visual.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 	add_child(visual)
 	visual.hide()
@@ -38,7 +41,7 @@ func _ready() -> void:
 	support.collision_mask=0
 	add_child(support)
 	var shape:=CollisionPolygon2D.new()
-	shape.polygon=PackedVector2Array([Vector2(-13,20),Vector2(112,20),Vector2(112,32),Vector2(-13,32)])
+	shape.polygon=PackedVector2Array([Vector2(-13,20),Vector2(112+extra_length,20),Vector2(112+extra_length,32),Vector2(-13,32)])
 	support.add_child(shape)
 
 ## Retorna a posição de referência em que a habilidade é oferecida ao jogador.
@@ -185,7 +188,7 @@ func get_dependents() -> Array[CoopPlayer]:
 		if actor.is_on_floor() and actor.velocity.y>=0 and box.end.y>_locked_origin.y+23: continue
 		var predicted:=Rect2(box.position+global_transform.basis_xform_inv(actor.velocity)*0.12,box.size)
 		var swept:=box.merge(predicted)
-		if swept.end.x>_locked_origin.x-13 and swept.position.x<_locked_origin.x+112 and box.position.y<_locked_origin.y+34: result.append(actor)
+		if swept.end.x>_locked_origin.x-13 and swept.position.x<_locked_origin.x+112+extra_length and box.position.y<_locked_origin.y+34: result.append(actor)
 	return result
 
 ## Encerra a habilidade durante recuperação/limpeza e restaura sprite, controles e apoio.

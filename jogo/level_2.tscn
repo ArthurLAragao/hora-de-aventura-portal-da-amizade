@@ -24,7 +24,7 @@
 
 [ext_resource type="SpriteFrames" path="res://Assets/03_Objects_and_Puzzles/Godot/crank.tres" id="9"]
 
-[ext_resource type="Script" path="res://mechanisms/fionna_platform.gd" id="10"]
+[ext_resource type="Script" path="res://scripts/puzzles/ice_passage.gd" id="10"]
 
 [ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="11"]
 
@@ -134,6 +134,7 @@ position = Vector2(1488,487)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7")
+extra_length = 96.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Anchor"]
 position = Vector2(0,12)
@@ -154,7 +155,7 @@ theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
 theme_override_constants/outline_size = 5
 
 [node name="Crank" type="Area2D" parent="."]
-position = Vector2(1640,487)
+position = Vector2(1736,487)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("8")
@@ -188,11 +189,13 @@ theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
 theme_override_constants/outline_size = 5
 
 [node name="ExtendPlatform" type="AnimatableBody2D" parent="."]
-position = Vector2(1632,519)
+position = Vector2(1696,519)
 z_index = 1
 collision_layer = 1
 collision_mask = 2
 script = ExtResource("10")
+direction = -1
+length = 192.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ExtendPlatform"]
 position = Vector2(1,6)
@@ -258,7 +261,7 @@ tile_set = ExtResource("4")
 format = 2
 
 [node name="FirstCrank" type="Area2D" parent="."]
-position = Vector2(760,487)
+position = Vector2(696,487)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("8")
@@ -292,12 +295,13 @@ theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
 theme_override_constants/outline_size = 5
 
 [node name="FirstPlatform" type="AnimatableBody2D" parent="."]
-position = Vector2(800,519)
+position = Vector2(736,519)
 z_index = 1
 collision_layer = 1
 collision_mask = 2
 script = ExtResource("10")
-extension = Vector2(96,0)
+direction = 1
+length = 192.0
 
 [node name="Sprite2D" type="Sprite2D" parent="FirstPlatform"]
 position = Vector2(1,6)

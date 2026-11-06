@@ -54,7 +54,7 @@ func _build_terrain() -> void:
 	terrain.clear()
 	# 32×32 original ice grid. Flat support at world Y519.
 	for column in 72:
-		if column in [27,28,47,48]: continue
+		if column in [23,24,25,26,27,28,47,48,49,50,51,52]: continue
 		for row in range(16,21): terrain.set_cell(0,Vector2i(column,row),0,Vector2i(1,0 if row==16 else 1))
 	$Roof.clear()
 	for column in range(14,19):

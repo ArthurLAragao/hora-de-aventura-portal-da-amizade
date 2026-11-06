@@ -38,6 +38,14 @@ func configure() -> void:
 	# Os antigos arcos finos não competem mais com a arquitetura regional final.
 	var identity=level.get_node_or_null("LevelIdentity/ArquiteturaDistante")
 	if identity!=null:identity.hide()
+	if phase==3:
+		for x in [48,832,1152,1888,2112]:
+			var rock:=Sprite2D.new();rock.texture=load("res://Assets/02_Environments/manual_review/cave_rocks.png")
+			rock.position=Vector2(x,floor_y-52);rock.z_index=-4;rock.modulate=Color("8c88a7");add_child(rock)
+	if phase==4 and panorama is Sprite2D:
+		var material:=ShaderMaterial.new();var shader:=Shader.new()
+		shader.code="shader_type canvas_item; void fragment(){ vec4 c=texture(TEXTURE,UV)*COLOR; float g=dot(c.rgb,vec3(0.299,0.587,0.114)); c.rgb=mix(vec3(g),c.rgb,0.52)*0.88; COLOR=c;}"
+		material.shader=shader;panorama.material=material
 	build_groups()
 
 ## Agrupa flora nativa nas margens dos ambientes, mantendo áreas de mecanismo livres.
@@ -122,20 +130,7 @@ func draw_distance() -> void:
 				for dx in [0,36,72]:
 					distant.draw_rect(Rect2(x+dx-12,411,28,7),Color("b8d8dd"))
 					distant.draw_rect(Rect2(x+dx+6,418,3,14+posmod(dx,13)),Color("83afc8"))
-		3:
-			for spec in [[32,88],[832,66],[1152,92],[1888,70],[2112,84]]:
-				var x: int=spec[0];var height: int=spec[1]
-				for step in range(ceili(height/12.0)):
-					distant.draw_rect(Rect2(x-step*3,floor_y-height+step*12,18+step*7,height-step*12),Color("343751"))
-				for step in 4:distant.draw_rect(Rect2(x+3+step*2,floor_y-height+8+step*12,3,11),Color("64798b"))
-		4:
-			for x in [32,856,1752,2080]:
-				pier(x,388,138,Color("725568"),Color("ceab92"))
-				# Tanques de fundo: silhueta arredondada em degraus, sem aparentar novo terminal.
-				distant.draw_rect(Rect2(x+12,254,40,12),Color("ba9b90"))
-				distant.draw_rect(Rect2(x+8,266,48,86),Color("876a7c"))
-				for y in [270,328]:distant.draw_rect(Rect2(x+6,y,52,5),Color("c29d8b"))
-				distant.draw_rect(Rect2(x+17,279,6,43),Color("ad8d9a"))
+		3,4:pass # Rochas nativas e a pintura da oficina substituem os montes/caixotes abstratos.
 		5:
 			for x in [16,432,1080,1840,2112]:
 				pier(x,500,244,Color("49435c"),Color("a393ad"))

@@ -27,7 +27,7 @@ func _ready() -> void:
 ## Cria o sprite local mantendo sua escala nativa e referência de textura.
 func _sprite(file: String,at: Vector2) -> Sprite2D:
 	var sprite:=Sprite2D.new()
-	sprite.texture=load(ART+file)
+	sprite.texture=load(("res://Assets/02_Environments/manual_review/" if file.contains("256") else ART)+file)
 	sprite.centered=false
 	sprite.position=at
 	add_child(sprite)

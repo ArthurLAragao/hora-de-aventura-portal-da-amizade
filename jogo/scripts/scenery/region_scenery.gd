@@ -56,15 +56,7 @@ func _draw() -> void:
 			draw_texture_rect(underside_texture,Rect2(x,516,32,32),false,Color("a6a0bc"))
 	else:
 		# Pipe routes live in the background: they connect bays without suggesting platforms.
-		for span in [[24,340],[856,1210],[1360,1870],[1990,2160]]:
-			var y:=264.0
-			draw_line(Vector2(span[0],y),Vector2(span[1],y),Color("795a62"),12)
-			draw_line(Vector2(span[0],y-2),Vector2(span[1],y-2),Color("93a991"),7)
-			for x in range(span[0]+8,span[1],48):
-				draw_rect(Rect2(x,y-8,4,16),Color("9b8055"))
-			for x in [span[0],span[1]]:
-				draw_line(Vector2(x,y),Vector2(x,382),Color("795a62"),12)
-				draw_line(Vector2(x-2,y),Vector2(x-2,382),Color("93a991"),7)
+		# Tubos decorativos sobrepostos retirados; o circuito jogável tem prioridade visual.
 		for x in [160,980,1440,1920]:draw_line(Vector2(x,160),Vector2(x,187),Color("715560"),2)
 		for x in range(0,2176,32):
 			if level.get_node("TileMapLayer").get_cell_source_id(Vector2i(x/32,12))<0:continue

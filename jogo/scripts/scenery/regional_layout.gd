@@ -18,9 +18,9 @@ func _ready() -> void:
 		platform("DuetStep",Vector2(1632,350),64)
 		platform("DuetBalcony",Vector2(1712,306),96)
 	elif region==4:
-		platform("LowerServiceWalk",Vector2(944,324),96)
-		platform("UpperServiceWalk",Vector2(1072,264),112)
-		platform("ReturnServiceWalk",Vector2(1200,324),80)
+		platform("LowerServiceWalk",Vector2(944,340),96)
+		platform("UpperServiceWalk",Vector2(1072,304),112)
+		platform("ReturnServiceWalk",Vector2(1200,344),80)
 		platform("CircuitServiceWalk",Vector2(1520,320),96)
 		get_node("CircuitServiceWalk").get_child(0).one_way_collision=true
 	if not Engine.is_editor_hint():_configure.call_deferred()
@@ -29,7 +29,7 @@ func _ready() -> void:
 func platform(label: String,at: Vector2,width: int) -> void:
 	var body:=StaticBody2D.new();body.name=label;body.position=at;body.collision_layer=1;body.collision_mask=0
 	var shape:=CollisionShape2D.new();var rectangle:=RectangleShape2D.new();rectangle.size=Vector2(width,8)
-	shape.shape=rectangle;shape.position.y=4;body.add_child(shape)
+	shape.shape=rectangle;shape.position.y=4;shape.one_way_collision=(region==4);body.add_child(shape)
 	var kind: String="03_musical_cave" if region==3 else "04_candy_workshop"
 	var texture:=load("res://Assets/02_Environments/"+kind+"/tiles/platform.png") as Texture2D
 	var used:=texture.get_image().get_used_rect()
@@ -48,7 +48,7 @@ func _configure() -> void:
 	if region==3:
 		var ground: TileMapLayer=root_level.get_node("TileMapLayer")
 		for cell in ground.get_used_cells():
-			if cell.x>=42 and cell.x<=47:ground.erase_cell(cell)
+			if (cell.x>=42 and cell.x<=49) or (cell.x>=18 and cell.x<=20):ground.erase_cell(cell)
 		root_level.get_node("EnergyTerminal").position.y=274
 		for x in [1712,1808]:
 			var plate:=load("res://pressure_plate.tscn").instantiate() as PressurePlate
@@ -58,6 +58,10 @@ func _configure() -> void:
 			var used:=sprite.texture.get_image().get_used_rect()
 			sprite.position.y=-(used.end.y-sprite.texture.get_height()*0.5)
 			plate.activation_changed.connect(_check_duet)
+			var finish:=Node2D.new();finish.set_script(load("res://scripts/scenery/regional_plate.gd"));plate.add_child(finish)
+	elif region==4:
+		var finish:=Node2D.new();finish.set_script(load("res://scripts/scenery/regional_plate.gd"));finish.set("region",4)
+		root_level.get_node("TrunkPuzzle/Plate").add_child(finish)
 	# The crystal is visibly dormant until the existing mechanisms are solved.
 	var crystal:=root_level.get_node("FriendshipCrystal") as FriendshipCrystal
 	crystal.monitoring=false

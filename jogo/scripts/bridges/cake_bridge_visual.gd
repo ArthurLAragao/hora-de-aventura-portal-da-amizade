@@ -1,5 +1,6 @@
 extends Node2D
 const CENTER = preload("res://Assets/01_Characters/cake/bridge/center.png")
+var extra_length:=0.0
 var frame: Texture2D
 var progress := 0.0
 var full_rendered := false
@@ -14,10 +15,10 @@ func has_full_render() -> bool:
 ## Desenha a apresentação local; este método não concede progresso nem altera colisões. Contexto: desenho progressivo da ponte de Cake.
 func _draw() -> void:
 	if frame==null: return
-	var length := roundi(progress*88)
+	var length := roundi(progress*(88+extra_length))
 	draw_texture_rect_region(frame,Rect2(-48,-40,52,80),Rect2(0,0,52,80))
 	if length>0:
-		var back_length:=roundi(progress*108)
+		var back_length:=roundi(progress*(108+extra_length))
 		var cursor:=0
 		while cursor<back_length:
 			var width:=mini(88,back_length-cursor)

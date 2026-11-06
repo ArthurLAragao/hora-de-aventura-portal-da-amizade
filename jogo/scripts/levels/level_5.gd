@@ -4,7 +4,7 @@ const B=preload("res://scripts/core/journey_build.gd")
 const ENV="res://Assets/02_Environments/05_mirror_tower/"
 @export_range(1,2) var lead_player_id:=1
 @export_range(1,16) var reflection_limit:=12
-@export var initial_orientations: Array[int]=[1,0,0,1,0,0]
+@export var initial_orientations: Array[int]=[1,0,0,1,0,1]
 var marceline: CoopPlayer
 var cake: CoopPlayer
 var mirrors: Array[Dictionary]=[]
@@ -63,15 +63,15 @@ func _ready() -> void:
 	add_mirror(Vector2(980,336),1,&"float",1)
 	add_receiver(Vector2(1056,336),1,"○")
 	emitters.append({"at":Vector2(780,480),"dir":Vector2.DOWN,"sector":1})
-	# Dois feixes compartilham o espelho superior: cada ajuste influencia o mesmo sistema.
+	# Duas rotas finais legíveis e de frente para o revestimento refletor.
+	# A galeria anterior já combina o desvio de Cake com o espelho de Marceline.
 	add_mirror(Vector2(1400,488),2,&"crawl",0)
-	add_receiver(Vector2(1510,336),2,"△")
+	add_receiver(Vector2(1510,488),2,"△")
 	emitters.append({"at":Vector2(1400,480),"dir":Vector2.DOWN,"sector":2})
 	add_mirror(Vector2(1620,336),2,&"float",1)
-	add_receiver(Vector2(1620,248),2,"□")
-	emitters.append({"at":Vector2(1700,336),"dir":Vector2.LEFT,"sector":2})
-	# O relé fixo recebe Cake depois do teto; nenhum raio atravessa a rocha do túnel.
-	add_mirror(Vector2(1620,488),2,&"",0)
+	mirrors.back()["front_sign"]=-1
+	add_receiver(Vector2(1700,336),2,"□")
+	emitters.append({"at":Vector2(1620,488),"dir":Vector2.UP,"sector":2})
 	B.area(self,"CheckpointArea",Vector2(1230,475),Vector2(80,50))
 	checkpoint_sprite=B.sprite(self,"Checkpoint",B.OBJECTS+"checkpoint_off.png",Vector2(1220,468))
 	crystal=load("res://crystal.tscn").instantiate();crystal.name="FriendshipCrystal";crystal.position=Vector2(1940,467);add_child(crystal)
@@ -104,7 +104,7 @@ func add_mirror(at: Vector2,sector: int,ability: StringName,orientation: int) ->
 	if ability!=&"" and mirrors.size()<initial_orientations.size():orientation=posmod(initial_orientations[mirrors.size()],2)
 	var sprite=B.sprite(self,"Mirror%d"%mirrors.size(),B.OBJECTS+"mirror_45.png",at,0.5)
 	var prompt=B.label(self,"",at+Vector2(-48,-46),13)
-	mirrors.append({"at":at,"sector":sector,"ability":ability,"orientation":orientation,"sprite":sprite,"prompt":prompt})
+	mirrors.append({"at":at,"sector":sector,"ability":ability,"orientation":orientation,"front_sign":(-1 if ability==&"float" and sector==1 else 1),"sprite":sprite,"prompt":prompt})
 
 ## Registra receptor identificado por forma, além da cor do feixe.
 func add_receiver(at: Vector2,sector: int,symbol: String) -> void:
@@ -140,6 +140,8 @@ func refresh_light() -> void:
 			beams.append([at,at+dir*length,source.sector])
 			if target.is_empty():break
 			if not mirror_hit:target.active=true;break
+			var normal:=Vector2(-1,-1) if target.orientation==0 else Vector2(1,-1)
+			if dir.dot(normal*target.front_sign)>=0:break
 			var key:=str(target.at)+str(dir)
 			if seen.has(key):break
 			seen[key]=true
@@ -207,8 +209,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 ## Desenha feixes não nocivos atrás dos personagens e emissores fixados na arquitetura.
 func _draw() -> void:
 	for segment in beams:
-		draw_line(segment[0],segment[1],Color("51476b"),6)
-		draw_line(segment[0],segment[1],[Color("ffe4a1"),Color("94e9df"),Color("e9b7fa")][segment[2]],2)
+		draw_line(segment[0],segment[1],Color("302b48"),6)
+		draw_line(segment[0],segment[1],[Color("ffe4a1"),Color("94e9df"),Color("e9b7fa")][segment[2]],3)
+		draw_line(segment[0],segment[1],Color("fff8da"),1)
 	for x in [700,1300]:
 		for edge in [x,x+156]:draw_rect(Rect2(edge,478,4,22),Color("635779"))
 		draw_rect(Rect2(x,478,160,3),Color("39344e"))
@@ -219,10 +222,16 @@ func _draw() -> void:
 		if mirror.ability==&"float" and mirror.sector>0:
 			for y in range(0,int(mirror.at.y)-12,8):draw_rect(Rect2(mirror.at.x-1,y,2,6),Color("9b8aa4"))
 	for source in emitters:draw_rect(Rect2(source.at-Vector2(5,5),Vector2(10,10)),Color("c4a869"))
+	for mirror in mirrors:
+		var normal: Vector2=(Vector2(-1,-1) if mirror.orientation==0 else Vector2(1,-1))*mirror.front_sign
+		var center: Vector2=mirror.at
+		var tangent:=Vector2(-normal.y,normal.x).normalized()*9
+		draw_line(center-tangent,center+tangent,Color("2a293d"),5)
+		draw_line(center-tangent+normal.normalized()*2,center+tangent+normal.normalized()*2,Color("c9f1ed"),2)
 	for gate in gates:
-		var x: float=gate.position.x
-		for side in [-36,28]:
-			draw_rect(Rect2(x+side,238,8,262),Color("45415d"));draw_rect(Rect2(x+side+2,238,2,262),Color("c5aa74"))
-		draw_rect(Rect2(x-36,234,72,10),Color("45415d"))
-		if not gate.is_open:
-			for dx in range(-24,25,12):draw_rect(Rect2(x+dx,244,5,256),Color("9183ac"));draw_rect(Rect2(x+dx,244,1,256),Color("ead0a0"))
+		var at:=Vector2(gate.position.x-44,232)
+		var art: Texture2D=preload("res://Assets/02_Environments/manual_review/tower_gate.png")
+		if not gate.is_open:draw_texture(art,at)
+		else:
+			for x in [0,66]:draw_texture_rect_region(art,Rect2(at+Vector2(x,0),Vector2(22,268)),Rect2(x,0,22,268))
+			draw_texture_rect_region(art,Rect2(at+Vector2(22,0),Vector2(44,26)),Rect2(22,0,44,26))

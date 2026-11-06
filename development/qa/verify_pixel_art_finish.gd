@@ -30,10 +30,12 @@ func run() -> void:
 	await open(4)
 	level.finn.position=Vector2(1260,350);level.bmo.position=Vector2(1320,350)
 	await frames(25)
-	check("circuit starts with disconnected elbows at different heights",level.connections.turns==[1,3] and level.connections.areas[0].position.y>level.connections.areas[1].position.y)
+	check("circuit starts with disconnected elbows at different heights",level.connections.turns==[1,3,2] and level.connections.areas[0].position.y>level.connections.areas[1].position.y)
 	check("receiver begins unpowered",not level.connections.locked and not level.energy_terminal.energized)
 	await capture("pixel-circuit-disconnected-%d"%viewport_size.x)
 	await circuit_detail("disconnected")
+	level.finn.position=Vector2(1216,312);await frames(8)
+	for turn in 2:await tap(level.finn,"interact")
 	level.finn.position=Vector2(1432,350);await frames(8)
 	for turn in 3:await tap(level.finn,"interact")
 	check("original contextual input rotates the first conductor",level.connections.turns[0]==0)
@@ -46,7 +48,7 @@ func run() -> void:
 	await capture("pixel-circuit-powered-%d"%viewport_size.x)
 	await circuit_detail("powered")
 	await open(4)
-	check("scene restart restores circuit and door visuals",not level.connections.locked and not level.energy_gate.is_open and level.connections.turns==[1,3])
+	check("scene restart restores circuit and door visuals",not level.connections.locked and not level.energy_gate.is_open and level.connections.turns==[1,3,2])
 	await finish("Native pixel art and live circuit presentation")
 
 func open(number: int) -> void:

@@ -39,16 +39,18 @@ func run() -> void:
 		a=level.finn;b=level.bmo
 		# Sobreposição provocada apenas na fixture; no percurso os encaixes ficam em alturas diferentes.
 		level.connections.areas[1].position=level.connections.areas[0].position
+		level.connections.areas[2].position=level.connections.areas[0].position
 		a.position=Vector2(1432,352);b.position=Vector2(1320,352);await frames(12)
 		check("fixture de sobreposição real dos dois condutores",level.connections.areas.all(func(area):return area.overlaps_body(a)))
 		var before: Array=level.connections.turns.duplicate()
 		await capture("circuit-overlap-before")
 		await tap(a,"interact")
-		var changes:=int(level.connections.turns[0]!=before[0])+int(level.connections.turns[1]!=before[1])
+		var changes:=int(level.connections.turns[0]!=before[0])+int(level.connections.turns[1]!=before[1])+int(level.connections.turns[2]!=before[2])
 		check("uma entrada gira somente um condutor",changes==1)
 		await capture("circuit-overlap-after")
 		level.connections.areas[1].position=Vector2(1520,284)
-		level.connections.turns.assign([0,0])
+		level.connections.areas[2].position=Vector2(1216,308)
+		level.connections.turns.assign([0,0,0])
 		a.position=Vector2(1432,352);b.position=Vector2(1320,352);await frames(12)
 		await tap(b,"interact",1)
 		check("conexão de BMO está em andamento",level.energy_terminal.pending)
