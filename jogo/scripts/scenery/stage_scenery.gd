@@ -101,10 +101,7 @@ func _draw() -> void:
 		for spec in [[446,486,level.LEFT_FLOOR,level.tutorial_solved],[1902,2022,level.FLOOR,level.relay_solved]]:
 			var color:=Color("a5d6aa") if spec[3] else Color("a0804d")
 			for x in range(spec[0],spec[1],10):draw_line(Vector2(x,spec[2]+11),Vector2(x+6,spec[2]+11),color,2)
-		for spec in [[544,level.LEFT_FLOOR-65,level.tutorial_solved],[2080,level.FLOOR-65,level.relay_solved]]:
-			if not spec[2]:
-				draw_rect(Rect2(spec[0]-8,spec[1],16,14),Color("263d3e"))
-				draw_rect(Rect2(spec[0]-5,spec[1]+3,10,7),Color("c49a54"))
+		# Os fechos agora pertencem à textura do portão, sem sobreposição de cadeados.
 		# Short wooden trail edging sits below the walk surface; it never suggests a platform.
 		for span in [[16,248,level.LEFT_FLOOR],[1100,1240,level.FLOOR],[2140,2400,level.FLOOR]]:
 			for x in range(span[0],span[1],24):

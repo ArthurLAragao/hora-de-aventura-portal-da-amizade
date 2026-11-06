@@ -9,6 +9,7 @@ var columns: Array[int]=[]
 var floor_y:=519
 var lights: Array[Sprite2D]=[]
 var time:=0.0
+var body_texture: Texture2D
 const ART="res://Assets/02_Environments/"
 const REGIONS={2:"02_ice_kingdom",3:"03_musical_cave",4:"04_candy_workshop",5:"05_mirror_tower"}
 
@@ -21,6 +22,7 @@ func _ready() -> void:
 func configure() -> void:
 	await get_tree().process_frame
 	floor_y={2:519,3:394,4:388,5:500}[phase]
+	body_texture=load(ART+REGIONS[phase]+"/tiles/fill.png")
 	var map=level.get_node_or_null("Terrain" if phase==2 else "TileMapLayer")
 	if map!=null:
 		var row:=16 if phase==2 else 12
@@ -52,35 +54,64 @@ func build_groups() -> void:
 			add_child(sprite)
 			if index==2 and phase==3:lights.append(sprite)
 
-## Desenha rocha ou alvenaria sob o piso real, com juntas maiores que evitam ruído repetitivo.
+## Massas contínuas sob o piso: veios de gelo, estratos de caverna e alvenaria estrutural.
+## Cada faixa é limitada pelas colunas existentes; nenhuma lacuna recebe chão decorativo.
 func draw_foundations() -> void:
-	var palette: Array={2:[Color("355b79"),Color("658ba7"),Color("a2c8d3")],3:[Color("302c48"),Color("50415f"),Color("897796")],4:[Color("815969"),Color("ad8086"),Color("e0baa1")],5:[Color("40394f"),Color("6a5d78"),Color("a190a6")]}[phase]
+	var colors: Array={2:[Color("244b68"),Color("477b97"),Color("8bb7c8")],3:[Color("292b43"),Color("44415c"),Color("6b6585")],4:[Color("654453"),Color("916776"),Color("c6978b")],5:[Color("363148"),Color("57506b"),Color("887b99")]}[phase]
+	var bottom: int={2:672,3:512,4:512,5:640}[phase]
+	var top:=floor_y+26
 	for column in columns:
-		var x:=column*32
-		var top:=floor_y+26
-		foundation.draw_rect(Rect2(x,top,32,100),palette[0])
-		foundation.draw_rect(Rect2(x,top,32,3),palette[2].darkened(0.24))
-		for row in 3:
-			var y:=top+10+row*30
-			var seam:=posmod(column*13+row*11,26)
-			if phase in [2,3]:
-				# Rocha facetada irregular: contorno, plano de luz e fissura em degraus.
-				var a:=Vector2(x,y)
-				var bevel:=3+posmod(column+row,4)
-				var points:=PackedVector2Array([a+Vector2(bevel,1),a+Vector2(25,0),a+Vector2(31,6),a+Vector2(29,22),a+Vector2(22,27),a+Vector2(4,25),a+Vector2(0,18),a+Vector2(1,6)])
-				foundation.draw_colored_polygon(points,palette[1].darkened(0.07*row+posmod(column,3)*0.025))
-				foundation.draw_line(a+Vector2(bevel+1,3),a+Vector2(24,2),palette[2].darkened(0.3),1)
-				foundation.draw_rect(Rect2(x+5,y+9,7,2),palette[1].lightened(0.08))
-				foundation.draw_rect(Rect2(x+20,y+17,6,2),palette[0])
-				continue
-			foundation.draw_rect(Rect2(x,y,32,25),palette[1].darkened(0.09*row))
-			foundation.draw_rect(Rect2(x+seam,y,2,25),palette[0])
-			foundation.draw_rect(Rect2(x+4,y+4,12,2),palette[2].darkened(0.22+row*0.08))
-			if phase in [2,3]:foundation.draw_rect(Rect2(x+19,y+13,6,2),palette[0])
-		# Peças de união de fábrica/torre; gelo e caverna recebem veios mais irregulares.
-		if phase in [4,5] and posmod(column,4)==0:
-			foundation.draw_rect(Rect2(x+2,top+3,5,94),palette[0])
-			foundation.draw_rect(Rect2(x+3,top+3,2,88),palette[2].darkened(0.27))
+		for y in range(top,bottom,32):
+			var height:=mini(32,bottom-y)
+			foundation.draw_texture_rect_region(body_texture,Rect2(column*32,y,32,height),Rect2(0,0,32,height))
+	# O relevo amplo tinge a textura original: preserva granulação, paleta e densidade de pixels.
+	colors[1].a=0.38
+	colors[2].a=0.58
+	var begin:=0
+	while begin<columns.size():
+		var end:=begin+1
+		while end<columns.size() and columns[end]==columns[end-1]+1:end+=1
+		var left:=columns[begin]*32;var right: int=(columns[end-1]+1)*32
+		if phase in [2,3]:
+			# Facetas largas com bordas em degraus substituem a antiga malha de pedras idênticas.
+			for x in range(left,right,96):
+				var width:=mini(96,right-x)
+				var depth:=bottom-top-12-posmod(x/32,3)*7
+				var inset:=mini(12,width/3)
+				var face:=PackedVector2Array([Vector2(x,top),Vector2(x+width,top),Vector2(x+width,top+depth-18),Vector2(x+width-inset,top+depth-18),Vector2(x+width-inset,top+depth),Vector2(x+inset,top+depth),Vector2(x+inset,top+depth-8),Vector2(x,top+depth-8)])
+				foundation.draw_colored_polygon(face,colors[1].darkened(posmod(x/32,3)*0.045))
+				foundation.draw_rect(Rect2(x,top,width,3),colors[2].darkened(0.18))
+				if phase==2:
+					# Cristal de gelo estriado; brilho opaco, sem parecer plataforma adicional.
+					for dx in range(7,width-3,19):
+						var height:=depth-12-posmod(x+dx,27)
+						foundation.draw_rect(Rect2(x+dx,top+9,3,height),colors[2].darkened(0.18))
+						foundation.draw_rect(Rect2(x+dx+3,top+18,2,maxi(2,height-20)),colors[0].lightened(0.05))
+				else:
+					# Camadas horizontais interrompidas por fissuras, como a rocha do fundo.
+					for row in 3:
+						var y:=top+18+row*23
+						var split:=mini(width-3,12+posmod(x+row*29,maxi(1,width-18)))
+						foundation.draw_rect(Rect2(x,y,split,2),colors[0])
+						foundation.draw_rect(Rect2(x+split,y,2,7),colors[0])
+						foundation.draw_rect(Rect2(x+split,y+7,width-split,2),colors[0])
+						foundation.draw_rect(Rect2(x+4,y-2,maxi(1,split-8),1),colors[2].darkened(0.25))
+		else:
+			# Blocos largos e juntas desencontradas, com base escura em vez de grade uniforme.
+			for row in 3:
+				var y:=top+row*32
+				for x in range(left-32*(row%2),right,64):
+					var a:=maxi(x,left);var b:=mini(x+62,right)
+					if b<=a:continue
+					foundation.draw_rect(Rect2(a,y,b-a,29),colors[1].darkened(row*0.07))
+					foundation.draw_rect(Rect2(a,y,b-a,2),colors[2].darkened(row*0.12))
+					foundation.draw_rect(Rect2(a+2,y+3,1,23),colors[2].darkened(0.3))
+					foundation.draw_rect(Rect2(a+6,y+19,mini(14,b-a-6),2),colors[0].lightened(0.04))
+			for x in range(left+24,right-8,160):
+				foundation.draw_rect(Rect2(x,top,8,bottom-top),colors[0])
+				foundation.draw_rect(Rect2(x+2,top,3,bottom-top-4),colors[2].darkened(0.18))
+		foundation.draw_rect(Rect2(left,bottom-4,right-left,4),colors[0])
+		begin=end
 
 ## Nervuras grandes enquadram conjuntos; todas ficam atrás de personagens e plataformas.
 func draw_distance() -> void:

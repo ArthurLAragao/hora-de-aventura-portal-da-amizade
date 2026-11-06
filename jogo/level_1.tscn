@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3trspdrwrocq"]
+[gd_scene load_steps=7 format=3 uid="uid://d3trspdrwrocq"]
+
+[ext_resource type="Script" path="res://scripts/scenery/local_mechanism_finish.gd" id="local_finish"]
 
 [ext_resource type="Script" path="res://scripts/scenery/level_identity.gd" id="identity_finish"]
 [ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
@@ -21,4 +23,8 @@ phase = 1
 
 [node name="LevelIdentity" type="Node2D" parent="."]
 script = ExtResource("identity_finish")
+phase = 1
+
+[node name="LocalMechanismFinish" type="Node" parent="."]
+script = ExtResource("local_finish")
 phase = 1
