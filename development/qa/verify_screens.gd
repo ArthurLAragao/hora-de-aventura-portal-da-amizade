@@ -164,7 +164,7 @@ func result_cases() -> void:
 			inside=inside and Rect2(Vector2.ZERO,root.get_visible_rect().size).grow(1).encloses(bounds)
 		check("celebração e botões enquadrados em %s"%size,inside and ending.get_node("Finn")!=null and ending.get_node("BMO")!=null)
 		await capture("ending-%dx%d"%[size.x,size.y])
-	await key(KEY_ENTER);ui_scene=current_scene;level=null
+	await frames(100);await key(KEY_ENTER);ui_scene=current_scene;level=null
 	check("teclado sai da celebração para seleção",ui_scene.name=="PhaseSelect" and not paused)
 
 ## Executa os fluxos de tela com renderização, sem alegar resolver fases pelas fixtures.
