@@ -12,7 +12,7 @@ var _clock := 0.0
 
 func _ready() -> void:
     process_mode = Node.PROCESS_MODE_ALWAYS
-    var err := _udp.bind(PORT, "127.0.0.1")
+    var err := _udp.bind(PORT, "0.0.0.0")
     if err != OK:
         push_warning("ESP32: porta UDP %d indisponível (%d)." % [PORT, err])
         set_process(false)
@@ -22,6 +22,10 @@ func _process(delta: float) -> void:
     var count := mini(_udp.get_available_packet_count(), 128)
     for i in count:
         var message := _udp.get_packet().get_string_from_utf8().strip_edges()
+        var source_ip := _udp.get_packet_ip()
+        # Permite a ponte local antiga ou o ESP32 no AP dedicado.
+        if source_ip not in ["127.0.0.1", "192.168.4.1"]:
+            continue
         var values := message.split(",")
         if values.size() != 3 or values[0] != "AT1":
             continue
