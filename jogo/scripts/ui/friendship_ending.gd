@@ -1,5 +1,6 @@
 extends CanvasLayer
 ## Celebração final responsiva: entrada breve, emblema dos seis cristais e amigos animados.
+const ART=preload("res://scripts/ui/sprite_art.gd")
 const B=preload("res://scripts/core/journey_build.gd")
 const UI=preload("res://scripts/ui/menu_layout.gd")
 const COLORS=[Color("76d7ed"),Color("87d8a2"),Color("bf91eb"),Color("f0b26f"),Color("f0a4cd"),Color("e4ce7a")]
@@ -7,6 +8,9 @@ var friends: Array[AnimatedSprite2D]=[]
 var bases: Array[Vector2]=[]
 var ceremony: Node2D
 var elapsed:=0.0
+var crystal_sprites: Array[AnimatedSprite2D]=[]
+var activation_sprites: Array[AnimatedSprite2D]=[]
+var lit_count:=0
 
 ## Reaproveita os frames reais, mede os pés uma vez e mantém botões fora da animação.
 func _ready() -> void:
@@ -16,7 +20,7 @@ func _ready() -> void:
 	shade.color=Color(0.025,0.08,0.12,0.36);shade.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(shade)
 	var title:=B.label(self,"VOCÊS SALVARAM O MUNDO DE OOO!",Vector2(0,54),34);title.name="Title";title.size.x=1152;title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	var sub:=B.label(self,"Seis amigos. Seis cristais. Uma conquista de todos.",Vector2(0,106),20);sub.size.x=1152;sub.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	ceremony=Node2D.new();ceremony.name="CrystalEmblem";ceremony.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;add_child(ceremony);ceremony.draw.connect(draw_emblem)
+	ceremony=Node2D.new();ceremony.name="CrystalEmblem";ceremony.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;add_child(ceremony);build_emblem()
 	var names=["Finn","Jake","Fionna","Cake","Marceline","BMO"]
 	for i in 6:
 		var actor:=AnimatedSprite2D.new();actor.name=names[i];actor.sprite_frames=load("res://Assets/01_Characters/%s/animations.tres"%names[i].to_lower())
@@ -29,28 +33,21 @@ func _ready() -> void:
 		var label:=B.label(self,names[i],Vector2(base.x-66,526),17);label.size.x=132;label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	for i in 1:
 		var button:=Button.new();button.name="Menu";button.text="Voltar ao menu"
-		button.position=Vector2(436,590);button.size=Vector2(280,44);B.style_button(button);add_child(button)
+		button.position=Vector2(436,590);button.size=Vector2(280,44);B.style_button(button);ART.button(button);add_child(button)
 		var path: String="res://Assets/04_Interface/Godot/main_menu.tscn"
 		button.pressed.connect(func():get_tree().change_scene_to_file(path))
 	get_viewport().size_changed.connect(fit_screen);fit_screen();arm_buttons.call_deferred()
 
-## Um emblema luminoso, sombras sob os amigos e confetes discretos; sem partículas persistentes.
-func draw_emblem() -> void:
-	ceremony.draw_circle(Vector2(576,272),98,Color("122f3b"))
-	ceremony.draw_arc(Vector2(576,272),101,0,TAU,64,Color("bda66d"),2)
+## Medalhão e seis cristais são PNGs/atlas; o piso usa o mesmo tile do santuário.
+func build_emblem() -> void:
+	var medallion:=Sprite2D.new();medallion.name="VictoryMedallion";medallion.texture=load(ART.ROOT+"victory_medallion.png");medallion.position=Vector2(576,278);medallion.scale=Vector2.ONE*1.75;ceremony.add_child(medallion)
+	var sockets=[Vector2(0,-57),Vector2(48,-27),Vector2(48,28),Vector2(0,58),Vector2(-48,28),Vector2(-48,-27)]
 	for i in 6:
-		var a:=TAU*i/6-PI/2;var center:=Vector2(576,272)+Vector2(cos(a),sin(a))*65
-		var points:=PackedVector2Array([center+Vector2(0,-23),center+Vector2(13,-8),center+Vector2(10,13),center+Vector2(0,23),center+Vector2(-10,13),center+Vector2(-13,-8)])
-		var lit:=elapsed>0.25+i*0.16
-		ceremony.draw_colored_polygon(points,COLORS[i] if lit else Color("364e59"))
-		ceremony.draw_polyline(points+PackedVector2Array([points[0]]),Color("e9e1b5") if lit else Color("71858a"),2)
-		if lit:ceremony.draw_line(center+Vector2(-3,-12),center+Vector2(-3,8),Color("fff3d1"),2)
-	for i in 6:ceremony.draw_rect(Rect2(bases[i].x-24,506,48,3),Color("243e48"))
-	ceremony.draw_rect(Rect2(88,510,976,5),Color("507a77"));ceremony.draw_rect(Rect2(88,510,976,1),Color("b4c9ab"))
-	for i in 18:
-		var phase:=fmod(elapsed*0.10+i*0.061,1.0)
-		var at:=Vector2(104+posmod(i*137,944),166+phase*230)
-		ceremony.draw_rect(Rect2(at.round(),Vector2(3,3)),Color(COLORS[i%6],0.30))
+		var at: Vector2=medallion.position+sockets[i]*1.75
+		var gem:=ART.gem(ceremony,at,COLORS[i],0.8);gem.hide();crystal_sprites.append(gem)
+		var fx:=ART.burst(ceremony,at,COLORS[i]);fx.hide();activation_sprites.append(fx)
+	for x in range(88,1064,32):
+		var floor:=Sprite2D.new();floor.texture=load("res://Assets/02_Environments/06_friendship_portal/tiles/top.png");floor.region_enabled=true;floor.region_rect=Rect2(0,20,32,12);floor.position=Vector2(x+16,512);ceremony.add_child(floor)
 
 ## Entrada escalonada e pequenos saltos de comemoração, com pousos claros na mesma base.
 func _process(delta: float) -> void:
@@ -59,7 +56,8 @@ func _process(delta: float) -> void:
 		var entrance:=clampf((elapsed-i*0.11)/0.45,0,1)
 		var hop:=maxf(0,sin((elapsed-i*0.14)*3.2))*5 if elapsed>1.4 else 0.0
 		friends[i].position=bases[i]+Vector2(0,roundf((1-entrance)*22-hop));friends[i].modulate.a=entrance
-	ceremony.queue_redraw()
+	while lit_count<6 and elapsed>0.25+lit_count*0.16:
+		crystal_sprites[lit_count].show();activation_sprites[lit_count].show();activation_sprites[lit_count].play(&"activate");lit_count+=1
 
 ## Enquadra a tela inteira sem deformar o emblema, personagens ou botões.
 func fit_screen() -> void:

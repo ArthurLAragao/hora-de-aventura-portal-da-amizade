@@ -35,8 +35,8 @@ func _ready() -> void:
 	level=get_parent()
 	canvas=CanvasLayer.new();canvas.name="Conversation";canvas.layer=15;add_child(canvas)
 	card=PanelContainer.new();card.name="Card";card.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(card)
-	var style:=StyleBoxFlat.new();style.bg_color=Color("102832f2");style.border_color=Color("d6cf9a")
-	style.set_border_width_all(2);style.set_corner_radius_all(6);style.set_content_margin_all(12)
+	card.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+	var style:=preload("res://scripts/ui/sprite_art.gd").skin(true)
 	card.add_theme_stylebox_override("panel",style)
 	var row:=HBoxContainer.new();row.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_theme_constant_override("separation",12);card.add_child(row)
 	portrait=TextureRect.new();portrait.custom_minimum_size=Vector2(54,64);portrait.size_flags_vertical=Control.SIZE_SHRINK_CENTER;portrait.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;portrait.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;portrait.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;portrait.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_child(portrait)

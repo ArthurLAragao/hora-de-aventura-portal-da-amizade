@@ -1,6 +1,7 @@
 extends Control
 ## HUD da aventura: retratos reais, papéis atuais e emblema dos cristais desta sessão.
 ## Não cria vidas fictícias nem interfere nos controles, na coleta ou no checkpoint.
+const ART=preload("res://scripts/ui/sprite_art.gd")
 const UI=preload("res://scripts/ui/menu_layout.gd")
 const PIXEL=preload("res://Assets/08_Fonts/PixelifySans.ttf")
 const COLORS=[Color("7cd8ef"),Color("8be3b4"),Color("c69af2"),Color("ffb875"),Color("f1a9ce"),Color("e6c762")]
@@ -28,25 +29,19 @@ func _ready() -> void:
 		picture.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;picture.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(picture);portraits.append(picture)
 		var role:=UI.label(design,"P%d"%(slot+1),Rect2(x+58,19,74,16),13);role.modulate=Color("e2c68e")
 		roles.append(UI.label(design,"",Rect2(x+58,35,78,28),17))
-	plaque(Rect2(846,14,290,84))
-	count_label=UI.label(design,"Cristais da Amizade · 0/6",Rect2(864,19,256,20),14)
-	emblem=preload("res://scripts/ui/crystal_emblem.gd").new();emblem.position=Vector2(860,45);emblem.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(emblem)
+	var relicary:=TextureRect.new();relicary.name="CrystalRelicary";relicary.texture=load(ART.ROOT+"hud_crystals.png")
+	relicary.position=Vector2(846,14);relicary.size=Vector2(288,92);relicary.mouse_filter=MOUSE_FILTER_IGNORE;relicary.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;design.add_child(relicary)
+	count_label=UI.label(design,"Cristais da Amizade · 0/6",Rect2(864,26,256,20),14)
+	emblem=preload("res://scripts/ui/crystal_emblem.gd").new();emblem.position=Vector2(860,49);emblem.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(emblem)
 	var help:=UI.button(design,"Ajuda",Rect2(1000,106,64,28),"HelpAdventure");help.add_theme_font_size_override("font_size",13);help.focus_mode=Control.FOCUS_NONE;help.pressed.connect(screens.open_help)
 	var menu:=UI.button(design,"Fases",Rect2(1070,106,66,28),"PhasesAdventure");menu.add_theme_font_size_override("font_size",13);menu.focus_mode=Control.FOCUS_NONE;menu.pressed.connect(screens.navigate.bind("res://phase_select.tscn",0))
-	for button in [help,menu]:
-		for state in ["normal","hover","pressed","focus"]:
-			var style:=button.get_theme_stylebox(state).duplicate() as StyleBoxFlat
-			style.set_corner_radius_all(0);style.border_color=Color("e4c88b");style.bg_color=Color("142f38e8");button.add_theme_stylebox_override(state,style)
+	for button in [help,menu]:ART.button(button)
 	get_viewport().size_changed.connect(fit);fit();sync()
 
-## Moldura de metal e madeira escura, em degraus e sem cantos suavizados.
+## Cartões com moldura PNG; os recortes preservam as bordas ao redimensionar.
 func plaque(rect: Rect2) -> void:
-	var p:=UI.panel(design,rect)
-	var style:=p.get_theme_stylebox("panel").duplicate() as StyleBoxFlat
-	style.bg_color=Color("142f38e8");style.border_color=Color("bba675");style.set_corner_radius_all(5);style.set_border_width_all(2)
-	style.shadow_color=Color("081923a0");style.shadow_offset=Vector2(0,3);style.shadow_size=0;p.add_theme_stylebox_override("panel",style)
-	for dx in [4.0,rect.size.x-6]:
-		var rivet:=ColorRect.new();rivet.color=Color("e4c88b");rivet.position=rect.position+Vector2(dx,5);rivet.size=Vector2(2,2);rivet.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(rivet)
+	var p:=Panel.new();p.position=rect.position;p.size=rect.size;p.mouse_filter=MOUSE_FILTER_IGNORE
+	p.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;p.add_theme_stylebox_override("panel",ART.skin());design.add_child(p)
 
 ## Escala a HUD inteira; não muda resolução ou câmera do mundo.
 func fit() -> void:
