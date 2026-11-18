@@ -1,0 +1,62 @@
+[
+  {
+    "suite": "verify_adventure_presentation",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_campaign_ui",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_final_regions",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_friendship_story",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_journey_1",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_journey_6",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_level_2",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_mirror_tower",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_presentation_finish",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_sprite_presentation",
+    "resolution_group": "tests",
+    "failures": 0
+  },
+  {
+    "suite": "verify_journey_6",
+    "resolution_group": "tests_1920x1080",
+    "failures": 0
+  },
+  {
+    "suite": "verify_sprite_presentation",
+    "resolution_group": "tests_1920x1080",
+    "failures": 0
+  }
+]

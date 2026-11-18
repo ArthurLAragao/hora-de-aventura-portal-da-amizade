@@ -1,0 +1,119 @@
+{
+	"checks": [
+		{
+			"check": "P1: conversa usa moldura PNG importada",
+			"passed": true
+		},
+		{
+			"check": "P1: relicário tem textura dedicada",
+			"passed": true
+		},
+		{
+			"check": "P1: somente cristais conquistados aparecem",
+			"passed": true
+		},
+		{
+			"check": "P1: brilho termina sem resíduos",
+			"passed": true
+		},
+		{
+			"check": "P1: rotação tem oito frames reais",
+			"passed": true
+		},
+		{
+			"check": "P1: sprites usam filtro nearest",
+			"passed": true
+		},
+		{
+			"check": "P1: seis monumentos têm PNGs distintos",
+			"passed": true
+		},
+		{
+			"check": "P1: não há cristal instalado inicialmente",
+			"passed": true
+		},
+		{
+			"check": "P1: parceira caminha até pedestal 1",
+			"passed": true
+		},
+		{
+			"check": "P1: primeira caminha até pedestal 1",
+			"passed": true
+		},
+		{
+			"check": "P1: entrada instala só uma vez e efeito termina 1",
+			"passed": true
+		},
+		{
+			"check": "P1: parceira caminha até pedestal 2",
+			"passed": true
+		},
+		{
+			"check": "P1: primeira caminha até pedestal 2",
+			"passed": true
+		},
+		{
+			"check": "P1: entrada instala só uma vez e efeito termina 2",
+			"passed": true
+		},
+		{
+			"check": "P1: parceira caminha até pedestal 3",
+			"passed": true
+		},
+		{
+			"check": "P1: primeira caminha até pedestal 3",
+			"passed": true
+		},
+		{
+			"check": "P1: entrada instala só uma vez e efeito termina 3",
+			"passed": true
+		},
+		{
+			"check": "P1: parceira caminha até pedestal 4",
+			"passed": true
+		},
+		{
+			"check": "P1: primeira caminha até pedestal 4",
+			"passed": true
+		},
+		{
+			"check": "P1: entrada instala só uma vez e efeito termina 4",
+			"passed": true
+		},
+		{
+			"check": "P1: parceira caminha até pedestal 5",
+			"passed": true
+		},
+		{
+			"check": "P1: primeira caminha até pedestal 5",
+			"passed": true
+		},
+		{
+			"check": "P1: entrada instala só uma vez e efeito termina 5",
+			"passed": true
+		},
+		{
+			"check": "P1: parceira caminha até pedestal 6",
+			"passed": true
+		},
+		{
+			"check": "P1: primeira caminha até pedestal 6",
+			"passed": true
+		},
+		{
+			"check": "P1: entrada instala só uma vez e efeito termina 6",
+			"passed": true
+		},
+		{
+			"check": "P1: celebração tem medalhão PNG e seis personagens originais",
+			"passed": true
+		},
+		{
+			"check": "P1: cristais da vitória aparecem uma vez",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"headless": false,
+	"viewport": "(1280, 720)"
+}
