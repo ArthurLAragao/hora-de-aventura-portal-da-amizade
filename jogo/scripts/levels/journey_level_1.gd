@@ -63,6 +63,10 @@ func _build() -> void:
 	tutorial_plate=B.plate(self,"TutorialPlate",Vector2(416,LEFT_FLOOR),&"",true)
 	tutorial_gate=B.gate(self,"TutorialGate",544,LEFT_FLOOR,96)
 	bridge=B.packed(self,"JakeBridge","res://jake_bridge.tscn",Vector2(640,376))
+	# Entrada rente à margem; o desenho usa automaticamente a altura real deste apoio.
+	var support: StaticBody2D=bridge.get_node("BridgeBody")
+	var support_shape: RectangleShape2D=support.get_node("CollisionShape2D").shape
+	support.position.y=LEFT_FLOOR-bridge.position.y+support_shape.size.y*0.5
 	bridge.process_mode=Node.PROCESS_MODE_DISABLED
 	permanent=B.packed(self,"PermanentBridge","res://permanent_bridge.tscn",Vector2(720,400))
 	permanent.get_node("CollisionShape2D").one_way_collision=true
