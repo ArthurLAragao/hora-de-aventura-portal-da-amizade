@@ -1,6 +1,6 @@
 extends RefCounted
 ## Elementos locais das telas: não altera o tema global nem a resolução do projeto.
-const FONT=preload("res://Assets/08_Fonts/NotoSans.ttf")
+const FONT=preload("res://Assets/08_Fonts/PixelifySans.ttf")
 
 ## Cria um rótulo legível na posição definida, com quebra de linha opcional.
 static func label(parent: Node,text: String,rect: Rect2,size:=22,wrap:=false) -> Label:

@@ -41,7 +41,7 @@ func _ready() -> void:
 ## Medalhão e seis cristais são PNGs/atlas; o piso usa o mesmo tile do santuário.
 func build_emblem() -> void:
 	var medallion:=Sprite2D.new();medallion.name="VictoryMedallion";medallion.texture=load(ART.ROOT+"victory_medallion.png");medallion.position=Vector2(576,278);medallion.scale=Vector2.ONE*1.75;ceremony.add_child(medallion)
-	var sockets=[Vector2(0,-57),Vector2(48,-27),Vector2(48,28),Vector2(0,58),Vector2(-48,28),Vector2(-48,-27)]
+	var sockets=[Vector2(0,-53.5),Vector2(52,-25.5),Vector2(52,29.5),Vector2(0,59.5),Vector2(-52,29.5),Vector2(-52,-25.5)]
 	for i in 6:
 		var at: Vector2=medallion.position+sockets[i]*1.75
 		var gem:=ART.gem(ceremony,at,COLORS[i],0.8);gem.hide();crystal_sprites.append(gem)

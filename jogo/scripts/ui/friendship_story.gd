@@ -1,65 +1,94 @@
 extends Node
-## Miniconversas reativas: apresentação separada da física, das entradas e da progressão.
+## Conversas de abertura: controles só voltam após ler ou pular e soltar as teclas.
 const SCRIPT=preload("res://scripts/content/friendship_lines.gd")
-const FONT=preload("res://Assets/08_Fonts/NotoSans.ttf")
+const UI=preload("res://scripts/ui/menu_layout.gd")
+const FONT=preload("res://Assets/08_Fonts/PixelifySans.ttf")
 const NAMES={"finn":"Finn","jake":"Jake","fionna":"Fionna","cake":"Cake","marceline":"Marceline","bmo":"BMO"}
 @export_range(1,6) var phase:=1
-@export_range(3.0,12.0,0.5) var minimum_read_seconds:=10.0
 @export var enabled:=true
 var level: Node2D
 var canvas: CanvasLayer
 var card: PanelContainer
-var partner_portrait: TextureRect
+var shade: ColorRect
 var portrait: TextureRect
+var partner_portrait: TextureRect
 var speaker: Label
+var partner_name: Label
 var dialogue: Label
 var footer: Label
+var next_button: Button
+var skip_button: Button
+var modal_active:=false
+var previous_paused:=false
+var closing:=false
+var armed:=false
+var arm_time:=0.0
+var ready_to_watch:=false
 var seen: Dictionary={}
 var emitted: Array[String]=[]
-var pending: Array[Dictionary]=[]
 var current_lines: Array=[]
+var last_lines: Array=[]
 var current_id:=""
 var current_line:=0
-var last_lines: Array=[]
-var remaining:=0.0
-var poll_left:=0.0
 var stage_seen:=0
-var recoveries:=0
-var ready_to_watch:=false
-var tween: Tween
-var last_viewport:=Vector2.ZERO
 var portraits: Dictionary={}
+var last_viewport:=Vector2.ZERO
 
-## Constrói o cartão e aguarda a montagem da fase antes de consultar seus eventos.
+## A apresentação continua processando durante sua própria pausa; o mundo não.
 func _ready() -> void:
-	level=get_parent()
-	canvas=CanvasLayer.new();canvas.name="Conversation";canvas.layer=15;add_child(canvas)
-	card=PanelContainer.new();card.name="Card";card.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(card)
-	card.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+	process_mode=Node.PROCESS_MODE_ALWAYS;level=get_parent()
+	canvas=CanvasLayer.new();canvas.name="Conversation";canvas.layer=42;add_child(canvas)
+	shade=ColorRect.new();shade.color=Color(0.02,0.06,0.10,0.22);shade.mouse_filter=Control.MOUSE_FILTER_STOP;canvas.add_child(shade)
+	card=PanelContainer.new();card.name="Card";card.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;canvas.add_child(card)
 	var style:=preload("res://scripts/ui/sprite_art.gd").skin(true)
+	style.set_content_margin(SIDE_LEFT,30);style.set_content_margin(SIDE_RIGHT,30);style.set_content_margin(SIDE_TOP,24);style.set_content_margin(SIDE_BOTTOM,18)
 	card.add_theme_stylebox_override("panel",style)
-	var row:=HBoxContainer.new();row.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_theme_constant_override("separation",12);card.add_child(row)
-	portrait=TextureRect.new();portrait.custom_minimum_size=Vector2(54,64);portrait.size_flags_vertical=Control.SIZE_SHRINK_CENTER;portrait.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;portrait.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;portrait.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;portrait.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_child(portrait)
-	var column:=VBoxContainer.new();column.size_flags_horizontal=Control.SIZE_EXPAND_FILL;column.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_child(column)
-	speaker=make_label(16);column.add_child(speaker)
-	dialogue=make_label(18);dialogue.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;dialogue.custom_minimum_size=Vector2(0,52);column.add_child(dialogue)
-	footer=make_label(11);footer.modulate=Color("c2c8c5");column.add_child(footer);footer.show()
-	partner_portrait=TextureRect.new();partner_portrait.custom_minimum_size=Vector2(64,80);partner_portrait.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;partner_portrait.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;partner_portrait.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;partner_portrait.mouse_filter=Control.MOUSE_FILTER_IGNORE;partner_portrait.modulate=Color("91aaa0");row.add_child(partner_portrait)
-	card.hide()
-	start.call_deferred()
+	var stack:=VBoxContainer.new();stack.add_theme_constant_override("separation",12);card.add_child(stack)
+	var row:=HBoxContainer.new();row.add_theme_constant_override("separation",22);stack.add_child(row)
+	var left:=VBoxContainer.new();left.custom_minimum_size.x=112;row.add_child(left)
+	portrait=portrait_box(left);speaker=make_label(20);speaker.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;left.add_child(speaker)
+	dialogue=make_label(24);dialogue.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;dialogue.vertical_alignment=VERTICAL_ALIGNMENT_CENTER;dialogue.size_flags_horizontal=Control.SIZE_EXPAND_FILL;dialogue.custom_minimum_size=Vector2(150,104);row.add_child(dialogue)
+	var right:=VBoxContainer.new();right.custom_minimum_size.x=112;row.add_child(right)
+	partner_portrait=portrait_box(right);partner_name=make_label(20);partner_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;right.add_child(partner_name)
+	var controls:=HBoxContainer.new();controls.alignment=BoxContainer.ALIGNMENT_CENTER;controls.add_theme_constant_override("separation",16);stack.add_child(controls)
+	footer=make_label(16);footer.size_flags_vertical=Control.SIZE_SHRINK_CENTER;controls.add_child(footer)
+	next_button=Button.new();next_button.text="Próxima";next_button.custom_minimum_size=Vector2(132,34);next_button.add_theme_font_override("font",FONT);next_button.add_theme_font_size_override("font_size",20);preload("res://scripts/ui/sprite_art.gd").button(next_button);controls.add_child(next_button);next_button.pressed.connect(advance)
+	skip_button=Button.new();skip_button.text="Pular";skip_button.custom_minimum_size=Vector2(108,34);skip_button.add_theme_font_override("font",FONT);skip_button.add_theme_font_size_override("font_size",20);preload("res://scripts/ui/sprite_art.gd").button(skip_button);controls.add_child(skip_button);skip_button.pressed.connect(skip)
+	canvas.hide();get_viewport().size_changed.connect(layout_card.bind(true));start.call_deferred()
 
-## Cria rótulos sem foco nem captura de cliques ou teclas dos jogadores.
+## Retrato recortado pela região opaca uma vez, centralizado dentro da moldura.
+func portrait_box(parent: Node) -> TextureRect:
+	var frame:=PanelContainer.new();frame.add_theme_stylebox_override("panel",preload("res://scripts/ui/sprite_art.gd").skin());parent.add_child(frame)
+	var picture:=TextureRect.new();picture.custom_minimum_size=Vector2(84,84);picture.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;picture.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;picture.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;picture.mouse_filter=Control.MOUSE_FILTER_IGNORE;frame.add_child(picture);return picture
 func make_label(size: int) -> Label:
-	var label:=Label.new();label.add_theme_font_override("font",FONT);label.add_theme_font_size_override("font_size",size);label.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	return label
-
-## Abre o contexto da fase sem simular cristais anteriores nem conceder progresso.
+	var text:=Label.new();text.add_theme_font_override("font",FONT);text.add_theme_font_size_override("font_size",size);text.mouse_filter=Control.MOUSE_FILTER_IGNORE;return text
+func trimmed(id: String) -> Texture2D:
+	if not portraits.has(id):
+		var source: Texture2D=load("res://Assets/01_Characters/%s/portrait.png"%id)
+		var atlas:=AtlasTexture.new();atlas.atlas=source;atlas.region=source.get_image().get_used_rect();portraits[id]=atlas
+	return portraits[id]
+func role_name(id: String) -> String:
+	for actor in get_tree().get_nodes_in_group("players"):
+		if String(actor.character_id)==id and actor.is_visible_in_tree():return NAMES[id]+" · P%d"%actor.player_id
+	return NAMES.get(id,id)
 func start() -> void:
 	ready_to_watch=true
 	if not enabled:return
+	var startup: Array=[]
+	for actor in get_tree().get_nodes_in_group("players"):
+		startup.append([actor,actor.movement_locked]);actor.movement_locked=true
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	if not is_inside_tree():return
+	if level.has_method("ground_initial_pair"):level.ground_initial_pair()
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	if not is_inside_tree():return
+	for entry in startup:
+		if is_instance_valid(entry[0]):entry[0].movement_locked=entry[1]
 	queue_moment("intro")
 
-## Consulta somente estados conquistados no jogo, com frequência reduzida.
+## API observada pela HUD: os estados vêm dos mecanismos reais, sem conceder progresso.
 func snapshot() -> Dictionary:
 	match phase:
 		1:return {"first":level.tutorial_solved,"passage":level.permanent.visible,"cooperation":level.relay_solved,"crystal":level.crystal_count>0,"ending":level.completion_count>0,"recovery":level.fall.recovery_count}
@@ -70,128 +99,68 @@ func snapshot() -> Dictionary:
 		6:return {"first":level.repaired[0],"passage":level.clue_revealed,"cooperation":level.repaired[2],"crystal":level.crystal_count>0,"ending":level.completion_count>0,"recovery":level.recovery_count}
 	return {}
 
-## Enfileira um acontecimento uma vez; conclusões substituem comentários atrasados.
-func queue_moment(id: String,replace_current:=false) -> void:
-	if seen.has(id):return
+## Somente abertura/trocas de dupla iniciam conversas; conquistas não geram caixas avulsas.
+func queue_moment(id: String,_replace:=false) -> void:
+	if seen.has(id) or not (id=="intro" or id.begins_with("pair")):return
 	seen[id]=true;emitted.append(id)
 	var lines: Array=SCRIPT.LINES[phase].get(id,[])
-	if id in ["first","passage","cooperation","crystal"] and current_id=="intro":replace_current=true
-	if replace_current:clear_card()
-	if lines.is_empty():return
-	pending.append({"id":id,"lines":lines.duplicate(true)})
-	# Evita acumular um tutorial quando a dupla avança rapidamente.
-	if pending.size()>2:pending.remove_at(0)
-	if current_lines.is_empty():next_sequence()
-
-## Inicia a próxima conversa e conserva somente a última para a releitura opcional.
-func next_sequence() -> void:
-	if pending.is_empty():
-		current_lines.clear();current_id="";card.hide();return
-	var moment: Dictionary=pending.pop_front();current_id=moment.id;current_lines=moment.lines;last_lines=current_lines.duplicate(true);current_line=0
-	show_line()
-
-## Mostra retrato original, nome, papel atual e uma fala completa, sem efeito de digitação.
+	if not lines.is_empty():begin(lines,id)
+func begin(lines: Array,id: String) -> void:
+	if not modal_active:previous_paused=get_tree().paused
+	current_lines=lines.duplicate(true);last_lines=current_lines.duplicate(true);current_id=id;current_line=0;closing=false;modal_active=true
+	get_tree().paused=true;level.set_meta("dialogue_modal",true);canvas.show();show_line()
 func show_line() -> void:
-	var line: Array=current_lines[current_line]
-	if not portraits.has(line[0]):portraits[line[0]]=load("res://Assets/01_Characters/%s/portrait.png"%line[0])
-	portrait.texture=portraits[line[0]]
-	var role:=""
+	var line: Array=current_lines[current_line];var id:=String(line[0]);portrait.texture=trimmed(id);speaker.text=role_name(id)
 	for actor in get_tree().get_nodes_in_group("players"):
-		if String(actor.character_id)==line[0]:role=" · P%d"%actor.player_id;break
-	speaker.text=NAMES[line[0]]+role
-	for actor in get_tree().get_nodes_in_group("players"):
-		if String(actor.character_id)!=line[0]:partner_portrait.texture=load("res://Assets/01_Characters/%s/portrait.png"%actor.character_id);break
-	dialogue.text=line[1]
-	footer.text="%d/%d · Tab: próxima · F3: rever"%[current_line+1,current_lines.size()]
-	remaining=maxf(minimum_read_seconds,String(line[1]).length()*0.075)
-	card.modulate.a=0.0;card.show();layout_card(true)
-	if tween:tween.kill()
-	tween=create_tween();tween.tween_property(card,"modulate:a",1.0,0.15)
-
-## Posiciona o cartão fora da faixa principal do chão, respeitando a tela atual.
-func layout_card(force:=false) -> void:
-	var viewport:=get_viewport().get_visible_rect().size
-	if viewport==last_viewport and not force:return
-	last_viewport=viewport
-	var width:=minf(1040.0,viewport.x-32)
-	card.size=Vector2(width,0);card.position=Vector2((viewport.x-width)*0.5,viewport.y-148)
-	settle_height.call_deferred()
-
-## Espera a largura dos contêineres estabilizar antes de reduzir a altura do texto quebrado.
+		if String(actor.character_id)!=id and actor.is_visible_in_tree():partner_portrait.texture=trimmed(String(actor.character_id));partner_name.text=role_name(String(actor.character_id));break
+	dialogue.text=line[1];footer.text="%d/%d · Tab / Enter"%[current_line+1,current_lines.size()]
+	next_button.text="Jogar" if current_line==current_lines.size()-1 else "Próxima"
+	armed=false;arm_time=0;next_button.disabled=true;skip_button.disabled=true;layout_card(true)
+func layout_card(_force:=false) -> void:
+	if not is_inside_tree() or is_queued_for_deletion() or not is_instance_valid(card) or get_viewport()==null:return
+	var size:=get_viewport().get_visible_rect().size;shade.size=size;card.size=Vector2(minf(1008,size.x-48),0)
+	card.position=Vector2((size.x-card.size.x)*0.5,maxf(20,size.y-card.size.y-24));settle_height.call_deferred()
 func settle_height() -> void:
-	# Uma troca de cena pode retirar a conversa antes da chamada adiada.
-	if not is_inside_tree() or is_queued_for_deletion():return
+	if not is_inside_tree():return
 	await get_tree().process_frame
-	if not is_inside_tree() or not is_instance_valid(card):return
-	card.size=Vector2(card.size.x,0)
-	card.position.y=get_viewport().get_visible_rect().size.y-card.size.y-16
-
-## Avança ou encerra a fala sem consumir interação, salto ou habilidade dos jogadores.
+	if is_inside_tree():card.size.y=0;card.position.y=maxf(20,get_viewport().get_visible_rect().size.y-card.size.y-24)
 func advance() -> void:
-	if current_lines.is_empty():return
+	if not modal_active or not armed or closing:return
 	current_line+=1
-	if current_line>=current_lines.size():next_sequence()
+	if current_line>=current_lines.size():skip()
 	else:show_line()
+func skip() -> void:
+	if not modal_active or not armed:return
+	closing=true;next_button.disabled=true;skip_button.disabled=true;footer.text="Solte as teclas para jogar"
 
-## Limpa fila e cartão ao recuperar, trocar de dupla ou priorizar um novo contexto.
+## Sempre restaura a pausa anterior, inclusive ao reiniciar ou sair da cena.
 func clear_card() -> void:
-	pending.clear();current_lines.clear();current_id="";remaining=0.0;card.hide()
-
-## Identifica painéis e transições que precisam de toda a atenção visual.
+	if modal_active and get_tree()!=null:get_tree().paused=previous_paused
+	modal_active=false;closing=false;current_lines.clear();current_id="";canvas.hide();level.set_meta("dialogue_modal",false)
 func obstructed() -> bool:
+	var screens=level.get_node_or_null("GameScreens")
+	if screens!=null and (screens.help_open or screens.leaving):return true
 	if phase==6 and (level._transitioning or level._recovering):return true
-	if phase in [3,4]:
-		var hud=level.get_node("HUD")
-		if hud.help_panel.visible:return true
-		if level.bmo.interaction_owner!=null and is_instance_valid(level.bmo.interaction_owner) and level.bmo.interaction_owner.get("panel_open")==true:return true
-	if phase==6 and level.terminal.get("panel_open"):return true
-	if phase in [1,6] and level.has_node("QualityPresentation") and level.get_node("QualityPresentation").shown_help:return true
-	if phase==5 and level.get_node("HUD/Help").visible:return true
-	if phase==2:
-		for child in level.get_node("Instructions").get_children():
-			if child is PanelContainer and child.visible:return true
 	return false
-
-## Reage a conquistas e erros sem escrever em estados dos puzzles ou dos personagens.
 func _process(delta: float) -> void:
 	if not ready_to_watch:return
-	if not enabled:card.hide();return
-	# A troca existente cuida dos atores; a nova dupla só fala depois de receber controles.
-	if phase==6 and (level._transitioning or level._recovering):
-		clear_card();canvas.hide();return
-	poll_left-=delta
-	if poll_left<=0:
-		poll_left=0.15
-		var state:=snapshot()
-		if not state.ending and int(state.recovery)>recoveries:
-			recoveries=state.recovery;clear_card()
-			if not seen.has("retry"):
-				seen["retry"]=true;emitted.append("retry")
-				var actor=get_tree().get_nodes_in_group("players")[0]
-				pending.append({"id":"retry","lines":[[String(actor.character_id),"Tudo bem. Vamos tentar de novo em dupla!"]]});next_sequence()
-		if phase==6 and stage_seen!=level.stage:
-			stage_seen=level.stage
-			queue_moment("pair%d"%stage_seen,true)
-		if state.ending:
-			queue_moment("ending",true)
-			if phase==6:clear_card();return
-		else:
-			for id in ["first","passage","cooperation","crystal"]:
-				if state[id]:queue_moment(id)
-	if obstructed():
-		if not current_lines.is_empty():clear_card()
-		canvas.hide();return
-	canvas.show()
-	if not current_lines.is_empty():
-		layout_card();remaining-=delta
-		if remaining<=0:advance()
-
-## Tab avança texto; F3 relê a conversa mais recente. As teclas de jogo não são capturadas.
+	if modal_active:
+		arm_time+=delta
+		if closing:
+			if not UI.game_input_held():clear_card()
+		elif arm_time>0.18 and not UI.game_input_held():armed=true;next_button.disabled=false;skip_button.disabled=false
+		return
+	if enabled and phase==6 and not obstructed() and stage_seen!=level.stage:
+		stage_seen=level.stage;queue_moment("pair%d"%stage_seen)
 func _input(event: InputEvent) -> void:
-	if not enabled or not ready_to_watch or obstructed():return
-	if phase==6 and level.completion_count>0:return
 	if not event is InputEventKey or not event.pressed or event.echo:return
-	if event.keycode==KEY_TAB and not current_lines.is_empty():
-		advance();get_viewport().set_input_as_handled()
-	elif event.keycode==KEY_F3 and not last_lines.is_empty():
-		clear_card();pending.append({"id":"replay","lines":last_lines.duplicate(true)});next_sequence();get_viewport().set_input_as_handled()
+	if modal_active:
+		get_viewport().set_input_as_handled()
+		if event.keycode==KEY_F2:
+			clear_card();level.get_node("GameScreens").restart_phase()
+		elif armed and event.keycode==KEY_ESCAPE:skip()
+		elif armed and event.keycode in [KEY_TAB,KEY_ENTER,KEY_KP_ENTER,KEY_SPACE,KEY_E]:advance()
+	elif enabled and event.keycode==KEY_F3 and not last_lines.is_empty() and not obstructed():
+		begin(last_lines,"replay");get_viewport().set_input_as_handled()
+func _exit_tree() -> void:
+	if modal_active and get_tree()!=null:get_tree().paused=previous_paused

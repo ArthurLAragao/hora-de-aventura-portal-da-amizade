@@ -17,6 +17,7 @@ var demo_action: Array[String]=["",""]
 var action_labels: Array[Label]=[]
 var elapsed:=0.0
 var key_count:=0
+var demo_bases: Array[Vector2]=[]
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(PRESET_FULL_RECT);texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
@@ -28,11 +29,13 @@ func _ready() -> void:
 	UI.label(design,"Aperte no teclado ou clique em uma tecla.",Rect2(56,78,1168,30),20)
 	for i in 2:
 		var at:=Vector2(56+i*588,122);UI.panel(design,Rect2(at,Vector2(568,106)))
-		UI.label(design,"P%d"%(i+1),Rect2(at+Vector2(18,10),Vector2(60,30)),24).modulate=Color("87daba") if i==0 else Color("f1ca80")
+		UI.label(design,"P%d · %s"%[i+1,"Finn" if i==0 else "Jake"],Rect2(at+Vector2(22,14),Vector2(128,24)),20).modulate=Color("87daba") if i==0 else Color("f1ca80")
 		var actor:=AnimatedSprite2D.new();actor.sprite_frames=load("res://Assets/01_Characters/"+("finn" if i==0 else "jake")+"/animations.tres")
-		actor.position=at+Vector2(104,64);actor.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;design.add_child(actor);actor.play(&"idle");demos.append(actor)
-		action_labels.append(UI.label(design,"Vamos experimentar!",Rect2(at+Vector2(164,16),Vector2(380,30)),23))
-		UI.label(design,"Andar   ·   Pular   ·   Usar   ·   Poder",Rect2(at+Vector2(164,60),Vector2(380,28)),17)
+		var texture:=actor.sprite_frames.get_frame_texture(&"idle",0);var used:=texture.get_image().get_used_rect()
+		actor.offset=texture.get_size()*0.5-Vector2(used.get_center());actor.position=at+Vector2(86,70)
+		actor.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;design.add_child(actor);actor.play(&"idle");demos.append(actor);demo_bases.append(actor.position)
+		action_labels.append(UI.label(design,"Vamos experimentar!",Rect2(at+Vector2(176,22),Vector2(364,30)),24))
+		UI.label(design,"Andar   ·   Pular   ·   Usar   ·   Poder",Rect2(at+Vector2(176,62),Vector2(364,26)),18)
 	# Bloco principal, funções, navegação e teclado numérico: 104 teclas representadas.
 	var rows=[
 		[["Esc",KEY_ESCAPE,1],["F1",KEY_F1,1],["F2",KEY_F2,1],["F3",KEY_F3,1],["F4",KEY_F4,1],["F5",KEY_F5,1],["F6",KEY_F6,1],["F7",KEY_F7,1],["F8",KEY_F8,1],["F9",KEY_F9,1],["F10",KEY_F10,1],["F11",KEY_F11,1],["F12",KEY_F12,1]],
@@ -51,8 +54,11 @@ func _ready() -> void:
 	for i in 3:add_key(["←","↓","→"][i],[KEY_LEFT,KEY_DOWN,KEY_RIGHT][i],Rect2(742+i*44,492,40,41))
 	var pad=[["Num",KEY_NUMLOCK,0,0,1,1],["/",KEY_KP_DIVIDE,1,0,1,1],["*",KEY_KP_MULTIPLY,2,0,1,1],["-",KEY_KP_SUBTRACT,3,0,1,1],["7",KEY_KP_7,0,1,1,1],["8",KEY_KP_8,1,1,1,1],["9",KEY_KP_9,2,1,1,1],["+",KEY_KP_ADD,3,1,1,2],["4",KEY_KP_4,0,2,1,1],["5",KEY_KP_5,1,2,1,1],["6",KEY_KP_6,2,2,1,1],["1",KEY_KP_1,0,3,1,1],["2",KEY_KP_2,1,3,1,1],["3",KEY_KP_3,2,3,1,1],["Enter",KEY_KP_ENTER,3,3,1,2],["0",KEY_KP_0,0,4,2,1],[".",KEY_KP_PERIOD,2,4,1,1]]
 	for spec in pad:add_key(spec[0],spec[1],Rect2(912+spec[2]*44,308+spec[3]*46,spec[4]*44-4,spec[5]*46-5))
-	UI.label(design,"P1 · verde     P2 · dourado",Rect2(56,562,1100,28),19)
-	roles=UI.label(design,"Espaço ou W: pular  ·  E / Enter: usar  ·  Q / Shift direito: poder",Rect2(56,598,1160,26),17)
+	UI.panel(design,Rect2(56,550,1168,82))
+	var p1:=UI.label(design,"P1 · verde",Rect2(350,560,280,24),20);p1.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;p1.modulate=Color("87daba")
+	var p2:=UI.label(design,"P2 · dourado",Rect2(650,560,280,24),20);p2.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;p2.modulate=Color("f1ca80")
+	roles=UI.label(design,"Espaço ou W: pular  ·  E / Enter: usar  ·  Q / Shift direito: poder",Rect2(80,594,1120,24),18)
+	roles.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	back=UI.button(design,"Voltar ao jogo" if embedded else "Voltar ao menu",Rect2(450,646,380,46),"back");back.pressed.connect(close)
 	resized.connect(fit);fit()
 
@@ -96,7 +102,7 @@ func _process(delta: float) -> void:
 	for i in 2:
 		var walking:=demo_action[i]=="Andar" and held.keys().any(func(code):return key_owner(code)==i+1 and code in [KEY_A,KEY_D,KEY_LEFT,KEY_RIGHT])
 		demo_time[i]=0.65 if walking else maxf(0,demo_time[i]-delta)
-		demos[i].position.y=186-roundf(sin((0.65-demo_time[i])/0.65*PI)*22) if demo_time[i]>0 and demo_action[i]=="Pular" else 186
+		demos[i].position=demo_bases[i]-Vector2(0,roundf(sin((0.65-demo_time[i])/0.65*PI)*18) if demo_time[i]>0 and demo_action[i]=="Pular" else 0)
 		if demo_time[i]==0:demos[i].play(&"idle")
 func set_roles(value: String) -> void:roles.text=value
 func close() -> void:

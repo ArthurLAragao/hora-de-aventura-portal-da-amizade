@@ -30,11 +30,8 @@ func _build_clue() -> void:
 	clue.name="MusicalClue"
 	clue.visible=false
 	clue.position = Vector2(480, 116)
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color("172b38")
-	style.border_color = Color("c7e2dc")
-	style.set_border_width_all(2)
-	style.set_content_margin_all(8)
+	var style:=preload("res://scripts/ui/sprite_art.gd").skin(false,Color("b9b2d7"))
+	style.set_content_margin_all(10)
 	clue.add_theme_stylebox_override("panel", style)
 	add_child(clue)
 

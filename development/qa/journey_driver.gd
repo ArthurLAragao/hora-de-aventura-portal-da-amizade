@@ -8,6 +8,7 @@ var recorded_ticks:=0
 var viewport_size:=Vector2i(1152,648)
 var record_interval:=30
 var role:=1
+var auto_dismiss_dialogue:=true
 var level
 
 func _initialize() -> void:
@@ -30,12 +31,29 @@ func _initialize() -> void:
 
 func frames(n: int) -> void:
 	for i in n:
+		await dismiss_dialogue()
 		await physics_frame
 		await process_frame
 		recorded_ticks+=1
 		if record_dir!="" and recorded_ticks%record_interval==0:
 			RenderingServer.force_draw(false)
 			root.get_texture().get_image().save_png(record_dir.path_join("%06d.png"%recorded_ticks))
+
+## O verificador lê/pula a apresentação por entrada real antes de executar os controles da rota.
+func dismiss_dialogue() -> void:
+	if not auto_dismiss_dialogue:return
+	for tick in 240:
+		if not is_instance_valid(current_scene):return
+		var story=current_scene.get_node_or_null("FriendshipStory")
+		if story==null:return
+		var awaiting_pair: bool=story.phase==6 and story.stage_seen!=current_scene.stage and not current_scene._transitioning
+		if not story.modal_active and not awaiting_pair:return
+		release()
+		if story.modal_active and story.armed:
+			var key:=InputEventKey.new();key.keycode=KEY_ESCAPE;key.pressed=true;Input.parse_input_event(key)
+			key=InputEventKey.new();key.keycode=KEY_ESCAPE;key.pressed=false;Input.parse_input_event(key)
+		await physics_frame
+		await process_frame
 
 func check(text: String,ok: bool) -> void:
 	checks.append({"check":"P%d: %s"%[role,text],"passed":ok})
@@ -48,6 +66,7 @@ func release() -> void:
 
 func until(predicate: Callable,limit: int=240) -> bool:
 	for i in limit:
+		await dismiss_dialogue()
 		if predicate.call(): return true
 		await frames(1)
 	return predicate.call()
@@ -56,6 +75,7 @@ func action(actor: CoopPlayer,key: String) -> String:
 	return "p%d_%s"%[actor.player_id,key]
 
 func tap(actor: CoopPlayer,key: String,n: int=2) -> void:
+	await dismiss_dialogue()
 	await process_frame
 	Input.action_press(action(actor,key))
 	await frames(n)
@@ -74,6 +94,7 @@ func steer(actor: CoopPlayer,goal: float) -> void:
 		else: Input.action_release(action(actor,side))
 
 func walk(actor: CoopPlayer,goal: float,limit: int=480) -> bool:
+	await dismiss_dialogue()
 	for i in limit:
 		if level.get("_transitioning") and not actor.is_in_group("players"):
 			Input.action_release(action(actor,"left"))
@@ -96,6 +117,7 @@ func walk(actor: CoopPlayer,goal: float,limit: int=480) -> bool:
 	return false
 
 func jump(actor: CoopPlayer,goal: float,ability: bool=false) -> bool:
+	await dismiss_dialogue()
 	Input.action_press(action(actor,"jump"))
 	if ability: Input.action_press(action(actor,"ability"))
 	await frames(2)

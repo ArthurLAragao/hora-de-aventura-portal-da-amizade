@@ -35,6 +35,7 @@ func _ready() -> void:
 
 ## A mesma composição funciona nas resoluções suportadas, com proporções preservadas.
 func fit() -> void:
+	if not is_inside_tree() or get_viewport()==null or not is_instance_valid(design):return
 	UI.fit(design,get_viewport().get_visible_rect().size,Vector2(1152,648))
 
 ## Movimento curto, controlado e sem flashes; botão só arma depois da tecla de abertura solta.

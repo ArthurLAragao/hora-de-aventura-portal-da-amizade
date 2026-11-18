@@ -51,7 +51,7 @@ func _ready() -> void:
 	prompt=preload("res://scripts/ui/menu_layout.gd").label(design,"",Rect2(80,586,992,36),21);prompt.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	glow=ColorRect.new();glow.size=Vector2(1152,648);glow.color=Color(0.76,0.96,0.86,0);glow.mouse_filter=Control.MOUSE_FILTER_IGNORE;design.add_child(glow)
 	get_viewport().size_changed.connect(fit);fit()
-	var atmosphere:=Node2D.new();atmosphere.set_script(load("res://scripts/scenery/world_atmosphere.gd"));atmosphere.set("phase",6);add_child(atmosphere)
+	var atmosphere:=Node2D.new();atmosphere.name="WorldAtmosphere";atmosphere.set_script(load("res://scripts/scenery/world_atmosphere.gd"));atmosphere.set("phase",6);add_child(atmosphere)
 
 func fit() -> void:preload("res://scripts/ui/menu_layout.gd").fit(design,get_viewport().get_visible_rect().size,Vector2(1152,648))
 func nearest(actor: CoopPlayer) -> int:

@@ -62,3 +62,8 @@ func _grounded_destination(actor: CoopPlayer, desired: Vector2) -> Vector2:
 	var bottom := collider.global_transform * Vector2(0, shape.size.y * 0.5)
 	var bottom_offset := bottom.y - actor.global_position.y
 	return Vector2(desired.x, hit.position.y - bottom_offset - 2.5)
+
+## Posiciona somente a dupla inicial sobre o piso antes da conversa, sem resolver puzzles.
+func ground_initial_pair() -> void:
+	for actor in $Players.get_children():
+		if actor is CoopPlayer:actor.global_position=_grounded_destination(actor,actor.global_position)+Vector2(0,2.5)

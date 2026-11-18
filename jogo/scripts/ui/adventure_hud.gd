@@ -24,11 +24,11 @@ func _ready() -> void:
 	for slot in 2:
 		var x:=16+slot*150
 		plaque(Rect2(x,14,142,58))
-		var picture:=TextureRect.new();picture.position=Vector2(x+8,18);picture.size=Vector2(42,48)
+		var picture:=TextureRect.new();picture.position=Vector2(x+12,21);picture.size=Vector2(40,44)
 		picture.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;picture.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		picture.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;picture.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(picture);portraits.append(picture)
-		var role:=UI.label(design,"P%d"%(slot+1),Rect2(x+58,19,74,16),13);role.modulate=Color("e2c68e")
-		roles.append(UI.label(design,"",Rect2(x+58,35,78,28),17))
+		var role:=UI.label(design,"P%d"%(slot+1),Rect2(x+60,21,74,16),13);role.modulate=Color("e2c68e");role.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		var character:=UI.label(design,"",Rect2(x+58,38,78,24),17);character.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;roles.append(character)
 	var relicary:=TextureRect.new();relicary.name="CrystalRelicary";relicary.texture=load(ART.ROOT+"hud_crystals.png")
 	relicary.position=Vector2(846,14);relicary.size=Vector2(288,92);relicary.mouse_filter=MOUSE_FILTER_IGNORE;relicary.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;design.add_child(relicary)
 	count_label=UI.label(design,"Cristais da Amizade · 0/6",Rect2(864,26,256,20),14)
@@ -68,9 +68,11 @@ func sync() -> void:
 				id=String(actor.character_id);break
 		if id.is_empty():continue
 		roles[slot].text=NAMES.get(id,id.capitalize())
-		if not cache.has(id):cache[id]=load("res://Assets/01_Characters/%s/portrait.png"%id)
+		if not cache.has(id):
+			var source: Texture2D=load("res://Assets/01_Characters/%s/portrait.png"%id)
+			var crop:=AtlasTexture.new();crop.atlas=source;crop.region=source.get_image().get_used_rect();cache[id]=crop
 		portraits[slot].texture=cache[id]
-	visible=not screens.help_open and not screens.leaving and not (screens.phase==6 and screens.completed())
+	visible=not story.modal_active and not screens.help_open and not screens.leaving and not (screens.phase==6 and screens.completed())
 
 ## Frequência baixa: não há consulta de estados ou carregamento de retratos por quadro.
 func _process(delta: float) -> void:

@@ -20,11 +20,14 @@ func route(slot: int) -> void:
 	await jump(jake,476)
 	await walk(jake,636)
 	check("Jake requests bridge from the safe bank",level.bridge.can_activate(jake) and jake.is_on_floor())
+	if slot==1 and viewport_size.x<=1280:
+		record_dir=capture_dir.path_join("bridge-entry-frames");record_interval=6;DirAccess.make_dir_recursive_absolute(record_dir)
 	Input.action_press(action(jake,"ability"))
 	await until(func():return level.bridge._bridge_active,200)
 	await jump(finn,478)
 	await walk(finn,570)
-	await jump(finn,686)
+	var entry_y:=finn.position.y
+	check("Finn entra apenas caminhando, sem salto",await walk(finn,686) and absf(finn.position.y-entry_y)<0.6)
 	check("Finn entry actually lands on Jake",finn.is_on_floor() and level.bridge.get_dependents().has(finn))
 	Input.action_release(action(jake,"ability"))
 	await tap(finn,"jump")
@@ -38,6 +41,7 @@ func route(slot: int) -> void:
 	await walk(finn,866)
 	await tap(finn,"interact")
 	await frames(8)
+	await frames(18);record_dir=""
 	check("Finn lever repairs permanent connection",level.permanent.visible and level.permanent.collision_layer==1)
 	Input.action_release(action(jake,"ability"))
 	await until(func():return not jake.movement_locked,200)
@@ -76,5 +80,5 @@ func route(slot: int) -> void:
 
 func run() -> void:
 	root.size=viewport_size
-	for slot in ([1] if record_dir!="" else [1,2]): await route(slot)
+	for slot in [1,2]: await route(slot)
 	await finish("New Phase1")

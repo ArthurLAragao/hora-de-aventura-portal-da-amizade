@@ -1,5 +1,5 @@
 extends RefCounted
-const FONT=preload("res://Assets/08_Fonts/NotoSans.ttf")
+const FONT=preload("res://Assets/08_Fonts/PixelifySans.ttf")
 const OBJECTS="res://Assets/03_Objects_and_Puzzles/sprites/"
 const ACTORS={"Finn":"res://player1.tscn","Jake":"res://player_2.tscn","Fionna":"res://Assets/01_Characters/fionna/playable.tscn","Cake":"res://Assets/01_Characters/cake/playable.tscn","Marceline":"res://Assets/01_Characters/marceline/visual.tscn","BMO":"res://Assets/01_Characters/bmo/playable.tscn"}
 

@@ -1,4 +1,5 @@
 extends SceneTree
+var auto_dismiss_dialogue:=true
 var room: Node2D
 var cake: CoopPlayer
 var fionna: CoopPlayer
@@ -22,8 +23,24 @@ func _initialize() -> void:
 		if arg.begins_with("--report="): report_path=arg.trim_prefix("--report=")
 		if arg.begins_with("--capture-dir="): capture_dir=arg.trim_prefix("--capture-dir=")
 	call_deferred("run")
+func dismiss_dialogue() -> void:
+	if not auto_dismiss_dialogue:return
+	for tick in 240:
+		if not is_instance_valid(current_scene):return
+		var story=current_scene.get_node_or_null("FriendshipStory")
+		if story==null:return
+		var awaiting_pair: bool=story.phase==6 and story.stage_seen!=current_scene.stage and not current_scene._transitioning
+		if not story.modal_active and not awaiting_pair:return
+		release()
+		if story.modal_active and story.armed:
+			var key:=InputEventKey.new();key.keycode=KEY_ESCAPE;key.pressed=true;Input.parse_input_event(key)
+			key=InputEventKey.new();key.keycode=KEY_ESCAPE;key.pressed=false;Input.parse_input_event(key)
+		await physics_frame
+		await process_frame
+
 func frames(n: int) -> void:
 	for i in n:
+		await dismiss_dialogue()
 		await physics_frame
 		await process_frame
 func check(label: String,ok: bool) -> void:

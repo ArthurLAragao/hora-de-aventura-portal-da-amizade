@@ -26,7 +26,7 @@ func _ready() -> void:
 	process_mode=Node.PROCESS_MODE_ALWAYS;level=get_parent()
 	layer=CanvasLayer.new();layer.name="ScreenLayer";layer.layer=40;add_child(layer)
 	connect_help_buttons.call_deferred()
-	var atmosphere:=Node2D.new();atmosphere.set_script(load("res://scripts/scenery/world_atmosphere.gd"));atmosphere.set("phase",phase);level.add_child.call_deferred(atmosphere)
+	var atmosphere:=Node2D.new();atmosphere.name="WorldAtmosphere";atmosphere.set_script(load("res://scripts/scenery/world_atmosphere.gd"));atmosphere.set("phase",phase);level.add_child.call_deferred(atmosphere)
 	var adventure_layer:=CanvasLayer.new();adventure_layer.name="AdventureLayer";adventure_layer.layer=18;add_child(adventure_layer)
 	adventure_hud=preload("res://scripts/ui/adventure_hud.gd").new();adventure_layer.add_child(adventure_hud)
 	get_viewport().size_changed.connect(fit_result)
@@ -180,6 +180,8 @@ func _process(delta: float) -> void:
 ## F1 abre orientações e Esc retorna à fase; F2 reinicia com segurança mesmo durante a leitura.
 func _input(event: InputEvent) -> void:
 	if leaving:return
+	var story=level.get_node_or_null("FriendshipStory")
+	if story!=null and story.modal_active:return
 	if not event is InputEventKey or not event.pressed or event.echo:return
 	if help_open:
 		if event.keycode==KEY_F1 or event.keycode==KEY_ESCAPE:close_help();get_viewport().set_input_as_handled()

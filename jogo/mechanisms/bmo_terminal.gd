@@ -13,7 +13,7 @@ const NAMES = ["círculo", "quadrado", "triângulo"]
 const ON = preload("res://Assets/03_Objects_and_Puzzles/sprites/terminal_on.png")
 const RECEIVER_ON = preload("res://Assets/03_Objects_and_Puzzles/sprites/receiver_on.png")
 const BATTERY_ON = preload("res://Assets/03_Objects_and_Puzzles/sprites/battery_on.png")
-const FONT = preload("res://Assets/08_Fonts/NotoSans.ttf")
+const FONT = preload("res://Assets/08_Fonts/PixelifySans.ttf")
 var operator: CoopPlayer
 var panel_open := false
 var energized := false
@@ -144,13 +144,8 @@ func _label(text: String, size: int = 16) -> Label:
 	return label
 
 ## Cria o estilo de fundo/borda usado nos elementos do painel.
-func _style(selected: bool) -> StyleBoxFlat:
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color("314351") if not selected else Color("526d61")
-	style.border_color = Color("e4f7f0") if selected else Color("526878")
-	style.set_border_width_all(3 if selected else 1)
-	style.set_content_margin_all(8)
-	return style
+func _style(selected: bool) -> StyleBoxTexture:
+	return preload("res://scripts/ui/sprite_art.gd").skin(false,Color("fff0b0") if selected else Color.WHITE)
 
 ## Monta o painel de símbolos com seleção, progresso e instruções do operador.
 func _build_panel() -> void:
@@ -161,7 +156,6 @@ func _build_panel() -> void:
 	panel.position = Vector2(32, 138)
 	panel.custom_minimum_size = Vector2(410, 276)
 	var style := _style(false)
-	style.bg_color = Color("172b38")
 	style.set_content_margin_all(14)
 	panel.add_theme_stylebox_override("panel", style)
 	layer.add_child(panel)
