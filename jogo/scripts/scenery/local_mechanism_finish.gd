@@ -1,18 +1,16 @@
 extends Node
-## Aplica apenas as duas revisões locais pedidas: portões da Fase 1 e placas da Fase 6.
+## Aplica os acabamentos locais, inclusive ao portão final aninhado da trilha.
 @export_range(1,6) var phase:=1
-
-## Aguarda a construção dos mecanismos pela raiz da fase.
-func _ready() -> void:
-	apply.call_deferred()
-
-## Não altera scripts compartilhados nem a geometria de detecção dos mecanismos.
+func _ready() -> void:apply.call_deferred()
+func collect(parent: Node,result: Array) -> void:
+	for child in parent.get_children():
+		if (phase==1 and child is CoopGate) or (phase==6 and child is PressurePlate):result.append(child)
+		collect(child,result)
 func apply() -> void:
 	var lever=get_parent().get_node_or_null("Lever")
-	if phase==1 and lever!=null:
-		var skin:=Node2D.new();skin.set_script(load("res://scripts/scenery/forest_lever_skin.gd"));lever.add_child(skin)
-	for node in get_parent().get_children():
-		if (phase==1 and node is CoopGate) or (phase==6 and node is PressurePlate):
-			var finish:=Node2D.new();finish.name="LocalFinish"
-			finish.set_script(load("res://scripts/scenery/forest_gate_finish.gd" if phase==1 else "res://scripts/scenery/sanctuary_plate_finish.gd"))
-			node.add_child(finish)
+	if phase==1 and lever!=null and not lever.has_node("LeverArtwork"):
+		var skin:=Node2D.new();skin.name="LeverArtwork";skin.set_script(load("res://scripts/scenery/forest_lever_skin.gd"));lever.add_child(skin)
+	var candidates: Array=[];collect(get_parent(),candidates)
+	for node in candidates:
+		if node.has_node("LocalFinish"):continue
+		var finish:=Node2D.new();finish.name="LocalFinish";finish.set_script(load("res://scripts/scenery/forest_gate_finish.gd" if phase==1 else "res://scripts/scenery/sanctuary_plate_finish.gd"));node.add_child(finish)

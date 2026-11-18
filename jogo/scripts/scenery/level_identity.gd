@@ -7,7 +7,7 @@ var previous_state:=""
 var saved_window: Array=[]
 var backdrop: Node2D
 
-## Prepara a camada e corrige apenas o enquadramento local da Torre dos Espelhos.
+## Prepara a camada; o perfil local comum preserva os limites e a lógica da câmera.
 func _ready() -> void:
 	level=get_parent();z_index=1;texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 	backdrop=Node2D.new();backdrop.name="ArquiteturaDistante";backdrop.z_index=-3
@@ -16,12 +16,13 @@ func _ready() -> void:
 
 ## Aguarda construtores de fase que montam suas referências no _ready da raiz.
 func configure() -> void:
-	if phase==5:
+	if phase in [2,3,4,5]:
 		var window=get_window()
 		saved_window=[window.content_scale_size,window.content_scale_mode,window.content_scale_aspect]
 		window.content_scale_size=Vector2i(1152,648)
 		window.content_scale_mode=Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 		window.content_scale_aspect=Window.CONTENT_SCALE_ASPECT_KEEP
+	if phase==5:
 		# A pintura conserva proporção. Seu fundo deve cobrir os limites completos da câmera.
 		var panorama: Sprite2D=level.get_node("Background/Panorama")
 		var ratio:=maxf(2208.0/panorama.texture.get_width(),648.0/panorama.texture.get_height())

@@ -76,6 +76,8 @@ func _configure() -> void:
 	root_level.get_node("RegionalScenery").queue_redraw()
 	crystal.get_node("Sprite2D").texture=load("res://Assets/03_Objects_and_Puzzles/sprites/crystal_"+("purple" if region==3 else "orange")+".png")
 	crystal.get_node("Sprite2D").texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+	if region==3:
+		var station:=Node2D.new();station.name="MusicalStationArtwork";station.set_script(load("res://scripts/scenery/cave_station_finish.gd"));add_child(station)
 
 ## Conquista a confirmação quando ambas as placas da dupla estão ativas.
 func _check_duet(_active: bool) -> void:

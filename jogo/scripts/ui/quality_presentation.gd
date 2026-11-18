@@ -80,7 +80,7 @@ func _process(_delta: float) -> void:
 			hint.text=""
 			if absf(block.position.x-(304 if not level.tutorial_solved else 1360))>80: hint.text=("R" if actor.player_id==1 else "Backspace")+": repor"
 		for gate in [level.tutorial_gate,level.relay_gate,level.final_gate]:
-			gate.get_node("Sprite2D").visible=not gate.is_open
+			gate.get_node("Sprite2D").visible=not gate.is_open and not gate.has_node("LocalFinish")
 	else:
 		if level.stage==1:
 			var cake=level.pair[1]
