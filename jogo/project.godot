@@ -14,6 +14,10 @@ config/name="Adventure Time"
 run/main_scene="res://Assets/04_Interface/Godot/main_menu.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
+[autoload]
+
+Esp32InputBridge="*res://scripts/core/esp32_input_bridge.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"

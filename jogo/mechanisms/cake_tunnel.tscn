@@ -1,0 +1,51 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://mechanisms/cake_tunnel.gd" id="1_g01cm"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/tunnel_left.png" id="2_qinxy"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/tunnel_right.png" id="3_wytr2"]
+[ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="4_htsf4"]
+
+[sub_resource type="RectangleShape2D" id="Entry"]
+size = Vector2(64, 60)
+
+[node name="Tunnel" type="Node2D" unique_id=106399986]
+script = ExtResource("1_g01cm")
+
+[node name="LeftEntry" type="Area2D" parent="." unique_id=192187448]
+position = Vector2(292, 480)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEntry" unique_id=1389446720]
+shape = SubResource("Entry")
+
+[node name="Marker" type="Sprite2D" parent="LeftEntry" unique_id=1758324654]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_qinxy")
+
+[node name="RightEntry" type="Area2D" parent="." unique_id=1129419558]
+position = Vector2(508, 480)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightEntry" unique_id=2081108557]
+shape = SubResource("Entry")
+
+[node name="Marker" type="Sprite2D" parent="RightEntry" unique_id=1663649622]
+z_index = -1
+texture_filter = 1
+position = Vector2(0, 6)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_wytr2")
+
+[node name="Prompt" type="Label" parent="." unique_id=1233458020]
+offset_left = 238.0
+offset_top = 408.0
+theme_override_fonts/font = ExtResource("4_htsf4")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.03, 0.08, 0.13, 1)
+theme_override_constants/outline_size = 5
+text = "TÚNEL · Cake"

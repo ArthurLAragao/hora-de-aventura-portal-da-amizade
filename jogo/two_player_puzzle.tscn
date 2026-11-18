@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://two_player_puzzle.gd" id="1_puzzle"]
+[ext_resource type="Script" path="res://scripts/puzzles/two_player_puzzle.gd" id="1_puzzle"]
 [ext_resource type="PackedScene" path="res://pressure_plate.tscn" id="2_plate"]
 [ext_resource type="PackedScene" path="res://gate.tscn" id="3_gate"]
 

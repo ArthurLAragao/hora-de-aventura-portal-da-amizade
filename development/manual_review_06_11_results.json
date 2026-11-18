@@ -1,0 +1,128 @@
+[
+  {
+    "test": "record_ending_route",
+    "viewport": "(1280, 720)",
+    "checks": 66,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_challenge_edges",
+    "viewport": "(1280, 720)",
+    "checks": 31,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_final_regions",
+    "viewport": "(1280, 720)",
+    "checks": 102,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_1",
+    "viewport": "(1280, 720)",
+    "checks": 36,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_6",
+    "viewport": "(1280, 720)",
+    "checks": 66,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_safety",
+    "viewport": "(1920, 1080)",
+    "checks": 98,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_layout_polish",
+    "viewport": "(1280, 720)",
+    "checks": 34,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_level_2",
+    "viewport": "(1280, 720)",
+    "checks": 61,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_manual_review",
+    "viewport": "(1280, 720)",
+    "checks": 26,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_mirror_safety",
+    "viewport": "(1280, 720)",
+    "checks": 30,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_mirror_tower",
+    "viewport": "(1280, 720)",
+    "checks": 20,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_pixel_art_finish",
+    "viewport": "(1280, 720)",
+    "checks": 32,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_regional_states",
+    "viewport": "(1920, 1080)",
+    "checks": 12,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_screens",
+    "viewport": "(1920, 1080)",
+    "checks": 121,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_final_regions",
+    "viewport": "(1920, 1080)",
+    "checks": 102,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_6",
+    "viewport": "(1920, 1080)",
+    "checks": 66,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_level_2",
+    "viewport": "(1920, 1080)",
+    "checks": 61,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_mirror_tower",
+    "viewport": "(1920, 1080)",
+    "checks": 20,
+    "failures": 0,
+    "console_errors": []
+  }
+]

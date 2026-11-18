@@ -1,6 +1,12 @@
-[gd_scene load_steps=30 format=3]
+[gd_scene load_steps=35 format=3]
 
-[ext_resource type="Script" path="res://level_2.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/scenery/habitat_finish.gd" id="habitat_finish"]
+[ext_resource type="Script" path="res://scripts/scenery/level_identity.gd" id="identity_finish"]
+[ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
+[ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
+[ext_resource type="Script" path="res://scripts/ui/friendship_story.gd" id="story_content"]
+
+[ext_resource type="Script" path="res://scripts/levels/level_2.gd" id="1"]
 
 [ext_resource type="PackedScene" path="res://Assets/01_Characters/cake/playable.tscn" id="2"]
 
@@ -10,15 +16,15 @@
 
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/02_ice_kingdom/background.png" id="5"]
 
-[ext_resource type="Script" path="res://tests/cake_tunnel.gd" id="6"]
+[ext_resource type="Script" path="res://mechanisms/cake_tunnel.gd" id="6"]
 
-[ext_resource type="Script" path="res://tests/cake_anchor.gd" id="7"]
+[ext_resource type="Script" path="res://scripts/bridges/cake_bridge.gd" id="7"]
 
-[ext_resource type="Script" path="res://tests/fionna_crank.gd" id="8"]
+[ext_resource type="Script" path="res://mechanisms/fionna_crank.gd" id="8"]
 
 [ext_resource type="SpriteFrames" path="res://Assets/03_Objects_and_Puzzles/Godot/crank.tres" id="9"]
 
-[ext_resource type="Script" path="res://tests/fionna_platform.gd" id="10"]
+[ext_resource type="Script" path="res://scripts/puzzles/ice_passage.gd" id="10"]
 
 [ext_resource type="FontFile" path="res://Assets/08_Fonts/NotoSans.ttf" id="11"]
 
@@ -30,13 +36,15 @@
 
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/tunnel_right.png" id="15"]
 
-[ext_resource type="Script" path="res://shared_camera.gd" id="15"]
+[ext_resource type="Script" path="res://scripts/core/shared_camera.gd" id="15"]
 [ext_resource type="PackedScene" path="res://push_block.tscn" id="16"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/ice_block.png" id="17"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/switch_off.png" id="18"]
-[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/crystal_cyan.png" id="19"]
+[ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/crystal_green.png" id="19"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/start_flag.png" id="20"]
 [ext_resource type="Texture2D" path="res://Assets/02_Environments/02_ice_kingdom/tiles/bridge.png" id="21"]
+
+[ext_resource type="Script" path="res://scripts/scenery/region_scenery.gd" id="98_region_art"]
 
 [sub_resource type="RectangleShape2D" id="Entry"]
 size = Vector2(64,60)
@@ -126,6 +134,7 @@ position = Vector2(1488,487)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7")
+extra_length = 96.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Anchor"]
 position = Vector2(0,12)
@@ -146,7 +155,7 @@ theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
 theme_override_constants/outline_size = 5
 
 [node name="Crank" type="Area2D" parent="."]
-position = Vector2(1640,487)
+position = Vector2(1736,487)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("8")
@@ -180,11 +189,13 @@ theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
 theme_override_constants/outline_size = 5
 
 [node name="ExtendPlatform" type="AnimatableBody2D" parent="."]
-position = Vector2(1632,519)
+position = Vector2(1696,519)
 z_index = 1
 collision_layer = 1
 collision_mask = 2
 script = ExtResource("10")
+direction = -1
+length = 192.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ExtendPlatform"]
 position = Vector2(1,6)
@@ -250,7 +261,7 @@ tile_set = ExtResource("4")
 format = 2
 
 [node name="FirstCrank" type="Area2D" parent="."]
-position = Vector2(760,487)
+position = Vector2(696,487)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("8")
@@ -284,12 +295,13 @@ theme_override_colors/font_outline_color = Color(0.03,0.08,0.13,1)
 theme_override_constants/outline_size = 5
 
 [node name="FirstPlatform" type="AnimatableBody2D" parent="."]
-position = Vector2(800,519)
+position = Vector2(736,519)
 z_index = 1
 collision_layer = 1
 collision_mask = 2
 script = ExtResource("10")
-extension = Vector2(96,0)
+direction = 1
+length = 192.0
 
 [node name="Sprite2D" type="Sprite2D" parent="FirstPlatform"]
 position = Vector2(1,6)
@@ -355,3 +367,25 @@ position = Vector2(2314,300)
 collision_layer = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
 shape = SubResource("WorldWall")
+[node name="RegionalScenery" type="Node2D" parent="."]
+script = ExtResource("98_region_art")
+region = 2
+
+[node name="FriendshipStory" type="Node" parent="."]
+script = ExtResource("story_content")
+phase = 2
+
+[node name="CleanPresentation" type="Node" parent="."]
+script = ExtResource("clean_presentation")
+
+[node name="GameScreens" type="Node" parent="."]
+script = ExtResource("game_screens")
+phase = 2
+
+[node name="LevelIdentity" type="Node2D" parent="."]
+script = ExtResource("identity_finish")
+phase = 2
+
+[node name="HabitatFinish" type="Node2D" parent="."]
+script = ExtResource("habitat_finish")
+phase = 2

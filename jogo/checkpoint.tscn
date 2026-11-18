@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://checkpoint.gd" id="1_checkpoint"]
+[ext_resource type="Script" path="res://scripts/puzzles/checkpoint.gd" id="1_checkpoint"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/checkpoint_off.png" id="2_checkpoint"]
 [ext_resource type="Texture2D" path="res://Assets/03_Objects_and_Puzzles/sprites/checkpoint_on.png" id="3_checkpoint_on"]
 [ext_resource type="AudioStream" path="res://Assets/07_Audio/SFX/checkpoint.wav" id="4_checkpoint_sfx"]

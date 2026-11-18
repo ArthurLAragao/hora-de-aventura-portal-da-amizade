@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-02",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "requirement": "03/11: situações, diálogos ou desafios que expressem o tema escolhido",
+  "theme": "amizade e cooperação",
+  "implementation": "nonblocking reactive conversations with existing portraits in all six phases",
+  "minimum_read_seconds": 7.0,
+  "controls": {
+    "Tab": "advance line",
+    "F3": "replay latest conversation"
+  },
+  "results": [
+    {
+      "test": "verify_friendship_story",
+      "resolution": "1280x720",
+      "checks": 140,
+      "failures": 0,
+      "fixture_setup": true
+    },
+    {
+      "test": "verify_journey_1",
+      "resolution": "1280x720",
+      "checks": 36,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_level_2",
+      "resolution": "1280x720",
+      "checks": 61,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_final_regions",
+      "resolution": "1280x720",
+      "checks": 94,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_mirror_tower",
+      "resolution": "1280x720",
+      "checks": 18,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_journey_6",
+      "resolution": "1280x720",
+      "checks": 66,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_journey_safety",
+      "resolution": "1280x720",
+      "checks": 98,
+      "failures": 0,
+      "fixture_setup": true
+    },
+    {
+      "test": "verify_regional_states",
+      "resolution": "1280x720",
+      "checks": 12,
+      "failures": 0,
+      "fixture_setup": true
+    },
+    {
+      "test": "verify_mirror_safety",
+      "resolution": "1280x720",
+      "checks": 30,
+      "failures": 0,
+      "fixture_setup": true
+    },
+    {
+      "test": "verify_challenge_edges",
+      "resolution": "1280x720",
+      "checks": 31,
+      "failures": 0,
+      "fixture_setup": true
+    },
+    {
+      "test": "verify_menu",
+      "resolution": "1280x720",
+      "checks": 16,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_friendship_story",
+      "resolution": "1152x648",
+      "checks": 140,
+      "failures": 0,
+      "fixture_setup": true
+    },
+    {
+      "test": "verify_journey_1",
+      "resolution": "1152x648",
+      "checks": 36,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_level_2",
+      "resolution": "1152x648",
+      "checks": 61,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_final_regions",
+      "resolution": "1152x648",
+      "checks": 94,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_mirror_tower",
+      "resolution": "1152x648",
+      "checks": 18,
+      "failures": 0,
+      "fixture_setup": false
+    },
+    {
+      "test": "verify_journey_6",
+      "resolution": "1152x648",
+      "checks": 66,
+      "failures": 0,
+      "fixture_setup": false
+    }
+  ],
+  "preservation": {
+    "modified_existing": [
+      "level_1.tscn",
+      "level_2.tscn",
+      "level_3.tscn",
+      "level_4.tscn",
+      "level_5.tscn",
+      "level_6.tscn",
+      "mechanisms/bmo_terminal.gd",
+      "scripts/ui/friendship_ending.gd",
+      "README.md",
+      "docs/APRESENTACAO.md",
+      "docs/CODIGO.md"
+    ],
+    "new": [
+      "scripts/content/friendship_lines.gd",
+      "scripts/ui/friendship_story.gd",
+      "docs/CONTEUDO_03_11.md"
+    ],
+    "scene_layouts_unchanged_except_story_node": true,
+    "all_physics_character_bridge_checkpoint_scripts_preserved": true,
+    "terminal_only_error_text_changed": true,
+    "ending_only_subtitle_changed": true
+  },
+  "rendering": "D3D12; native rendered captures inspected",
+  "recording": "real phase 1 opening and player movement by inputs; stored outside game/repository",
+  "limits": [
+    "no new voice acting",
+    "audio muted during QA",
+    "no real two-person or child reading validation",
+    "no exported build or second computer",
+    "human approval pending"
+  ]
+}

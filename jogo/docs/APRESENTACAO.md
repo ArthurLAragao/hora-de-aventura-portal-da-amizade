@@ -1,0 +1,56 @@
+# Roteiro de apresentação
+
+## Antes da aula
+
+Abra `project.godot` no Godot 4.7.2. Aguarde a importação normal. O projeto não precisa dos testes ou arquivos de autoria para executar. O ZIP fonte deve ser extraído inteiro; não execute de dentro do ZIP.
+
+## Abas úteis no Godot
+
+1. `Assets/04_Interface/Godot/main_menu.tscn`: F5 demonstra o fluxo inicial.
+2. `level_1.tscn`: abertura cooperativa com Finn e Jake.
+3. `level_2.tscn`: Fionna e Cake, túnel e passagem.
+4. `level_3.tscn`: Marceline e BMO, comunicação por símbolos.
+5. `level_4.tscn`: Finn e BMO, transporte e circuito.
+6. `level_5.tscn`: Marceline e Cake, espelhos e receptores.
+7. `level_6.tscn`: três duplas sucessivas e encerramento.
+
+Use F6 para executar a aba de cena atual. F8 para interromper a execução antes de trocar a demonstração. Não apresente uma posição de teste como um percurso concluído.
+
+## Código para mostrar, se solicitado
+
+- `scripts/characters/player.gd`: movimento compartilhado e separação entre personagem/jogador/capacidade.
+- `scripts/bridges/jake_bridge.gd`: estados e segurança da ponte.
+- `mechanisms/bmo_terminal.gd`: painel e bloqueio apenas do operador.
+- `scripts/levels/level_6.gd`: trocas de dupla e preservação do progresso.
+
+Todas as funções mantidas possuem comentários em português. Consulte `CODIGO.md` para encontrar uma função sem procurar em dezenas de arquivos.
+
+## Demonstração curta
+
+Mostre o menu e escolha uma fase. Explique que os dois jogadores usam o mesmo computador. Demonstre uma ação em que cada parceiro contribui, um mecanismo com feedback e uma recuperação segura. Na Fase 6, mostre a troca de dupla e, quando houver tempo para o percurso, a celebração.
+
+Não é necessário abrir todas as funções durante a apresentação. Deixe a documentação disponível e priorize o jogo funcionando.
+
+## Falar com precisão
+
+Há seis fases acessíveis pelo seletor. A Fase 5 foi implementada após a otimização; seu percurso e limites de validação estão em `FASE_5.md`. Foram realizados testes automatizados de percurso e inspeção de capturas reais; isso não equivale a validar exportação, outros computadores ou todos os cenários possíveis. A otimização reduziu o material dentro do projeto e o trabalho de preparação de recursos, sem alterar os puzzles.
+
+
+## Item de 29/10 — desafios e obstáculos
+
+A tabela de desafios, contribuições de cada jogador, correções e roteiro curto está em [DESAFIOS_29_10.md](DESAFIOS_29_10.md). Demonstre erro e nova tentativa, além da solução. Não apresente preparação de estado de testes isolados como percurso concluído.
+
+
+## Item de 03/11 — conteúdo do jogo
+
+Demonstre as miniconversas da abertura e as reações às conquistas. Explique como a cooperação dos puzzles expressa amizade: compartilhar pistas, dividir tarefas e deixar caminho para o parceiro. Tab avança e F3 relê a conversa mais recente, sem interromper os controles. O roteiro e as falas estão em [CONTEUDO_03_11.md](CONTEUDO_03_11.md).
+
+
+## Apresentação sem tutoriais permanentes
+
+As fases mostram o cenário e as conversas, sem ordens de ação ou teclas flutuantes. Pistas e o painel operacional do terminal permanecem. Tab/F3 continuam disponíveis, com a legenda retirada do cartão. Ver [APRESENTACAO_LIMPA.md](APRESENTACAO_LIMPA.md).
+
+
+## Item de 05/11 — telas e instruções
+
+A tela inicial mantém Jogar, Como jogar e Som. As orientações têm três páginas e podem ser abertas por F1 durante a fase, com retorno ao progresso atual. As conclusões das Fases 1–5 oferecem continuação, repetição, seleção e menu; a celebração da Fase 6 conserva os seis personagens e retorno estável. Consulte [TELAS_05_11.md](TELAS_05_11.md) para o fluxo e a matriz de validação.

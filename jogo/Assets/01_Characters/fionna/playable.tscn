@@ -1,5 +1,5 @@
 [gd_scene load_steps=4 format=3]
-[ext_resource type="Script" path="res://fionna_player.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/characters/fionna_player.gd" id="1"]
 [ext_resource type="PackedScene" path="res://Assets/01_Characters/fionna/visual.tscn" id="2"]
 [sub_resource type="RectangleShape2D" id="Body"]
 size = Vector2(20,54)

@@ -1,0 +1,114 @@
+[
+  {
+    "test": "verify_challenge_edges",
+    "resolution": "(1280, 720)",
+    "checks": 31,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_final_regions",
+    "resolution": "(1280, 720)",
+    "checks": 100,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_journey_1",
+    "resolution": "(1280, 720)",
+    "checks": 36,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_journey_6",
+    "resolution": "(1280, 720)",
+    "checks": 66,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_journey_safety",
+    "resolution": "(1920, 1080)",
+    "checks": 98,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_layout_polish",
+    "resolution": "(1280, 720)",
+    "checks": 34,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_level_2",
+    "resolution": "(1280, 720)",
+    "checks": 61,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_mirror_safety",
+    "resolution": "(1280, 720)",
+    "checks": 30,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_mirror_tower",
+    "resolution": "(1280, 720)",
+    "checks": 20,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_pixel_art_finish",
+    "resolution": "(1280, 720)",
+    "checks": 32,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_regional_states",
+    "resolution": "(1920, 1080)",
+    "checks": 12,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_final_regions",
+    "resolution": "(1920, 1080)",
+    "checks": 100,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_journey_1",
+    "resolution": "(1920, 1080)",
+    "checks": 36,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_journey_6",
+    "resolution": "(1920, 1080)",
+    "checks": 66,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_level_2",
+    "resolution": "(1920, 1080)",
+    "checks": 61,
+    "failures": 0,
+    "console_problems": []
+  },
+  {
+    "test": "verify_mirror_tower",
+    "resolution": "(1920, 1080)",
+    "checks": 20,
+    "failures": 0,
+    "console_problems": []
+  }
+]

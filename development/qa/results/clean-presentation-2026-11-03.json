@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-03",
+  "engine": "4.7.2",
+  "change": "remove persistent tutorial overlays and world key prompts; preserve conversations and essential puzzle information",
+  "results": [
+    {
+      "test": "verify_clean_presentation-1793681911629508000",
+      "profile": "final-1280x720",
+      "checks": 40,
+      "failures": 0
+    },
+    {
+      "test": "verify_journey_1",
+      "profile": "final-1280x720",
+      "checks": 36,
+      "failures": 0
+    },
+    {
+      "test": "verify_challenge_edges",
+      "profile": "native-1280x720",
+      "checks": 31,
+      "failures": 0
+    },
+    {
+      "test": "verify_final_regions",
+      "profile": "native-1280x720",
+      "checks": 94,
+      "failures": 0
+    },
+    {
+      "test": "verify_friendship_story",
+      "profile": "native-1280x720",
+      "checks": 140,
+      "failures": 0
+    },
+    {
+      "test": "verify_journey_6",
+      "profile": "native-1280x720",
+      "checks": 66,
+      "failures": 0
+    },
+    {
+      "test": "verify_journey_safety",
+      "profile": "native-1280x720",
+      "checks": 98,
+      "failures": 0
+    },
+    {
+      "test": "verify_level_2",
+      "profile": "native-1280x720",
+      "checks": 61,
+      "failures": 0
+    },
+    {
+      "test": "verify_menu",
+      "profile": "native-1280x720",
+      "checks": 16,
+      "failures": 0
+    },
+    {
+      "test": "verify_mirror_tower",
+      "profile": "native-1280x720",
+      "checks": 18,
+      "failures": 0
+    },
+    {
+      "test": "verify_regional_states",
+      "profile": "native-1280x720",
+      "checks": 12,
+      "failures": 0
+    },
+    {
+      "test": "verify_clean_presentation",
+      "profile": "native-1152x648",
+      "checks": 40,
+      "failures": 0
+    },
+    {
+      "test": "verify_friendship_story",
+      "profile": "native-1152x648",
+      "checks": 140,
+      "failures": 0
+    }
+  ],
+  "preservation": {
+    "modified_existing": [
+      "level_1.tscn",
+      "level_2.tscn",
+      "level_3.tscn",
+      "level_4.tscn",
+      "level_5.tscn",
+      "level_6.tscn",
+      "scripts/ui/friendship_story.gd",
+      "README.md",
+      "docs/CONTEUDO_03_11.md",
+      "docs/APRESENTACAO.md",
+      "docs/CODIGO.md"
+    ],
+    "new": [
+      "scripts/ui/clean_phase_presentation.gd",
+      "docs/APRESENTACAO_LIMPA.md"
+    ],
+    "scene_layouts_unchanged_except_presentation_node": true,
+    "all_gameplay_character_art_bridge_checkpoint_camera_scripts_preserved": true,
+    "dialogue_script_only_footer_visibility_changed": true
+  },
+  "rendering": "D3D12; real captures inspected",
+  "nonfinal_attempt": "first full phase 2 run timed out; isolated visible-window rerun completed successfully",
+  "limits": [
+    "human acceptance pending",
+    "no new export, audio, second-computer or two-person validation"
+  ],
+  "backup_files": 1994
+}

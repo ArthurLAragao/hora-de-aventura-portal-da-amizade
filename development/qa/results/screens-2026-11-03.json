@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-03",
+  "godot": "4.7.2",
+  "scope": "Telas e instruções de 05/11",
+  "renderer": "D3D12, execução nativa",
+  "resolutions": [
+    [
+      800,
+      450
+    ],
+    [
+      1024,
+      768
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1920,
+      1080
+    ]
+  ],
+  "reports": {
+    "verify_challenge_edges": {
+      "checks": 31,
+      "failures": 0
+    },
+    "verify_clean_presentation": {
+      "checks": 40,
+      "failures": 0
+    },
+    "verify_final_regions": {
+      "checks": 94,
+      "failures": 0
+    },
+    "verify_friendship_story": {
+      "checks": 140,
+      "failures": 0
+    },
+    "verify_journey_1": {
+      "checks": 36,
+      "failures": 0
+    },
+    "verify_journey_6": {
+      "checks": 66,
+      "failures": 0
+    },
+    "verify_journey_safety": {
+      "checks": 98,
+      "failures": 0
+    },
+    "verify_level_2": {
+      "checks": 61,
+      "failures": 0
+    },
+    "verify_menu": {
+      "checks": 16,
+      "failures": 0
+    },
+    "verify_mirror_tower": {
+      "checks": 18,
+      "failures": 0
+    },
+    "verify_regional_states": {
+      "checks": 12,
+      "failures": 0
+    },
+    "verify_screens": {
+      "checks": 121,
+      "failures": 0
+    }
+  },
+  "preservation": {
+    "modified_existing": [
+      "level_1.tscn",
+      "level_2.tscn",
+      "level_3.tscn",
+      "level_4.tscn",
+      "level_5.tscn",
+      "level_6.tscn",
+      "Assets/04_Interface/Godot/instructions.tscn",
+      "Assets/04_Interface/Godot/screen_controller.gd",
+      "scripts/ui/phase_select.gd",
+      "scripts/ui/friendship_ending.gd",
+      "scripts/ui/clean_phase_presentation.gd",
+      "README.md",
+      "docs/APRESENTACAO.md",
+      "docs/CODIGO.md",
+      "docs/FASE_5.md"
+    ],
+    "new": [
+      "scripts/ui/menu_layout.gd",
+      "scripts/ui/instructions_screen.gd",
+      "scripts/ui/game_screens.gd",
+      "docs/TELAS_05_11.md"
+    ],
+    "all_phase_layouts_preserved_except_ui_node": true,
+    "all_characters_art_puzzles_bridges_checkpoints_cameras_project_config_unchanged": true,
+    "backup_files": 1996
+  },
+  "notes": [
+    "Percursos normais verificados por entrada nas suites de jornada, com papéis padrão e invertidos.",
+    "Casos isolados de telas, pontes, terminais e celebração usam preparação de estado e não contam como travessia.",
+    "Captura adicional após ajuste de contorno do texto de som excedeu o tempo; a repetição com renderização sem capturas passou. Capturas anteriores permanecem identificadas.",
+    "Não foram validados exportação, áudio em dispositivo real, duas pessoas ou máquina da apresentação.",
+    "Aprovação manual desta rodada permanece pendente."
+  ]
+}

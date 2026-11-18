@@ -1,0 +1,2219 @@
+{
+  "verify_journey_1": {
+    "checks": [
+      {
+        "check": "P1: correct duo and unchanged 32x20 grid",
+        "passed": true
+      },
+      {
+        "check": "P1: safe independent initial floor",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake cannot push or activate tutorial alone",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn physically moves tutorial log and opens path",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake requests bridge from the safe bank",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn entry actually lands on Jake",
+        "passed": true
+      },
+      {
+        "check": "P1: airborne partner retains the bridge",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn lever repairs permanent connection",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake follows physically on permanent support",
+        "passed": true
+      },
+      {
+        "check": "P1: checkpoint reached legitimately after shared passage",
+        "passed": true
+      },
+      {
+        "check": "P1: same log becomes Jake's step",
+        "passed": true
+      },
+      {
+        "check": "P1: upper capability plate opens Finn's route",
+        "passed": true
+      },
+      {
+        "check": "P1: leaving the upper plate removes unsolved cooperation",
+        "passed": true
+      },
+      {
+        "check": "P1: Finn push plus Jake position solves final combination",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal requires the final combination",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal collected by real arrival exactly once",
+        "passed": true
+      },
+      {
+        "check": "P1: one character alone cannot finish",
+        "passed": true
+      },
+      {
+        "check": "P1: complete cooperative route without recovery or reposition",
+        "passed": true
+      },
+      {
+        "check": "P2: correct duo and unchanged 32x20 grid",
+        "passed": true
+      },
+      {
+        "check": "P2: safe independent initial floor",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake cannot push or activate tutorial alone",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn physically moves tutorial log and opens path",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake requests bridge from the safe bank",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn entry actually lands on Jake",
+        "passed": true
+      },
+      {
+        "check": "P2: airborne partner retains the bridge",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn lever repairs permanent connection",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake follows physically on permanent support",
+        "passed": true
+      },
+      {
+        "check": "P2: checkpoint reached legitimately after shared passage",
+        "passed": true
+      },
+      {
+        "check": "P2: same log becomes Jake's step",
+        "passed": true
+      },
+      {
+        "check": "P2: upper capability plate opens Finn's route",
+        "passed": true
+      },
+      {
+        "check": "P2: leaving the upper plate removes unsolved cooperation",
+        "passed": true
+      },
+      {
+        "check": "P2: Finn push plus Jake position solves final combination",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal requires the final combination",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal collected by real arrival exactly once",
+        "passed": true
+      },
+      {
+        "check": "P2: one character alone cannot finish",
+        "passed": true
+      },
+      {
+        "check": "P2: complete cooperative route without recovery or reposition",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "headless": false,
+    "viewport": "(1280, 720)"
+  },
+  "verify_level_2": {
+    "checks": [
+      {
+        "check": "Cake P1: safe separate spawns/roles/own ice grid",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: shared camera references and own bounds",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: independent input and marked block can move",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: actual horizontal block push stops",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: block has no drift after push",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: context begins crawl at real entrance",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: tunnel actually traversed and cannot stand under roof",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: low roof prevents jumping",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: real reverse in tunnel",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: exit restores normal posture",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Cake switch legitimately unlocks first crank",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Fionna uses the actual ice block as step",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Fionna reaches top route instead of being trapped",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: first crank extends permanent ice passage",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Fionna traverses the stepped ice ridge",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Cake traverses the same ridge",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: both pass first section without recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Cake bridge works at translated level anchor",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: entry lands on Cake, not bypass jump",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: airborne release waits safely in this level",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: second permanent passage available and Cake released",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: pair reunites without teleport or fall recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Fionna reaches the crystal terrace",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: Cake reaches the crystal terrace",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: normal route reaches reserved final area",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: crystal and joint exit complete once",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: one composed scenery layer",
+        "passed": true
+      },
+      {
+        "check": "Cake P1: F2 resets controls, bridge and mechanisms",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: safe separate spawns/roles/own ice grid",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: shared camera references and own bounds",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: independent input and marked block can move",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: actual horizontal block push stops",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: block has no drift after push",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: context begins crawl at real entrance",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: tunnel actually traversed and cannot stand under roof",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: low roof prevents jumping",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: real reverse in tunnel",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: exit restores normal posture",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Cake switch legitimately unlocks first crank",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Fionna uses the actual ice block as step",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Fionna reaches top route instead of being trapped",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: first crank extends permanent ice passage",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Fionna traverses the stepped ice ridge",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Cake traverses the same ridge",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: both pass first section without recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Cake bridge works at translated level anchor",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: entry lands on Cake, not bypass jump",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: airborne release waits safely in this level",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: second permanent passage available and Cake released",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: pair reunites without teleport or fall recovery",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Fionna reaches the crystal terrace",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: Cake reaches the crystal terrace",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: normal route reaches reserved final area",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: crystal and joint exit complete once",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: one composed scenery layer",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: F2 resets controls, bridge and mechanisms",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 1 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 2 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 3 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 4 has safe floor and label",
+        "passed": true
+      },
+      {
+        "check": "Cake P2: explicit test start 5 has safe floor and label",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "fixture_positions_are_route_evidence": false,
+    "full_phase_completion": true,
+    "headless": false
+  },
+  "verify_final_regions": {
+    "checks": [
+      {
+        "check": "P1: 3: correct pair and independent inputs",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: grounded initial pair",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: HUD retains received pair instructions",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: clue starts hidden",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: reach lower balcony",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: reach raised music panel",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: musical action opens received gate",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: checkpoint earned after musical gate",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: panel opens without accidental first confirmation",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: entered sequence opens symbol gate and releases controls",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: Marceline crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: BMO crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: energy completes and releases BMO",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: revealed visual clue",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: both regain the far bank",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: two plates confirm the duet",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: joint completion without recovery",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: grounded correct pair",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: one energy activation connection",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn loads the actual carrier",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: BMO transports supported block",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn reaches rail landing",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn pushes delivered block to pressure plate",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: BMO crosses the rail opening",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: BMO safely approaches the delivered block",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: checkpoint earned after log gate",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: physical conduit shapes aligned",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn cannot operate energy",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: energy opens gate once",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: repeated energy is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: joint completion without recovery",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: correct pair and independent inputs",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: grounded initial pair",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: HUD retains received pair instructions",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: clue starts hidden",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: reach lower balcony",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: reach raised music panel",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: musical action opens received gate",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: checkpoint earned after musical gate",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: panel opens without accidental first confirmation",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: entered sequence opens symbol gate and releases controls",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: Marceline crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: BMO crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: energy completes and releases BMO",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: revealed visual clue",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: both regain the far bank",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: two plates confirm the duet",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: joint completion without recovery",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: grounded correct pair",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: one energy activation connection",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn loads the actual carrier",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: BMO transports supported block",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn reaches rail landing",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn pushes delivered block to pressure plate",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: BMO crosses the rail opening",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: BMO safely approaches the delivered block",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: checkpoint earned after log gate",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: physical conduit shapes aligned",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn cannot operate energy",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: energy opens gate once",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: repeated energy is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: joint completion without recovery",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "headless": false,
+    "viewport": "(1280, 720)"
+  },
+  "verify_journey_6": {
+    "checks": [
+      {
+        "check": "P1: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P1: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P1: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P1: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P1: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P1: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P1: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P1: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P1: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P1: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P1: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P1: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P1: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P1: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P1: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P1: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P1: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P1: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P1: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P1: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P1: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P1: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P1: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P1: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P1: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      },
+      {
+        "check": "P2: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P2: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P2: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P2: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P2: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P2: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P2: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P2: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P2: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P2: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P2: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P2: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P2: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P2: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P2: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P2: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P2: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P2: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P2: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P2: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P2: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P2: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P2: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P2: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P2: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "headless": false,
+    "viewport": "(1280, 720)"
+  },
+  "verify_journey_safety": {
+    "checks": [
+      {
+        "check": "P1: fixture: early fall returns BOTH to initial safe ground",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: checkpoint refuses unearned arrival",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: unearned marker never becomes respawn",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: ordinary jump does not replace Jake over raised gap",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: fresh checkpoint entry requires repaired passage",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: grounded unresolved log keeps useful position after fall",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: obstructing unresolved log restored without erasing passage",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: final combination latches permanently",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: first crystal records a single collection",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: fall preserves final gate, checkpoint and crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: near-simultaneous falls enqueue one pair recovery",
+        "passed": true
+      },
+      {
+        "check": "P1: F1 complete restart clears puzzles/crystal and keeps swapped controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6 sector 0: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart during sector 0 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6 sector 1: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart during sector 1 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6 sector 2: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: F6 restart during sector 2 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: early bridge cancel restores controls/no invisible floor",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: Cake cannot stand up during a real crawl under the roof",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: crank refuses before Cake's tunnel/switch",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: crank cancellation restores local controls and coherent retry",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: interrupted crank animation cancels safely without awarding progress",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: BMO cannot guess symbols before clue or use music capability",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: opening interaction never enters first symbol",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: terminal cancel unblocks only operator",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: wrong sequence is retryable and cannot repair signal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: correct retry activates signal once",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: repeated interaction is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: one confirmation alone cannot reveal crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: both confirmations required before crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: portal refuses single player even with sixth crystal",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture: C recovery retains crystal, seals and current pair",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F1: both players at exit cannot finish without crystal/puzzle",
+        "passed": true
+      },
+      {
+        "check": "P1: fixture F6: both at portal cannot skip final signal/confirmation/crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: early fall returns BOTH to initial safe ground",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: checkpoint refuses unearned arrival",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: unearned marker never becomes respawn",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: ordinary jump does not replace Jake over raised gap",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: fresh checkpoint entry requires repaired passage",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: grounded unresolved log keeps useful position after fall",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: obstructing unresolved log restored without erasing passage",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: final combination latches permanently",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: first crystal records a single collection",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: fall preserves final gate, checkpoint and crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: near-simultaneous falls enqueue one pair recovery",
+        "passed": true
+      },
+      {
+        "check": "P2: F1 complete restart clears puzzles/crystal and keeps swapped controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6 sector 0: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: F6 restart during sector 0 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6 sector 1: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: F6 restart during sector 1 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6 sector 2: fall restores correct pair/roles and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: F6 restart during sector 2 returns to initial duo/progress, preserving configured roles",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: early bridge cancel restores controls/no invisible floor",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: Cake cannot stand up during a real crawl under the roof",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: crank refuses before Cake's tunnel/switch",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: crank cancellation restores local controls and coherent retry",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: interrupted crank animation cancels safely without awarding progress",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: BMO cannot guess symbols before clue or use music capability",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: opening interaction never enters first symbol",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: terminal cancel unblocks only operator",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: wrong sequence is retryable and cannot repair signal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: correct retry activates signal once",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: repeated interaction is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: one confirmation alone cannot reveal crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: both confirmations required before crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: portal refuses single player even with sixth crystal",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture: C recovery retains crystal, seals and current pair",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during approach clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during source clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during growth clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during hold clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during pending clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during shrink clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: fall during reverse clears support, sprite and both local controls",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F1: both players at exit cannot finish without crystal/puzzle",
+        "passed": true
+      },
+      {
+        "check": "P2: fixture F6: both at portal cannot skip final signal/confirmation/crystal",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "headless": false,
+    "viewport": "(1280, 720)"
+  },
+  "verify_regional_states": {
+    "checks": [
+      {
+        "check": "P1: ice simultaneous fall returns once to safe start",
+        "passed": true
+      },
+      {
+        "check": "P1: ice cannot collect or finish before mechanisms",
+        "passed": true
+      },
+      {
+        "check": "P1: ice checkpoint earned only after solved approach and reunion",
+        "passed": true
+      },
+      {
+        "check": "P1: ice collects crystal without one-player completion",
+        "passed": true
+      },
+      {
+        "check": "P1: ice recovery preserves crystal and solved passages",
+        "passed": true
+      },
+      {
+        "check": "P1: ice full restart clears crystal checkpoint and completion",
+        "passed": true
+      },
+      {
+        "check": "P1: workshop cancels transport connection without movement",
+        "passed": true
+      },
+      {
+        "check": "P1: workshop waits instead of carrying block through partner",
+        "passed": true
+      },
+      {
+        "check": "P1: workshop repeated attempt transports once safely",
+        "passed": true
+      },
+      {
+        "check": "P1: workshop local block reset restores unsolved rail",
+        "passed": true
+      },
+      {
+        "check": "P1: workshop refuses energy until physical shapes align",
+        "passed": true
+      },
+      {
+        "check": "P1: workshop restart clears rail and connections",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "headless": false,
+    "viewport": "(1280, 720)"
+  },
+  "portable-qa/verify_menu": {
+    "failures": 0,
+    "checks": [
+      "PASS existing main menu loads",
+      "PASS main menu play button exists",
+      "PASS main menu fits a 4:3 window without cropping its design",
+      "PASS play opens phase selection",
+      "PASS phase one is enabled",
+      "PASS phase selector renders each button caption only once",
+      "PASS only phase 5 remains unavailable in the selector",
+      "PASS imported phase 2 is enabled",
+      "PASS imported phase 3 is enabled",
+      "PASS imported phase 4 is enabled",
+      "PASS imported phase 6 is enabled",
+      "PASS phase buttons do not overlap",
+      "PASS selector fits a 4:3 window without clipping the design",
+      "PASS phase one button opens the playable level"
+    ]
+  },
+  "portable-qa/verify_optimization": {
+    "checks": [
+      {
+        "check": "game does not contain the old tests directory",
+        "passed": true
+      },
+      {
+        "check": "standalone mechanism does not instantiate a test room: cake_tunnel",
+        "passed": true
+      },
+      {
+        "check": "standalone mechanism does not instantiate a test room: fionna_crank",
+        "passed": true
+      },
+      {
+        "check": "standalone mechanism does not instantiate a test room: music_panel",
+        "passed": true
+      },
+      {
+        "check": "standalone mechanism does not instantiate a test room: symbol_terminal",
+        "passed": true
+      },
+      {
+        "check": "portal cache contains exactly the original aperture cells",
+        "passed": true
+      },
+      {
+        "check": "cached portal coefficients preserve the original wave",
+        "passed": true
+      }
+    ],
+    "failures": 0
+  },
+  "clean-package-qa/verify_journey_6": {
+    "checks": [
+      {
+        "check": "P1: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P1: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P1: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P1: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P1: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P1: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P1: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P1: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P1: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P1: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P1: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P1: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P1: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P1: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P1: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P1: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P1: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P1: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P1: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P1: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P1: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P1: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P1: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P1: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P1: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P1: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P1: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P1: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P1: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P1: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      },
+      {
+        "check": "P2: independent opening, correct duo and no fictitious loaded progress",
+        "passed": true
+      },
+      {
+        "check": "P2: only two active actors, safe separate starts",
+        "passed": true
+      },
+      {
+        "check": "P2: Jake requests approach from the bank",
+        "passed": true
+      },
+      {
+        "check": "P2: A entry lands on Jake support",
+        "passed": true
+      },
+      {
+        "check": "P2: A standing dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A airborne dependency keeps support",
+        "passed": true
+      },
+      {
+        "check": "P2: A remote counterweight physically repairs structure",
+        "passed": true
+      },
+      {
+        "check": "P2: A finishes only after physical reunion",
+        "passed": true
+      },
+      {
+        "check": "P2: old duo has no controls/collision/group, camera follows new pair",
+        "passed": true
+      },
+      {
+        "check": "P2: B inherits roles, not temporary actions",
+        "passed": true
+      },
+      {
+        "check": "P2: B context enters geometrically low tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: B real tunnel traversal cannot stand into roof",
+        "passed": true
+      },
+      {
+        "check": "P2: B can retreat in tunnel",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake legitimately frees Fionna's crank",
+        "passed": true
+      },
+      {
+        "check": "P2: Fionna reuses previous counterweight as step",
+        "passed": true
+      },
+      {
+        "check": "P2: crank provides actual return support",
+        "passed": true
+      },
+      {
+        "check": "P2: Cake reaches the extended return platform",
+        "passed": true
+      },
+      {
+        "check": "P2: B reciprocal reunion advances C and preserves repairs",
+        "passed": true
+      },
+      {
+        "check": "P2: C has correct roles and two active players",
+        "passed": true
+      },
+      {
+        "check": "P2: C terminal cannot precede legitimate clue",
+        "passed": true
+      },
+      {
+        "check": "P2: Marceline reaches takeoff using jumps",
+        "passed": true
+      },
+      {
+        "check": "P2: limited float reaches musical clue shelf",
+        "passed": true
+      },
+      {
+        "check": "P2: musical indicator rests on the panel's opaque edge",
+        "passed": true
+      },
+      {
+        "check": "P2: music reveals forms and authorizes terminal",
+        "passed": true
+      },
+      {
+        "check": "P2: terminal opens without accidental confirmation",
+        "passed": true
+      },
+      {
+        "check": "P2: partner still moves during BMO panel",
+        "passed": true
+      },
+      {
+        "check": "P2: BMO enters clue through own controls and restores third seal",
+        "passed": true
+      },
+      {
+        "check": "P2: joint confirmation makes sixth crystal available",
+        "passed": true
+      },
+      {
+        "check": "P2: crystal collected once; one player cannot end",
+        "passed": true
+      },
+      {
+        "check": "P2: entire three-pair normal route reaches stable ending",
+        "passed": true
+      },
+      {
+        "check": "P2: six friends celebrate without six controlled bodies",
+        "passed": true
+      },
+      {
+        "check": "P2: ending buttons and six portraits are framed inside the reference canvas",
+        "passed": true
+      },
+      {
+        "check": "P2: no orphan music indicator or tutorial HUD in the ending",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "headless": false,
+    "viewport": "(1280, 720)"
+  },
+  "publication-qa/verify_final_regions": {
+    "checks": [
+      {
+        "check": "P1: 3: correct pair and independent inputs",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: grounded initial pair",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: HUD retains received pair instructions",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: clue starts hidden",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: reach lower balcony",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: reach raised music panel",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: musical action opens received gate",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: checkpoint earned after musical gate",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: panel opens without accidental first confirmation",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: entered sequence opens symbol gate and releases controls",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: Marceline crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: BMO crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: energy completes and releases BMO",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: revealed visual clue",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: both regain the far bank",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: two plates confirm the duet",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 3: joint completion without recovery",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: grounded correct pair",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: one energy activation connection",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn loads the actual carrier",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: BMO transports supported block",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn reaches rail landing",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn pushes delivered block to pressure plate",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: BMO crosses the rail opening",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: BMO safely approaches the delivered block",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: checkpoint earned after log gate",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: physical conduit shapes aligned",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: Finn cannot operate energy",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: energy opens gate once",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: repeated energy is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P1: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P1: 4: joint completion without recovery",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: correct pair and independent inputs",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: grounded initial pair",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: HUD retains received pair instructions",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: clue starts hidden",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: reach lower balcony",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: reach raised music panel",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: musical action opens received gate",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 860.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: checkpoint earned after musical gate",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1050.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: panel opens without accidental first confirmation",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: entered sequence opens symbol gate and releases controls",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: Marceline crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: BMO crosses the stepped echo islands",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: energy completes and releases BMO",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: revealed visual clue",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: both regain the far bank",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: two plates confirm the duet",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 3: joint completion without recovery",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: grounded correct pair",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: one energy activation connection",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn loads the actual carrier",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: BMO transports supported block",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn reaches rail landing",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn pushes delivered block to pressure plate",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: BMO crosses the rail opening",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: BMO safely approaches the delivered block",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1056.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: checkpoint earned after log gate",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: physical conduit shapes aligned",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: Finn cannot operate energy",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: energy opens gate once",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: repeated energy is idempotent",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 1980.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: crystal collected on input-driven route",
+        "passed": true
+      },
+      {
+        "check": "P2: partner reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: lead reaches 2090.0",
+        "passed": true
+      },
+      {
+        "check": "P2: 4: joint completion without recovery",
+        "passed": true
+      }
+    ],
+    "failures": 0,
+    "headless": false,
+    "viewport": "(1152, 648)"
+  }
+}

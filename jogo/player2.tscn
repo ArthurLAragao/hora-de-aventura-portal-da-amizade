@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8o5mjpuutiky"]
 
-[ext_resource type="Script" uid="uid://vtcp4tuqqatj" path="res://player.gd" id="1_rihsh"]
+[ext_resource type="Script" uid="uid://vtcp4tuqqatj" path="res://scripts/characters/player.gd" id="1_rihsh"]
 [ext_resource type="Texture2D" uid="uid://cri28yhc1bhfk" path="res://Assets/01_Characters/finn/spritesheet.png" id="2_vop8p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]

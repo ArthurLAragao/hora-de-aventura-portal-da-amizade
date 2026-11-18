@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/scenery/habitat_finish.gd" id="habitat_finish"]
+[ext_resource type="Script" path="res://scripts/scenery/level_identity.gd" id="identity_finish"]
+[ext_resource type="Script" path="res://scripts/ui/game_screens.gd" id="game_screens"]
+[ext_resource type="Script" path="res://scripts/ui/clean_phase_presentation.gd" id="clean_presentation"]
+[ext_resource type="Script" path="res://scripts/ui/friendship_story.gd" id="story_content"]
+
+[ext_resource type="Script" path="res://scripts/levels/level_5.gd" id="1"]
+
+[node name="MirrorTower" type="Node2D"]
+script = ExtResource("1")
+
+[node name="FriendshipStory" type="Node" parent="."]
+script = ExtResource("story_content")
+phase = 5
+
+[node name="CleanPresentation" type="Node" parent="."]
+script = ExtResource("clean_presentation")
+
+[node name="GameScreens" type="Node" parent="."]
+script = ExtResource("game_screens")
+phase = 5
+
+[node name="LevelIdentity" type="Node2D" parent="."]
+script = ExtResource("identity_finish")
+phase = 5
+
+[node name="HabitatFinish" type="Node2D" parent="."]
+script = ExtResource("habitat_finish")
+phase = 5

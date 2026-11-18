@@ -1,0 +1,67 @@
+{
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "date": "2026-11-02",
+  "phase": 5,
+  "results": [
+    {
+      "report": "route-final.json",
+      "checks": 18,
+      "failures": 0,
+      "viewport": "(1280, 720)",
+      "type": "rendered input route/regression"
+    },
+    {
+      "report": "route-1152-final.json",
+      "checks": 18,
+      "failures": 0,
+      "viewport": "(1152, 648)",
+      "type": "rendered input route/regression"
+    },
+    {
+      "report": "safety-final.json",
+      "checks": 30,
+      "failures": 0,
+      "viewport": "(1280, 720)",
+      "type": "isolated fixtures, not route evidence"
+    },
+    {
+      "report": "verify_journey_6.json",
+      "checks": 66,
+      "failures": 0,
+      "viewport": "(1280, 720)",
+      "type": "rendered input route/regression"
+    },
+    {
+      "report": "verify_level_2.json",
+      "checks": 61,
+      "failures": 0,
+      "viewport": null,
+      "type": "rendered input route/regression"
+    },
+    {
+      "report": "verify_mirror_tower.json",
+      "checks": 18,
+      "failures": 0,
+      "viewport": "(1280, 720)",
+      "type": "rendered input route/regression"
+    }
+  ],
+  "menu": "all six enabled; clicked Phase 5 and loaded MirrorTower",
+  "rendering": "D3D12; captures inspected",
+  "preserved_layouts": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "limits": [
+    "audio muted",
+    "no real two-person validation",
+    "no exported build",
+    "no second computer",
+    "human comfort and enjoyment pending"
+  ],
+  "backup": "external source backup before edits; 1984 files",
+  "recording": "input-driven normal route, no actor repositioning; GIF kept outside playable project"
+}

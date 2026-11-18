@@ -1,0 +1,516 @@
+{
+  "publication-routes": {
+    "exit": 0,
+    "messages": [],
+    "report": {
+      "checks": [
+        {
+          "check": "P1: 3: correct pair and independent inputs",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: grounded initial pair",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: HUD retains received pair instructions",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: clue starts hidden",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: reach lower balcony",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: reach raised music panel",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: musical action opens received gate",
+          "passed": true
+        },
+        {
+          "check": "P1: partner reaches 860.0",
+          "passed": true
+        },
+        {
+          "check": "P1: lead reaches 860.0",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: checkpoint earned after musical gate",
+          "passed": true
+        },
+        {
+          "check": "P1: partner reaches 1050.0",
+          "passed": true
+        },
+        {
+          "check": "P1: lead reaches 1050.0",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: panel opens without accidental first confirmation",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: entered sequence opens symbol gate and releases controls",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: Marceline crosses the stepped echo islands",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: BMO crosses the stepped echo islands",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: energy completes and releases BMO",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: revealed visual clue",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: both regain the far bank",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: two plates confirm the duet",
+          "passed": true
+        },
+        {
+          "check": "P1: partner reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P1: lead reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: crystal collected on input-driven route",
+          "passed": true
+        },
+        {
+          "check": "P1: partner reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P1: lead reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P1: 3: joint completion without recovery",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: grounded correct pair",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: one energy activation connection",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: Finn loads the actual carrier",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: BMO transports supported block",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: Finn reaches rail landing",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: Finn pushes delivered block to pressure plate",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: BMO crosses the rail opening",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: BMO safely approaches the delivered block",
+          "passed": true
+        },
+        {
+          "check": "P1: partner reaches 1056.0",
+          "passed": true
+        },
+        {
+          "check": "P1: lead reaches 1056.0",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: checkpoint earned after log gate",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: physical conduit shapes aligned",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: Finn cannot operate energy",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: energy opens gate once",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: repeated energy is idempotent",
+          "passed": true
+        },
+        {
+          "check": "P1: partner reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P1: lead reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: crystal collected on input-driven route",
+          "passed": true
+        },
+        {
+          "check": "P1: partner reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P1: lead reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P1: 4: joint completion without recovery",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: correct pair and independent inputs",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: grounded initial pair",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: HUD retains received pair instructions",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: clue starts hidden",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: reach lower balcony",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: reach raised music panel",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: musical action opens received gate",
+          "passed": true
+        },
+        {
+          "check": "P2: partner reaches 860.0",
+          "passed": true
+        },
+        {
+          "check": "P2: lead reaches 860.0",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: checkpoint earned after musical gate",
+          "passed": true
+        },
+        {
+          "check": "P2: partner reaches 1050.0",
+          "passed": true
+        },
+        {
+          "check": "P2: lead reaches 1050.0",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: panel opens without accidental first confirmation",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: entered sequence opens symbol gate and releases controls",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: Marceline crosses the stepped echo islands",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: BMO crosses the stepped echo islands",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: energy completes and releases BMO",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: revealed visual clue",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: both regain the far bank",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: two plates confirm the duet",
+          "passed": true
+        },
+        {
+          "check": "P2: partner reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P2: lead reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: crystal collected on input-driven route",
+          "passed": true
+        },
+        {
+          "check": "P2: partner reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P2: lead reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P2: 3: joint completion without recovery",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: grounded correct pair",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: one energy activation connection",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: Finn loads the actual carrier",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: BMO transports supported block",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: Finn reaches rail landing",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: Finn pushes delivered block to pressure plate",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: BMO crosses the rail opening",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: BMO safely approaches the delivered block",
+          "passed": true
+        },
+        {
+          "check": "P2: partner reaches 1056.0",
+          "passed": true
+        },
+        {
+          "check": "P2: lead reaches 1056.0",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: checkpoint earned after log gate",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: physical conduit shapes aligned",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: Finn cannot operate energy",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: energy opens gate once",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: repeated energy is idempotent",
+          "passed": true
+        },
+        {
+          "check": "P2: partner reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P2: lead reaches 1980.0",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: crystal collected on input-driven route",
+          "passed": true
+        },
+        {
+          "check": "P2: partner reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P2: lead reaches 2090.0",
+          "passed": true
+        },
+        {
+          "check": "P2: 4: joint completion without recovery",
+          "passed": true
+        }
+      ],
+      "failures": 0,
+      "headless": false,
+      "viewport": "(1152, 648)"
+    }
+  },
+  "publication-art": {
+    "exit": 0,
+    "messages": [],
+    "report": {
+      "checks": [
+        {
+          "check": "P1: native leaf matches existing gate support rectangle",
+          "passed": true
+        },
+        {
+          "check": "P1: frame opening is genuinely transparent",
+          "passed": true
+        },
+        {
+          "check": "P1: door has binary alpha and limited native palette",
+          "passed": true
+        },
+        {
+          "check": "P1: open gate retains frame while removing leaf and collider",
+          "passed": true
+        },
+        {
+          "check": "P1: native leaf matches existing gate support rectangle",
+          "passed": true
+        },
+        {
+          "check": "P1: frame opening is genuinely transparent",
+          "passed": true
+        },
+        {
+          "check": "P1: door has binary alpha and limited native palette",
+          "passed": true
+        },
+        {
+          "check": "P1: open gate retains frame while removing leaf and collider",
+          "passed": true
+        },
+        {
+          "check": "P1: platform art ends at the physical support",
+          "passed": true
+        },
+        {
+          "check": "P1: platform art ends at the physical support",
+          "passed": true
+        },
+        {
+          "check": "P1: platform art ends at the physical support",
+          "passed": true
+        },
+        {
+          "check": "P1: platform art ends at the physical support",
+          "passed": true
+        },
+        {
+          "check": "P1: native leaf matches existing gate support rectangle",
+          "passed": true
+        },
+        {
+          "check": "P1: frame opening is genuinely transparent",
+          "passed": true
+        },
+        {
+          "check": "P1: door has binary alpha and limited native palette",
+          "passed": true
+        },
+        {
+          "check": "P1: open gate retains frame while removing leaf and collider",
+          "passed": true
+        },
+        {
+          "check": "P1: native leaf matches existing gate support rectangle",
+          "passed": true
+        },
+        {
+          "check": "P1: frame opening is genuinely transparent",
+          "passed": true
+        },
+        {
+          "check": "P1: door has binary alpha and limited native palette",
+          "passed": true
+        },
+        {
+          "check": "P1: open gate retains frame while removing leaf and collider",
+          "passed": true
+        },
+        {
+          "check": "P1: platform art ends at the physical support",
+          "passed": true
+        },
+        {
+          "check": "P1: platform art ends at the physical support",
+          "passed": true
+        },
+        {
+          "check": "P1: platform art ends at the physical support",
+          "passed": true
+        },
+        {
+          "check": "P1: circuit starts with clearly vertical disconnected conductors",
+          "passed": true
+        },
+        {
+          "check": "P1: receiver begins unpowered",
+          "passed": true
+        },
+        {
+          "check": "P1: original contextual input rotates the first conductor",
+          "passed": true
+        },
+        {
+          "check": "P1: both physical conductor paths align",
+          "passed": true
+        },
+        {
+          "check": "P1: existing BMO action powers receiver and opens original gate",
+          "passed": true
+        },
+        {
+          "check": "P1: scene restart restores circuit and door visuals",
+          "passed": true
+        }
+      ],
+      "failures": 0,
+      "headless": false,
+      "viewport": "(1280, 720)"
+    }
+  }
+}

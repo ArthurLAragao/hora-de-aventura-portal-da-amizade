@@ -1,0 +1,263 @@
+{
+  "ice-final": {
+    "checks": 53,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\ice-final.log",
+        "--script",
+        "res://tests/verify_level_2.gd",
+        "--headless",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\ice-final.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "polish-final": {
+    "checks": 92,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\polish-final.log",
+        "--script",
+        "res://tests/verify_final_regions.gd",
+        "--rendering-method",
+        "gl_compatibility",
+        "--audio-driver",
+        "Dummy",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\polish-final.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "final-render1280": {
+    "checks": 92,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\final-render1280.log",
+        "--script",
+        "res://tests/verify_final_regions.gd",
+        "--rendering-method",
+        "gl_compatibility",
+        "--audio-driver",
+        "Dummy",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\final-render1280.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after",
+        "--resolution=1280x720"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "rail-routes": {
+    "checks": 92,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\rail-routes.log",
+        "--script",
+        "res://tests/verify_final_regions.gd",
+        "--headless",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\rail-routes.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "rail-safety": {
+    "checks": 12,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\rail-safety.log",
+        "--script",
+        "res://tests/verify_regional_states.gd",
+        "--headless",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\rail-safety.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "recovery-entrypoint": {
+    "checks": 25,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\recovery-entrypoint.log",
+        "--script",
+        "res://tests/verify_imported_recovery.gd",
+        "--headless",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\recovery-entrypoint.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "access-fixed": {
+    "checks": 34,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\access-fixed.log",
+        "--script",
+        "res://tests/qa_regions.gd",
+        "--headless",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\access-fixed.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "preserve1": {
+    "checks": 36,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\preserve1.log",
+        "--script",
+        "res://tests/verify_journey_1.gd",
+        "--headless",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\preserve1.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "preserve6": {
+    "checks": 66,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\preserve6.log",
+        "--script",
+        "res://tests/verify_journey_6.gd",
+        "--headless",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\preserve6.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  },
+  "visual-final1280": {
+    "checks": 15,
+    "failures": 0,
+    "run": {
+      "project": "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+      "args": [
+        "C:\\Users\\Ryzen\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64_console.exe",
+        "--path",
+        "C:\\Users\\Ryzen\\Documents\\Codex\\2026-10-22\\quero-que-voc-me-ajude-a\\outputs\\adventure-time-phase1-corrigida",
+        "--fixed-fps",
+        "60",
+        "--log-file",
+        "D:\\TEMP\\fases-234-final-2026-10-28\\logs\\visual-final1280.log",
+        "--script",
+        "res://tests/verify_regional_finish.gd",
+        "--rendering-method",
+        "gl_compatibility",
+        "--audio-driver",
+        "Dummy",
+        "--",
+        "--report=D:\\TEMP\\fases-234-final-2026-10-28\\visual-final1280.json",
+        "--capture-dir=D:\\TEMP\\fases-234-final-2026-10-28\\captures-after",
+        "--resolution=1280x720"
+      ],
+      "exit": 0,
+      "fresh_report": true,
+      "messages": []
+    }
+  }
+}

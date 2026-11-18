@@ -1,42 +1,39 @@
-# Hora de Aventura: O Portal da Amizade — fase 1
+# Hora de Aventura: O Portal da Amizade
 
-Projeto local para dois jogadores, feito no Godot 4.7.2. Os assets fornecidos foram preservados; o percurso usa apenas arte presente na pasta `Assets/`.
+Plataforma 2D cooperativo local para dois jogadores. Abra `project.godot` com **Godot 4.7.2** e use **F5** para o menu. Fases disponíveis: **1, 2, 3, 4, 5 e 6**. A Torre dos Espelhos possui percurso cooperativo, cristal e ligação com a Fase 6.
 
-## Abrir e jogar
+## Estrutura enxuta
 
-1. Abra esta pasta no Godot 4.7.2 e aguarde a importação dos recursos.
-2. Pressione **F5**, escolha **Jogar** e depois **Fase 1 | Jogar**.
-3. **Finn:** A/D para andar, Espaço para pular, E para usar a alavanca, Q para empurrar o tronco na direção em que está olhando e R para restaurá-lo ao ponto inicial quando estiver perto.
-4. **Jake:** setas esquerda/direita para andar, seta para cima para pular e Shift direito para manter a ponte quando estiver junto da âncora marcada.
+- `Assets/`: recursos do jogo e materiais dos seis ambientes.
+- `scripts/characters`, `bridges`, `levels`, `puzzles`, `scenery`, `ui`, `core`: scripts por responsabilidade, mantendo nomes e identidades de classe.
+- `mechanisms/`: terminal, túnel, manivela, plataforma e painel musical reutilizáveis.
+- `docs/`: arquitetura, funções, manutenção, apresentação e registros históricos.
+- Cenas principais permanecem na raiz para abrir facilmente com F6.
 
-## Caminho da fase
+QA e matrizes de arte ficam **fora da pasta do projeto**, na área opcional `development/` do repositório. Não são necessários para jogar. Nada é baixado ou instalado ao abrir o jogo.
 
-Área inicial → ponte temporária do Jake → alavanca e passagem permanente → checkpoint → tronco sobre placa de pressão → duas placas simultâneas → cristal → saída que exige Finn e Jake juntos.
+## Controles
 
-Os objetos do puzzle estão separados ao longo do mapa. Seis tiles soltos que apareciam no ar e dentro do primeiro vão foram removidos. A plataforma inicial agora alcança a borda esquerda e há limites físicos nas duas extremidades. O script da fase é `@tool`, então a extensão do terreno e a vegetação também aparecem ao abrir a cena no editor. O tronco é um `AnimatableBody2D` com movimento horizontal limitado por colisões; seu corpo agora encosta no piso e sua placa detecta o objeto na altura correta. O portão abre e desativa a colisão ao receber o sinal da placa. O checkpoint guarda pontos seguros distintos para Finn e Jake durante a sessão.
+| Papel | Movimento | Salto | Interação | Habilidade |
+|---|---|---|---|---|
+| P1 | A / D | Espaço ou W | E | Q |
+| P2 | Setas laterais | Seta para cima | Enter | Shift direito |
 
-## Visual e menu
+F1 abre orientações opcionais; F2 reinicia a cena; Esc fecha as orientações ou cancela ações contextuais. A ajuda disponível na cena descreve os comandos específicos. Habilidades dependem do personagem, não do número do jogador.
 
-O menu principal conserva a arte e os botões originais. A seleção de fases foi reorganizada para remover rótulos duplicados, manter espaçamento e caber em janelas 16:9 e 4:3. Só a fase 1 fica habilitada.
+## Documentação
 
-O fundo usa a ilustração original uma vez e prolonga a rota com um recorte do horizonte de montanhas e colinas do mesmo arquivo; a casa na árvore não se repete. Motivos distantes desse horizonte podem voltar a aparecer. O parallax é discreto. A vegetação usa `decor_01.png` a `decor_04.png`, sem colisão.
+- [Telas e instruções de 05/11](docs/TELAS_05_11.md)
+- [Apresentação limpa — retirada dos tutoriais](docs/APRESENTACAO_LIMPA.md)
+- [Conteúdo de 03/11 — história e miniconversas](docs/CONTEUDO_03_11.md)
+- [Desafios e obstáculos — revisão do item de 29/10](docs/DESAFIOS_29_10.md)
+- [Roteiro para a professora](docs/APRESENTACAO.md)
+- [Fase 5 — percurso, óptica e testes](docs/FASE_5.md)
+- [Arquitetura e estados](docs/ARQUITETURA.md)
+- [Índice de todas as funções](docs/CODIGO.md)
+- [Otimização e validação](docs/OTIMIZACAO.md)
+- [Manutenção e QA externo](docs/MANUTENCAO.md)
+- [Créditos e fontes preservados](docs/CREDITOS_E_FONTES.md)
+- [Relatórios anteriores](docs/history/)
 
-## Limites desta entrega
-
-- Esta entrega cobre a fase 1. As fases 2 a 6 não existem ainda e aparecem como indisponíveis.
-- O progresso dos puzzles é mantido apenas enquanto a fase está aberta; não há gravação em disco.
-- Os testes automatizados simulam os dois controles e o percurso. Eles não substituem uma sessão de aceitação com duas pessoas em janela, em diferentes computadores e resoluções.
-- A duração pretendida de 5 a 8 minutos ainda precisa ser medida em teste com jogadores.
-- A pasta não inclui preset ou executável de publicação. Uma versão pública também depende de confirmar direitos de uso dos personagens, nomes e assets da franquia.
-
-## Verificação automatizada
-
-No Godot 4.7.2, execute a partir desta pasta:
-
-```powershell
-& 'C:\caminho\para\Godot_v4.7.2-stable_win64_console.exe' --headless --path . --editor --quit
-& 'C:\caminho\para\Godot_v4.7.2-stable_win64_console.exe' --headless --path . --script res://tests/verify_menu.gd
-& 'C:\caminho\para\Godot_v4.7.2-stable_win64_console.exe' --headless --path . --script res://tests/verify_level.gd
-```
-
-Os scripts verificam menu, seletor, entrada na fase, movimento independente, salto, ponte, alavanca, checkpoint, queda, movimento real do tronco até a placa, abertura e passagem pelo portão, placas cooperativas, cristal e saída.
+O ZIP otimizado é um projeto fonte Godot, não um executável exportado. A validação técnica não substitui uma sessão de duas pessoas nem a avaliação manual de conforto.
