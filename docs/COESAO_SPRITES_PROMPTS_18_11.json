@@ -1,0 +1,101 @@
+[
+  {
+    "arquivo": "plate_forest.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production 2D game pixel-art sprite strip. EXACTLY FOUR equally spaced frames in ONE HORIZONTAL ROW on genuine transparent background. Same pressure plate object in every frame, same stable base silhouette, same center and baseline. Intended native sprite cell 84x24 pixels: WIDE and VERY LOW tread sitting directly on the ground, front elevation with a little visible top. No vertical sign, no floating icon, no tall pedestal. Frames left to right: inactive/dim; available/top raised slightly and side lamps visible; pressed/the central tread sinks 3 pixels while fixed end caps stay in place; complete/tread lowered and engraved end-cap chevrons and tiny lamps glow ivory. The end caps extend beyond a character standing on the middle so they remain visible. Strong crisp pixel grid, 1px dark outline, flat clusters of 3-5 colors per material, nearest-neighbor enlargement, no blurred gradients, no painting, no text, no numbers, no frame lines. Leave ample transparent separation between the four complete objects, no cropped edges. Consistent object size in all frames. Material: chunky oak plank tread mounted in a mossy carved wooden ground base, brass hinge pins and small amber side lamps. Warm honey wood and dark teal shadows. Treehouse trail identity, modest root-like carving on endcaps.",
+    "tamanho_final": [
+      336,
+      26
+    ]
+  },
+  {
+    "arquivo": "plate_ice.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production 2D game pixel-art sprite strip. EXACTLY FOUR equally spaced frames in ONE HORIZONTAL ROW on genuine transparent background. Same pressure plate object in every frame, same stable base silhouette, same center and baseline. Intended native sprite cell 84x24 pixels: WIDE and VERY LOW tread sitting directly on the ground, front elevation with a little visible top. No vertical sign, no floating icon, no tall pedestal. Frames left to right: inactive/dim; available/top raised slightly and side lamps visible; pressed/the central tread sinks 3 pixels while fixed end caps stay in place; complete/tread lowered and engraved end-cap chevrons and tiny lamps glow ivory. The end caps extend beyond a character standing on the middle so they remain visible. Strong crisp pixel grid, 1px dark outline, flat clusters of 3-5 colors per material, nearest-neighbor enlargement, no blurred gradients, no painting, no text, no numbers, no frame lines. Leave ample transparent separation between the four complete objects, no cropped edges. Consistent object size in all frames. Material: pale frozen stone base embedded in snowy ground, muted blue ice tread with stepped frost edges, tiny geometric snowflake engraving IN the tread and small icy mint lamps on the endcaps. Cold blue palette, no snow clouds.",
+    "tamanho_final": [
+      336,
+      26
+    ]
+  },
+  {
+    "arquivo": "plate_cave.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production 2D game pixel-art sprite strip. EXACTLY FOUR equally spaced frames in ONE HORIZONTAL ROW on genuine transparent background. Same pressure plate object in every frame, same stable base silhouette, same center and baseline. Intended native sprite cell 84x24 pixels: WIDE and VERY LOW tread sitting directly on the ground, front elevation with a little visible top. No vertical sign, no floating icon, no tall pedestal. Frames left to right: inactive/dim; available/top raised slightly and side lamps visible; pressed/the central tread sinks 3 pixels while fixed end caps stay in place; complete/tread lowered and engraved end-cap chevrons and tiny lamps glow ivory. The end caps extend beyond a character standing on the middle so they remain visible. Strong crisp pixel grid, 1px dark outline, flat clusters of 3-5 colors per material, nearest-neighbor enlargement, no blurred gradients, no painting, no text, no numbers, no frame lines. Leave ample transparent separation between the four complete objects, no cropped edges. Consistent object size in all frames. Material: blue-violet cave stone base, bronze recessed central resonator tread with three tiny engraved grooves, lavender crystal inlays on the fixed sidecaps, tiny mint indicator lamps. Musical cave identity. Compact crafted physical mechanism, no floating music notes.",
+    "tamanho_final": [
+      336,
+      26
+    ]
+  },
+  {
+    "arquivo": "plate_workshop.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production 2D game pixel-art sprite strip. EXACTLY FOUR equally spaced frames in ONE HORIZONTAL ROW on genuine transparent background. Same pressure plate object in every frame, same stable base silhouette, same center and baseline. Intended native sprite cell 84x24 pixels: WIDE and VERY LOW tread sitting directly on the ground, front elevation with a little visible top. No vertical sign, no floating icon, no tall pedestal. Frames left to right: inactive/dim; available/top raised slightly and side lamps visible; pressed/the central tread sinks 3 pixels while fixed end caps stay in place; complete/tread lowered and engraved end-cap chevrons and tiny lamps glow ivory. The end caps extend beyond a character standing on the middle so they remain visible. Strong crisp pixel grid, 1px dark outline, flat clusters of 3-5 colors per material, nearest-neighbor enlargement, no blurred gradients, no painting, no text, no numbers, no frame lines. Leave ample transparent separation between the four complete objects, no cropped edges. Consistent object size in all frames. Material: copper and biscuit workshop base, cream enamel pressure tread with grooves and mechanical hinge detail, tiny warm amber lamps and inset rivets, cocoa/navy outlines. Restrained warm candy-workshop palette, no loose candy or bright rainbow.",
+    "tamanho_final": [
+      336,
+      26
+    ]
+  },
+  {
+    "arquivo": "plate_sanctuary.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production 2D game pixel-art sprite strip. EXACTLY FOUR equally spaced frames in ONE HORIZONTAL ROW on genuine transparent background. Same pressure plate object in every frame, same stable base silhouette, same center and baseline. Intended native sprite cell 84x24 pixels: WIDE and VERY LOW tread sitting directly on the ground, front elevation with a little visible top. No vertical sign, no floating icon, no tall pedestal. Frames left to right: inactive/dim; available/top raised slightly and side lamps visible; pressed/the central tread sinks 3 pixels while fixed end caps stay in place; complete/tread lowered and engraved end-cap chevrons and tiny lamps glow ivory. The end caps extend beyond a character standing on the middle so they remain visible. Strong crisp pixel grid, 1px dark outline, flat clusters of 3-5 colors per material, nearest-neighbor enlargement, no blurred gradients, no painting, no text, no numbers, no frame lines. Leave ample transparent separation between the four complete objects, no cropped edges. Consistent object size in all frames. Material: heavy teal-grey stone foundation with brass edging, mint stepped stone tread, small ivory/mint lamps and angular engraved channels on the endcaps. Friendship sanctuary architecture, quiet teal and antique-gold palette, no floating emblems.",
+    "tamanho_final": [
+      336,
+      26
+    ]
+  },
+  {
+    "arquivo": "plate_reunion.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production 2D game pixel-art sprite strip. EXACTLY FOUR equally spaced frames in ONE HORIZONTAL ROW on genuine transparent background. Same pressure plate object in every frame, same stable base silhouette, same center and baseline. Intended native sprite cell 84x24 pixels: WIDE and VERY LOW tread sitting directly on the ground, front elevation with a little visible top. No vertical sign, no floating icon, no tall pedestal. Frames left to right: inactive/dim; available/top raised slightly and side lamps visible; pressed/the central tread sinks 3 pixels while fixed end caps stay in place; complete/tread lowered and engraved end-cap chevrons and tiny lamps glow ivory. The end caps extend beyond a character standing on the middle so they remain visible. Strong crisp pixel grid, 1px dark outline, flat clusters of 3-5 colors per material, nearest-neighbor enlargement, no blurred gradients, no painting, no text, no numbers, no frame lines. Leave ample transparent separation between the four complete objects, no cropped edges. Consistent object size in all frames. This is a REUNION FLOOR TILE, not a raised weight plate. Material: flat teal stone and brass sanctuary base, two small footprint engravings IN the recessed center, no raised central tread. In frame 3 the footprints brighten; in frame 4 the two endcap chevrons glow ivory. Keep the whole object flat and integrated into the floor in every frame. Distinct silhouette from the ordinary pressure plate, no pedestal, no UI badge.",
+    "tamanho_final": [
+      336,
+      26
+    ]
+  },
+  {
+    "arquivo": "lever_forest.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production 2D pixel-art game animation sprite strip, exactly FOUR equal square cells on ONE horizontal row, transparent background. A small physical wooden-and-brass lever attached to a low rooted oak mounting base. Same object, same size and baseline in every frame. Four positions: handle leans LEFT; handle nearer upright left; handle nearer upright right; handle leans RIGHT. Only the shaft and compact rounded wood grip rotate around the fixed brass pivot; keep base, plinth and side light still. Last state has a small lit mint lamp on the base, first lamp dark. Intended native cell64x56 pixels, front elevation. Chunky carved oak, selective moss at foot, brass pivot, muted cream highlights, 1px dark teal outline, 3-5 flat color shades, crisp pixel clusters, nearest enlargement. Low warm friendly platform-game mechanism. No text, no gridlines, no arrows or floating icons, no scenery, no characters, no blur, no painting. Each lever fully contained in its own cell with space around it.",
+    "tamanho_final": [
+      256,
+      64
+    ]
+  },
+  {
+    "arquivo": "cave_power.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "A production game pixel-art two-frame horizontal sprite strip on transparent background, exactly two equal square cells. Same small musical-cave POWER RESONATOR PEDESTAL in both cells. Intended native cell48x56 pixels, front elevation, fully grounded base, 1px dark indigo outline, chunky flat pixel shading, nearest neighbor. Carved violet-blue cave stone low stand, three short antique brass organ pipes flanking a recessed faceted lavender crystal core, small socket and cable connection at lower left. First cell dormant, crystal muted; second cell powered, crystal mint-ivory bright with small illuminated inset channels. Keep exact same architecture and size between cells. Physical scenic machine, not a UI icon or a glass capsule. No letters, no numbers, no characters, no scenery, no blur, no painting, no floating gems or disconnected details.",
+    "tamanho_final": [
+      112,
+      64
+    ]
+  },
+  {
+    "arquivo": "cave_console.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production game pixel-art sprite strip, exactly TWO equally sized square cells on ONE horizontal row, transparent background. Same small musical-cave control console in both frames, native48x48 intended, front elevation with a tiny top plane, crisp chunky pixel grid, selective navy outline, 4 flat colors per material. Violet stone grounded pedestal with low brass control face and three carved symbol keys (circle square triangle), short embedded copper pipe leading down into its stone base. Frame1 inactive/dim key lamps. Frame2 identical structure, mint ivory key lamps lit. Compact physical mechanism integrated with cave architecture, not a floating screen or detached icon. Every object complete in its own cell, same center and baseline. No text, no labels, no scenery, no characters, no gradients, no painting.",
+    "tamanho_final": [
+      112,
+      64
+    ]
+  },
+  {
+    "arquivo": "ambient_cloud.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "One small production pixel-art far-background cloud sprite, genuine transparent background. Intended native96x32 pixels, horizontally layered rounded cloud silhouette built from stair-stepped pixel clusters, three flat shades: warm ivory on top, pale blue middle, muted dusty blue underside. Soft in composition but absolutely crisp hard pixel edges, no blur or gradients, no dark cartoon outline. A few connected lobes forming ONE continuous cloud, not many tiny puffs, not a rectangle. No scene, no objects, no characters, no text. Clean restrained background sprite for a colorful pixel platform game.",
+    "tamanho_final": [
+      96,
+      24
+    ]
+  },
+  {
+    "arquivo": "ambient_glint.png",
+    "modo": "image_gen integrado, PNG original preservado; preparo offline do atlas",
+    "prompt": "Production pixel-art VFX sprite strip, EXACTLY FOUR equally sized square cells in ONE horizontal row, transparent background. A TINY ambient four-point light speck twinkles: first a single dim pixel; second a 3pixel little cross; third a 5pixel ivory/gold cross; fourth a 3pixel cross returning to dim. Intended native cell8x8 pixels, same center in all frames, very small simple shapes, crisp nearest-neighbor grid, hard alpha, only ivory and muted pale gold. No haze, no glow cloud, no gradients, no smoke, no frame borders, no text, no other objects, no scenery. Leave plenty of transparent space separating the four tiny sprites.",
+    "tamanho_final": [
+      32,
+      8
+    ]
+  }
+]

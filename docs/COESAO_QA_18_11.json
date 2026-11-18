@@ -1,0 +1,197 @@
+{
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "renderizacao": true,
+  "aprovacao_manual_nova": false,
+  "limites": [
+    "audio",
+    "duas pessoas",
+    "ESP32/controle fisico",
+    "exportacao",
+    "outro computador"
+  ],
+  "original": [
+    {
+      "suite": "verify_adventure_presentation",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 171,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_campaign_ui",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 26,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_cohesion",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 23,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_final_regions",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 102,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_1",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 38,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_6",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 102,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_safety",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 98,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_level_2",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 61,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_mirror_tower",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 20,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_modal_story",
+      "resolucao": "(1280, 720)",
+      "verificacoes": 93,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_presentation_finish",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 19,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_cohesion",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 23,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_final_regions",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 102,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_1",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 38,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_6",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 102,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_level_2",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 61,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_mirror_tower",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 20,
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_modal_story",
+      "resolucao": "(1920, 1080)",
+      "verificacoes": 89,
+      "falhas": 0,
+      "problemas_console": []
+    }
+  ],
+  "publicacao": [
+    {
+      "suite": "verify_adventure_presentation",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_campaign_ui",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_cohesion",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_final_regions",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_1",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_6",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_journey_safety",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_level_2",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_mirror_tower",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_modal_story",
+      "falhas": 0,
+      "problemas_console": []
+    },
+    {
+      "suite": "verify_presentation_finish",
+      "falhas": 0,
+      "problemas_console": []
+    }
+  ]
+}
