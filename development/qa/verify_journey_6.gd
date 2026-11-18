@@ -1,6 +1,7 @@
 extends "res://tests/journey_driver.gd"
 
 func route(slot: int) -> void:
+	preload("res://scripts/core/campaign_progress.gd").write({"version":1,"completed":[1,2,3,4,5],"crystals":[1,2,3,4,5],"restored":false})
 	await fresh("res://level_6.tscn",slot,"primary_player_id")
 	var finn: CoopPlayer=level.pair[0]
 	var jake: CoopPlayer=level.pair[1]
@@ -114,13 +115,23 @@ func route(slot: int) -> void:
 	await jump(bmo,640)
 	check("crystal collected once; one player cannot end",level.crystal_count==1 and level.completion_count==0)
 	await walk(marceline,560)
-	await jump(marceline,660)
-	await frames(15)
-	check("entire three-pair normal route reaches stable ending",level.completion_count==1 and level.exit_area._completed and level.recovery_count==0 and level.checkpoint_stage==2)
-	check("six friends celebrate without six controlled bodies",level.has_node("Celebration") and get_nodes_in_group("players").is_empty() and level.crystal_count==1)
-	await capture("phase6-celebration")
-	check("ending buttons and six portraits are framed inside the reference canvas",level.get_node("Celebration/Phases").get_rect().end.y<=648 and level.get_node("Celebration/Menu").get_rect().end.x<=1152 and level.get_node("Celebration").get_children().filter(func(n):return n is AnimatedSprite2D).size()==6)
-	check("no orphan music indicator or tutorial HUD in the ending",not level.receiver.visible and not level.hud.visible)
+	Input.action_press(action(marceline,"jump"));Input.action_press(action(marceline,"right"));await frames(2);Input.action_release(action(marceline,"jump"))
+	check("F6: saída conjunta abre monumento",await until(func():return is_instance_valid(current_scene) and current_scene.scene_file_path=="res://monument_finale.tscn",240))
+	release();level=current_scene;await frames(20)
+	var first: CoopPlayer=level.actors[0];var second: CoopPlayer=level.actors[1]
+	check("epílogo: papéis preservados e seis cristais reais",first.player_id==slot and second.player_id==3-slot and level.available.size()==6)
+	for i in 6:
+		var target: float=level.pedestals[i].x
+		check("epílogo: parceira alcança monumento %d"%i,await walk(second,target-38))
+		check("epílogo: primeira alcança monumento %d"%i,await walk(first,target))
+		await tap(first if i%2==0 else second,"interact")
+		if i in [0,2,4]:await capture("monuments-%d"%i)
+		check("epílogo: cristal %d depositado por entrada real"%(i+1),i+1 in level.placed)
+	await frames(300)
+	check("vitória após os seis depósitos",level.finished and level.has_node("Celebration") and preload("res://scripts/core/campaign_progress.gd").read().restored)
+	check("vitória: seis amigos e retorno único",level.get_node("Celebration").get_children().filter(func(n):return n is AnimatedSprite2D).size()==6 and level.get_node("Celebration/Menu")!=null)
+	await frames(100)
+	await capture("monument-victory")
 
 func run() -> void:
 	root.size=viewport_size

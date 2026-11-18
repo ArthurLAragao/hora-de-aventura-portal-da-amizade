@@ -11,10 +11,11 @@ var elapsed:=0.0
 ## Reaproveita os frames reais, mede os pés uma vez e mantém botões fora da animação.
 func _ready() -> void:
 	layer=45
+	var background:=TextureRect.new();background.texture=load("res://Assets/02_Environments/06_friendship_portal/background.png");background.size=Vector2(1152,648);background.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;background.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_COVERED;background.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(background)
 	var shade:=ColorRect.new();shade.name="Backdrop";shade.position=Vector2.ZERO;shade.size=Vector2(1152,648)
-	shade.color=Color(0.025,0.08,0.12,0.82);shade.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(shade)
-	var title:=B.label(self,"Juntos, conseguimos!",Vector2(0,54),34);title.name="Title";title.size.x=1152;title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	var sub:=B.label(self,"O Portal da Amizade está restaurado.",Vector2(0,106),20);sub.size.x=1152;sub.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	shade.color=Color(0.025,0.08,0.12,0.36);shade.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(shade)
+	var title:=B.label(self,"VOCÊS SALVARAM O MUNDO DE OOO!",Vector2(0,54),34);title.name="Title";title.size.x=1152;title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	var sub:=B.label(self,"Seis amigos. Seis cristais. Uma conquista de todos.",Vector2(0,106),20);sub.size.x=1152;sub.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	ceremony=Node2D.new();ceremony.name="CrystalEmblem";ceremony.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;add_child(ceremony);ceremony.draw.connect(draw_emblem)
 	var names=["Finn","Jake","Fionna","Cake","Marceline","BMO"]
 	for i in 6:
@@ -26,10 +27,10 @@ func _ready() -> void:
 		var used:=frame.get_image().get_used_rect();actor.offset.y=-(used.end.y-frame.get_height()*0.5)
 		var base:=Vector2(166+i*164,506);bases.append(base);friends.append(actor);actor.position=base+Vector2(0,22);actor.modulate.a=0
 		var label:=B.label(self,names[i],Vector2(base.x-66,526),17);label.size.x=132;label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	for i in 2:
-		var button:=Button.new();button.name="Phases" if i==0 else "Menu";button.text="Jogar outra fase" if i==0 else "Menu"
-		button.position=Vector2(370+i*220,590);button.size=Vector2(204,40);B.style_button(button);add_child(button)
-		var path: String="res://phase_select.tscn" if i==0 else "res://Assets/04_Interface/Godot/main_menu.tscn"
+	for i in 1:
+		var button:=Button.new();button.name="Menu";button.text="Voltar ao menu"
+		button.position=Vector2(436,590);button.size=Vector2(280,44);B.style_button(button);add_child(button)
+		var path: String="res://Assets/04_Interface/Godot/main_menu.tscn"
 		button.pressed.connect(func():get_tree().change_scene_to_file(path))
 	get_viewport().size_changed.connect(fit_screen);fit_screen();arm_buttons.call_deferred()
 
@@ -74,7 +75,7 @@ func arm_buttons() -> void:
 	if not is_inside_tree():return
 	for child in get_children():
 		if child is Button:child.disabled=false
-	get_node("Phases").grab_focus()
+	get_node("Menu").grab_focus()
 
 ## Esc oferece retorno estável ao menu.
 func _unhandled_key_input(event: InputEvent) -> void:

@@ -491,8 +491,9 @@ func _celebrate() -> void:
 	hud.get_node("Message").text=""
 	message_left=0.0
 	hud.hide()
-	var layer:=CanvasLayer.new();layer.name="Celebration"
-	layer.set_script(load("res://scripts/ui/friendship_ending.gd"));add_child(layer)
+	preload("res://scripts/core/campaign_progress.gd").complete(6)
+	get_tree().set_meta("finale_role",primary_player_id)
+	get_tree().change_scene_to_file.call_deferred("res://monument_finale.tscn")
 
 ## Atualiza a mensagem breve do objetivo ou estado atual.
 func _note(text: String) -> void:
