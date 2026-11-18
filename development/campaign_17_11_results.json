@@ -1,0 +1,114 @@
+[
+  {
+    "test": "record_ceremony",
+    "viewport": "(1280, 720)",
+    "checks": 51,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_adventure_presentation",
+    "viewport": "(1280, 720)",
+    "checks": 171,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_campaign_ui",
+    "viewport": "(1280, 720)",
+    "checks": 26,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_challenge_edges",
+    "viewport": "(1280, 720)",
+    "checks": 31,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_final_regions",
+    "viewport": "(1280, 720)",
+    "checks": 102,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_friendship_story",
+    "viewport": "(1280, 720)",
+    "checks": 140,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_1",
+    "viewport": "(1280, 720)",
+    "checks": 36,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_6",
+    "viewport": "(1280, 720)",
+    "checks": 102,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_safety",
+    "viewport": "(1920, 1080)",
+    "checks": 98,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_level_2",
+    "viewport": "(1280, 720)",
+    "checks": 61,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_menu",
+    "viewport": "menu 4:3 / 16:9",
+    "checks": 17,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_mirror_tower",
+    "viewport": "(1280, 720)",
+    "checks": 20,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_presentation_finish",
+    "viewport": "(1920, 1080)",
+    "checks": 19,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_regional_states",
+    "viewport": "(1920, 1080)",
+    "checks": 12,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_1",
+    "viewport": "(1920, 1080)",
+    "checks": 36,
+    "failures": 0,
+    "console_errors": []
+  },
+  {
+    "test": "verify_journey_6",
+    "viewport": "(1920, 1080)",
+    "checks": 102,
+    "failures": 0,
+    "console_errors": []
+  }
+]
