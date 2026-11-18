@@ -2,7 +2,7 @@ extends RefCounted
 ## Falas originais em português: acontecimentos do SGDD, sem dublagem ou instruções técnicas.
 const LINES={
 	1:{
-		"intro":[["finn","O portal quebrou e espalhou os cristais. Vamos buscar o primeiro!"],["jake","Vou com você. Ninguém fica para trás!"]],
+		"intro":[["finn","Jake, o portal perdeu a luz! O cristal da trilha pode ajudar a salvar nosso mundo."],["jake","Então vamos juntos! Você abre o caminho para mim e eu para você."]],
 		"first":[["jake","Um caminho aberto! Agora posso ajudar na travessia."]],
 		"passage":[["jake","Você abriu a passagem! Agora também posso atravessar."]],
 		"cooperation":[["finn","Seu caminho por cima ajudou meu tronco a chegar!"]],
@@ -10,7 +10,7 @@ const LINES={
 		"ending":[["finn","A trilha era difícil sozinho. Em dupla, deu certo!"],["jake","Vamos encontrar os outros. Ainda faltam cristais!"]]
 	},
 	2:{
-		"intro":[["fionna","Há um cristal depois das pontes de gelo."],["cake","Eu vejo uma passagem pequena. Vamos abrir caminho juntas!"]],
+		"intro":[["fionna","Cake, o cristal do gelo está do outro lado. Precisamos levar sua luz de volta ao portal."],["cake","Eu vejo uma passagem pequena. Vamos abrir caminho juntas!"]],
 		"first":[["cake","Achei o interruptor! Agora você pode girar a manivela."]],
 		"passage":[["fionna","Você abriu o mecanismo; eu abri a passagem. Boa parceria!"]],
 		"cooperation":[["cake","Você deixou um caminho para mim também. Obrigada!"]],
@@ -34,7 +34,7 @@ const LINES={
 		"ending":[["bmo","Cada um fez uma parte da mesma tarefa."],["finn","E ninguém precisou fazer tudo sozinho!"]]
 	},
 	5:{
-		"intro":[["cake","O cristal está na torre, mas os portões estão fechados."],["marceline","Vamos guiar a luz. Eu vejo os espelhos de cima!"]],
+		"intro":[["cake","Marceline, o cristal da torre guarda uma luz especial. Vamos levá-la aos nossos amigos!"],["marceline","Vamos guiar a luz. Eu vejo os espelhos de cima!"]],
 		"first":[["marceline","A luz acendeu o sinal! Podemos repetir a ideia juntas."]],
 		"passage":[["cake","Meu espelho e o seu formaram um só caminho de luz!"]],
 		"cooperation":[["marceline","Dois sinais acesos. Cada uma alcançou uma parte importante."]],
@@ -42,7 +42,7 @@ const LINES={
 		"ending":[["marceline","Você viu caminhos que eu não conseguia alcançar."],["cake","Juntas, vimos a solução inteira!"]]
 	},
 	6:{
-		"intro":[["finn","Os cristais chegaram. Agora precisamos reconstruir o portal."],["jake","Vamos preparar o acesso para nossos amigos!"]],
+		"intro":[["finn","Já trouxemos cinco cristais. Vamos recuperar o último e preparar o monumento da amizade!"],["jake","Vamos preparar o acesso para nossos amigos!"]],
 		"first":[["jake","A base está firme. Já podemos chamar a próxima dupla!"]],
 		"pair1":[["fionna","Finn e Jake prepararam o acesso. Nossa vez de ajudar!"],["cake","Eu abro o caminho pequeno; você cuida da manivela."]],
 		"pair2":[["marceline","A estrutura e o mecanismo voltaram. Falta o sinal!"],["bmo","Você revela as formas, e eu conecto o portal."]],

@@ -4,11 +4,12 @@ const SCRIPT=preload("res://scripts/content/friendship_lines.gd")
 const FONT=preload("res://Assets/08_Fonts/NotoSans.ttf")
 const NAMES={"finn":"Finn","jake":"Jake","fionna":"Fionna","cake":"Cake","marceline":"Marceline","bmo":"BMO"}
 @export_range(1,6) var phase:=1
-@export_range(3.0,12.0,0.5) var minimum_read_seconds:=7.0
+@export_range(3.0,12.0,0.5) var minimum_read_seconds:=10.0
 @export var enabled:=true
 var level: Node2D
 var canvas: CanvasLayer
 var card: PanelContainer
+var partner_portrait: TextureRect
 var portrait: TextureRect
 var speaker: Label
 var dialogue: Label
@@ -42,7 +43,8 @@ func _ready() -> void:
 	var column:=VBoxContainer.new();column.size_flags_horizontal=Control.SIZE_EXPAND_FILL;column.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_child(column)
 	speaker=make_label(16);column.add_child(speaker)
 	dialogue=make_label(18);dialogue.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;dialogue.custom_minimum_size=Vector2(0,52);column.add_child(dialogue)
-	footer=make_label(11);footer.modulate=Color("c2c8c5");column.add_child(footer);footer.hide()
+	footer=make_label(11);footer.modulate=Color("c2c8c5");column.add_child(footer);footer.show()
+	partner_portrait=TextureRect.new();partner_portrait.custom_minimum_size=Vector2(64,80);partner_portrait.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;partner_portrait.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;partner_portrait.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;partner_portrait.mouse_filter=Control.MOUSE_FILTER_IGNORE;partner_portrait.modulate=Color("91aaa0");row.add_child(partner_portrait)
 	card.hide()
 	start.call_deferred()
 
@@ -97,6 +99,8 @@ func show_line() -> void:
 	for actor in get_tree().get_nodes_in_group("players"):
 		if String(actor.character_id)==line[0]:role=" · P%d"%actor.player_id;break
 	speaker.text=NAMES[line[0]]+role
+	for actor in get_tree().get_nodes_in_group("players"):
+		if String(actor.character_id)!=line[0]:partner_portrait.texture=load("res://Assets/01_Characters/%s/portrait.png"%actor.character_id);break
 	dialogue.text=line[1]
 	footer.text="%d/%d · Tab: próxima · F3: rever"%[current_line+1,current_lines.size()]
 	remaining=maxf(minimum_read_seconds,String(line[1]).length()*0.075)
@@ -109,8 +113,8 @@ func layout_card(force:=false) -> void:
 	var viewport:=get_viewport().get_visible_rect().size
 	if viewport==last_viewport and not force:return
 	last_viewport=viewport
-	var width:=minf(400.0,viewport.x-32)
-	card.size=Vector2(width,0);card.position=Vector2(viewport.x-width-16,float(get_meta("presentation_top_margin",112.0)))
+	var width:=minf(1040.0,viewport.x-32)
+	card.size=Vector2(width,0);card.position=Vector2((viewport.x-width)*0.5,viewport.y-148)
 	settle_height.call_deferred()
 
 ## Espera a largura dos contêineres estabilizar antes de reduzir a altura do texto quebrado.
@@ -120,6 +124,7 @@ func settle_height() -> void:
 	await get_tree().process_frame
 	if not is_inside_tree() or not is_instance_valid(card):return
 	card.size=Vector2(card.size.x,0)
+	card.position.y=get_viewport().get_visible_rect().size.y-card.size.y-16
 
 ## Avança ou encerra a fala sem consumir interação, salto ou habilidade dos jogadores.
 func advance() -> void:

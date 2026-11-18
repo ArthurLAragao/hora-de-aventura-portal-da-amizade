@@ -8,6 +8,9 @@ func _ready() -> void:
 
 ## Não altera scripts compartilhados nem a geometria de detecção dos mecanismos.
 func apply() -> void:
+	var lever=get_parent().get_node_or_null("Lever")
+	if phase==1 and lever!=null:
+		var skin:=Node2D.new();skin.set_script(load("res://scripts/scenery/forest_lever_skin.gd"));lever.add_child(skin)
 	for node in get_parent().get_children():
 		if (phase==1 and node is CoopGate) or (phase==6 and node is PressurePlate):
 			var finish:=Node2D.new();finish.name="LocalFinish"

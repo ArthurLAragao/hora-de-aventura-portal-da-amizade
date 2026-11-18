@@ -3,6 +3,8 @@ extends SceneTree
 var failures := 0
 
 func _initialize() -> void:
+	set_meta("campaign_profile_path",get_script().resource_path.get_base_dir()+"/menu_test_progress.json")
+	preload("res://scripts/core/campaign_progress.gd").reset()
 	call_deferred("_run")
 
 func _check(label: String, condition: bool) -> void:
@@ -40,7 +42,7 @@ func _run() -> void:
 	await process_frame
 	var first := phase_select.get_node("Design/Phase1") as Button
 	_check("phase one is enabled", first != null and not first.disabled)
-	_check("phase selector renders each button caption only once", first != null and first.text == "1 · Casa na Árvore\nFinn + Jake" and first.get_child_count() == 0)
+	_check("phase selector renders each button caption only once", first != null and first.text.is_empty() and first.get_child_count()>0)
 	var unavailable := 0
 	var phase_buttons: Array[Button] = []
 	for phase in range(2, 7):
@@ -49,9 +51,9 @@ func _run() -> void:
 			phase_buttons.append(button)
 		if button != null and button.disabled:
 			unavailable += 1
-	_check("all six phases are available in the selector", unavailable == 0)
+	_check("new campaign locks five destinations", unavailable == 5)
 	for phase in [2,3,4,5,6]:
-		_check("imported phase %d is enabled" % phase, not (phase_select.get_node("Design/Phase%d" % phase) as Button).disabled)
+		_check("future phase %d is locked" % phase, (phase_select.get_node("Design/Phase%d" % phase) as Button).disabled)
 	var cards_do_not_overlap := true
 	phase_buttons.append(first)
 	for left_index in range(phase_buttons.size()):
@@ -74,9 +76,20 @@ func _run() -> void:
 	change_scene_to_file("res://phase_select.tscn")
 	await process_frame
 	await process_frame
+	var locked_scene:=current_scene
+	current_scene.open_phase(5);await process_frame
+	_check("locked phase cannot be opened by callback",current_scene==locked_scene)
+	for number in range(1,5):preload("res://scripts/core/campaign_progress.gd").complete(number)
+	change_scene_to_file("res://phase_select.tscn");await process_frame;await process_frame
 	(current_scene.get_node("Design/Phase5") as Button).pressed.emit()
 	await process_frame
 	await process_frame
 	_check("phase five button opens MirrorTower", current_scene != null and current_scene.name == "MirrorTower")
 	print("Menu check failures: ", failures)
+	_stop_audio(current_scene);current_scene.queue_free();await process_frame;await process_frame
+	OS.delay_msec(160)
 	quit(0 if failures == 0 else 1)
+
+func _stop_audio(node: Node) -> void:
+	for child in node.get_children():_stop_audio(child)
+	if node is AudioStreamPlayer or node is AudioStreamPlayer2D:node.stop()

@@ -9,6 +9,9 @@ var capture_dir:=""
 var report_path:=""
 var viewport_size:=Vector2i(1152,648)
 func _initialize() -> void:
+	var save_path=get_script().resource_path.get_base_dir()+"/test_progress.json"
+	set_meta("campaign_profile_path",save_path)
+	if FileAccess.file_exists(save_path):DirAccess.remove_absolute(save_path)
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_ALWAYS_ON_TOP,true)
 	DisplayServer.window_move_to_foreground()
 	if DisplayServer.get_name()!="headless": DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)

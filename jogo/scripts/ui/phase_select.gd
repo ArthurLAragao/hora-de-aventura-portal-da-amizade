@@ -1,142 +1,53 @@
 extends Control
-## Responsive selector for the phase available in this project build.
-
-const DESIGN_SIZE := Vector2(640.0, 360.0)
-const PHASE_SCENE := "res://level_1.tscn"
-const PLAYABLE_PHASES := {1: PHASE_SCENE, 2: "res://level_2.tscn", 3: "res://level_3.tscn", 4: "res://level_4.tscn", 5: "res://level_5.tscn", 6: "res://level_6.tscn"}
-const MENU_SCENE := "res://Assets/04_Interface/Godot/main_menu.tscn"
-
-const COLOR_INK := Color("17263d")
-const COLOR_PANEL := Color("173b56")
-const COLOR_PANEL_HOVER := Color("20536c")
-const COLOR_TEAL := Color("21b9bf")
-const COLOR_DISABLED := Color("65717d")
-const COLOR_GOLD := Color("f4c95d")
-
-const PHASE_CAPTIONS=["1 · Casa na Árvore\nFinn + Jake","2 · Reino Gelado\nFionna + Cake","3 · Caverna Musical\nMarceline + BMO","4 · Oficina Doce\nFinn + BMO","5 · Torre dos Espelhos\nMarceline + Cake","6 · Portal da Amizade\nTrês duplas"]
-
+## Destinos ilustrados com progresso real e desbloqueio sequencial da campanha.
+const UI=preload("res://scripts/ui/menu_layout.gd")
+const PROGRESS=preload("res://scripts/core/campaign_progress.gd")
+const DESIGN_SIZE=Vector2(1280,720)
+const MENU_SCENE="res://Assets/04_Interface/Godot/main_menu.tscn"
+const REGIONS=["01_tree_house","02_ice_kingdom","03_musical_cave","04_candy_workshop","05_mirror_tower","06_friendship_portal"]
+const TITLES=["Casa na Árvore","Reino Gelado","Caverna Musical","Oficina Doce","Torre dos Espelhos","Portal da Amizade"]
+const PAIRS=["Finn e Jake","Fionna e Cake","Marceline e BMO","Finn e BMO","Marceline e Cake","Os seis amigos"]
 var _design: Control
+var cards: Array[Button]=[]
+var confirm: ConfirmationDialog
+var elapsed:=0.0
+var accents: Node2D
 
-## Prepara as referências e o estado deste componente ao entrar na árvore. Contexto: seleção das fases disponíveis.
 func _ready() -> void:
-	texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
-	var fill:=ColorRect.new();fill.name="WindowBackdrop";fill.color=Color("081a26");fill.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(fill);move_child(fill,0);fill.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	_build_screen()
-	resized.connect(_fit_design)
-	_fit_design()
-
-## Constrói a seleção responsiva com as fases realmente disponíveis.
-func _build_screen() -> void:
-	_design = Control.new()
-	_design.name = "Design"
-	_design.size = DESIGN_SIZE
-	add_child(_design)
-
-	var background := TextureRect.new()
-	background.name = "Background"
-	background.texture = load("res://Assets/06_Story_Screens/discovery.png")
-	background.size = DESIGN_SIZE
-	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	background.stretch_mode = TextureRect.STRETCH_SCALE
-	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_design.add_child(background)
-
-	var shade := ColorRect.new()
-	shade.name = "Shade"
-	shade.size = DESIGN_SIZE
-	shade.color = Color(0.035, 0.075, 0.13, 0.58)
-	shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_design.add_child(shade)
-
-	_add_label("ESCOLHAM UMA FASE", Rect2(20, 15, 600, 34), 25, Color("fff1be"))
-	_add_label("Escolham uma aventura", Rect2(20, 51, 600, 22), 13, Color("b9f5ec"))
-
-	for index in range(6):
-		var column := index % 3
-		var row := floori(float(index) / 3.0)
-		var rect := Rect2(46 + column * 184, 91 + row * 67, 168, 54)
-		_add_phase_button(index + 1, rect)
-
-	var back := Button.new()
-	back.name = "Back"
-	back.text = "VOLTAR AO MENU"
-	back.position = Vector2(220, 251)
-	back.size = Vector2(200, 42)
-	_style_button(back, false, true)
-	back.pressed.connect(func() -> void: get_tree().change_scene_to_file(MENU_SCENE))
-	back.mouse_default_cursor_shape=Control.CURSOR_POINTING_HAND
-	_design.add_child(back)
-	_design.get_node("Phase1").grab_focus()
-
-## Cria o botão da fase, mantendo indisponíveis as ainda não integradas.
-func _add_phase_button(phase_number: int, rect: Rect2) -> void:
-	var button := Button.new()
-	button.name = "Phase%d" % phase_number
-	button.position = rect.position
-	button.size = rect.size
-	var available := PLAYABLE_PHASES.has(phase_number)
-	button.text = PHASE_CAPTIONS[phase_number-1] if available else "FASE %d   |   EM BREVE" % phase_number
-	button.disabled = not available
-	_style_button(button, available)
-	if available:
-		button.pressed.connect(func() -> void: get_tree().change_scene_to_file(PLAYABLE_PHASES[phase_number]))
-	_design.add_child(button)
-
-## Aplica estilos visuais e de foco ao botão.
-func _style_button(button: Button, enabled: bool, compact: bool = false) -> void:
-	button.focus_mode = Control.FOCUS_ALL
-	button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND if enabled else Control.CURSOR_ARROW
-	button.add_theme_font_override("font", load("res://Assets/08_Fonts/PixelifySans.ttf"))
-	button.add_theme_font_size_override("font_size", 13 if compact else 12)
-	button.add_theme_color_override("font_color", Color("fff6d7"))
-	button.add_theme_color_override("font_hover_color", Color("fff6d7"))
-	button.add_theme_color_override("font_pressed_color", Color("fff6d7"))
-	button.add_theme_color_override("font_disabled_color", Color("d0d5d8"))
-	button.add_theme_color_override("font_focus_color", Color("fff6d7"))
-	button.add_theme_constant_override("outline_size", 2)
-	button.add_theme_color_override("font_outline_color", COLOR_INK)
-	button.add_theme_stylebox_override("normal", _button_panel(COLOR_TEAL if enabled else COLOR_DISABLED, COLOR_GOLD if enabled else Color("90979e")))
-	button.add_theme_stylebox_override("hover", _button_panel(COLOR_PANEL_HOVER, COLOR_GOLD))
-	button.add_theme_stylebox_override("pressed", _button_panel(Color("157e92"), COLOR_GOLD))
-	button.add_theme_stylebox_override("focus", _button_panel(COLOR_PANEL_HOVER, Color("fff1be")))
-	button.add_theme_stylebox_override("disabled", _button_panel(COLOR_DISABLED, Color("90979e")))
-
-## Cria o estilo de painel usado pelo botão.
-func _button_panel(fill: Color, border: Color) -> StyleBoxFlat:
-	var style := StyleBoxFlat.new()
-	style.bg_color = fill
-	style.border_color = border
-	style.set_border_width_all(3)
-	style.set_corner_radius_all(8)
-	style.shadow_color = Color(0.02, 0.04, 0.08, 0.62)
-	style.shadow_size = 4
-	style.content_margin_left = 8
-	style.content_margin_right = 8
-	style.content_margin_top = 5
-	style.content_margin_bottom = 5
-	return style
-
-## Cria um rótulo com texto, tamanho e cor configurados.
-func _add_label(value: String, rect: Rect2, font_size: int, color: Color) -> void:
-	var label := Label.new()
-	label.text = value
-	label.position = rect.position
-	label.size = rect.size
-	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	label.add_theme_font_override("font", load("res://Assets/08_Fonts/PixelifySans.ttf"))
-	label.add_theme_font_size_override("font_size", font_size)
-	label.add_theme_color_override("font_color", color)
-	label.add_theme_color_override("font_shadow_color", COLOR_INK)
-	label.add_theme_constant_override("shadow_offset_x", 2)
-	label.add_theme_constant_override("shadow_offset_y", 2)
-	_design.add_child(label)
-
-## Ajusta a composição à janela preservando sua proporção.
+	set_anchors_and_offsets_preset(PRESET_FULL_RECT);texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+	var fill:=ColorRect.new();fill.color=Color("0d2530");add_child(fill);fill.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
+	_design=Control.new();_design.name="Design";_design.size=DESIGN_SIZE;add_child(_design)
+	var background:=TextureRect.new();background.texture=load("res://Assets/06_Story_Screens/discovery.png");background.size=DESIGN_SIZE;background.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;background.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_COVERED;background.modulate=Color("708879");background.mouse_filter=MOUSE_FILTER_IGNORE;_design.add_child(background)
+	UI.label(_design,"O CAMINHO DA AMIZADE",Rect2(62,26,1160,44),32)
+	UI.label(_design,"Um cristal. Uma descoberta. O próximo destino.",Rect2(62,76,1160,28),19)
+	var data:=PROGRESS.read()
+	for i in 6:
+		var at:=Vector2(62+(i%3)*390,128+floori(i/3.0)*226)
+		var card:=UI.button(_design,"",Rect2(at,Vector2(374,210)),"Phase%d"%(i+1));card.clip_contents=true;cards.append(card)
+		var unlocked:=PROGRESS.unlocked(i+1);card.disabled=not unlocked
+		var picture:=TextureRect.new();picture.texture=load("res://Assets/02_Environments/"+REGIONS[i]+"/background.png");picture.position=Vector2(3,3);picture.size=Vector2(368,150);picture.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;picture.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_COVERED;picture.mouse_filter=MOUSE_FILTER_IGNORE;card.add_child(picture)
+		if not unlocked:picture.modulate=Color("65727c")
+		var strip:=ColorRect.new();strip.position=Vector2(3,148);strip.size=Vector2(368,60);strip.color=Color("102a34f5");strip.mouse_filter=MOUSE_FILTER_IGNORE;card.add_child(strip)
+		UI.label(card,"%d · %s"%[i+1,TITLES[i]],Rect2(14,154,346,26),21)
+		UI.label(card,PAIRS[i] if unlocked else "Conclua a fase %d"%i,Rect2(14,182,346,22),15).modulate=Color("bfd3c9")
+		if i+1 in data.completed:UI.label(card,"✓",Rect2(332,10,30,36),28).modulate=Color("e2db99")
+		elif not unlocked:
+			var lock:=Node2D.new();lock.position=Vector2(184,70);lock.draw.connect(func():lock.draw_arc(Vector2.ZERO,12,PI,TAU,12,Color("f2dcab"),4);lock.draw_rect(Rect2(-16,0,32,25),Color("17333f"));lock.draw_rect(Rect2(-13,3,26,19),Color("d2b984"));lock.draw_rect(Rect2(-2,8,4,9),Color("17333f")));card.add_child(lock)
+		card.pressed.connect(open_phase.bind(i+1))
+	accents=Node2D.new();accents.z_index=2;accents.draw.connect(draw_accents);_design.add_child(accents)
+	UI.button(_design,"Voltar ao menu",Rect2(62,622,300,48),"Back").pressed.connect(func():get_tree().change_scene_to_file(MENU_SCENE))
+	UI.button(_design,"Nova aventura",Rect2(920,622,300,48),"NewAdventure").pressed.connect(func():confirm.popup_centered())
+	confirm=ConfirmationDialog.new();confirm.title="Começar de novo?";confirm.dialog_text="Isso apaga os cristais e as fases liberadas neste computador.";confirm.ok_button_text="Nova aventura";confirm.cancel_button_text="Continuar aventura";add_child(confirm)
+	confirm.confirmed.connect(func():PROGRESS.reset();get_tree().reload_current_scene())
+	resized.connect(_fit_design);_fit_design();cards[0].grab_focus.call_deferred()
+func open_phase(number: int) -> void:
+	if PROGRESS.unlocked(number):get_tree().change_scene_to_file("res://level_%d.tscn"%number)
+## Folhas na trilha, flocos no gelo e pontos de luz na caverna; todos presos aos cartões.
+func draw_accents() -> void:
+	for i in 3:
+		for j in 6:
+			var at:=Vector2(76+i*390+fmod(j*59+elapsed*(8+i*4),336),144+fmod(j*23+elapsed*(5+i*3),122))
+			accents.draw_rect(Rect2(at.round(),Vector2(4 if i==0 else 2,2)),[Color("b0ca78"),Color("def2f1"),Color("bc9dd6")][i])
+func _process(delta: float) -> void:elapsed+=delta;accents.queue_redraw()
 func _fit_design() -> void:
-	if not is_instance_valid(_design):
-		return
-	var factor := minf(size.x / DESIGN_SIZE.x, size.y / DESIGN_SIZE.y)
-	_design.scale = Vector2(factor, factor)
-	_design.position = (size - DESIGN_SIZE * factor) * 0.5
+	if is_instance_valid(_design):UI.fit(_design,size,DESIGN_SIZE)

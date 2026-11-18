@@ -28,22 +28,22 @@ func _ready() -> void:
 		picture.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;picture.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(picture);portraits.append(picture)
 		var role:=UI.label(design,"P%d"%(slot+1),Rect2(x+58,19,74,16),13);role.modulate=Color("e2c68e")
 		roles.append(UI.label(design,"",Rect2(x+58,35,78,28),17))
-	plaque(Rect2(804,14,332,66))
-	count_label=UI.label(design,"Cristais recuperados · 0/6",Rect2(818,19,304,20),14)
-	emblem=Control.new();emblem.position=Vector2(824,46);emblem.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(emblem);emblem.draw.connect(draw_emblem)
-	var help:=UI.button(design,"Ajuda",Rect2(1000,90,64,28),"HelpAdventure");help.add_theme_font_size_override("font_size",13);help.focus_mode=Control.FOCUS_NONE;help.pressed.connect(screens.open_help)
-	var menu:=UI.button(design,"Fases",Rect2(1070,90,66,28),"PhasesAdventure");menu.add_theme_font_size_override("font_size",13);menu.focus_mode=Control.FOCUS_NONE;menu.pressed.connect(screens.navigate.bind("res://phase_select.tscn",0))
+	plaque(Rect2(846,14,290,84))
+	count_label=UI.label(design,"Cristais da Amizade · 0/6",Rect2(864,19,256,20),14)
+	emblem=preload("res://scripts/ui/crystal_emblem.gd").new();emblem.position=Vector2(860,45);emblem.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(emblem)
+	var help:=UI.button(design,"Ajuda",Rect2(1000,106,64,28),"HelpAdventure");help.add_theme_font_size_override("font_size",13);help.focus_mode=Control.FOCUS_NONE;help.pressed.connect(screens.open_help)
+	var menu:=UI.button(design,"Fases",Rect2(1070,106,66,28),"PhasesAdventure");menu.add_theme_font_size_override("font_size",13);menu.focus_mode=Control.FOCUS_NONE;menu.pressed.connect(screens.navigate.bind("res://phase_select.tscn",0))
 	for button in [help,menu]:
 		for state in ["normal","hover","pressed","focus"]:
 			var style:=button.get_theme_stylebox(state).duplicate() as StyleBoxFlat
-			style.set_corner_radius_all(0);style.border_color=Color("e4c88b");style.bg_color=Color("182d36f2");button.add_theme_stylebox_override(state,style)
+			style.set_corner_radius_all(0);style.border_color=Color("e4c88b");style.bg_color=Color("142f38e8");button.add_theme_stylebox_override(state,style)
 	get_viewport().size_changed.connect(fit);fit();sync()
 
 ## Moldura de metal e madeira escura, em degraus e sem cantos suavizados.
 func plaque(rect: Rect2) -> void:
 	var p:=UI.panel(design,rect)
 	var style:=p.get_theme_stylebox("panel").duplicate() as StyleBoxFlat
-	style.bg_color=Color("182d36f2");style.border_color=Color("bba675");style.set_corner_radius_all(0);style.set_border_width_all(2)
+	style.bg_color=Color("142f38e8");style.border_color=Color("bba675");style.set_corner_radius_all(5);style.set_border_width_all(2)
 	style.shadow_color=Color("081923a0");style.shadow_offset=Vector2(0,3);style.shadow_size=0;p.add_theme_stylebox_override("panel",style)
 	for dx in [4.0,rect.size.x-6]:
 		var rivet:=ColorRect.new();rivet.color=Color("e4c88b");rivet.position=rect.position+Vector2(dx,5);rivet.size=Vector2(2,2);rivet.mouse_filter=MOUSE_FILTER_IGNORE;design.add_child(rivet)
@@ -62,10 +62,10 @@ func sync() -> void:
 	var story=screens.level.get_node_or_null("FriendshipStory")
 	if story==null or not story.ready_to_watch:return
 	var state: Dictionary=story.snapshot()
-	acquired=get_tree().get_meta("friendship_crystals",[]).duplicate()
+	acquired=preload("res://scripts/core/campaign_progress.gd").read().crystals.duplicate()
 	if state.get("crystal",false) and not screens.phase in acquired:
-		acquired.append(screens.phase);get_tree().set_meta("friendship_crystals",acquired.duplicate())
-	count_label.text="Cristais recuperados · %d/6"%acquired.size();emblem.queue_redraw()
+		acquired.append(screens.phase);get_tree().set_meta("friendship_crystals",acquired.duplicate());preload("res://scripts/core/campaign_progress.gd").collect(screens.phase)
+	count_label.text="Cristais da Amizade · %d/6"%acquired.size();emblem.set_crystals(acquired)
 	for slot in 2:
 		var id:=""
 		for actor in get_tree().get_nodes_in_group("players"):
@@ -76,17 +76,6 @@ func sync() -> void:
 		if not cache.has(id):cache[id]=load("res://Assets/01_Characters/%s/portrait.png"%id)
 		portraits[slot].texture=cache[id]
 	visible=not screens.help_open and not screens.leaving and not (screens.phase==6 and screens.completed())
-
-## Seis encaixes numerados: forma facetada, brilho e preenchimento distinguem a conquista.
-func draw_emblem() -> void:
-	for i in 6:
-		var at:=Vector2(i*50+10,10);var lit: bool=i+1 in acquired
-		var points:=PackedVector2Array([at+Vector2(-8,-4),at+Vector2(0,-12),at+Vector2(8,-4),at+Vector2(6,5),at+Vector2(0,10),at+Vector2(-6,5)])
-		emblem.draw_colored_polygon(points,Color("12202e"));emblem.draw_polyline(points+PackedVector2Array([points[0]]),Color("8c826a"),2)
-		if lit:
-			emblem.draw_colored_polygon(PackedVector2Array([at+Vector2(-5,-3),at+Vector2(0,-9),at+Vector2(5,-3),at+Vector2(0,7)]),COLORS[i])
-			emblem.draw_line(at+Vector2(0,-7),at+Vector2(0,5),Color("fff1c6"),2)
-		emblem.draw_string(PIXEL,at+Vector2(14,4),str(i+1),HORIZONTAL_ALIGNMENT_LEFT,-1,12,Color("e7d9b2") if lit else Color("8d9ca2"))
 
 ## Frequência baixa: não há consulta de estados ou carregamento de retratos por quadro.
 func _process(delta: float) -> void:
